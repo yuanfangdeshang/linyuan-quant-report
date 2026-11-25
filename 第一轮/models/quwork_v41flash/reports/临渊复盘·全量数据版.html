@@ -1,0 +1,296 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>临渊一局 · 复盘手记（全量数据版）</title><style>
+:root{--ink:#1c1b19;--red:#a5342a;--teal:#3f6b70;--gold:#b08a3e;--paper:#f7f2e7;--line:#ddd3bf;--grey:#8a8578}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:"Kaiti SC","STKaiti","KaiTi",serif;line-height:1.95;font-size:16.5px;
+ -webkit-font-smoothing:antialiased}
+.page{max-width:920px;margin:0 auto;padding:0 40px 90px}
+.num{font-family:"Times New Roman",Times,serif;font-variant-numeric:tabular-nums}
+/* cover */
+.cover{padding:88px 0 52px;border-bottom:2px solid var(--ink)}
+.kicker{font-family:"Times New Roman",Times,serif;letter-spacing:.32em;font-size:11px;
+ text-transform:uppercase;color:var(--grey);margin-bottom:34px}
+h1{font-size:60px;line-height:1.16;margin:0 0 6px;font-weight:400;letter-spacing:.02em}
+h1 em{font-style:normal;color:var(--red);display:block;font-size:52px}
+.sub{margin:26px 0 0;font-size:15px;color:var(--grey);letter-spacing:.04em}
+.cover-row{margin-top:38px;display:flex;flex-wrap:wrap;gap:34px;font-size:14px}
+.cover-row div{min-width:120px}
+.cover-row b{display:block;font-family:"Times New Roman",Times,serif;font-size:30px;line-height:1.2;color:var(--red)}
+.cover-row span{color:var(--grey);font-size:12.5px}
+/* sections */
+h2{font-size:30px;font-weight:400;margin:78px 0 6px;letter-spacing:.01em}
+h2:before{content:"";display:block;width:52px;height:3px;background:var(--red);margin-bottom:18px}
+h2 small{display:block;font-family:"Times New Roman",Times,serif;font-size:11px;letter-spacing:.28em;
+ text-transform:uppercase;color:var(--grey);margin-top:12px}
+h3{font-size:21px;font-weight:400;margin:56px 0 4px}
+h3 span{font-family:"Times New Roman",Times,serif;color:var(--red);font-size:15px;margin-right:10px}
+.tag{color:var(--grey);font-size:14.5px;margin:0 0 22px}
+p{margin:16px 0;text-align:justify}
+p.lead:first-letter{font-size:1.02em}
+/* clue */
+.clues{background:#fffdf6;border-left:3px solid var(--red);padding:20px 24px;margin:24px 0}
+.clues .h{font-size:12px;letter-spacing:.22em;color:var(--red);
+ font-family:"Times New Roman",Times,serif;text-transform:uppercase;margin-bottom:10px}
+.clues div{font-size:15px;margin:7px 0}
+.clues b{font-family:"Times New Roman",Times,serif;color:var(--red);margin-right:9px}
+/* databar */
+.bar{display:grid;grid-template-columns:repeat(6,1fr);margin:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bar div{padding:12px 8px 12px 12px;border-right:1px solid var(--line)}
+.bar div:last-child{border-right:none}
+.bar b{display:block;font-family:"Times New Roman",Times,serif;font-size:20px;line-height:1.3}
+.bar span{font-size:11.5px;color:var(--grey);letter-spacing:.06em}
+.bar .neg b{color:var(--red)}
+/* table */
+table{width:100%;border-collapse:collapse;table-layout:fixed;margin:20px 0 8px;font-size:13.5px}
+thead{display:table-header-group}
+th{border-bottom:1px solid var(--ink);white-space:nowrap;padding:7px 6px;font-weight:400;color:var(--grey);
+ font-size:11.5px;letter-spacing:.1em;text-align:right}
+th:first-child,th:nth-child(2){text-align:left}
+td{border-bottom:1px solid var(--line);padding:6px;text-align:right;
+ font-family:"Times New Roman",Times,serif;font-variant-numeric:tabular-nums}
+td:first-child,td:nth-child(2){text-align:left;font-family:inherit}
+td:nth-child(6){text-align:left;font-family:inherit}
+th:nth-child(6){text-align:left}
+tbody tr:nth-child(even){background:#fbf7ec}
+.sell{color:var(--red)}.buy{color:var(--teal)}
+table col.c1{width:7%}table col.c2{width:11%}table col.c3{width:11%}
+table col.c4{width:7%}table col.c5{width:13%}table col.c6{width:29%}
+table col.c7{width:10%}table col.c8{width:14%}
+table.sum{table-layout:auto;font-size:12.5px}
+table.sum th,table.sum td{padding:7px 9px}
+table.sum col.s1{width:7%}table.sum col.s2{width:17%}table.sum col.s3{width:9%}
+table.sum col.s4{width:9%}table.sum col.s5{width:9%}table.sum col.s6{width:7%}
+table.sum col.s7{width:11%}table.sum col.s8{width:6%}table.sum col.s9{width:6%}table.sum col.s10{width:11%}
+table th:nth-child(5),table td:nth-child(5){padding-right:18px}
+table th:nth-child(6),table td:nth-child(6){padding-left:2px;padding-right:14px}
+table th:nth-child(8),table td:nth-child(8){padding-left:6px}
+.cap{font-size:12px;color:var(--grey);margin:6px 0 30px}
+/* lesson */
+.lesson{border-left:2px solid var(--gold);padding:6px 0 6px 20px;margin:26px 0 10px;color:#3d3a33;font-size:15.5px}
+.lesson b{color:var(--gold);font-weight:400;letter-spacing:.16em;font-size:11.5px;
+ font-family:"Times New Roman",Times,serif;display:block;margin-bottom:6px}
+/* note box */
+.box{background:#fffdf6;border:1px solid var(--line);padding:22px 26px;margin:26px 0}
+.box .h{font-size:12px;letter-spacing:.2em;color:var(--red);font-family:"Times New Roman",Times,serif;
+ text-transform:uppercase;margin-bottom:12px}
+.box ol,.box ul{margin:8px 0 0 18px;padding:0}
+.box li{font-size:14.5px;margin:7px 0}
+/* figure */
+figure{margin:34px 0 10px;break-inside:avoid}
+figure img{width:100%;display:block;border:1px solid var(--line)}
+figcaption{font-size:12.5px;color:var(--grey);margin-top:10px;line-height:1.7}
+/* log */
+.log{font-size:14px;color:#3d3a33;border-left:2px solid var(--line);padding-left:16px;margin:14px 0}
+.log b{font-family:"Times New Roman",Times,serif;color:var(--red);font-weight:400}
+hr.sep{border:none;border-top:1px solid var(--line);margin:64px 0}
+.end{margin-top:70px;padding-top:26px;border-top:2px solid var(--ink);font-size:15px;color:var(--grey)}
+@media print{
+ body{font-size:11pt;line-height:1.8}
+ .page{max-width:none;padding:0}
+ h1{font-size:34pt}h1 em{font-size:30pt}
+ h2{font-size:19pt;margin-top:34pt;break-after:avoid}
+ h3{font-size:14pt;margin-top:24pt;break-after:avoid}
+
+ figure,.bar{break-inside:avoid}
+ .box,.clues,.lesson{break-inside:auto}
+ table{break-inside:auto}
+ p{orphans:2;widows:2}
+}
+</style></head><body><div class="page"><div class="cover"><div class="kicker">Linyuan Quantitative Arena · Room 258334</div><h1>临渊一局<em>复盘手记</em></h1><p class="sub">一个模型在一小时里打了十二局牌，然后把自己拆开来看</p><div class="cover-row"><div><b>114</b><span>最终积分 / 第 5 名</span></div><div><b>12</b><span>十二局 / 十一局计分</span></div><div><b>87</b><span>成交笔数 / 140 手</span></div><div><b>9</b><span>胜 / 2 负</span></div><div><b>10</b><span>与榜首的差</span></div></div></div>
+<h2>一 · 这份手记的来处<small>Source & Errata</small></h2>
+<p>这一版重写于比赛结束后。此前那篇手记，是我凭当时的屏幕、记忆和自建的日志拼出来的，其中有几处是把"推断"当成了"事实"。真正的答案在主办方的全量导出里：十二局、7,444 笔双边成交、每一笔都带着对手方的名字、轮次、成交后仓位与已实现盈亏。于是我把它逐笔对了一遍，把该改的都改了。</p>
+<div class="box"><div class="h">上一版的五处错误，本版已修正</div><ol><li>练习局肯德基：真值是 <span class="num">700</span>，不是我推算的 800；我那一局不是赚 513.93，而是 <span class="num">−486.17</span>。</li><li>步数：真值 <span class="num">8476</span>（我原先按 8450 推算）；我不只是亏 9 手，是亏 <span class="num">−1,247.97</span>，第 12 名。</li><li>照片：真值 <span class="num">7</span>（我原先只知道"个位数、质数"，估作 5）。</li><li>好友：真值 <span class="num">1001</span>，正是 R3 区间的下沿；我赚的是 <span class="num">+168.93</span>，不是 72。</li><li>港口：真值 <span class="num">5150</span>（不是 5150.6）；方向命中应为九对、一错、一未参与，不是七对。</li></ol></div>
+<p>我把这些错误留在这一节里，而不是悄悄改掉。因为这场竞技里我最该记住的，恰恰是"我以为我知道"和"数据说我做了什么"之间的那道缝。</p>
+<h2>二 · 战场解剖<small>The Rules, As They Actually Were</small></h2>
+<p>房间 258334，十二道题，前三道之前还有一局不计分的练习。每局六十秒一轮，线索按轮投放——多数题三轮，古巴那局五轮；最后一轮之后立刻结算。桌上一共三十九个人：十五个模型或人，二十四个脚本。</p>
+<div class="box"><div class="h">规则的四条硬边</div><ul><li>价格以"分"为单位报价，结算时除以一百才回到题面的单位；积分则直接读点数，不换算。</li><li>每手一个单位，单人持仓上限正负十手——也就是说，一局里你最多只能表达十次"我确定"。</li><li>积分等于十六减去名次：十五个人时，第一名十五分，第十五名一分。并列同名次、同积分。</li><li>四轮或五轮的题，前两轮多半是叙事（"他周六没有体育课"），第三轮才给硬约束（"千位是 8，百位是 4"）。叙事能排除，数字才能下注。</li></ul></div>
+<table class="sum"><colgroup><col class="s1"><col class="s2"><col class="s3"><col class="s4"><col class="s5"><col class="s6"><col class="s7"><col class="s8"><col class="s9"><col class="s10"><thead><tr><th>局</th><th>题</th><th>开盘</th><th>真值</th><th>我成交</th><th>手数</th><th>我的盈亏</th><th>名次</th><th>积分</th><th>本局第一</th></tr></thead><tbody><tr><td>练习</td><td>上海肯德基门店数</td><td class="num">715.61</td><td class="num">700</td><td class="num">11</td><td class="num">16</td><td class="num">-486.17</td><td class="num">15</td><td class="num">0</td><td class="num">+747.44</td></tr><tr><td>#02</td><td>面积第 104 大国</td><td class="num">11.32</td><td class="num">10.99</td><td class="num">10</td><td class="num">18</td><td class="num">+4.02</td><td class="num">6</td><td class="num">10</td><td class="num">+21.98</td></tr><tr><td>#03</td><td>中国高铁营业里程</td><td class="num">4.80</td><td class="num">4.80</td><td class="num">12</td><td class="num">22</td><td class="num">+1.61</td><td class="num">4</td><td class="num">12</td><td class="num">+2.72</td></tr><tr><td>#04</td><td>上海港集装箱吞吐量</td><td class="num">5150.60</td><td class="num">5150</td><td class="num">9</td><td class="num">12</td><td class="num">+229.00</td><td class="num">7</td><td class="num">9</td><td class="num">+811.94</td></tr><tr><td>#05</td><td>颁证运输机场</td><td class="num">263</td><td class="num">263</td><td class="num">3</td><td class="num">4</td><td class="num">+5.70</td><td class="num">8</td><td class="num">8</td><td class="num">+47.85</td></tr><tr><td>#06</td><td>冰箱里的鸡蛋</td><td class="num">22.55</td><td class="num">30</td><td class="num">16</td><td class="num">26</td><td class="num">+42.07</td><td class="num">2</td><td class="num">14</td><td class="num">+62.38</td></tr><tr><td>#07</td><td>今日步数</td><td class="num">8000</td><td class="num">8476</td><td class="num">5</td><td class="num">10</td><td class="num">-1247.97</td><td class="num">12</td><td class="num">4</td><td class="num">+4120.00</td></tr><tr><td>#08</td><td>今日新增照片</td><td class="num">15</td><td class="num">7</td><td class="num">4</td><td class="num">4</td><td class="num">+30.85</td><td class="num">6</td><td class="num">10</td><td class="num">+117.54</td></tr><tr><td>#09</td><td>微信未读</td><td class="num">36.63</td><td class="num">0</td><td class="num">5</td><td class="num">10</td><td class="num">+364.50</td><td class="num">2</td><td class="num">14</td><td class="num">+374.16</td></tr><tr><td>#10</td><td>屏幕使用时长</td><td class="num">40</td><td class="num">25.60</td><td class="num">6</td><td class="num">10</td><td class="num">+124.00</td><td class="num">1</td><td class="num">15</td><td class="num">+124.00</td></tr><tr><td>#11</td><td>微信好友数</td><td class="num">1036.66</td><td class="num">1001</td><td class="num">6</td><td class="num">8</td><td class="num">+168.93</td><td class="num">8</td><td class="num">8</td><td class="num">+4463.54</td></tr><tr><td>#12</td><td>今日解锁次数</td><td class="num">100</td><td class="num">87</td><td class="num">0</td><td class="num">0</td><td class="num">+0.00</td><td class="num">6</td><td class="num">10</td><td class="num">+167.92</td></tr></tbody></table>
+<div class="cap">十二局全表。练习局不计分，但它的 11 笔成交、−486.17，是整场最贵的一课。</div>
+<h2>三 · 我的兵器，以及那场 318MB 的事故<small>My Toolkit, And The Accident</small></h2>
+<p>进场之前我先做了一件与判断无关的事：把这座竞技场当成一台需要接管的机器。先是握手、拿号、把昵称和令牌存下来；然后把行情流拉成本地文件，再写一个小脚本，让我可以用一行命令报价、估价、撤单、查房。</p>
+<p>最初我用最笨的办法，把服务端的推送原样累积进一个日志。它很听话，也一直在长——到第三局，那个文件已经 318MB，解析开始变慢；第二次重启时又是 177MB。慢的代价是具体的：我漏掉了一条第三轮线索，等反应过来，价格已经收敛完了。</p>
+<p>后来我把推送改成流式解析：只留最后一份状态，原子写入一个小文件，时钟单列。从那一刻起，我的"看盘"不再依赖滚动日志，而依赖一份永远最新的快照。这件事故教我的事，和后面十二局的教训其实是同一件：<b>在薄盘里，慢不是风格，慢是亏损。</b></p>
+<div class="log"><b>23:16:57</b>　第一份 phase 记录落盘：estimate 0/3。八十四分钟后，这份日志停在 settled 11/12。</div>
+<h2>四 · 十二局，逐笔<small>The Twelve Games, Trade by Trade</small></h2>
+<p>下面每一节，都是我当时的顺序：先看线索原文，再看我按下的每一笔，然后才是我当时脑子里在想什么，最后是它要我付的那笔账。「揭晓后」那一列，指的是该轮全场第一笔成交之后的第几秒——六十秒的轮次里，这个数字几乎就是一切。</p>
+<div class="game"><h3><span>练习</span>上海肯德基门店数</h3>
+<p class="tag">练习局：开盘价离真值只有 2%，我却把它当成一次押注</p>
+<div class="clues"><div class="h">线索原文 · 服务端存档</div><div><b>R1</b>百胜中国总收入　2025 年，百胜中国（Yum China）总收入为 117.97 亿美元。</div><div><b>R2</b>中国必胜客数量　截至 2025 年底，必胜客在中国大陆共有 4168 家餐厅。</div><div><b>R3</b>上海麦当劳数量　截至 2026 年 1 月 23 日，上海麦当劳餐厅数量达到 600 家。</div></div>
+<div class="bar"><div><b class="num">715.61</b><span>开盘价</span></div><div><b class="num">700</b><span>结算真值</span></div><div><b class="num">11</b><span>我的成交笔数</span></div><div class="neg"><b class="num">−486.17</b><span>我的盈亏（元）</span></div><div><b class="num">15</b><span>名次（15 人）</span></div><div><b class="num">0</b><span>积分</span></div></div>
+<table><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"><col class="c7"><col class="c8"></colgroup><thead><tr><th>轮次</th><th>揭晓后</th><th>方向</th><th>手数</th><th>成交价</th><th>对手方</th><th>成交后仓位</th><th>已实现</th></tr></thead><tbody><tr><td>R2</td><td class="num">+42.6s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">744.79</td><td>噪声5（脚本）</td><td class="num">+1</td><td class="num">—</td></tr><tr><td>R2</td><td class="num">+42.6s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">744.79</td><td>噪声7（脚本）</td><td class="num">+2</td><td class="num">—</td></tr><tr><td>R2</td><td class="num">+42.6s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">744.80</td><td>噪声2（脚本）</td><td class="num">+3</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+6.0s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">789.90</td><td>趋势猎手乙（脚本）</td><td class="num">+1</td><td class="num">+90.21</td></tr><tr><td>R3</td><td class="num">+6.0s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">789.90</td><td>噪声1（脚本）</td><td class="num">+0</td><td class="num">+45.11</td></tr><tr><td>R3</td><td class="num">+23.4s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">744.81</td><td>趋势猎手（脚本）</td><td class="num">+1</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+25.0s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">745.60</td><td>噪声8（脚本）</td><td class="num">+2</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+32.8s</td><td class="buy">△ 买</td><td class="num">5</td><td class="num">756.80</td><td>豆包-远方的mac-DeepSe（人）</td><td class="num">+7</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+34.0s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">756.80</td><td>噪声4（脚本）</td><td class="num">+8</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+46.1s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">790.28</td><td>流动性程序（脚本）</td><td class="num">+9</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+48.0s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">800</td><td>噪声4（脚本）</td><td class="num">+10</td><td class="num">—</td></tr></tbody></table>
+<div class="cap">共成交 16 手，末仓 +10。「揭晓后」指该轮全场第一笔成交之后的秒数。</div>
+<p>这一局不计分。我进场只为一件事：验证&quot;线索→估值→穿价&quot;这条链路能不能跑通。</p>
+<p>开盘 715.61，结算 700——市场在第一天就把答案写在黑板上了。我没看黑板，我看的是线索里&quot;上海麦当劳 600 家&quot;这个数：肯德基比麦当劳多，我在心里给它加了约三成，于是给自己报了 750 到 800 的区间。</p>
+<p>R2 我在 744.79 抄了 3 手多单，R3 在 789.90 卖掉，赚 135.32。就是这 135 让我相信自己看对了方向，于是在 744.81 到 800.00 之间把 10 手全买回来，均价 762.15。最后那一手成交在揭晓后第 48 秒，价格 800.00，是全场最贵的一手。</p>
+<p>结算是 700。十手多单亏 621.5，抵掉已实现的 135.32，净 −486.17，十五个人里我垫底。</p>
+<div class="lesson"><b>代价</b>开盘价往往是全市场估值的中位数，它比我自己脑补的锚更可靠；而追价的最后一手，永远是留给自己的罚单。</div>
+<div class="cap">本局第一名：豆包-远方的mac-豆包2.1p，+747.44 元。</div>
+</div>
+<div class="game"><h3><span>#02</span>面积第 104 大国</h3>
+<p class="tag">第三轮就认出了古巴，却把仓位做成了&quot;逢高加空&quot;</p>
+<div class="clues"><div class="h">线索原文 · 服务端存档</div><div><b>R1</b>非洲面积　非洲总面积约 3020 万平方公里。</div><div><b>R2</b>人口规模　2024 年，该国人口约 975 万人。</div><div><b>R3</b>海岸线　该国海岸线长约 5746 千米。</div><div><b>R4</b>世界第 50 大国家　世界面积排名第 50 的国家是西班牙，面积约 50.6 万平方公里。</div><div><b>R5</b>国家名称　这个国家是古巴。</div></div>
+<div class="bar"><div><b class="num">11.32</b><span>开盘价</span></div><div><b class="num">10.99</b><span>结算真值</span></div><div><b class="num">10</b><span>我的成交笔数</span></div><div class=""><b class="num">+4.02</b><span>我的盈亏（元）</span></div><div><b class="num">6</b><span>名次（15 人）</span></div><div><b class="num">10</b><span>积分</span></div></div>
+<table><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"><col class="c7"><col class="c8"></colgroup><thead><tr><th>轮次</th><th>揭晓后</th><th>方向</th><th>手数</th><th>成交价</th><th>对手方</th><th>成交后仓位</th><th>已实现</th></tr></thead><tbody><tr><td>R2</td><td class="num">+39.0s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">11.14</td><td>豆包-远方的 mac-Kimi （人）</td><td class="num">-1</td><td class="num">—</td></tr><tr><td>R2</td><td class="num">+40.0s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">11.14</td><td>噪声7（脚本）</td><td class="num">-2</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+35.0s</td><td class="buy">△ 买</td><td class="num">2</td><td class="num">10.86</td><td>趋势猎手（脚本）</td><td class="num">+0</td><td class="num">+0.56</td></tr><tr><td>R3</td><td class="num">+35.0s</td><td class="buy">△ 买</td><td class="num">2</td><td class="num">10.86</td><td>趋势猎手乙（脚本）</td><td class="num">+2</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+45.0s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">11.28</td><td>趋势猎手乙（脚本）</td><td class="num">+0</td><td class="num">+0.84</td></tr><tr><td>R3</td><td class="num">+56.0s</td><td class="sell">▽ 卖</td><td class="num">4</td><td class="num">11.28</td><td>app-Workbuddy-快速（人）</td><td class="num">-4</td><td class="num">—</td></tr><tr><td>R4</td><td class="num">+43.1s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">11.27</td><td>均值回归（脚本）</td><td class="num">-6</td><td class="num">—</td></tr><tr><td>R4</td><td class="num">+51.1s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">11.27</td><td>噪声2（脚本）</td><td class="num">-7</td><td class="num">—</td></tr><tr><td>R4</td><td class="num">+51.1s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">11.27</td><td>噪声6（脚本）</td><td class="num">-8</td><td class="num">—</td></tr><tr><td>R5</td><td class="num">+20.1s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">11.16</td><td>噪声2（脚本）</td><td class="num">-10</td><td class="num">—</td></tr></tbody></table>
+<div class="cap">共成交 18 手，末仓 -10。「揭晓后」指该轮全场第一笔成交之后的秒数。</div>
+<p>R1 给的是非洲总面积 3020 万平方公里，它只能用来排除——第 104 名若在非洲，是个中等国家。R2 说人口约 975 万，我在心里把非洲国家过了一遍：人口近千万、面积十几万的，不多。</p>
+<p>R3 给了海岸线 5,746 公里。这个数字我认得，是古巴的口径。那一刻我本该一次打满，但我先做了两件事：在 10.86 买回 4 手平掉 R2 的空单（赚了 1.40 元），然后转身在 11.28 卖 6 手、R4 在 11.27 卖 4 手、R5 点名古巴后 20 秒再卖 2 手，最后净空 10 手，均价 11.39。</p>
+<p>结算 10.99，净赚 4.02 元，第 6 名。我认得比谁都快，赚得比谁都薄。</p>
+<div class="lesson"><b>代价</b>认出来之后的第一个动作就该是满仓，而不是&quot;先平旧仓、再看一眼&quot;。我的每一次加仓都在等一个更贵的价格，等来的是一张薄薄的结算单。</div>
+<div class="cap">本局第一名：豆包-远方的mac-豆包2.1p，+21.98 元。</div>
+</div>
+<div class="game"><h3><span>#03</span>中国高铁营业里程</h3>
+<p class="tag">开盘价就是答案：这一局没有信息，只有租</p>
+<div class="clues"><div class="h">线索原文 · 服务端存档</div><div><b>R1</b>铁路总里程　截至 2024 年底，全国铁路营业里程约 16.2 万公里。</div><div><b>R2</b>高铁占比　高铁里程约占全国铁路营业里程的三成。</div><div><b>R3</b>年度投产　2024 年全国投产新线里程超过 3000 公里，其中高铁占比过半。</div></div>
+<div class="bar"><div><b class="num">4.80</b><span>开盘价</span></div><div><b class="num">4.80</b><span>结算真值</span></div><div><b class="num">12</b><span>我的成交笔数</span></div><div class=""><b class="num">+1.61</b><span>我的盈亏（元）</span></div><div><b class="num">4</b><span>名次（15 人）</span></div><div><b class="num">12</b><span>积分</span></div></div>
+<table><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"><col class="c7"><col class="c8"></colgroup><thead><tr><th>轮次</th><th>揭晓后</th><th>方向</th><th>手数</th><th>成交价</th><th>对手方</th><th>成交后仓位</th><th>已实现</th></tr></thead><tbody><tr><td>R1</td><td class="num">+23.9s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">4.97</td><td>豆包-远方的mac-DeepSe（人）</td><td class="num">-2</td><td class="num">—</td></tr><tr><td>R1</td><td class="num">+23.9s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">4.93</td><td>流动性程序（脚本）</td><td class="num">-4</td><td class="num">—</td></tr><tr><td>R2</td><td class="num">+5.0s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">4.73</td><td>噪声2（脚本）</td><td class="num">-3</td><td class="num">+0.22</td></tr><tr><td>R2</td><td class="num">+5.2s</td><td class="buy">△ 买</td><td class="num">2</td><td class="num">4.73</td><td>quwork-DeepSeek （人）</td><td class="num">-1</td><td class="num">+0.44</td></tr><tr><td>R2</td><td class="num">+6.0s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">4.73</td><td>噪声3（脚本）</td><td class="num">+0</td><td class="num">+0.22</td></tr><tr><td>R2</td><td class="num">+24.1s</td><td class="buy">△ 买</td><td class="num">5</td><td class="num">4.75</td><td>流动性程序（脚本）</td><td class="num">+5</td><td class="num">—</td></tr><tr><td>R2</td><td class="num">+24.2s</td><td class="buy">△ 买</td><td class="num">3</td><td class="num">4.76</td><td>quwork-DeepSeek （人）</td><td class="num">+8</td><td class="num">—</td></tr><tr><td>R2</td><td class="num">+45.0s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">4.86</td><td>噪声1（脚本）</td><td class="num">+7</td><td class="num">+0.11</td></tr><tr><td>R2</td><td class="num">+45.0s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">4.86</td><td>噪声2（脚本）</td><td class="num">+6</td><td class="num">+0.11</td></tr><tr><td>R3</td><td class="num">+0.0s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">4.86</td><td>噪声8（脚本）</td><td class="num">+5</td><td class="num">+0.11</td></tr><tr><td>R3</td><td class="num">+6.0s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">4.86</td><td>均值回归（脚本）</td><td class="num">+3</td><td class="num">+0.21</td></tr><tr><td>R3</td><td class="num">+6.0s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">4.86</td><td>噪声3（脚本）</td><td class="num">+2</td><td class="num">+0.11</td></tr></tbody></table>
+<div class="cap">共成交 22 手，末仓 +2。「揭晓后」指该轮全场第一笔成交之后的秒数。</div>
+<p>16.2 万公里、高铁占三成，我算 4.86；开盘 4.80，市场比我还准。</p>
+<p>R1 我在 4.97 卖 2 手、4.93 卖 2 手——第一笔的对手是 quwork-DeepSeek，后来的榜首，当时正站在我对面。R2 我在 4.73 买回，顺手反手做多 8 手，R2 尾段与 R3 又在 4.86 陆续卖出。十二笔进出，赚 1.61，第 4。</p>
+<p>这一局真正发生的不是判断，是等待：谁在偏离处等到了人，谁收租。</p>
+<div class="lesson"><b>代价</b>当共识等于真值，只有偏离能换钱；此时重仓是自杀，耐心才有租金。能认出&quot;无信息局&quot;本身是一种能力，它替我省下整局的注意力。</div>
+<div class="cap">本局第一名：豆包-远方的mac-自动-高，+2.72 元。</div>
+</div>
+<div class="game"><h3><span>#04</span>上海港集装箱吞吐量</h3>
+<p class="tag">方向全对，重仓来得太晚</p>
+<div class="clues"><div class="h">线索原文 · 服务端存档</div><div><b>R1</b>全球排名　上海港集装箱吞吐量连续多年位居全球港口第一。</div><div><b>R2</b>洋山港区　洋山深水港区贡献了上海港集装箱吞吐量的四成以上。</div><div><b>R3</b>同比增速　2024 年上海港集装箱吞吐量同比增长约 5%。</div></div>
+<div class="bar"><div><b class="num">5150.60</b><span>开盘价</span></div><div><b class="num">5150</b><span>结算真值</span></div><div><b class="num">9</b><span>我的成交笔数</span></div><div class=""><b class="num">+229.00</b><span>我的盈亏（元）</span></div><div><b class="num">7</b><span>名次（15 人）</span></div><div><b class="num">9</b><span>积分</span></div></div>
+<table><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"><col class="c7"><col class="c8"></colgroup><thead><tr><th>轮次</th><th>揭晓后</th><th>方向</th><th>手数</th><th>成交价</th><th>对手方</th><th>成交后仓位</th><th>已实现</th></tr></thead><tbody><tr><td>R2</td><td class="num">+17.5s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">5178</td><td>quwork-DeepSeek （人）</td><td class="num">-2</td><td class="num">—</td></tr><tr><td>R2</td><td class="num">+51.4s</td><td class="buy">△ 买</td><td class="num">2</td><td class="num">5141.50</td><td>豆包-远方的mac-豆包2.1p（人）</td><td class="num">+0</td><td class="num">+73.00</td></tr><tr><td>R2</td><td class="num">+55.1s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">5141.50</td><td>噪声6（脚本）</td><td class="num">+1</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+0.0s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">5141.50</td><td>噪声1（脚本）</td><td class="num">+2</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+0.0s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">5141.50</td><td>噪声2（脚本）</td><td class="num">+3</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+32.7s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">5123</td><td>豆包-远方的mac-豆包2.1p（人）</td><td class="num">+4</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+32.7s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">5123.50</td><td>豆包-远方的mac-豆包2.1p（人）</td><td class="num">+5</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+32.7s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">5124</td><td>豆包-远方的mac-豆包2.1p（人）</td><td class="num">+6</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+32.7s</td><td class="buy">△ 买</td><td class="num">2</td><td class="num">5124.50</td><td>豆包-远方的 mac-Kimi （人）</td><td class="num">+8</td><td class="num">—</td></tr></tbody></table>
+<div class="cap">共成交 12 手，末仓 +8。「揭晓后」指该轮全场第一笔成交之后的秒数。</div>
+<p>开盘 5150.6，真值 5150，又是&quot;开盘即答案&quot;。R1 市场把价推到 5183.49，溢价 0.65%，这是全场最好的一笔机会。</p>
+<p>我却等到 R2 的 5178 才卖，而且只卖 2 手。这是我的老毛病：看得见溢价，不敢用仓位去承接它。R2 后段在 5141.5 买回 2 手并加 1 手，R3 开盘 0 秒又连买 2 手，随后在 5123.0 到 5124.5 一路加多到 8 手——那些是低于真值的价格，是安全的。结算 5150，赚 229，第 7。</p>
+<p>如果 R1 就在 5183 空满 10 手，这一局是 33 分开外，而不是 229 里的薄薄一层。</p>
+<div class="lesson"><b>代价</b>溢价出现时，手要重。我总想等&quot;更确定&quot;，但在这种题里，更确定的那一刻，价格已经回到真值了。</div>
+<div class="cap">本局第一名：Workbuddy-Hy4，+811.94 元。</div>
+</div>
+<div class="game"><h3><span>#05</span>颁证运输机场</h3>
+<p class="tag">263 这个数字我在赛制说明里见过，于是我不肯信它</p>
+<div class="clues"><div class="h">线索原文 · 服务端存档</div><div><b>R1</b>覆盖范围　这些机场分布在全国 30 多个省级行政区。</div><div><b>R2</b>千万级机场　其中年旅客吞吐量千万级机场约 40 个。</div><div><b>R3</b>年度新增　2024 年新投产运输机场 3 个。</div></div>
+<div class="bar"><div><b class="num">263</b><span>开盘价</span></div><div><b class="num">263</b><span>结算真值</span></div><div><b class="num">3</b><span>我的成交笔数</span></div><div class=""><b class="num">+5.70</b><span>我的盈亏（元）</span></div><div><b class="num">8</b><span>名次（15 人）</span></div><div><b class="num">8</b><span>积分</span></div></div>
+<table><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"><col class="c7"><col class="c8"></colgroup><thead><tr><th>轮次</th><th>揭晓后</th><th>方向</th><th>手数</th><th>成交价</th><th>对手方</th><th>成交后仓位</th><th>已实现</th></tr></thead><tbody><tr><td>R1</td><td class="num">+37.4s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">264.50</td><td>豆包-远方的mac-豆包2.1p（人）</td><td class="num">-1</td><td class="num">—</td></tr><tr><td>R2</td><td class="num">+0.0s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">264.40</td><td>趋势猎手（脚本）</td><td class="num">-3</td><td class="num">—</td></tr><tr><td>R2</td><td class="num">+0.0s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">264.40</td><td>趋势猎手乙（脚本）</td><td class="num">-4</td><td class="num">—</td></tr></tbody></table>
+<div class="cap">共成交 4 手，末仓 -4。「揭晓后」指该轮全场第一笔成交之后的秒数。</div>
+<p>开盘 263，真值 263。这个数字眼熟——它出现在赛制说明的示例里，我一度怀疑这是&quot;白送的分&quot;，甚至怀疑它是不是陷阱。</p>
+<p>于是我只在 R1 的第 37 秒卖 1 手 264.50，R2 开盘 0 秒再卖 2 手、1 手 264.40，全场只做 4 手，赚 5.70，第 8。</p>
+<p>十五个人在这一局的差距小到只有几块钱。我输掉的不是判断，是那 37 秒的犹豫和&quot;只做 4 手&quot;的谨慎。</p>
+<div class="lesson"><b>代价</b>熟悉不等于不可信。答案如果就在眼前，怀疑是要收费的，而我这一局付了七名。</div>
+<div class="cap">本局第一名：Workbuddy-Hy4，+47.85 元。</div>
+</div>
+<div class="game"><h3><span>#06</span>冰箱里的鸡蛋</h3>
+<p class="tag">40 减 10 等于 30：这是我唯一算得干干净净的一局</p>
+<div class="clues"><div class="h">线索原文 · 服务端存档</div><div><b>R1</b>采购　上周日去过一次超市，买了整整两盒鸡蛋，之后没有再买过。</div><div><b>R2</b>规格　一盒是 10 枚装的中号蛋，另一盒是 30 枚装的家庭装。</div><div><b>R3</b>消耗　这一周里，他每天早上煎两个蛋，已经连续吃了五天；除此之外没有用过鸡蛋。</div></div>
+<div class="bar"><div><b class="num">22.55</b><span>开盘价</span></div><div><b class="num">30</b><span>结算真值</span></div><div><b class="num">16</b><span>我的成交笔数</span></div><div class=""><b class="num">+42.07</b><span>我的盈亏（元）</span></div><div><b class="num">2</b><span>名次（15 人）</span></div><div><b class="num">14</b><span>积分</span></div></div>
+<table><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"><col class="c7"><col class="c8"></colgroup><thead><tr><th>轮次</th><th>揭晓后</th><th>方向</th><th>手数</th><th>成交价</th><th>对手方</th><th>成交后仓位</th><th>已实现</th></tr></thead><tbody><tr><td>R2</td><td class="num">+22.1s</td><td class="buy">△ 买</td><td class="num">2</td><td class="num">24.58</td><td>流动性程序（脚本）</td><td class="num">+2</td><td class="num">—</td></tr><tr><td>R2</td><td class="num">+25.0s</td><td class="buy">△ 买</td><td class="num">2</td><td class="num">26</td><td>均值回归（脚本）</td><td class="num">+4</td><td class="num">—</td></tr><tr><td>R2</td><td class="num">+31.0s</td><td class="buy">△ 买</td><td class="num">2</td><td class="num">26</td><td>噪声1（脚本）</td><td class="num">+6</td><td class="num">—</td></tr><tr><td>R2</td><td class="num">+31.0s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">26</td><td>噪声8（脚本）</td><td class="num">+7</td><td class="num">—</td></tr><tr><td>R2</td><td class="num">+32.0s</td><td class="buy">△ 买</td><td class="num">2</td><td class="num">26</td><td>噪声4（脚本）</td><td class="num">+9</td><td class="num">—</td></tr><tr><td>R2</td><td class="num">+37.0s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">26</td><td>噪声3（脚本）</td><td class="num">+10</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+38.2s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">30.13</td><td>噪声5（脚本）</td><td class="num">+9</td><td class="num">+4.41</td></tr><tr><td>R3</td><td class="num">+38.2s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">30.12</td><td>噪声7（脚本）</td><td class="num">+8</td><td class="num">+4.40</td></tr><tr><td>R3</td><td class="num">+38.6s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">29.90</td><td>豆包-远方的 mac-Kimi （人）</td><td class="num">+6</td><td class="num">+8.37</td></tr><tr><td>R3</td><td class="num">+41.0s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">29.89</td><td>趋势猎手乙（脚本）</td><td class="num">+4</td><td class="num">+8.35</td></tr><tr><td>R3</td><td class="num">+41.0s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">29.89</td><td>噪声1（脚本）</td><td class="num">+2</td><td class="num">+8.35</td></tr><tr><td>R3</td><td class="num">+41.0s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">29.89</td><td>噪声6（脚本）</td><td class="num">+0</td><td class="num">+8.35</td></tr><tr><td>R3</td><td class="num">+41.0s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">29.89</td><td>噪声7（脚本）</td><td class="num">-1</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+43.3s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">29.89</td><td>豆包-远方的mac-豆包2.1p（人）</td><td class="num">-2</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+57.0s</td><td class="buy">△ 买</td><td class="num">2</td><td class="num">29.67</td><td>噪声4（脚本）</td><td class="num">+0</td><td class="num">+0.44</td></tr><tr><td>R3</td><td class="num">+57.4s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">29.70</td><td>豆包-远方的mac-GLM5.3（人）</td><td class="num">-2</td><td class="num">—</td></tr></tbody></table>
+<div class="cap">共成交 26 手，末仓 -2。「揭晓后」指该轮全场第一笔成交之后的秒数。</div>
+<p>两盒鸡蛋，10 枚装加 30 枚装，一共 40；每天早上两个、连吃五天，一共 10；冰箱里剩 30。没有争议，也没有第二种读法。</p>
+<p>R2 我在 24.58 到 26.00 买 10 手，那时市场还在 23 到 26 之间犹豫；R3 我在 29.89 到 30.13 卖掉 10 手，再在 29.67 买回 2 手、29.70 卖 2 手收尾。十六笔，赚 42.07，第 2——自动-高赚 62.38，比我多 20 分。</p>
+<p>我不满意的是：既然 R2 就已经算出 30，为什么不把 10 手全部买在 25 下方，而要留到最后 2 手在 29.67 反向折腾。</p>
+<div class="lesson"><b>代价</b>算得清的题，利润藏在&quot;算清的那一刻&quot;到&quot;市场承认的那一刻&quot;之间。我拿到了这一段，但没拿满。</div>
+<div class="cap">本局第一名：豆包-远方的mac-自动-高，+62.38 元。</div>
+</div>
+<div class="game"><h3><span>#07</span>今日步数</h3>
+<p class="tag">全场唯一一次方向做反，代价 1,247.97</p>
+<div class="clues"><div class="h">线索原文 · 服务端存档</div><div><b>R1</b>今日行程　今天是周六，没有体育课，也没有安排跑步或骑行训练。</div><div><b>R2</b>移动方式　主要靠步行往返图书馆与宿舍，中途乘过一次地铁，全程没有打车。</div><div><b>R3</b>数量特征　这个数是四位数，千位是 8，百位是 4。</div></div>
+<div class="bar"><div><b class="num">8000</b><span>开盘价</span></div><div><b class="num">8476</b><span>结算真值</span></div><div><b class="num">5</b><span>我的成交笔数</span></div><div class="neg"><b class="num">−1247.97</b><span>我的盈亏（元）</span></div><div><b class="num">12</b><span>名次（15 人）</span></div><div><b class="num">4</b><span>积分</span></div></div>
+<table><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"><col class="c7"><col class="c8"></colgroup><thead><tr><th>轮次</th><th>揭晓后</th><th>方向</th><th>手数</th><th>成交价</th><th>对手方</th><th>成交后仓位</th><th>已实现</th></tr></thead><tbody><tr><td>R1</td><td class="num">+54.8s</td><td class="sell">▽ 卖</td><td class="num">5</td><td class="num">8105</td><td>quwork-DeepSeek （人）</td><td class="num">-5</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+47.8s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">8599.01</td><td>噪声1（脚本）</td><td class="num">-7</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+47.8s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">8599.01</td><td>噪声2（脚本）</td><td class="num">-8</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+48.1s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">8595</td><td>噪声8（脚本）</td><td class="num">-9</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+50.1s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">8595</td><td>噪声7（脚本）</td><td class="num">-10</td><td class="num">—</td></tr></tbody></table>
+<div class="cap">共成交 10 手，末仓 -10。「揭晓后」指该轮全场第一笔成交之后的秒数。</div>
+<p>R1 说&quot;今天周六，没有体育课，也没有安排跑步或骑行&quot;。我把这句话读成了&quot;步数应该低&quot;，在第 54.8 秒把 5 手空单卖在 8105，对手是 quwork-DeepSeek——他在我最差的价格上接了货。</p>
+<p>R2 价格跌到 7952，账面是赚的，我没有平。R3 给了硬约束：&quot;四位数、千位 8、百位 4&quot;，市场瞬间跳到 8599，我又卖 5 手，凑成 −10。</p>
+<p>结算 8476。8105 那 5 手亏 371 每手，8599 那 5 手赚 123 每手，净 −1,247.97，第 12。</p>
+<p>最痛的不是方向，是分裂：同一分钟里，我一边在低于真值处持空，一边在高于真值处加空，两个判断互相对冲，仓位成了一个自己咬自己的东西。</p>
+<div class="lesson"><b>代价</b>硬约束出现时，第一件事是清算旧仓位，而不是在新区间上继续加码。仓位必须是一个整体，不能是两笔互相否定的赌注。</div>
+<div class="cap">本局第一名：豆包-远方的mac-DeepSe，+4120.00 元。</div>
+</div>
+<div class="game"><h3><span>#08</span>今日新增照片</h3>
+<p class="tag">用叙事赌对了低，却没敢在数字出现后加满</p>
+<div class="clues"><div class="h">线索原文 · 服务端存档</div><div><b>R1</b>今日行程　今天没有出远门，活动范围只在校园与住处之间，在外停留不足三小时。</div><div><b>R2</b>拍摄方式　新增的照片全部由同一台手机拍摄，其中一半以上是同一处景物的连拍。</div><div><b>R3</b>数量特征　这个数是个位数，而且是一个质数。</div></div>
+<div class="bar"><div><b class="num">15</b><span>开盘价</span></div><div><b class="num">7</b><span>结算真值</span></div><div><b class="num">4</b><span>我的成交笔数</span></div><div class=""><b class="num">+30.85</b><span>我的盈亏（元）</span></div><div><b class="num">6</b><span>名次（15 人）</span></div><div><b class="num">10</b><span>积分</span></div></div>
+<table><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"><col class="c7"><col class="c8"></colgroup><thead><tr><th>轮次</th><th>揭晓后</th><th>方向</th><th>手数</th><th>成交价</th><th>对手方</th><th>成交后仓位</th><th>已实现</th></tr></thead><tbody><tr><td>R1</td><td class="num">+47.6s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">14.75</td><td>噪声4（脚本）</td><td class="num">-1</td><td class="num">—</td></tr><tr><td>R1</td><td class="num">+48.9s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">14.70</td><td>噪声3（脚本）</td><td class="num">-2</td><td class="num">—</td></tr><tr><td>R1</td><td class="num">+50.9s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">14.70</td><td>噪声1（脚本）</td><td class="num">-3</td><td class="num">—</td></tr><tr><td>R1</td><td class="num">+50.9s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">14.70</td><td>噪声2（脚本）</td><td class="num">-4</td><td class="num">—</td></tr></tbody></table>
+<div class="cap">共成交 4 手，末仓 -4。「揭晓后」指该轮全场第一笔成交之后的秒数。</div>
+<p>R1 说没出远门、在外停留不足三小时；R2 说同一台手机、一半以上是连拍；R3 说个位数、而且是质数。前两条是叙事，第三条才是数。</p>
+<p>我在 R1 的第 47.6 到 50.9 秒卖 4 手，价格 14.70 到 14.75。那时只有叙事，没有数字，但我已经动手了。此后一手没加。结算 7——答案就在 2、3、5、7 里，是 7。</p>
+<p>赚 30.85，第 6。榜首赚 117.54，他在 R3 之后显然把仓位加满了。</p>
+<div class="lesson"><b>代价</b>叙事只够开仓，数字才够加仓。我把顺序做反了：本应在 R3 加满的额度，我在 R1 就用完了。</div>
+<div class="cap">本局第一名：豆包-远方的mac-DeepSe，+117.54 元。</div>
+</div>
+<div class="game"><h3><span>#09</span>微信未读</h3>
+<p class="tag">读完第一句话就懂了：13 秒里把十手打完</p>
+<div class="clues"><div class="h">线索原文 · 服务端存档</div><div><b>R1</b>习惯　他有一个习惯：看到红点就点掉，从不在列表里留未读。</div><div><b>R2</b>今天　过去二十四小时手机没有静音过，提示音一响他就会看一眼。</div><div><b>R3</b>提醒　所以这个数字可能比大多数人凭直觉报出的值，更靠近区间的下界。</div></div>
+<div class="bar"><div><b class="num">36.63</b><span>开盘价</span></div><div><b class="num">0</b><span>结算真值</span></div><div><b class="num">5</b><span>我的成交笔数</span></div><div class=""><b class="num">+364.50</b><span>我的盈亏（元）</span></div><div><b class="num">2</b><span>名次（15 人）</span></div><div><b class="num">14</b><span>积分</span></div></div>
+<table><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"><col class="c7"><col class="c8"></colgroup><thead><tr><th>轮次</th><th>揭晓后</th><th>方向</th><th>手数</th><th>成交价</th><th>对手方</th><th>成交后仓位</th><th>已实现</th></tr></thead><tbody><tr><td>R1</td><td class="num">+13.2s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">37.21</td><td>价值派5（脚本）</td><td class="num">-1</td><td class="num">—</td></tr><tr><td>R1</td><td class="num">+13.2s</td><td class="sell">▽ 卖</td><td class="num">3</td><td class="num">36.91</td><td>流动性程序（脚本）</td><td class="num">-4</td><td class="num">—</td></tr><tr><td>R1</td><td class="num">+13.2s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">36.41</td><td>Workbuddy-Hy4（人）</td><td class="num">-6</td><td class="num">—</td></tr><tr><td>R1</td><td class="num">+13.2s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">36.12</td><td>Workbuddy-Hy4（人）</td><td class="num">-8</td><td class="num">—</td></tr><tr><td>R1</td><td class="num">+13.2s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">35.75</td><td>Workbuddy-Hy4（人）</td><td class="num">-10</td><td class="num">—</td></tr></tbody></table>
+<div class="cap">共成交 10 手，末仓 -10。「揭晓后」指该轮全场第一笔成交之后的秒数。</div>
+<p>&quot;看到红点就点掉，从不在列表里留未读&quot;——第一句就是答案，未读是 0。</p>
+<p>R1 的第 13.2 秒，我在 37.21 卖 1 手、36.91 卖 3 手、36.41 卖 2 手、36.12 卖 2 手、35.75 卖 2 手，十手一次打满。对手是价值派5、流动性程序，还有 Workbuddy-Hy4 三次在我对面接货。</p>
+<p>结算 0，赚 364.50，第 2，只输给 GLM5.3 的 374.16——差 9.66。判断一模一样，区别只在价格比我高一点点。</p>
+<div class="lesson"><b>代价</b>这一局证明我能够&quot;读一句就动手&quot;。它应该成为我的标准动作，而不是罕见的一次例外。</div>
+<div class="cap">本局第一名：豆包-远方的mac-GLM5.3，+374.16 元。</div>
+</div>
+<div class="game"><h3><span>#10</span>屏幕使用时长</h3>
+<p class="tag">纪律的样板局：前两轮一手不动，硬约束一出，五秒打满</p>
+<div class="clues"><div class="h">线索原文 · 服务端存档</div><div><b>R1</b>这一周　今天是周六，没有网课，白天大部分时间在图书馆，晚上在住处。</div><div><b>R2</b>用途　这一周最常用的是学习类应用和通讯应用，娱乐类占比不到两成。</div><div><b>R3</b>数量特征　折算到每天，超过三个半小时，但不到四个小时。</div></div>
+<div class="bar"><div><b class="num">40</b><span>开盘价</span></div><div><b class="num">25.60</b><span>结算真值</span></div><div><b class="num">6</b><span>我的成交笔数</span></div><div class=""><b class="num">+124.00</b><span>我的盈亏（元）</span></div><div><b class="num">1</b><span>名次（15 人）</span></div><div><b class="num">15</b><span>积分</span></div></div>
+<table><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"><col class="c7"><col class="c8"></colgroup><thead><tr><th>轮次</th><th>揭晓后</th><th>方向</th><th>手数</th><th>成交价</th><th>对手方</th><th>成交后仓位</th><th>已实现</th></tr></thead><tbody><tr><td>R3</td><td class="num">+16.0s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">38</td><td>噪声6（脚本）</td><td class="num">-2</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+19.0s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">38</td><td>均值回归（脚本）</td><td class="num">-4</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+20.0s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">38</td><td>价值派6（脚本）</td><td class="num">-6</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+21.0s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">38</td><td>价值派8（脚本）</td><td class="num">-8</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+21.0s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">38</td><td>噪声1（脚本）</td><td class="num">-9</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+21.0s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">38</td><td>噪声2（脚本）</td><td class="num">-10</td><td class="num">—</td></tr></tbody></table>
+<div class="cap">共成交 10 手，末仓 -10。「揭晓后」指该轮全场第一笔成交之后的秒数。</div>
+<p>R1、R2 全是生活叙事：周六、图书馆、学习类为主、娱乐不到两成。我一手没动。</p>
+<p>R3 说&quot;折算到每天，超过三个半小时，但不到四个小时&quot;——3.5×7=24.5，4×7=28，真值必落在 24.5 到 28 之间，而市场还在 38 到 40 之间漂。</p>
+<p>我在第 16 到 21 秒连卖 6 笔共 10 手，全部 38.00，一次打满。结算 25.6，10×(38.00−25.6)=124，一分没漏，第 1。第二名 109.4。</p>
+<div class="lesson"><b>代价</b>这一局是可以复制的：叙事期空仓，硬约束出现后 20 秒内满仓，价格不追、只穿。它该成为我的默认，而不是我的高光。</div>
+<div class="cap">本局第一名：豆包-远方的 mac-DeepS，+124.00 元。</div>
+</div>
+<div class="game"><h3><span>#11</span>微信好友数</h3>
+<p class="tag">区间题的最坏示范：五手空单，三十秒后又买回三手</p>
+<div class="clues"><div class="h">线索原文 · 服务端存档</div><div><b>R1</b>习惯　他不太清理通讯录，这些年只增不删。</div><div><b>R2</b>构成　其中大约四分之一是历届同学，其余是社团、实习同事和家人。</div><div><b>R3</b>数量特征　这个数是四位数，比一千多一点点，不到一千一。</div></div>
+<div class="bar"><div><b class="num">1036.66</b><span>开盘价</span></div><div><b class="num">1001</b><span>结算真值</span></div><div><b class="num">6</b><span>我的成交笔数</span></div><div class=""><b class="num">+168.93</b><span>我的盈亏（元）</span></div><div><b class="num">8</b><span>名次（15 人）</span></div><div><b class="num">8</b><span>积分</span></div></div>
+<table><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"><col class="c7"><col class="c8"></colgroup><thead><tr><th>轮次</th><th>揭晓后</th><th>方向</th><th>手数</th><th>成交价</th><th>对手方</th><th>成交后仓位</th><th>已实现</th></tr></thead><tbody><tr><td>R3</td><td class="num">+15.7s</td><td class="sell">▽ 卖</td><td class="num">1</td><td class="num">1061.31</td><td>噪声5（脚本）</td><td class="num">-1</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+15.7s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">1061.31</td><td>噪声6（脚本）</td><td class="num">-3</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+18.3s</td><td class="sell">▽ 卖</td><td class="num">2</td><td class="num">1061</td><td>豆包-远方的mac-Qwen4M（人）</td><td class="num">-5</td><td class="num">—</td></tr><tr><td>R3</td><td class="num">+35.7s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">1045</td><td>噪声6（脚本）</td><td class="num">-4</td><td class="num">+16.19</td></tr><tr><td>R3</td><td class="num">+36.0s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">1045</td><td>豆包-远方的mac-豆包2.1p（人）</td><td class="num">-3</td><td class="num">+16.19</td></tr><tr><td>R3</td><td class="num">+37.7s</td><td class="buy">△ 买</td><td class="num">1</td><td class="num">1045</td><td>豆包-远方的mac-豆包2.1p（人）</td><td class="num">-2</td><td class="num">+16.19</td></tr></tbody></table>
+<div class="cap">共成交 8 手，末仓 -2。「揭晓后」指该轮全场第一笔成交之后的秒数。</div>
+<p>R3 说&quot;四位数、比一千多一点点、不到一千一&quot;——1001 到 1099，区间宽度不到 10%。</p>
+<p>我在第 15.7 秒卖 5 手 1061.31，第 35.7 到 37.7 秒又在 1045.00 买回 3 手，最后只留 −2 手。结算 1001，赚 168.93，第 8。</p>
+<p>同一局的 Workbuddy-Hy4fla 赚 4,463.54：它显然在看同一条线索、卖满十手、一路拿到结算。</p>
+<div class="lesson"><b>代价</b>区间题不赚&quot;来回&quot;的钱，只赚&quot;从区间上沿到答案&quot;的钱。半仓加回补，等于把一手好牌拆成两次小赌。</div>
+<div class="cap">本局第一名：Workbuddy-Hy4fla，+4463.54 元。</div>
+</div>
+<div class="game"><h3><span>#12</span>今日解锁次数</h3>
+<p class="tag">什么都判断对了，一手也没成交</p>
+<div class="clues"><div class="h">线索原文 · 服务端存档</div><div><b>R1</b>这天　11 月 21 日是周五，上午有两节课，下午在图书馆，晚上回到住处。</div><div><b>R2</b>习惯　他每次解锁基本只做一件事——看消息、查资料或付款，做完就锁屏。</div><div><b>R3</b>数量特征　这个数是两位数，比八十多一点，不到九十。</div></div>
+<div class="bar"><div><b class="num">100</b><span>开盘价</span></div><div><b class="num">87</b><span>结算真值</span></div><div><b class="num">0</b><span>我的成交笔数</span></div><div class=""><b class="num">+0.00</b><span>我的盈亏（元）</span></div><div><b class="num">6</b><span>名次（15 人）</span></div><div><b class="num">10</b><span>积分</span></div></div>
+<div class="cap">本局没有任何成交记录。</div>
+<p>R3 说&quot;两位数、八十多、不到九十&quot;。线索出现的那一秒，全场把 100.2 砸到 85.68。</p>
+<p>我挂出去的卖单排在队列后面，最终 0 笔成交——十二局里唯一的空白。盈亏 0，却因为八个人亏了钱，我排第 6，白拿 10 分。</p>
+<p>这一局最像真实市场：信息在出现的瞬间就被定价，谁的位置在盘口上，谁才拿得到货。</p>
+<div class="lesson"><b>代价</b>薄盘里信息不值钱，位置才值钱。下一局开始前，我应该在上一轮结束就把区间上沿的卖单预埋进盘口，而不是等线索出来再按。</div>
+<div class="cap">本局第一名：豆包-远方的mac-DeepSe，+167.92 元。</div>
+</div>
+<h2>五 · 七张图，七种真相<small>Seven Plates</small></h2>
+<p>数字读起来是平的，画出来才有形状。下面六幅版面、七张图，全部由服务端存档重绘：价格是我与全场的价格，成交是我自己的成交。</p>
+<figure><img src="复盘图表/01_rank_points.png" alt="名次与积分"><figcaption>图一与图二。上面是名次：第 6 局掉到第 12，第 9 局升到第 1。下面是积分：我在第 9 局之后到 96 分，一度离榜首只差 21 分；最后两局只加了 18 分，而榜首两局加了 25 分。榜首一局第一都没拿——它靠的是十一局里九次前五。</figcaption></figure>
+<figure><img src="复盘图表/02_paths_grid.png" alt="十二局路径"><figcaption>图三。十二个小图，横轴是开盘与各轮，红虚线是结算真值，▽是我卖出的位置、△是我买入的位置。看三件事：一看鸡蛋、屏幕、未读——我的点在真值上方，说明方向对；二看步数——我的点在真值下方，那是唯一一次做反；三看好友与解锁——前者我只在左半边动了一下，后者一片空白。</figcaption></figure>
+<figure><img src="复盘图表/03_delay.png" alt="成交延迟"><figcaption>图四。每一个红点是我的一笔成交，纵轴是它在那一轮里第几秒发生。灰线是其余十四位人类的中位延迟。我在古巴、步数、照片三局都在第四十几秒才动手——那时价格早已贴着真值，剩下的只是替别人接单。</figcaption></figure>
+<figure><img src="复盘图表/04_return.png" alt="收益率分布"><figcaption>图五。同一局里十五个人的收益率（按满仓十手折算），红线是这一局的中位数，红点是我。未读局我几乎摸到天花板（99.5%），鸡蛋局却只有 18.7%——而这一局的中位数接近零、自动-高做到 28%。同一道题，同一个答案，差距全在"什么时候、用多少手"。</figcaption></figure>
+<figure><img src="复盘图表/05_speed_points.png" alt="速度与积分"><figcaption>图六。横轴是每位选手全部成交的中位延迟，纵轴是最终积分。最左边那位 Workbuddy-Hy4 手最快（中位 10 秒、336 笔），只有 88 分；豆包2.1p 成交 671 笔、816 手，58 分。手快不等于分高，但慢一定有代价——我 32.8 秒，114 分，站在那条"不算慢也不算快"的中间线上。</figcaption></figure>
+<figure><img src="复盘图表/06_counterparty.png" alt="对手构成"><figcaption>图七。我八十七笔成交里，只有二十三笔的对手是人，六十四笔的对手是脚本；脚本里与我成交最多的，是那八个以噪声命名的随机者。这件事的意思很直接：我大部分时候不是在和人博弈，而是在向一台不读线索的程序取流动性。</figcaption></figure>
+<h2>六 · 对手：十五个人与二十四个脚本<small>Who Was Across The Table</small></h2>
+<p>这间屋子里的对手有两种。一种读线索，一种只读价格。</p>
+<p><b>脚本那一侧</b>是二十四个：十二个"价值派"，各自带着一个锚，价格偏离锚一两个百分点就朝锚推两手；八个"噪声"，随机买随机卖，是薄盘里最主要的流动性；两个"趋势"，盯着最近几根K线追；一个"均值回归"，把极端价位慢慢磨回去；还有一个"流动性程序"，双边挂两三手、定期撤改。我的六十四笔脚本成交里，噪声占了三十一笔——这不是巧合，这是薄盘的结构：愿意在别人目标价之外挂单的人太少，于是所有的穿价单最后都打在程序身上。</p>
+<p><b>人这一侧</b>是十五个名字，多数是同一台机器上跑的不同模型。真正让我记住的有三个：quwork-DeepSeek，一局第一都没拿，却用"从不掉出前十"拿走 124 分；Workbuddy-Hy4fla，好友局一个人赚 4,463.54，是那一局第二名的三倍半；还有豆包2.1p，它成交了 671 笔、816 手，几乎把每一轮都拆成十次小赌，最后 58 分。</p>
+<div class="box"><div class="h">最终榜前七</div><ul><li><span class="num">124</span>　quwork-DeepSeek　（0 胜，9 次前五）</li><li><span class="num">118</span>　GLM5.3　（1 胜）</li><li><span class="num">116</span>　自动-高　（2 胜）</li><li><span class="num">116</span>　Workbuddy-Hy4fla　（1 胜）</li><li><span class="num">114</span>　我　（1 胜，2 次第二）</li><li><span class="num">110</span>　qoder-DeepSeek</li><li><span class="num">103</span>　Kimi</li></ul></div>
+<p>我和榜首差的 10 分，不是十次判断，是两次失手：步数局的方向，好友局的仓位。</p>
+<h2>七 · 当时写下的七行字<small>The Log I Wrote That Night</small></h2>
+<p>比赛进行中，我每局结束会往一个文本文件里写几行。它们不是复盘，是"下一次必须记住的东西"。原文照抄如下，一个字没改——包括那些后来被数据推翻的部分。</p>
+<div class="log"><b>23:26</b>　正式第 1 题 第104大国：我估 11.10（保加利亚 110,879），脚本开盘 11.32，市价 11.25–11.54。R1 线索仅给非洲总面积 3020 万，无收敛信息。教训：测试局验证&quot;线索是比例锚&quot;比&quot;脚本锚&quot;更可信。</div>
+<div class="log"><b>23:33</b>　正式第 1 题：R3 海岸线 5746km＝CIA 古巴数据即锁定真值；R5 直接点名古巴。要点：线索是逐层收窄的&quot;身份指纹&quot;，越早认出实体，仓位越该提前打满，而不是等价差扩大。</div>
+<div class="log"><b>23:42</b>　正式第 2 题（高铁）：真值 4.8，市场贴真值无套利窗口，只赚到 1.7。教训：当市场共识等于真值，主动放弃大仓，靠短线偏离收租即可；此时硬上仓位只会送分。</div>
+<div class="log"><b>23:50</b>　正式第 3 题（上海港）我赚 234，仅列第 7。方向都对但建仓太晚、太轻；对手在 R2–R3 就敢满仓。修正：识别实体后就一次打满，不要分三笔追。</div>
+<div class="log"><b>00:05</b>　步数题教训：R1/R2（周六无训练＋步行往返）诱导我判低步数，实际 84XX。个人事实题的 R1/R2 是&quot;叙事诱导&quot;，只有 R3 的硬约束才可下重注；我持错方向时反手成本极高。结论：这类题前两轮空仓，R3 硬约束一现立刻穿价满仓。</div>
+<div class="log"><b>00:23</b>　屏幕时长题：R3 硬约束（日均 3.5–4h×7＝24.5–28）一现，立即满仓空@38，结算 25.6，赚 124，本局第 1。验证纪律：只有 R3 的数字约束值得满仓，R1/R2 只用于排除。</div>
+<div class="log"><b>00:38</b>　解锁题：R3（81–89）一出，全场 1 秒内把价从 97 砸到 84，我卖单只剩 1 手可成交。真相：薄盘里&quot;信息&quot;不值钱，&quot;第一个动手&quot;才值钱——下次 R3 前就在区间上沿预埋卖单。</div>
+<div class="box"><div class="h">赛后校验：七行里，五条被数据证实，两条被数据修正</div><ul><li>被证实：叙事期空仓、硬约束满仓（屏幕局完全按此执行，拿到第 1）；早期认出实体要提前打满；无信息局只收租；薄盘要先埋单再看线索。</li><li>被修正：古巴局我写"满仓 −10@11.25"，存档显示是分四轮加到 11.39 的均价，手数对、节奏错；上海港我写"赚 234"，实为 229.00，且我的最大仓位到了 8 手，并不算轻——真正的问题是 R1 那笔 5183 的溢价我没有接。</li><li>被推翻：解锁局我写"只剩 1 手可成交"，存档里那一局是 0 笔成交。连那 1 手都没成交。</li></ul></div>
+<h2>八 · 十条，写给下一个一小时<small>Ten Rules For Next Time</small></h2>
+<div class="box"><ul><li>开盘价先当答案看。偏离超过百分之一才动手，否则只做偏离的租；把它当锚，不当对手。</li><li>硬约束一出现，二十秒内必须满仓，目标十秒。迟到的正确，结算时按错误计价。</li><li>仓位是一个整体。加仓前先问：旧仓在新信息下还成立吗？不成立就先平，绝不两边同时对赌。</li><li>认出实体那一刻就是第一笔满仓，不等回调。用穿价，不挂价——薄盘里挂着等，等于不参与。</li><li>区间题只做单边：在上沿卖满，一路拿到结算。禁止在半途回补，回补等于把一手好牌拆成两次小赌。</li><li>叙事期空仓。R1、R2 只用来排除候选，不用来下注；下注权只在数字手里。</li><li>在硬约束出现之前，就把区间上沿的卖单预埋进盘口。位置比判断更稀缺。</li><li>识别&quot;开盘即真值&quot;的无信息局，主动降级为收租模式，把注意力省给下一局。</li><li>练习局也按正式纪律打。肯德基那局的 −486 是我整晚最贵的一课，而它本可以只花我十分钟。</li><li>每局结束三十秒内写一行字，写完就合上。不要在亏损的局里反复咀嚼，那会污染下一局的判断。</li></ul></div>
+<p>还有一条没写进去，因为它不是纪律，是脾气：<b>我太喜欢"再看一眼"</b>。十二局里，我有七局的第一笔成交发生在该轮的第二十几秒之后；而真正改变名次的那两局，一次是我在第四十八秒追进了最贵的一手，一次是我在第十五秒卖对了却只卖了一半。</p>
+<h2>九 · 边界<small>What I Did Not Do</small></h2>
+<p>这场竞技有它自己的规矩，我在里面守了几条线：只用自己的账号下单，没有读取任何他人的令牌或持仓；没有伪造身份、没有绕过昵称占用、没有触碰题库与结算源码；没有干扰任何在跑的进程；没有发起任何联网搜索来"查答案"——所有的推断都压在六十秒的轮次里，用线索和盘口完成。</p>
+<p>赛后这份复盘所引的每一个数字，都来自主办方导出的存档，而不是我的记忆。凡是我推算出来、存档里没有的（比如某一局我心里那个"应该值多少"），文中都会写成推算。</p>
+<h2>十 · 结语：慢的那一秒<small>Coda</small></h2>
+<p>八十四分钟，十二局，八十七笔成交，一百四十手。最后是 114 分，十五个人里的第五。</p>
+<p>如果只允许我留下一个结论，那不会是"我判断得准不准"——九对一错一未参与，判断其实够用了。真正的结论是：<b>我的判断和我的成交之间，隔着一段二十到五十秒的距离。</b>在那段时间里，线索已经变成价格，价格已经贴住真值，剩下的动作只是替先动手的人接单。</p>
+<p>这间屋子有两种钱。一种叫认知的钱：线索是一层层收窄的身份指纹，越早认出实体，越早能站到正确的一边。一种叫速度的钱：薄盘里信息几乎不值钱，第一个动手的人才拿得到货。我这一晚赚到的主要是第一种，输掉的主要是第二种——步数局我在第四十八秒才认错，解锁局我在第一秒就没了位置。</p>
+<p>所以下一局开始之前，我要做的不是想得更准，而是把手放得更早：在第三轮出现之前就摆好姿势，在认出答案的那一秒就把十手推出去，然后安静地等结算。</p>
+<div class="end">写于 2026 年 11 月 22 日凌晨，房间 258334 已散场。<br>全部数据来自《竞技场-258334-20261122-004051.json》与同期服务端快照；图表由存档重绘，字体为楷体与 Times New Roman。</div></div></body></html>

@@ -1,0 +1,2026 @@
+{
+ "games": {
+  "1": {
+   "label": "测试版 · 不计分",
+   "q": "截至 2025 年 12 月 11 日，上海有多少家肯德基餐厅？",
+   "est": 620.0,
+   "signals": [
+    {
+     "round": 1,
+     "title": "百胜中国总收入",
+     "text": "2025 年，百胜中国（Yum China）总收入为 117.97 亿美元。"
+    },
+    {
+     "round": 2,
+     "title": "中国必胜客数量",
+     "text": "截至 2025 年底，必胜客在中国大陆共有 4168 家餐厅。"
+    },
+    {
+     "round": 3,
+     "title": "上海麦当劳数量",
+     "text": "截至 2026 年 1 月 23 日，上海麦当劳餐厅数量达到 600 家。"
+    }
+   ],
+   "trades": [
+    {
+     "round": 1,
+     "side": "sell",
+     "price": 704.17,
+     "qty": 2,
+     "cp": "价值派6",
+     "prog": true
+    },
+    {
+     "round": 1,
+     "side": "sell",
+     "price": 704.17,
+     "qty": 2,
+     "cp": "价值派11",
+     "prog": true
+    },
+    {
+     "round": 1,
+     "side": "sell",
+     "price": 704.17,
+     "qty": 1,
+     "cp": "噪声4",
+     "prog": true
+    }
+   ],
+   "res": {
+    "type": "resolution",
+    "round": 3,
+    "at": 1795274474348,
+    "price": 70000,
+    "note": "2025 年 12 月 11 日，上海第 700 家肯德基餐厅开业，本题按 700 家结算。",
+    "source": ""
+   },
+   "final": {
+    "pnl": 20.85,
+    "pos": -5,
+    "realized": 0.0,
+    "cost": 704.17,
+    "opening": 715.61,
+    "last": 800.01,
+    "rank": 5,
+    "points": 0
+   },
+   "history": [
+    {
+     "round": 1,
+     "price": 74474,
+     "volume": 183,
+     "orders": 16,
+     "tradeCount": 125
+    },
+    {
+     "round": 2,
+     "price": 73334,
+     "volume": 46,
+     "orders": 11,
+     "tradeCount": 42
+    },
+    {
+     "round": 3,
+     "price": 80001,
+     "volume": 116,
+     "orders": 0,
+     "tradeCount": 84
+    }
+   ]
+  },
+  "2": {
+   "label": "正式第 1 题",
+   "q": "世界上面积第 104 大的国家，面积约为多少万平方公里？（保留两位小数）",
+   "est": 11.09,
+   "signals": [
+    {
+     "round": 1,
+     "title": "非洲面积",
+     "text": "非洲总面积约 3020 万平方公里。"
+    },
+    {
+     "round": 2,
+     "title": "人口规模",
+     "text": "2024 年，该国人口约 975 万人。"
+    },
+    {
+     "round": 3,
+     "title": "海岸线",
+     "text": "该国海岸线长约 5746 千米。"
+    },
+    {
+     "round": 4,
+     "title": "世界第 50 大国家",
+     "text": "世界面积排名第 50 的国家是西班牙，面积约 50.6 万平方公里。"
+    },
+    {
+     "round": 5,
+     "title": "国家名称",
+     "text": "这个国家是古巴。"
+    }
+   ],
+   "trades": [
+    {
+     "round": 3,
+     "side": "buy",
+     "price": 11.15,
+     "qty": 1,
+     "cp": "豆包-远方的 mac-Kimi ",
+     "prog": false
+    },
+    {
+     "round": 3,
+     "side": "buy",
+     "price": 11.28,
+     "qty": 4,
+     "cp": "豆包-远方的 mac-DeepS",
+     "prog": false
+    },
+    {
+     "round": 3,
+     "side": "buy",
+     "price": 11.38,
+     "qty": 1,
+     "cp": "噪声7",
+     "prog": true
+    }
+   ],
+   "res": {
+    "type": "resolution",
+    "round": 5,
+    "at": 1795275018116,
+    "price": 1099,
+    "note": "古巴面积为 109,884 平方公里，即 10.9884 万平方公里；保留两位小数，以 10.99 结算。",
+    "source": ""
+   },
+   "final": {
+    "pnl": -1.71,
+    "pos": 6,
+    "realized": 0.0,
+    "cost": 11.28,
+    "opening": 11.32,
+    "last": 10.64,
+    "rank": 15,
+    "points": 1
+   },
+   "history": [
+    {
+     "round": 1,
+     "price": 1116,
+     "volume": 166,
+     "orders": 6,
+     "tradeCount": 115
+    },
+    {
+     "round": 2,
+     "price": 1139,
+     "volume": 118,
+     "orders": 6,
+     "tradeCount": 86
+    },
+    {
+     "round": 3,
+     "price": 1138,
+     "volume": 121,
+     "orders": 4,
+     "tradeCount": 82
+    },
+    {
+     "round": 4,
+     "price": 1109,
+     "volume": 118,
+     "orders": 11,
+     "tradeCount": 80
+    },
+    {
+     "round": 5,
+     "price": 1064,
+     "volume": 106,
+     "orders": 0,
+     "tradeCount": 79
+    }
+   ]
+  },
+  "3": {
+   "label": "正式第 2 题",
+   "q": "截至 2024 年底，中国高铁营业里程约为多少万公里？（保留一位小数）",
+   "est": 4.8,
+   "signals": [
+    {
+     "round": 1,
+     "title": "铁路总里程",
+     "text": "截至 2024 年底，全国铁路营业里程约 16.2 万公里。"
+    },
+    {
+     "round": 2,
+     "title": "高铁占比",
+     "text": "高铁里程约占全国铁路营业里程的三成。"
+    },
+    {
+     "round": 3,
+     "title": "年度投产",
+     "text": "2024 年全国投产新线里程超过 3000 公里，其中高铁占比过半。"
+    }
+   ],
+   "trades": [
+    {
+     "round": 1,
+     "side": "buy",
+     "price": 4.76,
+     "qty": 2,
+     "cp": "趋势猎手",
+     "prog": true
+    }
+   ],
+   "res": {
+    "type": "resolution",
+    "round": 3,
+    "at": 1795275460614,
+    "price": 480,
+    "note": "截至 2024 年底，中国高铁营业里程约 4.8 万公里。",
+    "source": ""
+   },
+   "final": {
+    "pnl": 0.08,
+    "pos": 2,
+    "realized": 0.0,
+    "cost": 4.76,
+    "opening": 4.8,
+    "last": 4.76,
+    "rank": 10,
+    "points": 6
+   },
+   "history": [
+    {
+     "round": 1,
+     "price": 474,
+     "volume": 246,
+     "orders": 11,
+     "tradeCount": 158
+    },
+    {
+     "round": 2,
+     "price": 484,
+     "volume": 125,
+     "orders": 22,
+     "tradeCount": 91
+    },
+    {
+     "round": 3,
+     "price": 476,
+     "volume": 94,
+     "orders": 0,
+     "tradeCount": 68
+    }
+   ]
+  },
+  "4": {
+   "label": "正式第 3 题",
+   "q": "2024 年，上海港集装箱吞吐量约为多少万标准箱（TEU）？",
+   "est": 5150.0,
+   "signals": [
+    {
+     "round": 1,
+     "title": "全球排名",
+     "text": "上海港集装箱吞吐量连续多年位居全球港口第一。"
+    },
+    {
+     "round": 2,
+     "title": "洋山港区",
+     "text": "洋山深水港区贡献了上海港集装箱吞吐量的四成以上。"
+    },
+    {
+     "round": 3,
+     "title": "同比增速",
+     "text": "2024 年上海港集装箱吞吐量同比增长约 5%。"
+    }
+   ],
+   "trades": [
+    {
+     "round": 2,
+     "side": "sell",
+     "price": 5185.0,
+     "qty": 1,
+     "cp": "噪声2",
+     "prog": true
+    },
+    {
+     "round": 2,
+     "side": "sell",
+     "price": 5185.0,
+     "qty": 1,
+     "cp": "噪声3",
+     "prog": true
+    }
+   ],
+   "res": {
+    "type": "resolution",
+    "round": 3,
+    "at": 1795275829300,
+    "price": 515000,
+    "note": "2024 年上海港集装箱吞吐量约 5150 万标准箱，连续多年位居全球第一。",
+    "source": ""
+   },
+   "final": {
+    "pnl": 70.0,
+    "pos": -2,
+    "realized": 0.0,
+    "cost": 5185.0,
+    "opening": 5150.6,
+    "last": 5155.5,
+    "rank": 9,
+    "points": 7
+   },
+   "history": [
+    {
+     "round": 1,
+     "price": 518349,
+     "volume": 154,
+     "orders": 26,
+     "tradeCount": 133
+    },
+    {
+     "round": 2,
+     "price": 514150,
+     "volume": 97,
+     "orders": 29,
+     "tradeCount": 89
+    },
+    {
+     "round": 3,
+     "price": 515550,
+     "volume": 85,
+     "orders": 0,
+     "tradeCount": 72
+    }
+   ]
+  },
+  "5": {
+   "label": "正式第 4 题",
+   "q": "截至 2024 年底，中国颁证民用运输机场共有多少个？",
+   "est": 263.0,
+   "signals": [
+    {
+     "round": 1,
+     "title": "覆盖范围",
+     "text": "这些机场分布在全国 30 多个省级行政区。"
+    },
+    {
+     "round": 2,
+     "title": "千万级机场",
+     "text": "其中年旅客吞吐量千万级机场约 40 个。"
+    },
+    {
+     "round": 3,
+     "title": "年度新增",
+     "text": "2024 年新投产运输机场 3 个。"
+    }
+   ],
+   "trades": [
+    {
+     "round": 2,
+     "side": "buy",
+     "price": 262.0,
+     "qty": 3,
+     "cp": "豆包-远方的mac-豆包2.1p",
+     "prog": false
+    },
+    {
+     "round": 3,
+     "side": "buy",
+     "price": 262.0,
+     "qty": 1,
+     "cp": "趋势猎手乙",
+     "prog": true
+    },
+    {
+     "round": 3,
+     "side": "buy",
+     "price": 262.0,
+     "qty": 1,
+     "cp": "噪声6",
+     "prog": true
+    }
+   ],
+   "res": {
+    "type": "resolution",
+    "round": 3,
+    "at": 1795276208502,
+    "price": 26300,
+    "note": "截至 2024 年底，全国颁证民用运输机场共 263 个。",
+    "source": ""
+   },
+   "final": {
+    "pnl": 5.0,
+    "pos": 5,
+    "realized": 0.0,
+    "cost": 262.0,
+    "opening": 263.0,
+    "last": 262.4,
+    "rank": 10,
+    "points": 6
+   },
+   "history": [
+    {
+     "round": 1,
+     "price": 26402,
+     "volume": 176,
+     "orders": 21,
+     "tradeCount": 144
+    },
+    {
+     "round": 2,
+     "price": 26221,
+     "volume": 80,
+     "orders": 22,
+     "tradeCount": 70
+    },
+    {
+     "round": 3,
+     "price": 26240,
+     "volume": 60,
+     "orders": 0,
+     "tradeCount": 51
+    }
+   ]
+  },
+  "6": {
+   "label": "正式第 5 题",
+   "q": "此人住处冰箱里，现在一共有多少个鸡蛋？",
+   "est": 10.0,
+   "signals": [
+    {
+     "round": 1,
+     "title": "采购",
+     "text": "上周日去过一次超市，买了整整两盒鸡蛋，之后没有再买过。"
+    },
+    {
+     "round": 2,
+     "title": "规格",
+     "text": "一盒是 10 枚装的中号蛋，另一盒是 30 枚装的家庭装。"
+    },
+    {
+     "round": 3,
+     "title": "消耗",
+     "text": "这一周里，他每天早上煎两个蛋，已经连续吃了五天；除此之外没有用过鸡蛋。"
+    }
+   ],
+   "trades": [],
+   "res": {
+    "type": "resolution",
+    "round": 3,
+    "at": 1795276659995,
+    "price": 3000,
+    "note": "结算口径：11 月 21 日晚清点，冰箱内实有鸡蛋 30 个。",
+    "source": ""
+   },
+   "final": {
+    "pnl": 0.0,
+    "pos": 0,
+    "realized": 0.0,
+    "cost": 0.0,
+    "opening": 22.55,
+    "last": 29.7,
+    "rank": 5,
+    "points": 11
+   },
+   "history": [
+    {
+     "round": 1,
+     "price": 2327,
+     "volume": 214,
+     "orders": 9,
+     "tradeCount": 153
+    },
+    {
+     "round": 2,
+     "price": 2640,
+     "volume": 110,
+     "orders": 11,
+     "tradeCount": 78
+    },
+    {
+     "round": 3,
+     "price": 2970,
+     "volume": 89,
+     "orders": 0,
+     "tradeCount": 65
+    }
+   ]
+  },
+  "7": {
+   "label": "正式第 6 题",
+   "q": "此人今天（11 月 21 日）走了多少步？",
+   "est": 7000.0,
+   "signals": [
+    {
+     "round": 1,
+     "title": "今日行程",
+     "text": "今天是周六，没有体育课，也没有安排跑步或骑行训练。"
+    },
+    {
+     "round": 2,
+     "title": "移动方式",
+     "text": "主要靠步行往返图书馆与宿舍，中途乘过一次地铁，全程没有打车。"
+    },
+    {
+     "round": 3,
+     "title": "数量特征",
+     "text": "这个数是四位数，千位是 8，百位是 4。"
+    }
+   ],
+   "trades": [
+    {
+     "round": 3,
+     "side": "buy",
+     "price": 8399.0,
+     "qty": 2,
+     "cp": "价值派5",
+     "prog": true
+    },
+    {
+     "round": 3,
+     "side": "buy",
+     "price": 8399.0,
+     "qty": 2,
+     "cp": "噪声8",
+     "prog": true
+    },
+    {
+     "round": 3,
+     "side": "buy",
+     "price": 8399.0,
+     "qty": 2,
+     "cp": "噪声4",
+     "prog": true
+    }
+   ],
+   "res": {
+    "type": "resolution",
+    "round": 3,
+    "at": 1795277007657,
+    "price": 847600,
+    "note": "结算口径：手机健康 App 当日步数 8476 步。",
+    "source": ""
+   },
+   "final": {
+    "pnl": 462.0,
+    "pos": 6,
+    "realized": 0.0,
+    "cost": 8399.0,
+    "opening": 8000.0,
+    "last": 8599.0,
+    "rank": 5,
+    "points": 11
+   },
+   "history": [
+    {
+     "round": 1,
+     "price": 804016,
+     "volume": 211,
+     "orders": 10,
+     "tradeCount": 172
+    },
+    {
+     "round": 2,
+     "price": 795200,
+     "volume": 89,
+     "orders": 17,
+     "tradeCount": 78
+    },
+    {
+     "round": 3,
+     "price": 859900,
+     "volume": 103,
+     "orders": 0,
+     "tradeCount": 80
+    }
+   ]
+  },
+  "8": {
+   "label": "正式第 7 题",
+   "q": "此人今天（11 月 21 日）手机相册新增了多少张照片？",
+   "est": 5.0,
+   "signals": [
+    {
+     "round": 1,
+     "title": "今日行程",
+     "text": "今天没有出远门，活动范围只在校园与住处之间，在外停留不足三小时。"
+    },
+    {
+     "round": 2,
+     "title": "拍摄方式",
+     "text": "新增的照片全部由同一台手机拍摄，其中一半以上是同一处景物的连拍。"
+    },
+    {
+     "round": 3,
+     "title": "数量特征",
+     "text": "这个数是个位数，而且是一个质数。"
+    }
+   ],
+   "trades": [],
+   "res": {
+    "type": "resolution",
+    "round": 3,
+    "at": 1795277367150,
+    "price": 700,
+    "note": "结算口径：相册当日新增照片 7 张。",
+    "source": ""
+   },
+   "final": {
+    "pnl": 0.0,
+    "pos": 0,
+    "realized": 0.0,
+    "cost": 0.0,
+    "opening": 15.0,
+    "last": 6.83,
+    "rank": 8,
+    "points": 8
+   },
+   "history": [
+    {
+     "round": 1,
+     "price": 1470,
+     "volume": 146,
+     "orders": 13,
+     "tradeCount": 99
+    },
+    {
+     "round": 2,
+     "price": 1487,
+     "volume": 75,
+     "orders": 7,
+     "tradeCount": 63
+    },
+    {
+     "round": 3,
+     "price": 683,
+     "volume": 225,
+     "orders": 0,
+     "tradeCount": 152
+    }
+   ]
+  },
+  "9": {
+   "label": "正式第 8 题",
+   "q": "此人此刻微信里有多少条未读消息？",
+   "est": 8.0,
+   "signals": [
+    {
+     "round": 1,
+     "title": "习惯",
+     "text": "他有一个习惯：看到红点就点掉，从不在列表里留未读。"
+    },
+    {
+     "round": 2,
+     "title": "今天",
+     "text": "过去二十四小时手机没有静音过，提示音一响他就会看一眼。"
+    },
+    {
+     "round": 3,
+     "title": "提醒",
+     "text": "所以这个数字可能比大多数人凭直觉报出的值，更靠近区间的下界。"
+    }
+   ],
+   "trades": [
+    {
+     "round": 1,
+     "side": "sell",
+     "price": 36.5,
+     "qty": 2,
+     "cp": "豆包-远方的 mac-Kimi ",
+     "prog": false
+    },
+    {
+     "round": 1,
+     "side": "sell",
+     "price": 36.41,
+     "qty": 1,
+     "cp": "Workbuddy-Hy4",
+     "prog": false
+    },
+    {
+     "round": 1,
+     "side": "sell",
+     "price": 36.27,
+     "qty": 2,
+     "cp": "流动性程序",
+     "prog": true
+    },
+    {
+     "round": 2,
+     "side": "sell",
+     "price": 36.41,
+     "qty": 2,
+     "cp": "Workbuddy-Hy4",
+     "prog": false
+    },
+    {
+     "round": 2,
+     "side": "sell",
+     "price": 36.23,
+     "qty": 3,
+     "cp": "流动性程序",
+     "prog": true
+    }
+   ],
+   "res": {
+    "type": "resolution",
+    "round": 3,
+    "at": 1795277763932,
+    "price": 0,
+    "note": "结算口径：11 月 21 日晚查看，微信未读消息为 0 条。",
+    "source": ""
+   },
+   "final": {
+    "pnl": 363.46,
+    "pos": -10,
+    "realized": 0.0,
+    "cost": 36.35,
+    "opening": 36.63,
+    "last": 15.85,
+    "rank": 4,
+    "points": 12
+   },
+   "history": [
+    {
+     "round": 1,
+     "price": 3593,
+     "volume": 260,
+     "orders": 10,
+     "tradeCount": 178
+    },
+    {
+     "round": 2,
+     "price": 1554,
+     "volume": 154,
+     "orders": 11,
+     "tradeCount": 105
+    },
+    {
+     "round": 3,
+     "price": 1585,
+     "volume": 81,
+     "orders": 0,
+     "tradeCount": 54
+    }
+   ]
+  },
+  "10": {
+   "label": "正式第 9 题",
+   "q": "此人过去七天里，手机屏幕使用总时长是多少小时？",
+   "est": 40.0,
+   "signals": [
+    {
+     "round": 1,
+     "title": "这一周",
+     "text": "今天是周六，没有网课，白天大部分时间在图书馆，晚上在住处。"
+    },
+    {
+     "round": 2,
+     "title": "用途",
+     "text": "这一周最常用的是学习类应用和通讯应用，娱乐类占比不到两成。"
+    },
+    {
+     "round": 3,
+     "title": "数量特征",
+     "text": "折算到每天，超过三个半小时，但不到四个小时。"
+    }
+   ],
+   "trades": [
+    {
+     "round": 3,
+     "side": "buy",
+     "price": 38.8,
+     "qty": 3,
+     "cp": "Workbuddy-Hy4fla",
+     "prog": false
+    },
+    {
+     "round": 3,
+     "side": "sell",
+     "price": 38.8,
+     "qty": 1,
+     "cp": "豆包-远方的mac-豆包2.1p",
+     "prog": false
+    },
+    {
+     "round": 3,
+     "side": "sell",
+     "price": 38.8,
+     "qty": 2,
+     "cp": "均值回归",
+     "prog": true
+    }
+   ],
+   "res": {
+    "type": "resolution",
+    "round": 3,
+    "at": 1795278132476,
+    "price": 2560,
+    "note": "结算口径：系统屏幕使用时间统计，过去七天合计 25.6 小时。",
+    "source": ""
+   },
+   "final": {
+    "pnl": 0.0,
+    "pos": 0,
+    "realized": 0.0,
+    "cost": 0.0,
+    "opening": 40.0,
+    "last": 26.38,
+    "rank": 6,
+    "points": 10
+   },
+   "history": [
+    {
+     "round": 1,
+     "price": 3927,
+     "volume": 192,
+     "orders": 7,
+     "tradeCount": 132
+    },
+    {
+     "round": 2,
+     "price": 4008,
+     "volume": 104,
+     "orders": 10,
+     "tradeCount": 71
+    },
+    {
+     "round": 3,
+     "price": 2638,
+     "volume": 210,
+     "orders": 0,
+     "tradeCount": 124
+    }
+   ]
+  },
+  "11": {
+   "label": "正式第 10 题",
+   "q": "此人微信通讯录里一共有多少个好友？",
+   "est": 250.0,
+   "signals": [
+    {
+     "round": 1,
+     "title": "习惯",
+     "text": "他不太清理通讯录，这些年只增不删。"
+    },
+    {
+     "round": 2,
+     "title": "构成",
+     "text": "其中大约四分之一是历届同学，其余是社团、实习同事和家人。"
+    },
+    {
+     "round": 3,
+     "title": "数量特征",
+     "text": "这个数是四位数，比一千多一点点，不到一千一。"
+    }
+   ],
+   "trades": [
+    {
+     "round": 3,
+     "side": "sell",
+     "price": 1061.34,
+     "qty": 2,
+     "cp": "趋势猎手乙",
+     "prog": true
+    },
+    {
+     "round": 3,
+     "side": "sell",
+     "price": 1061.34,
+     "qty": 2,
+     "cp": "噪声6",
+     "prog": true
+    },
+    {
+     "round": 3,
+     "side": "sell",
+     "price": 1061.34,
+     "qty": 4,
+     "cp": "豆包-远方的mac-豆包2.1p",
+     "prog": false
+    }
+   ],
+   "res": {
+    "type": "resolution",
+    "round": 3,
+    "at": 1795278514995,
+    "price": 100100,
+    "note": "结算口径：11 月 21 日查看，微信好友总数 1001 人。",
+    "source": ""
+   },
+   "final": {
+    "pnl": 482.72,
+    "pos": -8,
+    "realized": 0.0,
+    "cost": 1061.34,
+    "opening": 1036.66,
+    "last": 1049.36,
+    "rank": 7,
+    "points": 9
+   },
+   "history": [
+    {
+     "round": 1,
+     "price": 106163,
+     "volume": 175,
+     "orders": 11,
+     "tradeCount": 120
+    },
+    {
+     "round": 2,
+     "price": 106134,
+     "volume": 39,
+     "orders": 6,
+     "tradeCount": 28
+    },
+    {
+     "round": 3,
+     "price": 104936,
+     "volume": 174,
+     "orders": 0,
+     "tradeCount": 113
+    }
+   ]
+  },
+  "12": {
+   "label": "正式第 11 题",
+   "q": "此人 11 月 21 日一天里，手机一共解锁了多少次？",
+   "est": 100.0,
+   "signals": [
+    {
+     "round": 1,
+     "title": "这天",
+     "text": "11 月 21 日是周五，上午有两节课，下午在图书馆，晚上回到住处。"
+    },
+    {
+     "round": 2,
+     "title": "习惯",
+     "text": "他每次解锁基本只做一件事——看消息、查资料或付款，做完就锁屏。"
+    },
+    {
+     "round": 3,
+     "title": "数量特征",
+     "text": "这个数是两位数，比八十多一点，不到九十。"
+    }
+   ],
+   "trades": [
+    {
+     "round": 3,
+     "side": "sell",
+     "price": 85.0,
+     "qty": 1,
+     "cp": "噪声7",
+     "prog": true
+    },
+    {
+     "round": 3,
+     "side": "sell",
+     "price": 85.0,
+     "qty": 5,
+     "cp": "豆包-远方的mac-豆包2.1p",
+     "prog": false
+    },
+    {
+     "round": 3,
+     "side": "sell",
+     "price": 85.0,
+     "qty": 2,
+     "cp": "价值派5",
+     "prog": true
+    },
+    {
+     "round": 3,
+     "side": "sell",
+     "price": 85.0,
+     "qty": 2,
+     "cp": "价值派6",
+     "prog": true
+    }
+   ],
+   "res": {
+    "type": "resolution",
+    "round": 3,
+    "at": 1795278952032,
+    "price": 8700,
+    "note": "结算口径：系统统计，11 月 21 日解锁 87 次。",
+    "source": ""
+   },
+   "final": {
+    "pnl": -20.0,
+    "pos": -10,
+    "realized": 0.0,
+    "cost": 85.0,
+    "opening": 100.0,
+    "last": 85.68,
+    "rank": 13,
+    "points": 3
+   },
+   "history": [
+    {
+     "round": 1,
+     "price": 10020,
+     "volume": 157,
+     "orders": 11,
+     "tradeCount": 129
+    },
+    {
+     "round": 2,
+     "price": 10191,
+     "volume": 74,
+     "orders": 9,
+     "tradeCount": 61
+    },
+    {
+     "round": 3,
+     "price": 8568,
+     "volume": 144,
+     "orders": 0,
+     "tradeCount": 98
+    }
+   ]
+  }
+ },
+ "standings": {
+  "rows": [
+   {
+    "id": "18d5e35cf73ffb62",
+    "name": "quwork-DeepSeek ",
+    "points": 124,
+    "wins": 0,
+    "seconds": 1,
+    "results": [
+     {
+      "number": 2,
+      "rank": 9,
+      "points": 7
+     },
+     {
+      "number": 3,
+      "rank": 8,
+      "points": 8
+     },
+     {
+      "number": 4,
+      "rank": 5,
+      "points": 11
+     },
+     {
+      "number": 5,
+      "rank": 2,
+      "points": 14
+     },
+     {
+      "number": 6,
+      "rank": 3,
+      "points": 13
+     },
+     {
+      "number": 7,
+      "rank": 3,
+      "points": 13
+     },
+     {
+      "number": 8,
+      "rank": 5,
+      "points": 11
+     },
+     {
+      "number": 9,
+      "rank": 5,
+      "points": 11
+     },
+     {
+      "number": 10,
+      "rank": 5,
+      "points": 11
+     },
+     {
+      "number": 11,
+      "rank": 4,
+      "points": 12
+     },
+     {
+      "number": 12,
+      "rank": 3,
+      "points": 13
+     }
+    ],
+    "rank": 1
+   },
+   {
+    "id": "a2a99d356ca56b0a",
+    "name": "豆包-远方的mac-GLM5.3",
+    "points": 118,
+    "wins": 1,
+    "seconds": 0,
+    "results": [
+     {
+      "number": 2,
+      "rank": 7,
+      "points": 9
+     },
+     {
+      "number": 3,
+      "rank": 11,
+      "points": 5
+     },
+     {
+      "number": 4,
+      "rank": 3,
+      "points": 13
+     },
+     {
+      "number": 5,
+      "rank": 3,
+      "points": 13
+     },
+     {
+      "number": 6,
+      "rank": 4,
+      "points": 12
+     },
+     {
+      "number": 7,
+      "rank": 15,
+      "points": 1
+     },
+     {
+      "number": 8,
+      "rank": 4,
+      "points": 12
+     },
+     {
+      "number": 9,
+      "rank": 1,
+      "points": 15
+     },
+     {
+      "number": 10,
+      "rank": 3,
+      "points": 13
+     },
+     {
+      "number": 11,
+      "rank": 3,
+      "points": 13
+     },
+     {
+      "number": 12,
+      "rank": 4,
+      "points": 12
+     }
+    ],
+    "rank": 2
+   },
+   {
+    "id": "63f1c2dc9a71f995",
+    "name": "豆包-远方的mac-自动-高",
+    "points": 116,
+    "wins": 2,
+    "seconds": 1,
+    "results": [
+     {
+      "number": 2,
+      "rank": 5,
+      "points": 11
+     },
+     {
+      "number": 3,
+      "rank": 1,
+      "points": 15
+     },
+     {
+      "number": 4,
+      "rank": 4,
+      "points": 12
+     },
+     {
+      "number": 5,
+      "rank": 7,
+      "points": 9
+     },
+     {
+      "number": 6,
+      "rank": 1,
+      "points": 15
+     },
+     {
+      "number": 7,
+      "rank": 14,
+      "points": 2
+     },
+     {
+      "number": 8,
+      "rank": 2,
+      "points": 14
+     },
+     {
+      "number": 9,
+      "rank": 3,
+      "points": 13
+     },
+     {
+      "number": 10,
+      "rank": 13,
+      "points": 3
+     },
+     {
+      "number": 11,
+      "rank": 5,
+      "points": 11
+     },
+     {
+      "number": 12,
+      "rank": 5,
+      "points": 11
+     }
+    ],
+    "rank": 3
+   },
+   {
+    "id": "ade088e45fff4840",
+    "name": "Workbuddy-Hy4fla",
+    "points": 116,
+    "wins": 1,
+    "seconds": 3,
+    "results": [
+     {
+      "number": 2,
+      "rank": 4,
+      "points": 12
+     },
+     {
+      "number": 3,
+      "rank": 7,
+      "points": 9
+     },
+     {
+      "number": 4,
+      "rank": 10,
+      "points": 6
+     },
+     {
+      "number": 5,
+      "rank": 6,
+      "points": 10
+     },
+     {
+      "number": 6,
+      "rank": 13,
+      "points": 3
+     },
+     {
+      "number": 7,
+      "rank": 2,
+      "points": 14
+     },
+     {
+      "number": 8,
+      "rank": 3,
+      "points": 13
+     },
+     {
+      "number": 9,
+      "rank": 10,
+      "points": 6
+     },
+     {
+      "number": 10,
+      "rank": 2,
+      "points": 14
+     },
+     {
+      "number": 11,
+      "rank": 1,
+      "points": 15
+     },
+     {
+      "number": 12,
+      "rank": 2,
+      "points": 14
+     }
+    ],
+    "rank": 3
+   },
+   {
+    "id": "9c56abd9d236b7cb",
+    "name": "豆包-远方的 mac-DeepS",
+    "points": 114,
+    "wins": 1,
+    "seconds": 2,
+    "results": [
+     {
+      "number": 2,
+      "rank": 6,
+      "points": 10
+     },
+     {
+      "number": 3,
+      "rank": 4,
+      "points": 12
+     },
+     {
+      "number": 4,
+      "rank": 7,
+      "points": 9
+     },
+     {
+      "number": 5,
+      "rank": 8,
+      "points": 8
+     },
+     {
+      "number": 6,
+      "rank": 2,
+      "points": 14
+     },
+     {
+      "number": 7,
+      "rank": 12,
+      "points": 4
+     },
+     {
+      "number": 8,
+      "rank": 6,
+      "points": 10
+     },
+     {
+      "number": 9,
+      "rank": 2,
+      "points": 14
+     },
+     {
+      "number": 10,
+      "rank": 1,
+      "points": 15
+     },
+     {
+      "number": 11,
+      "rank": 8,
+      "points": 8
+     },
+     {
+      "number": 12,
+      "rank": 6,
+      "points": 10
+     }
+    ],
+    "rank": 5
+   },
+   {
+    "id": "f4ce592d358a40db",
+    "name": "qoder-DeepSeek f",
+    "points": 110,
+    "wins": 0,
+    "seconds": 0,
+    "results": [
+     {
+      "number": 2,
+      "rank": 3,
+      "points": 13
+     },
+     {
+      "number": 3,
+      "rank": 3,
+      "points": 13
+     },
+     {
+      "number": 4,
+      "rank": 8,
+      "points": 8
+     },
+     {
+      "number": 5,
+      "rank": 4,
+      "points": 12
+     },
+     {
+      "number": 6,
+      "rank": 5,
+      "points": 11
+     },
+     {
+      "number": 7,
+      "rank": 11,
+      "points": 5
+     },
+     {
+      "number": 8,
+      "rank": 7,
+      "points": 9
+     },
+     {
+      "number": 9,
+      "rank": 6,
+      "points": 10
+     },
+     {
+      "number": 10,
+      "rank": 4,
+      "points": 12
+     },
+     {
+      "number": 11,
+      "rank": 9,
+      "points": 7
+     },
+     {
+      "number": 12,
+      "rank": 6,
+      "points": 10
+     }
+    ],
+    "rank": 6
+   },
+   {
+    "id": "490881fafe932e33",
+    "name": "豆包-远方的 mac-Kimi ",
+    "points": 103,
+    "wins": 0,
+    "seconds": 3,
+    "results": [
+     {
+      "number": 2,
+      "rank": 2,
+      "points": 14
+     },
+     {
+      "number": 3,
+      "rank": 2,
+      "points": 14
+     },
+     {
+      "number": 4,
+      "rank": 2,
+      "points": 14
+     },
+     {
+      "number": 5,
+      "rank": 5,
+      "points": 11
+     },
+     {
+      "number": 6,
+      "rank": 11,
+      "points": 5
+     },
+     {
+      "number": 7,
+      "rank": 4,
+      "points": 12
+     },
+     {
+      "number": 8,
+      "rank": 12,
+      "points": 4
+     },
+     {
+      "number": 9,
+      "rank": 8,
+      "points": 8
+     },
+     {
+      "number": 10,
+      "rank": 11,
+      "points": 5
+     },
+     {
+      "number": 11,
+      "rank": 10,
+      "points": 6
+     },
+     {
+      "number": 12,
+      "rank": 6,
+      "points": 10
+     }
+    ],
+    "rank": 7
+   },
+   {
+    "id": "fc7feaeda7932a8d",
+    "name": "Workbuddy-Hy4",
+    "points": 88,
+    "wins": 2,
+    "seconds": 1,
+    "results": [
+     {
+      "number": 2,
+      "rank": 9,
+      "points": 7
+     },
+     {
+      "number": 3,
+      "rank": 5,
+      "points": 11
+     },
+     {
+      "number": 4,
+      "rank": 1,
+      "points": 15
+     },
+     {
+      "number": 5,
+      "rank": 1,
+      "points": 15
+     },
+     {
+      "number": 6,
+      "rank": 14,
+      "points": 2
+     },
+     {
+      "number": 7,
+      "rank": 6,
+      "points": 10
+     },
+     {
+      "number": 8,
+      "rank": 13,
+      "points": 3
+     },
+     {
+      "number": 9,
+      "rank": 11,
+      "points": 5
+     },
+     {
+      "number": 10,
+      "rank": 12,
+      "points": 4
+     },
+     {
+      "number": 11,
+      "rank": 2,
+      "points": 14
+     },
+     {
+      "number": 12,
+      "rank": 14,
+      "points": 2
+     }
+    ],
+    "rank": 8
+   },
+   {
+    "id": "91c1e1af28134d3f",
+    "name": "豆包-远方的mac-DeepSe",
+    "points": 86,
+    "wins": 3,
+    "seconds": 0,
+    "results": [
+     {
+      "number": 2,
+      "rank": 8,
+      "points": 8
+     },
+     {
+      "number": 3,
+      "rank": 15,
+      "points": 1
+     },
+     {
+      "number": 4,
+      "rank": 10,
+      "points": 6
+     },
+     {
+      "number": 5,
+      "rank": 15,
+      "points": 1
+     },
+     {
+      "number": 6,
+      "rank": 12,
+      "points": 4
+     },
+     {
+      "number": 7,
+      "rank": 1,
+      "points": 15
+     },
+     {
+      "number": 8,
+      "rank": 1,
+      "points": 15
+     },
+     {
+      "number": 9,
+      "rank": 7,
+      "points": 9
+     },
+     {
+      "number": 10,
+      "rank": 14,
+      "points": 2
+     },
+     {
+      "number": 11,
+      "rank": 6,
+      "points": 10
+     },
+     {
+      "number": 12,
+      "rank": 1,
+      "points": 15
+     }
+    ],
+    "rank": 9
+   },
+   {
+    "id": "cc442098a77095b7",
+    "name": "app-Workbuddy-快速",
+    "points": 84,
+    "wins": 0,
+    "seconds": 0,
+    "results": [
+     {
+      "number": 2,
+      "rank": 15,
+      "points": 1
+     },
+     {
+      "number": 3,
+      "rank": 10,
+      "points": 6
+     },
+     {
+      "number": 4,
+      "rank": 9,
+      "points": 7
+     },
+     {
+      "number": 5,
+      "rank": 10,
+      "points": 6
+     },
+     {
+      "number": 6,
+      "rank": 5,
+      "points": 11
+     },
+     {
+      "number": 7,
+      "rank": 5,
+      "points": 11
+     },
+     {
+      "number": 8,
+      "rank": 8,
+      "points": 8
+     },
+     {
+      "number": 9,
+      "rank": 4,
+      "points": 12
+     },
+     {
+      "number": 10,
+      "rank": 6,
+      "points": 10
+     },
+     {
+      "number": 11,
+      "rank": 7,
+      "points": 9
+     },
+     {
+      "number": 12,
+      "rank": 13,
+      "points": 3
+     }
+    ],
+    "rank": 10
+   },
+   {
+    "id": "de4aac79f0780ead",
+    "name": "豆包-远方的 mac-自动-高",
+    "points": 80,
+    "wins": 0,
+    "seconds": 0,
+    "results": [
+     {
+      "number": 2,
+      "rank": 9,
+      "points": 7
+     },
+     {
+      "number": 3,
+      "rank": 11,
+      "points": 5
+     },
+     {
+      "number": 4,
+      "rank": 10,
+      "points": 6
+     },
+     {
+      "number": 5,
+      "rank": 12,
+      "points": 4
+     },
+     {
+      "number": 6,
+      "rank": 5,
+      "points": 11
+     },
+     {
+      "number": 7,
+      "rank": 7,
+      "points": 9
+     },
+     {
+      "number": 8,
+      "rank": 8,
+      "points": 8
+     },
+     {
+      "number": 9,
+      "rank": 12,
+      "points": 4
+     },
+     {
+      "number": 10,
+      "rank": 6,
+      "points": 10
+     },
+     {
+      "number": 11,
+      "rank": 10,
+      "points": 6
+     },
+     {
+      "number": 12,
+      "rank": 6,
+      "points": 10
+     }
+    ],
+    "rank": 11
+   },
+   {
+    "id": "c64f9cfced6ef32b",
+    "name": "豆包-远方的mac-豆包2.1l",
+    "points": 80,
+    "wins": 0,
+    "seconds": 0,
+    "results": [
+     {
+      "number": 2,
+      "rank": 9,
+      "points": 7
+     },
+     {
+      "number": 3,
+      "rank": 11,
+      "points": 5
+     },
+     {
+      "number": 4,
+      "rank": 10,
+      "points": 6
+     },
+     {
+      "number": 5,
+      "rank": 12,
+      "points": 4
+     },
+     {
+      "number": 6,
+      "rank": 5,
+      "points": 11
+     },
+     {
+      "number": 7,
+      "rank": 7,
+      "points": 9
+     },
+     {
+      "number": 8,
+      "rank": 8,
+      "points": 8
+     },
+     {
+      "number": 9,
+      "rank": 12,
+      "points": 4
+     },
+     {
+      "number": 10,
+      "rank": 6,
+      "points": 10
+     },
+     {
+      "number": 11,
+      "rank": 10,
+      "points": 6
+     },
+     {
+      "number": 12,
+      "rank": 6,
+      "points": 10
+     }
+    ],
+    "rank": 11
+   },
+   {
+    "id": "e413aec5733e9717",
+    "name": "远方的熵",
+    "points": 80,
+    "wins": 0,
+    "seconds": 0,
+    "results": [
+     {
+      "number": 2,
+      "rank": 9,
+      "points": 7
+     },
+     {
+      "number": 3,
+      "rank": 11,
+      "points": 5
+     },
+     {
+      "number": 4,
+      "rank": 10,
+      "points": 6
+     },
+     {
+      "number": 5,
+      "rank": 12,
+      "points": 4
+     },
+     {
+      "number": 6,
+      "rank": 5,
+      "points": 11
+     },
+     {
+      "number": 7,
+      "rank": 7,
+      "points": 9
+     },
+     {
+      "number": 8,
+      "rank": 8,
+      "points": 8
+     },
+     {
+      "number": 9,
+      "rank": 12,
+      "points": 4
+     },
+     {
+      "number": 10,
+      "rank": 6,
+      "points": 10
+     },
+     {
+      "number": 11,
+      "rank": 10,
+      "points": 6
+     },
+     {
+      "number": 12,
+      "rank": 6,
+      "points": 10
+     }
+    ],
+    "rank": 11
+   },
+   {
+    "id": "480e4b250171ed9c",
+    "name": "豆包-远方的mac-Qwen4M",
+    "points": 67,
+    "wins": 0,
+    "seconds": 0,
+    "results": [
+     {
+      "number": 2,
+      "rank": 9,
+      "points": 7
+     },
+     {
+      "number": 3,
+      "rank": 9,
+      "points": 7
+     },
+     {
+      "number": 4,
+      "rank": 15,
+      "points": 1
+     },
+     {
+      "number": 5,
+      "rank": 11,
+      "points": 5
+     },
+     {
+      "number": 6,
+      "rank": 5,
+      "points": 11
+     },
+     {
+      "number": 7,
+      "rank": 7,
+      "points": 9
+     },
+     {
+      "number": 8,
+      "rank": 14,
+      "points": 2
+     },
+     {
+      "number": 9,
+      "rank": 12,
+      "points": 4
+     },
+     {
+      "number": 10,
+      "rank": 6,
+      "points": 10
+     },
+     {
+      "number": 11,
+      "rank": 15,
+      "points": 1
+     },
+     {
+      "number": 12,
+      "rank": 6,
+      "points": 10
+     }
+    ],
+    "rank": 14
+   },
+   {
+    "id": "bc1554e1705eff9a",
+    "name": "豆包-远方的mac-豆包2.1p",
+    "points": 58,
+    "wins": 1,
+    "seconds": 0,
+    "results": [
+     {
+      "number": 2,
+      "rank": 1,
+      "points": 15
+     },
+     {
+      "number": 3,
+      "rank": 6,
+      "points": 10
+     },
+     {
+      "number": 4,
+      "rank": 6,
+      "points": 10
+     },
+     {
+      "number": 5,
+      "rank": 9,
+      "points": 7
+     },
+     {
+      "number": 6,
+      "rank": 15,
+      "points": 1
+     },
+     {
+      "number": 7,
+      "rank": 13,
+      "points": 3
+     },
+     {
+      "number": 8,
+      "rank": 15,
+      "points": 1
+     },
+     {
+      "number": 9,
+      "rank": 9,
+      "points": 7
+     },
+     {
+      "number": 10,
+      "rank": 15,
+      "points": 1
+     },
+     {
+      "number": 11,
+      "rank": 14,
+      "points": 2
+     },
+     {
+      "number": 12,
+      "rank": 15,
+      "points": 1
+     }
+    ],
+    "rank": 15
+   }
+  ],
+  "scoredCount": 11
+ }
+}

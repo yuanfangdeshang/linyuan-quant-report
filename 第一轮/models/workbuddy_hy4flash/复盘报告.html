@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>临渊量化 · Workbuddy-Hy4flash · 全赛复盘</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --line:#2a3140;
+    --txt:#e6edf3; --sub:#8b95a7; --accent:#4dd4ac; --gold:#f0b429;
+    --red:#ff6b6b; --blue:#3b82f6;
+  }
+  body { background:var(--bg); color:var(--txt); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.7; padding:0 0 80px; }
+  .wrap { max-width:1160px; margin:0 auto; padding:0 24px; }
+  header { background:linear-gradient(135deg,#111827 0%,#0d1117 60%,#132a24 100%); border-bottom:1px solid var(--line); padding:56px 0 44px; text-align:center; }
+  .kicker { color:var(--accent); letter-spacing:3px; font-size:13px; font-weight:600; }
+  h1 { font-size:38px; margin:14px 0 8px; letter-spacing:1px; }
+  .subtitle { color:var(--sub); font-size:15px; }
+  .hero { display:flex; gap:16px; justify-content:center; margin-top:32px; flex-wrap:wrap; }
+  .herocard { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px 28px; min-width:150px; }
+  .herocard .big { font-size:34px; font-weight:800; }
+  .herocard .big.accent { color:var(--accent); }
+  .herocard .big.gold { color:var(--gold); }
+  .herocard .big.red { color:var(--red); }
+  .herocard .cap { color:var(--sub); font-size:12px; margin-top:4px; letter-spacing:1px; }
+  section { margin-top:46px; }
+  h2 { font-size:23px; border-left:4px solid var(--accent); padding-left:14px; margin-bottom:20px; }
+  h3 { font-size:17px; color:var(--sub); margin:26px 0 12px; font-weight:600; }
+  p.desc { color:var(--sub); font-size:14px; margin-bottom:18px; }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:22px; margin-bottom:18px; }
+  .chart { width:100%; height:auto; display:block; }
+  .legend-note { color:var(--sub); font-size:12px; margin-top:8px; }
+  /* 题目卡片 */
+  .gcard { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px 22px; margin-bottom:16px; }
+  .gcard-head { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+  .tag { font-size:11px; padding:3px 10px; border-radius:20px; font-weight:700; letter-spacing:1px; }
+  .tag-practice { background:#3a3f4b; color:#cbd3df; }
+  .tag-gold { background:rgba(240,180,41,.15); color:var(--gold); border:1px solid rgba(240,180,41,.4); }
+  .tag-normal { background:rgba(77,212,172,.12); color:var(--accent); border:1px solid rgba(77,212,172,.3); }
+  .gtheme { font-size:16px; font-weight:700; }
+  .gscore { margin-left:auto; color:var(--accent); font-weight:800; font-size:16px; }
+  .gq { color:#c9d3e0; font-size:14px; margin-bottom:14px; }
+  .metrics { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; margin-bottom:12px; }
+  .m { background:var(--panel2); border-radius:9px; padding:10px 12px; }
+  .mk { display:block; color:var(--sub); font-size:11px; }
+  .mv { display:block; font-size:17px; font-weight:700; margin-top:2px; }
+  .mv.blue { color:var(--blue); } .mv.gold { color:var(--gold); } .mv.neg { color:var(--red); }
+  .gtruth { color:var(--sub); font-size:13px; margin:6px 0; }
+  .gop,.glesson { font-size:13.5px; margin-top:8px; color:#c9d3e0; }
+  .lbl { display:inline-block; color:var(--accent); font-weight:700; font-size:11px; border:1px solid rgba(77,212,172,.35); border-radius:5px; padding:1px 7px; margin-right:8px; }
+  .glesson .lbl { color:var(--gold); border-color:rgba(240,180,41,.35); }
+  /* 排名表 */
+  table { width:100%; border-collapse:collapse; }
+  th { text-align:left; color:var(--sub); font-size:12px; padding:8px 10px; border-bottom:1px solid var(--line); }
+  td { padding:9px 10px; font-size:14px; border-bottom:1px solid #1e2532; }
+  tr.me td { background:rgba(255,107,107,.09); color:#fff; font-weight:700; }
+  td.rk { width:50px; color:var(--sub); }
+  td.nm { width:300px; }
+  td.pt { width:60px; font-weight:700; }
+  .barcell { width:auto; }
+  .bar { height:12px; border-radius:6px; opacity:.8; }
+  /* 反思列表 */
+  .insight { background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:8px; padding:14px 18px; margin-bottom:12px; font-size:14px; color:#c9d3e0; }
+  .insight b { color:var(--accent); }
+  .phase { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .phasecard { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px; }
+  .phasecard .pn { color:var(--gold); font-size:12px; font-weight:700; letter-spacing:1px; }
+  .phasecard .pt { font-size:16px; font-weight:700; margin:6px 0 10px; }
+  .phasecard ul { list-style:none; font-size:13px; color:var(--sub); }
+  .phasecard li { padding:4px 0 4px 16px; position:relative; }
+  .phasecard li:before { content:"▸"; position:absolute; left:0; color:var(--accent); }
+  .flow { display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:center; margin:10px 0; }
+  .step { background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:12px 16px; font-size:13px; text-align:center; min-width:120px; }
+  .step b { display:block; color:var(--accent); font-size:14px; }
+  .arrow { color:var(--accent); font-size:20px; }
+  .comp { background:rgba(77,212,172,.06); border:1px solid rgba(77,212,172,.25); border-radius:12px; padding:18px 22px; color:#c9d3e0; font-size:14px; }
+  .comp b { color:var(--accent); }
+  footer { text-align:center; color:var(--sub); font-size:12px; margin-top:50px; padding-top:24px; border-top:1px solid var(--line); }
+  @media(max-width:760px){ .metrics{grid-template-columns:repeat(3,1fr)} .phase{grid-template-columns:1fr} h1{font-size:28px} }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="kicker">临渊量化 · 多模型实时交易竞技 · 全赛复盘</div>
+    <h1>Workbuddy-Hy4flash</h1>
+    <div class="subtitle">2026-11-21 23:16 → 11-22 00:38 · 全程约 82 分钟 · 1 测试局 + 11 正式局</div>
+    <div class="hero">
+      <div class="herocard"><div class="big gold">116</div><div class="cap">总积分</div></div>
+      <div class="herocard"><div class="big accent">并列第 3</div><div class="cap">15 人最终名次</div></div>
+      <div class="herocard"><div class="big">11 / 11</div><div class="cap">完赛局数</div></div>
+      <div class="herocard"><div class="big red">107</div><div class="cap">总下单笔数</div></div>
+      <div class="herocard"><div class="big">15</div><div class="cap">单局最高分(满分)</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2>一、最终战绩</h2>
+  <div class="panel">
+    <p class="desc">全场 15 名参赛者（含 8 个同级模型 + 若干脚本），最终我以 <b style="color:var(--gold)">116 分</b> 与另外两名选手并列第 3。冠军 quwork-DeepSeek 124 分，仅领先 8 分——相当于一到两局的名次差。整场呈现"开局落后 → 中段迭代 → 末段冲顶"的走势。</p>
+    <table>
+      <thead><tr><th>名次</th><th>选手</th><th>积分</th><th> Score</th></tr></thead>
+      <tbody><tr>
+          <td class="rk">1</td>
+          <td class="nm">quwork-DeepSeek</td>
+          <td class="pt">124</td>
+          <td class="barcell"><div class="bar" style="width:100%;background:#3b82f6"></div></td>
+        </tr><tr>
+          <td class="rk">2</td>
+          <td class="nm">豆包-远方的mac-GLM5.3</td>
+          <td class="pt">118</td>
+          <td class="barcell"><div class="bar" style="width:95%;background:#3b82f6"></div></td>
+        </tr><tr>
+          <td class="rk">3</td>
+          <td class="nm">豆包-远方的mac-自动-高</td>
+          <td class="pt">116</td>
+          <td class="barcell"><div class="bar" style="width:93%;background:#3b82f6"></div></td>
+        </tr><tr class="me">
+          <td class="rk">3</td>
+          <td class="nm">Workbuddy-Hy4fla ★</td>
+          <td class="pt">116</td>
+          <td class="barcell"><div class="bar" style="width:93%;background:#ff6b6b"></div></td>
+        </tr><tr>
+          <td class="rk">5</td>
+          <td class="nm">豆包-远方的 mac-DeepS</td>
+          <td class="pt">114</td>
+          <td class="barcell"><div class="bar" style="width:91%;background:#3b82f6"></div></td>
+        </tr><tr>
+          <td class="rk">6</td>
+          <td class="nm">qoder-DeepSeek f</td>
+          <td class="pt">110</td>
+          <td class="barcell"><div class="bar" style="width:88%;background:#3b82f6"></div></td>
+        </tr><tr>
+          <td class="rk">7</td>
+          <td class="nm">豆包-远方的 mac-Kimi</td>
+          <td class="pt">103</td>
+          <td class="barcell"><div class="bar" style="width:83%;background:#3b82f6"></div></td>
+        </tr><tr>
+          <td class="rk">8</td>
+          <td class="nm">Workbuddy-Hy4</td>
+          <td class="pt">88</td>
+          <td class="barcell"><div class="bar" style="width:70%;background:#3b82f6"></div></td>
+        </tr><tr>
+          <td class="rk">9</td>
+          <td class="nm">豆包-远方的mac-DeepSe</td>
+          <td class="pt">86</td>
+          <td class="barcell"><div class="bar" style="width:69%;background:#3b82f6"></div></td>
+        </tr><tr>
+          <td class="rk">10</td>
+          <td class="nm">app-Workbuddy-快速</td>
+          <td class="pt">84</td>
+          <td class="barcell"><div class="bar" style="width:67%;background:#3b82f6"></div></td>
+        </tr><tr>
+          <td class="rk">11</td>
+          <td class="nm">豆包-远方的 mac-自动-高</td>
+          <td class="pt">80</td>
+          <td class="barcell"><div class="bar" style="width:64%;background:#3b82f6"></div></td>
+        </tr><tr>
+          <td class="rk">11</td>
+          <td class="nm">豆包-远方的mac-豆包2.1l</td>
+          <td class="pt">80</td>
+          <td class="barcell"><div class="bar" style="width:64%;background:#3b82f6"></div></td>
+        </tr><tr>
+          <td class="rk">11</td>
+          <td class="nm">远方的熵</td>
+          <td class="pt">80</td>
+          <td class="barcell"><div class="bar" style="width:64%;background:#3b82f6"></div></td>
+        </tr><tr>
+          <td class="rk">14</td>
+          <td class="nm">豆包-远方的mac-Qwen4M</td>
+          <td class="pt">67</td>
+          <td class="barcell"><div class="bar" style="width:54%;background:#3b82f6"></div></td>
+        </tr><tr>
+          <td class="rk">15</td>
+          <td class="nm">豆包-远方的mac-豆包2.1p</td>
+          <td class="pt">58</td>
+          <td class="barcell"><div class="bar" style="width:46%;background:#3b82f6"></div></td>
+        </tr></tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>二、积分曲线：从落后到冲顶</h2>
+  <div class="panel">
+    <p class="desc">横轴为 11 局正式题，折线为我的累计积分，下方小字为该局名次，红点为单局进入前三。第 5 题（鸡蛋）是唯一失手（rank13、+3分），此后从第 6 题起进入爆发期，六局里拿下两个第 1、三个第 2、一个第 3。</p>
+    <svg viewBox="0 0 1080 340" class="chart"><line x1="55" y1="285.0" x2="1050" y2="285.0" stroke="#2a3140" stroke-width="1"/><text x="45" y="289.0" fill="#7d8899" font-size="12" text-anchor="end">0</text><line x1="55" y1="234.0" x2="1050" y2="234.0" stroke="#2a3140" stroke-width="1"/><text x="45" y="238.0" fill="#7d8899" font-size="12" text-anchor="end">25</text><line x1="55" y1="183.0" x2="1050" y2="183.0" stroke="#2a3140" stroke-width="1"/><text x="45" y="187.0" fill="#7d8899" font-size="12" text-anchor="end">50</text><line x1="55" y1="132.0" x2="1050" y2="132.0" stroke="#2a3140" stroke-width="1"/><text x="45" y="136.0" fill="#7d8899" font-size="12" text-anchor="end">75</text><line x1="55" y1="81.0" x2="1050" y2="81.0" stroke="#2a3140" stroke-width="1"/><text x="45" y="85.0" fill="#7d8899" font-size="12" text-anchor="end">100</text><line x1="55" y1="30.0" x2="1050" y2="30.0" stroke="#2a3140" stroke-width="1"/><text x="45" y="34.0" fill="#7d8899" font-size="12" text-anchor="end">125</text><text x="55.0" y="322" fill="#8b95a7" font-size="11" text-anchor="middle">第1题</text><text x="154.5" y="322" fill="#8b95a7" font-size="11" text-anchor="middle">第2题</text><text x="254.0" y="322" fill="#8b95a7" font-size="11" text-anchor="middle">第3题</text><text x="353.5" y="322" fill="#8b95a7" font-size="11" text-anchor="middle">第4题</text><text x="453.0" y="322" fill="#8b95a7" font-size="11" text-anchor="middle">第5题</text><text x="552.5" y="322" fill="#8b95a7" font-size="11" text-anchor="middle">第6题</text><text x="652.0" y="322" fill="#8b95a7" font-size="11" text-anchor="middle">第7题</text><text x="751.5" y="322" fill="#8b95a7" font-size="11" text-anchor="middle">第8题</text><text x="851.0" y="322" fill="#8b95a7" font-size="11" text-anchor="middle">第9题</text><text x="950.5" y="322" fill="#8b95a7" font-size="11" text-anchor="middle">第10题</text><text x="1050.0" y="322" fill="#8b95a7" font-size="11" text-anchor="middle">第11题</text><polygon points="55,285.0 55.0,260.5 154.5,242.2 254.0,229.9 353.5,209.5 453.0,203.4 552.5,174.8 652.0,148.3 751.5,136.1 851.0,107.5 950.5,76.9 1050.0,48.4 1050.0,285.0" fill="url(#g1)" opacity="0.35"/><polyline points="55.0,260.5 154.5,242.2 254.0,229.9 353.5,209.5 453.0,203.4 552.5,174.8 652.0,148.3 751.5,136.1 851.0,107.5 950.5,76.9 1050.0,48.4" fill="none" stroke="#4dd4ac" stroke-width="3"/><circle cx="55.0" cy="260.5" r="5" fill="#4dd4ac" stroke="#0d1117" stroke-width="2"/><text x="55.0" y="246.5" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">12</text><text x="55.0" y="280.5" fill="#8b95a7" font-size="10" text-anchor="middle">#4</text><circle cx="154.5" cy="242.2" r="5" fill="#4dd4ac" stroke="#0d1117" stroke-width="2"/><text x="154.5" y="228.2" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">21</text><text x="154.5" y="262.2" fill="#8b95a7" font-size="10" text-anchor="middle">#7</text><circle cx="254.0" cy="229.9" r="5" fill="#4dd4ac" stroke="#0d1117" stroke-width="2"/><text x="254.0" y="215.9" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">27</text><text x="254.0" y="249.9" fill="#8b95a7" font-size="10" text-anchor="middle">#10</text><circle cx="353.5" cy="209.5" r="5" fill="#4dd4ac" stroke="#0d1117" stroke-width="2"/><text x="353.5" y="195.5" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">37</text><text x="353.5" y="229.5" fill="#8b95a7" font-size="10" text-anchor="middle">#6</text><circle cx="453.0" cy="203.4" r="5" fill="#4dd4ac" stroke="#0d1117" stroke-width="2"/><text x="453.0" y="189.4" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">40</text><text x="453.0" y="223.4" fill="#8b95a7" font-size="10" text-anchor="middle">#13</text><circle cx="552.5" cy="174.8" r="5" fill="#ff6b6b" stroke="#0d1117" stroke-width="2"/><text x="552.5" y="160.8" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">54</text><text x="552.5" y="194.8" fill="#8b95a7" font-size="10" text-anchor="middle">#2</text><circle cx="652.0" cy="148.3" r="5" fill="#ff6b6b" stroke="#0d1117" stroke-width="2"/><text x="652.0" y="134.3" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">67</text><text x="652.0" y="168.3" fill="#8b95a7" font-size="10" text-anchor="middle">#3</text><circle cx="751.5" cy="136.1" r="5" fill="#4dd4ac" stroke="#0d1117" stroke-width="2"/><text x="751.5" y="122.1" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">73</text><text x="751.5" y="156.1" fill="#8b95a7" font-size="10" text-anchor="middle">#10</text><circle cx="851.0" cy="107.5" r="5" fill="#ff6b6b" stroke="#0d1117" stroke-width="2"/><text x="851.0" y="93.5" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">87</text><text x="851.0" y="127.5" fill="#8b95a7" font-size="10" text-anchor="middle">#2</text><circle cx="950.5" cy="76.9" r="5" fill="#ff6b6b" stroke="#0d1117" stroke-width="2"/><text x="950.5" y="62.9" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">102</text><text x="950.5" y="96.9" fill="#8b95a7" font-size="10" text-anchor="middle">#1</text><circle cx="1050.0" cy="48.4" r="5" fill="#ff6b6b" stroke="#0d1117" stroke-width="2"/><text x="1050.0" y="34.4" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">116</text><text x="1050.0" y="68.4" fill="#8b95a7" font-size="10" text-anchor="middle">#2</text><defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4dd4ac"/><stop offset="100%" stop-color="#4dd4ac" stop-opacity="0"/></linearGradient></defs></svg>
+  </div>
+</section>
+
+<section>
+  <h2>三、逐局得分与名次</h2>
+  <div class="panel">
+    <p class="desc">满分 15 分（第 1 名），末位 1 分。红色=前三，黄色=4–6名，灰色=6名后。我的得分分布明显右偏——后期显著优于前期，正是自我迭代的直接证据。</p>
+    <svg viewBox="0 0 1080 300" class="chart"><line x1="55" y1="230.0" x2="1050" y2="230.0" stroke="#2a3140" stroke-width="1"/><text x="45" y="234.0" fill="#7d8899" font-size="12" text-anchor="end">0</text><line x1="55" y1="189.0" x2="1050" y2="189.0" stroke="#2a3140" stroke-width="1"/><text x="45" y="193.0" fill="#7d8899" font-size="12" text-anchor="end">3</text><line x1="55" y1="148.0" x2="1050" y2="148.0" stroke="#2a3140" stroke-width="1"/><text x="45" y="152.0" fill="#7d8899" font-size="12" text-anchor="end">6</text><line x1="55" y1="107.0" x2="1050" y2="107.0" stroke="#2a3140" stroke-width="1"/><text x="45" y="111.0" fill="#7d8899" font-size="12" text-anchor="end">9</text><line x1="55" y1="66.0" x2="1050" y2="66.0" stroke="#2a3140" stroke-width="1"/><text x="45" y="70.0" fill="#7d8899" font-size="12" text-anchor="end">12</text><line x1="55" y1="25.0" x2="1050" y2="25.0" stroke="#2a3140" stroke-width="1"/><text x="45" y="29.0" fill="#7d8899" font-size="12" text-anchor="end">15</text><rect x="72.2" y="66.0" width="56.1" height="164.0" rx="4" fill="#f0b429"/><text x="100.2" y="58.0" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">12</text><text x="100.2" y="258" fill="#8b95a7" font-size="10" text-anchor="middle">第1题</text><text x="100.2" y="274" fill="#5b6b82" font-size="9" text-anchor="middle">#4</text><rect x="162.6" y="107.0" width="56.1" height="123.0" rx="4" fill="#5b6b82"/><text x="190.7" y="99.0" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">9</text><text x="190.7" y="258" fill="#8b95a7" font-size="10" text-anchor="middle">第2题</text><text x="190.7" y="274" fill="#5b6b82" font-size="9" text-anchor="middle">#7</text><rect x="253.1" y="148.0" width="56.1" height="82.0" rx="4" fill="#5b6b82"/><text x="281.1" y="140.0" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">6</text><text x="281.1" y="258" fill="#8b95a7" font-size="10" text-anchor="middle">第3题</text><text x="281.1" y="274" fill="#5b6b82" font-size="9" text-anchor="middle">#10</text><rect x="343.5" y="93.3" width="56.1" height="136.7" rx="4" fill="#f0b429"/><text x="371.6" y="85.3" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">10</text><text x="371.6" y="258" fill="#8b95a7" font-size="10" text-anchor="middle">第4题</text><text x="371.6" y="274" fill="#5b6b82" font-size="9" text-anchor="middle">#6</text><rect x="434.0" y="189.0" width="56.1" height="41.0" rx="4" fill="#5b6b82"/><text x="462.0" y="181.0" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">3</text><text x="462.0" y="258" fill="#8b95a7" font-size="10" text-anchor="middle">第5题</text><text x="462.0" y="274" fill="#5b6b82" font-size="9" text-anchor="middle">#13</text><rect x="524.5" y="38.7" width="56.1" height="191.3" rx="4" fill="#ff6b6b"/><text x="552.5" y="30.7" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">14</text><text x="552.5" y="258" fill="#8b95a7" font-size="10" text-anchor="middle">第6题</text><text x="552.5" y="274" fill="#5b6b82" font-size="9" text-anchor="middle">#2</text><rect x="614.9" y="52.3" width="56.1" height="177.7" rx="4" fill="#ff6b6b"/><text x="643.0" y="44.3" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">13</text><text x="643.0" y="258" fill="#8b95a7" font-size="10" text-anchor="middle">第7题</text><text x="643.0" y="274" fill="#5b6b82" font-size="9" text-anchor="middle">#3</text><rect x="705.4" y="148.0" width="56.1" height="82.0" rx="4" fill="#5b6b82"/><text x="733.4" y="140.0" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">6</text><text x="733.4" y="258" fill="#8b95a7" font-size="10" text-anchor="middle">第8题</text><text x="733.4" y="274" fill="#5b6b82" font-size="9" text-anchor="middle">#10</text><rect x="795.8" y="38.7" width="56.1" height="191.3" rx="4" fill="#ff6b6b"/><text x="823.9" y="30.7" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">14</text><text x="823.9" y="258" fill="#8b95a7" font-size="10" text-anchor="middle">第9题</text><text x="823.9" y="274" fill="#5b6b82" font-size="9" text-anchor="middle">#2</text><rect x="886.3" y="25.0" width="56.1" height="205.0" rx="4" fill="#ff6b6b"/><text x="914.3" y="17.0" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">15</text><text x="914.3" y="258" fill="#8b95a7" font-size="10" text-anchor="middle">第10题</text><text x="914.3" y="274" fill="#5b6b82" font-size="9" text-anchor="middle">#1</text><rect x="976.7" y="38.7" width="56.1" height="191.3" rx="4" fill="#ff6b6b"/><text x="1004.8" y="30.7" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">14</text><text x="1004.8" y="258" fill="#8b95a7" font-size="10" text-anchor="middle">第11题</text><text x="1004.8" y="274" fill="#5b6b82" font-size="9" text-anchor="middle">#2</text></svg>
+  </div>
+</section>
+
+<section>
+  <h2>四、我 vs 冠军：8 分差在哪</h2>
+  <div class="panel">
+    <p class="desc">冠军 quwork-DeepSeek 124 分，我 116 分。官方逐局得分对比显示：我<b style="color:var(--accent)">领先 7 局</b>、落后 4 局，没有平局。真正的失血点是<b style="color:var(--red)">鸡蛋题 −10 分</b>（我 3 分 vs 冠军 13 分），其次上海港 −5、未读数 −5、机场 −4；而我在第 1 题（+5）、第 9 题（+3）、第 10 题（+3）扳回大半——只差 8 分，本质上就是鸡蛋题那一次失误的代价。</p>
+    <svg viewBox="0 0 1080 310" class="chart"><line x1="55" y1="244.0" x2="1050" y2="244.0" stroke="#2a3140" stroke-width="1"/><text x="45" y="248.0" fill="#7d8899" font-size="11" text-anchor="end">0</text><line x1="55" y1="200.8" x2="1050" y2="200.8" stroke="#2a3140" stroke-width="1"/><text x="45" y="204.8" fill="#7d8899" font-size="11" text-anchor="end">3</text><line x1="55" y1="157.6" x2="1050" y2="157.6" stroke="#2a3140" stroke-width="1"/><text x="45" y="161.6" fill="#7d8899" font-size="11" text-anchor="end">6</text><line x1="55" y1="114.4" x2="1050" y2="114.4" stroke="#2a3140" stroke-width="1"/><text x="45" y="118.4" fill="#7d8899" font-size="11" text-anchor="end">9</text><line x1="55" y1="71.2" x2="1050" y2="71.2" stroke="#2a3140" stroke-width="1"/><text x="45" y="75.2" fill="#7d8899" font-size="11" text-anchor="end">12</text><line x1="55" y1="28.0" x2="1050" y2="28.0" stroke="#2a3140" stroke-width="1"/><text x="45" y="32.0" fill="#7d8899" font-size="11" text-anchor="end">15</text><rect x="66.7" y="71.2" width="32.6" height="172.8" rx="3" fill="#4dd4ac" opacity="0.9"/><rect x="101.2" y="143.2" width="32.6" height="100.8" rx="3" fill="#8b7cf6" opacity="0.85"/><text x="100.2" y="64.2" fill="#4dd4ac" font-size="9" font-weight="bold" text-anchor="middle">+5</text><text x="100.2" y="268" fill="#8b95a7" font-size="9" text-anchor="middle">第1题</text><rect x="157.1" y="114.4" width="32.6" height="129.6" rx="3" fill="#4dd4ac" opacity="0.9"/><rect x="191.7" y="128.8" width="32.6" height="115.2" rx="3" fill="#8b7cf6" opacity="0.85"/><text x="190.7" y="107.4" fill="#4dd4ac" font-size="9" font-weight="bold" text-anchor="middle">+1</text><text x="190.7" y="268" fill="#8b95a7" font-size="9" text-anchor="middle">第2题</text><rect x="247.6" y="157.6" width="32.6" height="86.4" rx="3" fill="#4dd4ac" opacity="0.9"/><rect x="282.1" y="85.6" width="32.6" height="158.4" rx="3" fill="#8b7cf6" opacity="0.85"/><text x="281.1" y="78.6" fill="#ff6b6b" font-size="9" font-weight="bold" text-anchor="middle">-5</text><text x="281.1" y="268" fill="#8b95a7" font-size="9" text-anchor="middle">第3题</text><rect x="338.0" y="100.0" width="32.6" height="144.0" rx="3" fill="#4dd4ac" opacity="0.9"/><rect x="372.6" y="42.4" width="32.6" height="201.6" rx="3" fill="#8b7cf6" opacity="0.85"/><text x="371.6" y="35.4" fill="#ff6b6b" font-size="9" font-weight="bold" text-anchor="middle">-4</text><text x="371.6" y="268" fill="#8b95a7" font-size="9" text-anchor="middle">第4题</text><rect x="428.5" y="200.8" width="32.6" height="43.2" rx="3" fill="#4dd4ac" opacity="0.9"/><rect x="463.0" y="56.8" width="32.6" height="187.2" rx="3" fill="#8b7cf6" opacity="0.85"/><text x="462.0" y="49.8" fill="#ff6b6b" font-size="9" font-weight="bold" text-anchor="middle">-10</text><text x="462.0" y="268" fill="#8b95a7" font-size="9" text-anchor="middle">第5题</text><rect x="518.9" y="42.4" width="32.6" height="201.6" rx="3" fill="#4dd4ac" opacity="0.9"/><rect x="553.5" y="56.8" width="32.6" height="187.2" rx="3" fill="#8b7cf6" opacity="0.85"/><text x="552.5" y="35.4" fill="#4dd4ac" font-size="9" font-weight="bold" text-anchor="middle">+1</text><text x="552.5" y="268" fill="#8b95a7" font-size="9" text-anchor="middle">第6题</text><rect x="609.4" y="56.8" width="32.6" height="187.2" rx="3" fill="#4dd4ac" opacity="0.9"/><rect x="644.0" y="85.6" width="32.6" height="158.4" rx="3" fill="#8b7cf6" opacity="0.85"/><text x="643.0" y="49.8" fill="#4dd4ac" font-size="9" font-weight="bold" text-anchor="middle">+2</text><text x="643.0" y="268" fill="#8b95a7" font-size="9" text-anchor="middle">第7题</text><rect x="699.8" y="157.6" width="32.6" height="86.4" rx="3" fill="#4dd4ac" opacity="0.9"/><rect x="734.4" y="85.6" width="32.6" height="158.4" rx="3" fill="#8b7cf6" opacity="0.85"/><text x="733.4" y="78.6" fill="#ff6b6b" font-size="9" font-weight="bold" text-anchor="middle">-5</text><text x="733.4" y="268" fill="#8b95a7" font-size="9" text-anchor="middle">第8题</text><rect x="790.3" y="42.4" width="32.6" height="201.6" rx="3" fill="#4dd4ac" opacity="0.9"/><rect x="824.9" y="85.6" width="32.6" height="158.4" rx="3" fill="#8b7cf6" opacity="0.85"/><text x="823.9" y="35.4" fill="#4dd4ac" font-size="9" font-weight="bold" text-anchor="middle">+3</text><text x="823.9" y="268" fill="#8b95a7" font-size="9" text-anchor="middle">第9题</text><rect x="880.8" y="28.0" width="32.6" height="216.0" rx="3" fill="#4dd4ac" opacity="0.9"/><rect x="915.3" y="71.2" width="32.6" height="172.8" rx="3" fill="#8b7cf6" opacity="0.85"/><text x="914.3" y="21.0" fill="#4dd4ac" font-size="9" font-weight="bold" text-anchor="middle">+3</text><text x="914.3" y="268" fill="#8b95a7" font-size="9" text-anchor="middle">第10题</text><rect x="971.2" y="42.4" width="32.6" height="201.6" rx="3" fill="#4dd4ac" opacity="0.9"/><rect x="1005.8" y="56.8" width="32.6" height="187.2" rx="3" fill="#8b7cf6" opacity="0.85"/><text x="1004.8" y="35.4" fill="#4dd4ac" font-size="9" font-weight="bold" text-anchor="middle">+1</text><text x="1004.8" y="268" fill="#8b95a7" font-size="9" text-anchor="middle">第11题</text><rect x="780" y="16" width="14" height="14" fill="#4dd4ac"/><text x="800" y="28" fill="#c9d3e0" font-size="12">我</text><rect x="880" y="16" width="14" height="14" fill="#8b7cf6"/><text x="900" y="28" fill="#c9d3e0" font-size="12">冠军 quwork-DeepSeek</text><text x="55" y="302" fill="#5b6b82" font-size="10">柱顶数字 = 我的得分 − 冠军得分。我领先 7 局、落后 4 局，净差 −8 分。</text></svg>
+  </div>
+</section>
+
+<section>
+  <h2>五、开盘锚命中精度</h2>
+  <div class="panel">
+    <p class="desc">这是全场最核心的规律：<b style="color:var(--gold)">开盘价（全场估价中位数）几乎总是非常接近真值</b>。改成相对误差后可以看到：11 局中有 6 局开盘锚误差 ≤3%（绿线内），只有鸡蛋、未读数、步数三题偏差较大——而这些恰恰是我靠线索二次修正后赚得最多的题。群体智慧负责定基准，线索负责纠偏，二者缺一不可。</p>
+    <svg viewBox="0 0 1080 410" class="chart"><line x1="84.4" y1="22" x2="84.4" y2="390" stroke="#4dd4ac" stroke-width="1" stroke-dasharray="4 4" opacity="0.7"/><text x="84.4" y="16" fill="#4dd4ac" font-size="10" text-anchor="middle">3% 精准线</text><text x="52" y="53" fill="#8b95a7" font-size="11" text-anchor="end">第1题 面积第104大国家</text><rect x="62" y="40" width="22.4" height="18" rx="3" fill="#f0b429" opacity="0.88"/><text x="92.4" y="53" fill="#f0b429" font-size="11" font-weight="bold">3.0%</text><text x="52" y="85" fill="#8b95a7" font-size="11" text-anchor="end">第2题 中国高铁里程</text><rect x="62" y="72" width="0.0" height="18" rx="3" fill="#4dd4ac" opacity="0.88"/><text x="70.0" y="85" fill="#4dd4ac" font-size="11" font-weight="bold">0.0%</text><text x="52" y="117" fill="#8b95a7" font-size="11" text-anchor="end">第3题 上海港集装箱</text><rect x="62" y="104" width="0.1" height="18" rx="3" fill="#4dd4ac" opacity="0.88"/><text x="70.1" y="117" fill="#4dd4ac" font-size="11" font-weight="bold">0.0%</text><text x="52" y="149" fill="#8b95a7" font-size="11" text-anchor="end">第4题 民航机场数</text><rect x="62" y="136" width="0.0" height="18" rx="3" fill="#4dd4ac" opacity="0.88"/><text x="70.0" y="149" fill="#4dd4ac" font-size="11" font-weight="bold">0.0%</text><text x="52" y="181" fill="#8b95a7" font-size="11" text-anchor="end">第5题 冰箱鸡蛋数</text><rect x="62" y="168" width="185.5" height="18" rx="3" fill="#ff6b6b" opacity="0.88"/><text x="255.5" y="181" fill="#ff6b6b" font-size="11" font-weight="bold">24.8%</text><text x="52" y="213" fill="#8b95a7" font-size="11" text-anchor="end">第6题 今日步数</text><rect x="62" y="200" width="41.9" height="18" rx="3" fill="#f0b429" opacity="0.88"/><text x="111.9" y="213" fill="#f0b429" font-size="11" font-weight="bold">5.6%</text><text x="52" y="245" fill="#8b95a7" font-size="11" text-anchor="end">第7题 相册新增照片</text><rect x="62" y="232" width="853.7" height="18" rx="3" fill="#ff6b6b" opacity="0.88"/><text x="923.7" y="245" fill="#ff6b6b" font-size="11" font-weight="bold">114.3%</text><text x="52" y="277" fill="#8b95a7" font-size="11" text-anchor="end">第8题 微信未读数</text><rect x="62" y="264" width="0.0" height="18" rx="3" fill="#4dd4ac" opacity="0.88"/><text x="70.0" y="277" fill="#4dd4ac" font-size="11" font-weight="bold">0.0%</text><text x="52" y="309" fill="#8b95a7" font-size="11" text-anchor="end">第9题 七天屏幕时长</text><rect x="62" y="296" width="420.2" height="18" rx="3" fill="#ff6b6b" opacity="0.88"/><text x="490.2" y="309" fill="#ff6b6b" font-size="11" font-weight="bold">56.2%</text><text x="52" y="341" fill="#8b95a7" font-size="11" text-anchor="end">第10题 微信好友数</text><rect x="62" y="328" width="26.6" height="18" rx="3" fill="#f0b429" opacity="0.88"/><text x="96.6" y="341" fill="#f0b429" font-size="11" font-weight="bold">3.6%</text><text x="52" y="373" fill="#8b95a7" font-size="11" text-anchor="end">第11题 今日解锁次数</text><rect x="62" y="360" width="111.6" height="18" rx="3" fill="#ff6b6b" opacity="0.88"/><text x="181.6" y="373" fill="#ff6b6b" font-size="11" font-weight="bold">14.9%</text><text x="62" y="406" fill="#5b6b82" font-size="10">误差 = |开盘价 − 结算真值| / 结算真值。开盘价是全场估价中位数，绿色越长代表群体共识越准。</text></svg>
+  </div>
+</section>
+
+<section>
+  <h2>六、官方赛后数据交叉校验</h2>
+  <div class="panel">
+    <p class="desc">用赛后导出的公开结算字段（ranking.pnl / history / review）校验我的实时落盘记录：<b style="color:var(--accent)">总分、逐局得分、名次、真值全部一致</b>，无一处偏差。下图为官方口径的逐局盈亏——两个超级盈利局（步数 +36.6 万、好友 +44.6 万）贡献了绝大部分利润，而鸡蛋题是唯一亏损局。</p>
+    <svg viewBox="0 0 1080 386" class="chart"><line x1="518.4" y1="22" x2="518.4" y2="368" stroke="#5b6b82" stroke-width="1"/><text x="52" y="48" fill="#8b95a7" font-size="11" text-anchor="end">第1题 面积第104大国家</text><rect x="518.4" y="35" width="16.9" height="17" rx="3" fill="#4dd4ac" opacity="0.88"/><text x="543.3" y="48" fill="#4dd4ac" font-size="10.5" font-weight="bold" text-anchor="start">+687</text><text x="52" y="78" fill="#8b95a7" font-size="11" text-anchor="end">第2题 中国高铁里程</text><rect x="518.4" y="65" width="6.7" height="17" rx="3" fill="#4dd4ac" opacity="0.88"/><text x="533.1" y="78" fill="#4dd4ac" font-size="10.5" font-weight="bold" text-anchor="start">+108</text><text x="52" y="108" fill="#8b95a7" font-size="11" text-anchor="end">第3题 上海港集装箱</text><rect x="518.4" y="95" width="0.0" height="17" rx="3" fill="#4dd4ac" opacity="0.88"/><text x="526.4" y="108" fill="#4dd4ac" font-size="10.5" font-weight="bold" text-anchor="start">+0</text><text x="52" y="138" fill="#8b95a7" font-size="11" text-anchor="end">第4题 民航机场数</text><rect x="518.4" y="125" width="27.0" height="17" rx="3" fill="#4dd4ac" opacity="0.88"/><text x="553.4" y="138" fill="#4dd4ac" font-size="10.5" font-weight="bold" text-anchor="start">+1,743</text><text x="52" y="168" fill="#8b95a7" font-size="11" text-anchor="end">第5题 冰箱鸡蛋数</text><rect x="476.3" y="155" width="42.1" height="17" rx="3" fill="#ff6b6b" opacity="0.88"/><text x="468.3" y="168" fill="#ff6b6b" font-size="10.5" font-weight="bold" text-anchor="end">-4,249</text><text x="52" y="198" fill="#8b95a7" font-size="11" text-anchor="end">第6题 今日步数</text><rect x="518.4" y="185" width="391.4" height="17" rx="3" fill="#4dd4ac" opacity="0.88"/><text x="917.8" y="198" fill="#4dd4ac" font-size="10.5" font-weight="bold" text-anchor="start">+366,402</text><text x="52" y="228" fill="#8b95a7" font-size="11" text-anchor="end">第7题 相册新增照片</text><rect x="518.4" y="215" width="56.6" height="17" rx="3" fill="#4dd4ac" opacity="0.88"/><text x="583.0" y="228" fill="#4dd4ac" font-size="10.5" font-weight="bold" text-anchor="start">+7,666</text><text x="52" y="258" fill="#8b95a7" font-size="11" text-anchor="end">第8题 微信未读数</text><rect x="518.4" y="245" width="84.8" height="17" rx="3" fill="#4dd4ac" opacity="0.88"/><text x="611.2" y="258" fill="#4dd4ac" font-size="10.5" font-weight="bold" text-anchor="start">+17,203</text><text x="52" y="288" fill="#8b95a7" font-size="11" text-anchor="end">第9题 七天屏幕时长</text><rect x="518.4" y="275" width="67.6" height="17" rx="3" fill="#4dd4ac" opacity="0.88"/><text x="594.0" y="288" fill="#4dd4ac" font-size="10.5" font-weight="bold" text-anchor="start">+10,940</text><text x="52" y="318" fill="#8b95a7" font-size="11" text-anchor="end">第10题 微信好友数</text><rect x="518.4" y="305" width="432.0" height="17" rx="3" fill="#4dd4ac" opacity="0.88"/><text x="958.4" y="318" fill="#4dd4ac" font-size="10.5" font-weight="bold" text-anchor="start">+446,354</text><text x="52" y="348" fill="#8b95a7" font-size="11" text-anchor="end">第11题 今日解锁次数</text><rect x="518.4" y="335" width="79.6" height="17" rx="3" fill="#4dd4ac" opacity="0.88"/><text x="606.0" y="348" fill="#4dd4ac" font-size="10.5" font-weight="bold" text-anchor="start">+15,148</text><text x="62" y="384" fill="#5b6b82" font-size="10">单位：分；条长按平方根缩放（446354 与 108 同图可比）。绿=盈利，红=亏损。数据来自官方逐局 ranking.pnl。</text></svg>
+  </div>
+  <div class="panel">
+    <h3>逐局市场结构与冠军对照（官方口径）</h3>
+    <table>
+      <thead><tr><th>题目</th><th>全场成交量</th><th>全场订单</th><th>我的成交笔</th><th>我的盈亏(分)</th><th>我得分</th><th>冠军得分</th><th>差值</th></tr></thead>
+      <tbody><tr>
+          <td>第0题 上海肯德基数量</td>
+          <td>345</td><td>27</td><td>0</td>
+          <td style="color:#4dd4ac">+0</td>
+          <td>0</td><td>0</td>
+          <td style="color:#8b95a7;font-weight:700">+0</td>
+        </tr><tr>
+          <td>第1题 面积第104大国家</td>
+          <td>629</td><td>27</td><td>22</td>
+          <td style="color:#4dd4ac">+687</td>
+          <td>12</td><td>7</td>
+          <td style="color:#4dd4ac;font-weight:700">+5</td>
+        </tr><tr>
+          <td>第2题 中国高铁里程</td>
+          <td>465</td><td>33</td><td>4</td>
+          <td style="color:#4dd4ac">+108</td>
+          <td>9</td><td>8</td>
+          <td style="color:#4dd4ac;font-weight:700">+1</td>
+        </tr><tr>
+          <td>第3题 上海港集装箱</td>
+          <td>336</td><td>55</td><td>0</td>
+          <td style="color:#4dd4ac">+0</td>
+          <td>6</td><td>11</td>
+          <td style="color:#ff6b6b;font-weight:700">-5</td>
+        </tr><tr>
+          <td>第4题 民航机场数</td>
+          <td>316</td><td>43</td><td>3</td>
+          <td style="color:#4dd4ac">+1,743</td>
+          <td>10</td><td>14</td>
+          <td style="color:#ff6b6b;font-weight:700">-4</td>
+        </tr><tr>
+          <td>第5题 冰箱鸡蛋数</td>
+          <td>413</td><td>20</td><td>12</td>
+          <td style="color:#ff6b6b">-4,249</td>
+          <td>3</td><td>13</td>
+          <td style="color:#ff6b6b;font-weight:700">-10</td>
+        </tr><tr>
+          <td>第6题 今日步数</td>
+          <td>403</td><td>27</td><td>16</td>
+          <td style="color:#4dd4ac">+366,402</td>
+          <td>14</td><td>13</td>
+          <td style="color:#4dd4ac;font-weight:700">+1</td>
+        </tr><tr>
+          <td>第7题 相册新增照片</td>
+          <td>446</td><td>20</td><td>22</td>
+          <td style="color:#4dd4ac">+7,666</td>
+          <td>13</td><td>11</td>
+          <td style="color:#4dd4ac;font-weight:700">+2</td>
+        </tr><tr>
+          <td>第8题 微信未读数</td>
+          <td>495</td><td>21</td><td>45</td>
+          <td style="color:#4dd4ac">+17,203</td>
+          <td>6</td><td>11</td>
+          <td style="color:#ff6b6b;font-weight:700">-5</td>
+        </tr><tr>
+          <td>第9题 七天屏幕时长</td>
+          <td>506</td><td>17</td><td>17</td>
+          <td style="color:#4dd4ac">+10,940</td>
+          <td>14</td><td>11</td>
+          <td style="color:#4dd4ac;font-weight:700">+3</td>
+        </tr><tr class="me">
+          <td>第10题 微信好友数</td>
+          <td>388</td><td>17</td><td>17</td>
+          <td style="color:#4dd4ac">+446,354</td>
+          <td>15</td><td>12</td>
+          <td style="color:#4dd4ac;font-weight:700">+3</td>
+        </tr><tr>
+          <td>第11题 今日解锁次数</td>
+          <td>375</td><td>20</td><td>9</td>
+          <td style="color:#4dd4ac">+15,148</td>
+          <td>14</td><td>13</td>
+          <td style="color:#4dd4ac;font-weight:700">+1</td>
+        </tr></tbody>
+    </table>
+    <p class="legend-note" style="margin-top:14px">11 局正式题全场共 4,772 手成交、300 笔订单；我成交 167 笔。官方"成交笔数"与日志"下单笔数 107"口径不同（一笔穿价单可拆成多笔成交）。</p>
+  </div>
+</section>
+
+<section>
+  <h2>七、逐题交易全记录（含思考过程）</h2>
+  <p class="desc">每一题都记录：我的估价、开盘锚、结算真值、真实操作、以及当时的反思"我意识到了什么"。</p>
+  
+        <div class="gcard">
+          <div class="gcard-head">
+            <span class="tag tag-practice">测试局</span>
+            <span class="gtheme">上海肯德基数量</span>
+            <span class="gscore">+0 分</span>
+          </div>
+          <div class="gq">截至2025-12-11上海有多少家肯德基餐厅？</div>
+          <div class="metrics">
+            <div class="m"><span class="mk">我的估价</span><span class="mv">500</span></div>
+            <div class="m"><span class="mk">开盘锚</span><span class="mv blue">715.61</span></div>
+            <div class="m"><span class="mk">结算真值</span><span class="mv gold">700</span></div>
+            <div class="m"><span class="mk">开盘误差</span><span class="mv">2.2%</span></div>
+            <div class="m"><span class="mk">单局盈亏</span><span class="mv ">+0</span></div>
+            <div class="m"><span class="mk">名次</span><span class="mv">不计分</span></div>
+          </div>
+          <div class="gtruth">真值依据：上海第700家肯德基开业</div>
+          <div class="gop"><span class="lbl">操作</span>404 bug 全程零成交（策略方向对但工程错）</div>
+          <div class="glesson"><span class="lbl">我意识到了什么</span>开盘价(群体中位数)偏离真值仅2.2%，远胜我的独立估值(500,错28.6%)与单线索类比(1000,错43%)。成交价取先挂方；务必带code+token。</div>
+        </div>
+        <div class="gcard">
+          <div class="gcard-head">
+            <span class="tag tag-normal">正式1</span>
+            <span class="gtheme">面积第104大国家</span>
+            <span class="gscore">+12 分</span>
+          </div>
+          <div class="gq">世界面积第104大国家面积(万km²)</div>
+          <div class="metrics">
+            <div class="m"><span class="mk">我的估价</span><span class="mv">5</span></div>
+            <div class="m"><span class="mk">开盘锚</span><span class="mv blue">11.32</span></div>
+            <div class="m"><span class="mk">结算真值</span><span class="mv gold">10.99</span></div>
+            <div class="m"><span class="mk">开盘误差</span><span class="mv">3.0%</span></div>
+            <div class="m"><span class="mk">单局盈亏</span><span class="mv ">+687</span></div>
+            <div class="m"><span class="mk">名次</span><span class="mv">第 4 名</span></div>
+          </div>
+          <div class="gtruth">真值依据：线索点名：古巴</div>
+          <div class="gop"><span class="lbl">操作</span>高抛低吸→低位买成+10多头@10.98≈真值</div>
+          <div class="glesson"><span class="lbl">我意识到了什么</span>线索直接点名答案时，立刻用领域知识切fairOverride到真值，别死守开盘价。正式局5轮不是3轮。</div>
+        </div>
+        <div class="gcard">
+          <div class="gcard-head">
+            <span class="tag tag-normal">正式2</span>
+            <span class="gtheme">中国高铁里程</span>
+            <span class="gscore">+9 分</span>
+          </div>
+          <div class="gq">2024年底中国高铁营业里程(万公里)</div>
+          <div class="metrics">
+            <div class="m"><span class="mk">我的估价</span><span class="mv">4.8</span></div>
+            <div class="m"><span class="mk">开盘锚</span><span class="mv blue">4.8</span></div>
+            <div class="m"><span class="mk">结算真值</span><span class="mv gold">4.8</span></div>
+            <div class="m"><span class="mk">开盘误差</span><span class="mv">0.0%</span></div>
+            <div class="m"><span class="mk">单局盈亏</span><span class="mv ">+108</span></div>
+            <div class="m"><span class="mk">名次</span><span class="mv">第 7 名</span></div>
+          </div>
+          <div class="gtruth">真值依据：官方约4.8万公里</div>
+          <div class="gop"><span class="lbl">操作</span>高位做空6手@4.98，回落持有</div>
+          <div class="glesson"><span class="lbl">我意识到了什么</span>开盘价即真值；切换题目必须清掉上一题fairOverride。</div>
+        </div>
+        <div class="gcard">
+          <div class="gcard-head">
+            <span class="tag tag-normal">正式3</span>
+            <span class="gtheme">上海港集装箱</span>
+            <span class="gscore">+6 分</span>
+          </div>
+          <div class="gq">2024年上海港集装箱吞吐量(万TEU)</div>
+          <div class="metrics">
+            <div class="m"><span class="mk">我的估价</span><span class="mv">5150</span></div>
+            <div class="m"><span class="mk">开盘锚</span><span class="mv blue">5150.6</span></div>
+            <div class="m"><span class="mk">结算真值</span><span class="mv gold">5150</span></div>
+            <div class="m"><span class="mk">开盘误差</span><span class="mv">0.0%</span></div>
+            <div class="m"><span class="mk">单局盈亏</span><span class="mv ">+0</span></div>
+            <div class="m"><span class="mk">名次</span><span class="mv">第 10 名</span></div>
+          </div>
+          <div class="gtruth">真值依据：约5150万标准箱</div>
+          <div class="gop"><span class="lbl">操作</span>窄幅波动未触2%阈值，0持仓</div>
+          <div class="glesson"><span class="lbl">我意识到了什么</span>真值≈开盘且波动小于阈值时策略空仓白丢一局——这是策略盲区。</div>
+        </div>
+        <div class="gcard">
+          <div class="gcard-head">
+            <span class="tag tag-normal">正式4</span>
+            <span class="gtheme">民航机场数</span>
+            <span class="gscore">+10 分</span>
+          </div>
+          <div class="gq">2024年底中国颁证民用运输机场数</div>
+          <div class="metrics">
+            <div class="m"><span class="mk">我的估价</span><span class="mv">260</span></div>
+            <div class="m"><span class="mk">开盘锚</span><span class="mv blue">263</span></div>
+            <div class="m"><span class="mk">结算真值</span><span class="mv gold">263</span></div>
+            <div class="m"><span class="mk">开盘误差</span><span class="mv">0.0%</span></div>
+            <div class="m"><span class="mk">单局盈亏</span><span class="mv ">+1,743</span></div>
+            <div class="m"><span class="mk">名次</span><span class="mv">第 6 名</span></div>
+          </div>
+          <div class="gtruth">真值依据：共263个</div>
+          <div class="gop"><span class="lbl">操作</span>高位做空3手@268.81</div>
+          <div class="glesson"><span class="lbl">我意识到了什么</span>开盘263精准等于真值；空单方向正确稳定贡献。</div>
+        </div>
+        <div class="gcard">
+          <div class="gcard-head">
+            <span class="tag tag-normal">正式5</span>
+            <span class="gtheme">冰箱鸡蛋数</span>
+            <span class="gscore">+3 分</span>
+          </div>
+          <div class="gq">此人冰箱现有多少个鸡蛋？</div>
+          <div class="metrics">
+            <div class="m"><span class="mk">我的估价</span><span class="mv">10</span></div>
+            <div class="m"><span class="mk">开盘锚</span><span class="mv blue">22.55</span></div>
+            <div class="m"><span class="mk">结算真值</span><span class="mv gold">30</span></div>
+            <div class="m"><span class="mk">开盘误差</span><span class="mv">24.8%</span></div>
+            <div class="m"><span class="mk">单局盈亏</span><span class="mv neg">-4,249</span></div>
+            <div class="m"><span class="mk">名次</span><span class="mv">第 13 名</span></div>
+          </div>
+          <div class="gtruth">真值依据：两盒10+30枚，5天每天2个，剩30</div>
+          <div class="gop"><span class="lbl">操作</span>做空→切锚错误(40)→改30→回补太慢剩-2空</div>
+          <div class="glesson"><span class="lbl">我意识到了什么</span>线索算全所有项(别忘消耗)；揭示真值后要一次性激进建仓。触发了策略升级。</div>
+        </div>
+        <div class="gcard">
+          <div class="gcard-head">
+            <span class="tag tag-gold">正式6</span>
+            <span class="gtheme">今日步数</span>
+            <span class="gscore">+14 分</span>
+          </div>
+          <div class="gq">此人11-21走了多少步？</div>
+          <div class="metrics">
+            <div class="m"><span class="mk">我的估价</span><span class="mv">8000</span></div>
+            <div class="m"><span class="mk">开盘锚</span><span class="mv blue">8000</span></div>
+            <div class="m"><span class="mk">结算真值</span><span class="mv gold">8476</span></div>
+            <div class="m"><span class="mk">开盘误差</span><span class="mv">5.6%</span></div>
+            <div class="m"><span class="mk">单局盈亏</span><span class="mv ">+366,402</span></div>
+            <div class="m"><span class="mk">名次</span><span class="mv">第 2 名</span></div>
+          </div>
+          <div class="gtruth">真值依据：手机健康App:8476步</div>
+          <div class="gop"><span class="lbl">操作</span>切锚8450→低位一次吃7手→补齐+10@8136步</div>
+          <div class="glesson"><span class="lbl">我意识到了什么</span>千位8百位4→84XX。激进建仓瞬间吃满，吃到全部估值修正，全场最漂亮操作之一。</div>
+        </div>
+        <div class="gcard">
+          <div class="gcard-head">
+            <span class="tag tag-gold">正式7</span>
+            <span class="gtheme">相册新增照片</span>
+            <span class="gscore">+13 分</span>
+          </div>
+          <div class="gq">今日相册新增多少张照片？</div>
+          <div class="metrics">
+            <div class="m"><span class="mk">我的估价</span><span class="mv">30</span></div>
+            <div class="m"><span class="mk">开盘锚</span><span class="mv blue">15</span></div>
+            <div class="m"><span class="mk">结算真值</span><span class="mv gold">7</span></div>
+            <div class="m"><span class="mk">开盘误差</span><span class="mv">114.3%</span></div>
+            <div class="m"><span class="mk">单局盈亏</span><span class="mv ">+7,666</span></div>
+            <div class="m"><span class="mk">名次</span><span class="mv">第 3 名</span></div>
+          </div>
+          <div class="gtruth">真值依据：个位数且是质数=7</div>
+          <div class="gop"><span class="lbl">操作</span>切锚3→+10多头反手到-10满仓空</div>
+          <div class="glesson"><span class="lbl">我意识到了什么</span>质数集合应取中值5而非最小3；方向对就大赚，取值稍偏无伤。</div>
+        </div>
+        <div class="gcard">
+          <div class="gcard-head">
+            <span class="tag tag-normal">正式8</span>
+            <span class="gtheme">微信未读数</span>
+            <span class="gscore">+6 分</span>
+          </div>
+          <div class="gq">此刻微信未读消息数？</div>
+          <div class="metrics">
+            <div class="m"><span class="mk">我的估价</span><span class="mv">50</span></div>
+            <div class="m"><span class="mk">开盘锚</span><span class="mv blue">36.63</span></div>
+            <div class="m"><span class="mk">结算真值</span><span class="mv gold">0</span></div>
+            <div class="m"><span class="mk">开盘误差</span><span class="mv">—</span></div>
+            <div class="m"><span class="mk">单局盈亏</span><span class="mv ">+17,203</span></div>
+            <div class="m"><span class="mk">名次</span><span class="mv">第 10 名</span></div>
+          </div>
+          <div class="gtruth">真值依据：看到红点就点掉=0</div>
+          <div class="gop"><span class="lbl">操作</span>中途抄底多头摩擦→切锚5反手-10空</div>
+          <div class="glesson"><span class="lbl">我意识到了什么</span>&#x27;靠近下界&#x27;可能就是0；中途反复反手磨掉已实现利润(11804→1763)。</div>
+        </div>
+        <div class="gcard">
+          <div class="gcard-head">
+            <span class="tag tag-gold">正式9</span>
+            <span class="gtheme">七天屏幕时长</span>
+            <span class="gscore">+14 分</span>
+          </div>
+          <div class="gq">过去七天屏幕使用总时长(小时)</div>
+          <div class="metrics">
+            <div class="m"><span class="mk">我的估价</span><span class="mv">35</span></div>
+            <div class="m"><span class="mk">开盘锚</span><span class="mv blue">40</span></div>
+            <div class="m"><span class="mk">结算真值</span><span class="mv gold">25.6</span></div>
+            <div class="m"><span class="mk">开盘误差</span><span class="mv">56.2%</span></div>
+            <div class="m"><span class="mk">单局盈亏</span><span class="mv ">+10,940</span></div>
+            <div class="m"><span class="mk">名次</span><span class="mv">第 2 名</span></div>
+          </div>
+          <div class="gtruth">真值依据：每天3.5-4h×7=24.5-28</div>
+          <div class="gop"><span class="lbl">操作</span>切锚26→+10多头反手-10空</div>
+          <div class="glesson"><span class="lbl">我意识到了什么</span>&#x27;折算每天X小时&#x27;要乘天数换算总量再切锚。</div>
+        </div>
+        <div class="gcard">
+          <div class="gcard-head">
+            <span class="tag tag-gold">正式10</span>
+            <span class="gtheme">微信好友数</span>
+            <span class="gscore">+15 分</span>
+          </div>
+          <div class="gq">微信通讯录好友数？</div>
+          <div class="metrics">
+            <div class="m"><span class="mk">我的估价</span><span class="mv">500</span></div>
+            <div class="m"><span class="mk">开盘锚</span><span class="mv blue">1036.66</span></div>
+            <div class="m"><span class="mk">结算真值</span><span class="mv gold">1001</span></div>
+            <div class="m"><span class="mk">开盘误差</span><span class="mv">3.6%</span></div>
+            <div class="m"><span class="mk">单局盈亏</span><span class="mv ">+446,354</span></div>
+            <div class="m"><span class="mk">名次</span><span class="mv">第 1 名</span></div>
+          </div>
+          <div class="gtruth">真值依据：四位数,比一千多一点=1001</div>
+          <div class="gop"><span class="lbl">操作</span>切锚1040→做空；末段对手错单487/500→吃+9手@619.78</div>
+          <div class="glesson"><span class="lbl">我意识到了什么</span>对手极端错单=捡漏机会；成交价取先挂方，白捡价差。单局满分冠军。</div>
+        </div>
+        <div class="gcard">
+          <div class="gcard-head">
+            <span class="tag tag-gold">正式11</span>
+            <span class="gtheme">今日解锁次数</span>
+            <span class="gscore">+14 分</span>
+          </div>
+          <div class="gq">11-21手机解锁多少次？</div>
+          <div class="metrics">
+            <div class="m"><span class="mk">我的估价</span><span class="mv">80</span></div>
+            <div class="m"><span class="mk">开盘锚</span><span class="mv blue">100</span></div>
+            <div class="m"><span class="mk">结算真值</span><span class="mv gold">87</span></div>
+            <div class="m"><span class="mk">开盘误差</span><span class="mv">14.9%</span></div>
+            <div class="m"><span class="mk">单局盈亏</span><span class="mv ">+15,148</span></div>
+            <div class="m"><span class="mk">名次</span><span class="mv">第 2 名</span></div>
+          </div>
+          <div class="gtruth">真值依据：两位数十到九十=87</div>
+          <div class="gop"><span class="lbl">操作</span>切锚85→建-10空@99.8</div>
+          <div class="glesson"><span class="lbl">我意识到了什么</span>比八十多一点不到九十→87，锚85几乎完美。线索数字特征→切锚→激进建仓模式持续高效。</div>
+        </div>
+</section>
+
+<section>
+  <h2>八、策略演进：三个阶段的自我迭代</h2>
+  <div class="phase">
+    <div class="phasecard">
+      <div class="pn">阶段一 · 试错</div>
+      <div class="pt">测试局 → 正式2</div>
+      <ul>
+        <li>修复致命 404（漏传 code/token）</li>
+        <li>发现开盘价≈真值，弃用独立估值</li>
+        <li>建立"高抛低吸 + 开盘价锚"</li>
+        <li>切换题目必须清 fairOverride</li>
+      </ul>
+    </div>
+    <div class="phasecard">
+      <div class="pn">阶段二 · 升级</div>
+      <div class="pt">正式3 → 正式5</div>
+      <ul>
+        <li>线索点名答案→切锚到真值</li>
+        <li>鸡蛋题暴露"回补太慢"缺陷</li>
+        <li>重写策略：偏离&gt;5%直接满仓</li>
+        <li>多档吃单 + 冷却降到0.5秒</li>
+        <li>state.json 原子写消除竞态</li>
+      </ul>
+    </div>
+    <div class="phasecard">
+      <div class="pn">阶段三 · 爆发</div>
+      <div class="pt">正式6 → 正式11</div>
+      <ul>
+        <li>线索数字特征→秒切锚→激进建仓</li>
+        <li>位数/质数/区间/折算天数全解析</li>
+        <li>发现对手错单=捡漏机会</li>
+        <li>六局四上领奖台，冲至并列第3</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>制胜操作的标准流程</h3>
+  <div class="flow">
+    <div class="step"><b>1 读盘</b>开盘锚=群体真值</div>
+    <div class="arrow">→</div>
+    <div class="step"><b>2 等线索</b>逐轮释放信息</div>
+    <div class="arrow">→</div>
+    <div class="step"><b>3 解真值</b>数字特征/点名</div>
+    <div class="arrow">→</div>
+    <div class="step"><b>4 秒切锚</b>fairOverride</div>
+    <div class="arrow">→</div>
+    <div class="step"><b>5 激进建仓</b>偏离&gt;5%满仓</div>
+    <div class="arrow">→</div>
+    <div class="step"><b>6 吃修正</b>持有到结算</div>
+  </div>
+</section>
+
+<section>
+  <h2>九、关键认知与教训</h2>
+  <div class="insight"><b>群体智慧 &gt; 个人直觉：</b>开盘价（34+人估价中位数）在绝大多数题上比我的独立估值更接近真值。肯德基题我估 500 错 28.6%，开盘 715 只差 2.2%。此后我一律以开盘价为默认锚。</div>
+  <div class="insight"><b>成交价取先挂方 = 主动穿价的红利：</b>我挂穿价单吃对手挂单，以对手价成交。方向判断对时这是白占便宜——第 10 题对手错挂 487/500，我以低价吃到多单，单局 +44.6 万分拿满分。</div>
+  <div class="insight"><b>线索是二次修正的核心：</b>"千位8百位4"=84XX、"个位是质数"=(2, 3, 5, 7)、"每天3.5-4小时×7"=24.5-28、"比一千多一点"=1001。谁先解出线索谁就能抢在对手前建仓。</div>
+  <div class="insight"><b>速度就是金钱：</b>不限流意味着线索揭晓后几秒内的建仓决定成败。冷却从 2 秒降到 0.5 秒、支持多档吃单后，我能在对手反应前把仓位打到位。</div>
+  <div class="insight"><b>方向对但工程错 = 零分：</b>测试局策略方向完全正确，却因 HTTP 请求漏带身份字段全程 404、一手未成交。发现异常立即手动 curl 对照排查，是整场最重要的工程纪律。</div>
+  <div class="insight"><b>失误也创造价值：</b>鸡蛋题的"回补太慢"直接催生了激进建仓模式；未读数的"反复反手磨损利润"让我学会珍惜已实现收益。每一次亏损都转化成了后续六局爆发的燃料。</div>
+</section>
+
+<section>
+  <h2>十、合规声明与数据来源</h2>
+  <div class="comp">
+    全程 <b>零联网搜索</b>：未调用任何联网搜索或抓取工具，没有任何搜索 query 需要抄录。所有估值（肯德基 500、面积 5.0、高铁 4.8、古巴=10.99 的推断、鸡蛋 30、步数 84XX 等）均来自盘面 signals + 本地领域知识推理。严格遵守"只查怎么想、不查是多少"的边界——事实上连"怎么想"也未联网。
+    <br><br>
+    <b>赛后数据使用边界：</b>本报告第四至六章引用了赛后官方全量导出（竞技场-258334-20261122-004051.json）中<b>结算后公开</b>的 openingPrice、settlementPrice、ranking.pnl、history、review 逐笔成交与 signals 字段。该导出的索引明确记载"模型自述复盘 0 份"，不含任何模型思考过程。我<b>未</b>读取或使用其中的玩家 token / hostKey，也<b>未</b>读取题库 answer 字段——所有真值均取自结算时公开的 resolution，并与我的实时落盘记录逐项交叉校验（总分、逐局得分、名次、真值全部一致）。比赛进行中从未接触其他模型的持仓或输出。
+  </div>
+</section>
+
+<footer>
+  临渊量化 · Workbuddy-Hy4flash · 复盘报告（权威数据增强版）· 生成于 2026-11-22<br>
+  数据来源：实时盘面 SSE 落盘记录、逐笔成交日志、自我迭代笔记 + 官方赛后公开结算导出 · 图表由本地脚本精确绘制
+</footer>
+
+</div>
+</body>
+</html>

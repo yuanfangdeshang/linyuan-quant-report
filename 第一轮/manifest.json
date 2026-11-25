@@ -1,0 +1,2147 @@
+{
+  "root": "/Users/yuanf/Documents/Qoder/模拟做市商/第一轮",
+  "large_file_threshold_bytes": 20971520,
+  "excluded": [
+    "server source",
+    "question bank",
+    "__pycache__",
+    ".DS_Store",
+    "node_modules"
+  ],
+  "files": [
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/赛后数据/chart_open_vs_settle.png",
+      "archived_path": "official/chart_open_vs_settle.png",
+      "compressed": false,
+      "original_size": 109908,
+      "archived_size": 109908,
+      "sha256_original": "ca8ca8e080d558be9f71970edca1d17a0589ce83609582a8402158d51a223899",
+      "sha256_archived": "ca8ca8e080d558be9f71970edca1d17a0589ce83609582a8402158d51a223899"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/赛后数据/chart_pnl.png",
+      "archived_path": "official/chart_pnl.png",
+      "compressed": false,
+      "original_size": 45254,
+      "archived_size": 45254,
+      "sha256_original": "6ec5aa223c22b20c0ce7f7082b694796f1dd0de3cce7d1974a7d2236f4d25960",
+      "sha256_archived": "6ec5aa223c22b20c0ce7f7082b694796f1dd0de3cce7d1974a7d2236f4d25960"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/赛后数据/chart_points.png",
+      "archived_path": "official/chart_points.png",
+      "compressed": false,
+      "original_size": 56388,
+      "archived_size": 56388,
+      "sha256_original": "884f09018a5dc97a44d0e9570e84ac7d5c94fb5aa47c4f841fb02e9a24168bac",
+      "sha256_archived": "884f09018a5dc97a44d0e9570e84ac7d5c94fb5aa47c4f841fb02e9a24168bac"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/赛后数据/chart_price_path.png",
+      "archived_path": "official/chart_price_path.png",
+      "compressed": false,
+      "original_size": 230989,
+      "archived_size": 230989,
+      "sha256_original": "c3e1bf703d19c21c77c52bc623fb92c8fd8c48adf964b4a569a597f6ebd0ee91",
+      "sha256_archived": "c3e1bf703d19c21c77c52bc623fb92c8fd8c48adf964b4a569a597f6ebd0ee91"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/赛后数据/chart_rank.png",
+      "archived_path": "official/chart_rank.png",
+      "compressed": false,
+      "original_size": 78034,
+      "archived_size": 78034,
+      "sha256_original": "cf07a76c291f9ad171945cc5babd0992332434ad2938d3cd420e155f8f93e126",
+      "sha256_archived": "cf07a76c291f9ad171945cc5babd0992332434ad2938d3cd420e155f8f93e126"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/赛后数据/chart_standings.png",
+      "archived_path": "official/chart_standings.png",
+      "compressed": false,
+      "original_size": 49680,
+      "archived_size": 49680,
+      "sha256_original": "7bf544e0a227ecf521528f6a444207592a90b6158d675f5adbd8a0887ee33dbd",
+      "sha256_archived": "7bf544e0a227ecf521528f6a444207592a90b6158d675f5adbd8a0887ee33dbd"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/赛后数据/gen_report.py",
+      "archived_path": "official/gen_report.py",
+      "compressed": false,
+      "original_size": 20817,
+      "archived_size": 20817,
+      "sha256_original": "58c2d0ae36a459736130211a0642b22139518dd57f3eeaee71145b87566311d2",
+      "sha256_archived": "58c2d0ae36a459736130211a0642b22139518dd57f3eeaee71145b87566311d2"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/赛后数据/qoder-DeepSeek-自述复盘.md",
+      "archived_path": "official/qoder-DeepSeek-自述复盘.md",
+      "compressed": false,
+      "original_size": 8647,
+      "archived_size": 8647,
+      "sha256_original": "2c0a535a85f2602ad2517eb9b38b5f2bfb59da114af78f8aa96a0d2db0859eb4",
+      "sha256_archived": "2c0a535a85f2602ad2517eb9b38b5f2bfb59da114af78f8aa96a0d2db0859eb4"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/赛后数据/report_template.html",
+      "archived_path": "official/report_template.html",
+      "compressed": false,
+      "original_size": 26173,
+      "archived_size": 26173,
+      "sha256_original": "2e33ede2666eab902df036000867dd60690f2726fc4e70502d11f27e4347bff5",
+      "sha256_archived": "2e33ede2666eab902df036000867dd60690f2726fc4e70502d11f27e4347bff5"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/赛后数据/rooms-关闭前-20261124-170348.json",
+      "archived_path": "official/rooms-关闭前-20261124-170348.json",
+      "compressed": false,
+      "original_size": 1898847,
+      "archived_size": 1898847,
+      "sha256_original": "028be3756817c7a8e05c942637d7ac411b5bdec286aaf7f30ab0f9821352208c",
+      "sha256_archived": "028be3756817c7a8e05c942637d7ac411b5bdec286aaf7f30ab0f9821352208c"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/赛后数据/rooms-原始快照-20261122-004051.json",
+      "archived_path": "official/rooms-原始快照-20261122-004051.json",
+      "compressed": false,
+      "original_size": 1693401,
+      "archived_size": 1693401,
+      "sha256_original": "e0c9118d2c56290df3bd43a1bbd6df845cd9e911a84f3a97bc9f5fe82e793bcf",
+      "sha256_archived": "e0c9118d2c56290df3bd43a1bbd6df845cd9e911a84f3a97bc9f5fe82e793bcf"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/赛后数据/竞技场-258334-20261122-004051.json",
+      "archived_path": "official/竞技场-258334-20261122-004051.json",
+      "compressed": false,
+      "original_size": 3236406,
+      "archived_size": 3236406,
+      "sha256_original": "e45d963556c4f8fc91163766a7342c2fd4f48ea61df94a98bb38aff74991482b",
+      "sha256_archived": "e45d963556c4f8fc91163766a7342c2fd4f48ea61df94a98bb38aff74991482b"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/赛后数据/竞技场-880529-20261122-004051.json",
+      "archived_path": "official/竞技场-880529-20261122-004051.json",
+      "compressed": false,
+      "original_size": 133943,
+      "archived_size": 133943,
+      "sha256_original": "c77f42f70ec396b22a196f5af57f22096d6069eb747d9668c800933734f76e6a",
+      "sha256_archived": "c77f42f70ec396b22a196f5af57f22096d6069eb747d9668c800933734f76e6a"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/赛后数据/索引.md",
+      "archived_path": "official/索引.md",
+      "compressed": false,
+      "original_size": 1717,
+      "archived_size": 1717,
+      "sha256_original": "d69ce9afabb02f51c1756fd0d648e117529e644877ea55de9b7563c504927827",
+      "sha256_archived": "d69ce9afabb02f51c1756fd0d648e117529e644877ea55de9b7563c504927827"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/复盘图表/01_rank_points.png",
+      "archived_path": "models/quwork_v41flash/charts/01_rank_points.png",
+      "compressed": false,
+      "original_size": 286719,
+      "archived_size": 286719,
+      "sha256_original": "5008a9bc962a49e7ce06b4ba2478023660b64f02e31e36544bef84538785dded",
+      "sha256_archived": "5008a9bc962a49e7ce06b4ba2478023660b64f02e31e36544bef84538785dded"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/复盘图表/02_paths_grid.png",
+      "archived_path": "models/quwork_v41flash/charts/02_paths_grid.png",
+      "compressed": false,
+      "original_size": 499101,
+      "archived_size": 499101,
+      "sha256_original": "b58d21b0dfb47a471e3a95999adeee3fc96061a93057acbf249a14f835c1d3e7",
+      "sha256_archived": "b58d21b0dfb47a471e3a95999adeee3fc96061a93057acbf249a14f835c1d3e7"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/复盘图表/03_delay.png",
+      "archived_path": "models/quwork_v41flash/charts/03_delay.png",
+      "compressed": false,
+      "original_size": 143810,
+      "archived_size": 143810,
+      "sha256_original": "941262c759b210e1faff505d0f1f7a0314dcb87ea67908b72d49e0d3858f7f35",
+      "sha256_archived": "941262c759b210e1faff505d0f1f7a0314dcb87ea67908b72d49e0d3858f7f35"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/复盘图表/04_return.png",
+      "archived_path": "models/quwork_v41flash/charts/04_return.png",
+      "compressed": false,
+      "original_size": 120417,
+      "archived_size": 120417,
+      "sha256_original": "b5218021a78db2636edac7dd935547ef75e182eb847599e48c8b4d3d11f1752d",
+      "sha256_archived": "b5218021a78db2636edac7dd935547ef75e182eb847599e48c8b4d3d11f1752d"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/复盘图表/05_speed_points.png",
+      "archived_path": "models/quwork_v41flash/charts/05_speed_points.png",
+      "compressed": false,
+      "original_size": 138068,
+      "archived_size": 138068,
+      "sha256_original": "b90b279a70c2ba728f0f443d0a27a1ec9b088a16093a4f6052ef3c73e423d700",
+      "sha256_archived": "b90b279a70c2ba728f0f443d0a27a1ec9b088a16093a4f6052ef3c73e423d700"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/复盘图表/06_counterparty.png",
+      "archived_path": "models/quwork_v41flash/charts/06_counterparty.png",
+      "compressed": false,
+      "original_size": 108122,
+      "archived_size": 108122,
+      "sha256_original": "653a2a988035ef64285589868ae8039d7e6a7aa8dbb7157032cb7b3a131aa2b1",
+      "sha256_archived": "653a2a988035ef64285589868ae8039d7e6a7aa8dbb7157032cb7b3a131aa2b1"
+    },
+    {
+      "source": "/Users/yuanf/.qoder/tmp/-Users-yuanf-Documents-Qoder------/attachments/8be60ac5-aa34-44ad-9219-36af9aa96dd6/473ca8f3-e24b-4979-a2b0-7ac236f33fc5.txt",
+      "archived_path": "models/quwork_v41flash/transcript.txt",
+      "compressed": false,
+      "original_size": 577487,
+      "archived_size": 577487,
+      "sha256_original": "705a5b5ca03928557b75ed85613c7fb94bd4d546ec73693897c4146170133b87",
+      "sha256_archived": "705a5b5ca03928557b75ed85613c7fb94bd4d546ec73693897c4146170133b87"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-6/临渊一局·复盘手记.html",
+      "archived_path": "models/deepseek_v41flash_doubao/临渊一局·复盘手记.html",
+      "compressed": false,
+      "original_size": 39938,
+      "archived_size": 39938,
+      "sha256_original": "e30d7c2b5bd08d48aef41b412bddaedb1865b096bfa08693b439bcd445427227",
+      "sha256_archived": "e30d7c2b5bd08d48aef41b412bddaedb1865b096bfa08693b439bcd445427227"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-6/临渊一局·复盘手记.pdf",
+      "archived_path": "models/deepseek_v41flash_doubao/临渊一局·复盘手记.pdf",
+      "compressed": false,
+      "original_size": 4184441,
+      "archived_size": 4184441,
+      "sha256_original": "53ffca8aa8620b882f62a5e48e46e35eda33d1be3597e9540b62cd00b30dd194",
+      "sha256_archived": "53ffca8aa8620b882f62a5e48e46e35eda33d1be3597e9540b62cd00b30dd194"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-6/assets/01_rank_curve.png",
+      "archived_path": "models/deepseek_v41flash_doubao/assets/01_rank_curve.png",
+      "compressed": false,
+      "original_size": 177609,
+      "archived_size": 177609,
+      "sha256_original": "15ce2f7211e37a0408d18c91ad1cbad997a009717c2294d5074039e5ce831873",
+      "sha256_archived": "15ce2f7211e37a0408d18c91ad1cbad997a009717c2294d5074039e5ce831873"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-6/assets/02_points.png",
+      "archived_path": "models/deepseek_v41flash_doubao/assets/02_points.png",
+      "compressed": false,
+      "original_size": 178910,
+      "archived_size": 178910,
+      "sha256_original": "56f799b284231a285543ff6fabf0e32977ffdea6a07f0c48dfa087ad3cbf24ab",
+      "sha256_archived": "56f799b284231a285543ff6fabf0e32977ffdea6a07f0c48dfa087ad3cbf24ab"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-6/assets/03_score.png",
+      "archived_path": "models/deepseek_v41flash_doubao/assets/03_score.png",
+      "compressed": false,
+      "original_size": 77879,
+      "archived_size": 77879,
+      "sha256_original": "600ab60ab61e0b1abe0f98150b099c5f70d98ab54a13b36876c250c3c39c2acc",
+      "sha256_archived": "600ab60ab61e0b1abe0f98150b099c5f70d98ab54a13b36876c250c3c39c2acc"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-6/assets/04a_paths.png",
+      "archived_path": "models/deepseek_v41flash_doubao/assets/04a_paths.png",
+      "compressed": false,
+      "original_size": 220287,
+      "archived_size": 220287,
+      "sha256_original": "c063ab2b3c8e3c6aa7110c80eabef1aadfbe8d3a4d45d9d983a9d42b8d8b0c0e",
+      "sha256_archived": "c063ab2b3c8e3c6aa7110c80eabef1aadfbe8d3a4d45d9d983a9d42b8d8b0c0e"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-6/assets/04b_paths.png",
+      "archived_path": "models/deepseek_v41flash_doubao/assets/04b_paths.png",
+      "compressed": false,
+      "original_size": 180010,
+      "archived_size": 180010,
+      "sha256_original": "9a38e464053d75bb418e67d754e00c486767d9b285092efa68504be1494d3d6f",
+      "sha256_archived": "9a38e464053d75bb418e67d754e00c486767d9b285092efa68504be1494d3d6f"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-6/assets/05_accuracy.png",
+      "archived_path": "models/deepseek_v41flash_doubao/assets/05_accuracy.png",
+      "compressed": false,
+      "original_size": 56817,
+      "archived_size": 56817,
+      "sha256_original": "bd3b12509b8a66d4403234bbe34aafda2668f6906d3191477dbcd19b4d1d3330",
+      "sha256_archived": "bd3b12509b8a66d4403234bbe34aafda2668f6906d3191477dbcd19b4d1d3330"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-9/bot_stdout.log",
+      "archived_path": "models/deepseek_v4pro_doubao/source/bot_stdout.log",
+      "compressed": false,
+      "original_size": 9517328,
+      "archived_size": 9517328,
+      "sha256_original": "5e682fcdb718aa41e782c08fa88afbcdab4ec071066ffc9430e9e3c105103b02",
+      "sha256_archived": "5e682fcdb718aa41e782c08fa88afbcdab4ec071066ffc9430e9e3c105103b02"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-9/chart_est_vs_true.png",
+      "archived_path": "models/deepseek_v4pro_doubao/source/chart_est_vs_true.png",
+      "compressed": false,
+      "original_size": 53263,
+      "archived_size": 53263,
+      "sha256_original": "ccde644d8a681b86f6ccbe7dae3974cb6ba3a3b898e7f7be846e4939553027d3",
+      "sha256_archived": "ccde644d8a681b86f6ccbe7dae3974cb6ba3a3b898e7f7be846e4939553027d3"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-9/chart_pnl.png",
+      "archived_path": "models/deepseek_v4pro_doubao/source/chart_pnl.png",
+      "compressed": false,
+      "original_size": 44883,
+      "archived_size": 44883,
+      "sha256_original": "347548520bc0d1c806357aa4fce592c53e88428379ceb47e7e71dfec3a79bc41",
+      "sha256_archived": "347548520bc0d1c806357aa4fce592c53e88428379ceb47e7e71dfec3a79bc41"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-9/chart_points.png",
+      "archived_path": "models/deepseek_v4pro_doubao/source/chart_points.png",
+      "compressed": false,
+      "original_size": 56388,
+      "archived_size": 56388,
+      "sha256_original": "884f09018a5dc97a44d0e9570e84ac7d5c94fb5aa47c4f841fb02e9a24168bac",
+      "sha256_archived": "884f09018a5dc97a44d0e9570e84ac7d5c94fb5aa47c4f841fb02e9a24168bac"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-9/chart_rank.png",
+      "archived_path": "models/deepseek_v4pro_doubao/source/chart_rank.png",
+      "compressed": false,
+      "original_size": 76272,
+      "archived_size": 76272,
+      "sha256_original": "fe0c91d992f903772b5f6f9966bf575687e50539cdc1e3843ef1052aa9c5fa05",
+      "sha256_archived": "fe0c91d992f903772b5f6f9966bf575687e50539cdc1e3843ef1052aa9c5fa05"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-9/chart_standings.png",
+      "archived_path": "models/deepseek_v4pro_doubao/source/chart_standings.png",
+      "compressed": false,
+      "original_size": 46375,
+      "archived_size": 46375,
+      "sha256_original": "303182cf35374bcbe81993a4ad19d8d843b00b3e2af59021e2126c30388e5776",
+      "sha256_archived": "303182cf35374bcbe81993a4ad19d8d843b00b3e2af59021e2126c30388e5776"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-9/estimate_input.txt",
+      "archived_path": "models/deepseek_v4pro_doubao/source/estimate_input.txt",
+      "compressed": false,
+      "original_size": 6,
+      "archived_size": 6,
+      "sha256_original": "fa11efc49ff178cc7c94f84e26e78b08816fc14ab628fe60d00fb6dc30912f38",
+      "sha256_archived": "fa11efc49ff178cc7c94f84e26e78b08816fc14ab628fe60d00fb6dc30912f38"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-9/fair_value.txt",
+      "archived_path": "models/deepseek_v4pro_doubao/source/fair_value.txt",
+      "compressed": false,
+      "original_size": 3,
+      "archived_size": 3,
+      "sha256_original": "ff393127b5a059b172af9b9eed820368071cf24d46df1b8326623c8e79178379",
+      "sha256_archived": "ff393127b5a059b172af9b9eed820368071cf24d46df1b8326623c8e79178379"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-9/reflection.md",
+      "archived_path": "models/deepseek_v4pro_doubao/source/reflection.md",
+      "compressed": false,
+      "original_size": 3888,
+      "archived_size": 3888,
+      "sha256_original": "7b9f35aff224465b83050deec60c2132e1b136c27ed67bdb634ba85d15bc8858",
+      "sha256_archived": "7b9f35aff224465b83050deec60c2132e1b136c27ed67bdb634ba85d15bc8858"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-9/report_data.json",
+      "archived_path": "models/deepseek_v4pro_doubao/source/report_data.json",
+      "compressed": false,
+      "original_size": 3394,
+      "archived_size": 3394,
+      "sha256_original": "c76b4f0fd2cae365bb264f2f4ea33a744824e7a8f5e4ee9c5f7b8e7cc9f012bf",
+      "sha256_archived": "c76b4f0fd2cae365bb264f2f4ea33a744824e7a8f5e4ee9c5f7b8e7cc9f012bf"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-9/report_template.html",
+      "archived_path": "models/deepseek_v4pro_doubao/source/report_template.html",
+      "compressed": false,
+      "original_size": 24864,
+      "archived_size": 24864,
+      "sha256_original": "b6c6da03471a4ca26ca02dc83de19a5f40ef77bd03f99b537ff932aa6cec1da1",
+      "sha256_archived": "b6c6da03471a4ca26ca02dc83de19a5f40ef77bd03f99b537ff932aa6cec1da1"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-9/state_latest.json",
+      "archived_path": "models/deepseek_v4pro_doubao/source/state_latest.json",
+      "compressed": false,
+      "original_size": 130510,
+      "archived_size": 130510,
+      "sha256_original": "b4ae4beba0af693367568fc981279b8076073fe80de97320d7a2c3c6ece624cd",
+      "sha256_archived": "b4ae4beba0af693367568fc981279b8076073fe80de97320d7a2c3c6ece624cd"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-9/trader.log",
+      "archived_path": "models/deepseek_v4pro_doubao/source/trader.log",
+      "compressed": false,
+      "original_size": 10469909,
+      "archived_size": 10469909,
+      "sha256_original": "034a64df7a315427e1fac63e5fec5ab87522bce5b3a4287b256b40d21c1f8f1f",
+      "sha256_archived": "034a64df7a315427e1fac63e5fec5ab87522bce5b3a4287b256b40d21c1f8f1f"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-9/trader_bot.py",
+      "archived_path": "models/deepseek_v4pro_doubao/source/trader_bot.py",
+      "compressed": false,
+      "original_size": 8727,
+      "archived_size": 8727,
+      "sha256_original": "8401659c9614e713bfb71b7ad24012a671988edfc1f7ee9a50beb986ab597bad",
+      "sha256_archived": "8401659c9614e713bfb71b7ad24012a671988edfc1f7ee9a50beb986ab597bad"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-11/临渊量化赛后复盘报告.html",
+      "archived_path": "models/deepseek_v4pro_doubao/reports/临渊量化赛后复盘报告.html",
+      "compressed": false,
+      "original_size": 786571,
+      "archived_size": 786571,
+      "sha256_original": "bce4d33145eabd64d101eaffd093e53eac9442f58adf1e6233667499f190a110",
+      "sha256_archived": "bce4d33145eabd64d101eaffd093e53eac9442f58adf1e6233667499f190a110"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-11/临渊量化逐笔复盘报告.html",
+      "archived_path": "models/deepseek_v4pro_doubao/reports/临渊量化逐笔复盘报告.html",
+      "compressed": false,
+      "original_size": 843262,
+      "archived_size": 843262,
+      "sha256_original": "291f87d84bde08d7b70e807ff1a3c705e4ca852b1b49db672cf2d960855f740a",
+      "sha256_archived": "291f87d84bde08d7b70e807ff1a3c705e4ca852b1b49db672cf2d960855f740a"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/bot.pid",
+      "archived_path": "models/doubao_21pro/bot.pid",
+      "compressed": false,
+      "original_size": 6,
+      "archived_size": 6,
+      "sha256_original": "967638a0b41b1c40d3d4db25758eee7ba73dfa60ee216f6545a32d14a3a2b360",
+      "sha256_archived": "967638a0b41b1c40d3d4db25758eee7ba73dfa60ee216f6545a32d14a3a2b360"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/build_archive.py",
+      "archived_path": "models/doubao_21pro/build_archive.py",
+      "compressed": false,
+      "original_size": 2442,
+      "archived_size": 2442,
+      "sha256_original": "4bb67ea314d17797dd8aa240fb8e0c0f7fa4a3574f915419bef567e0769d80ee",
+      "sha256_archived": "4bb67ea314d17797dd8aa240fb8e0c0f7fa4a3574f915419bef567e0769d80ee"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/build_pergame.py",
+      "archived_path": "models/doubao_21pro/build_pergame.py",
+      "compressed": false,
+      "original_size": 8975,
+      "archived_size": 8975,
+      "sha256_original": "72e2e6eb15bff9f8c8d1fda0d86df10f3ad2ae37caeb0ea135547cd08643dc0e",
+      "sha256_archived": "72e2e6eb15bff9f8c8d1fda0d86df10f3ad2ae37caeb0ea135547cd08643dc0e"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/build_report.py",
+      "archived_path": "models/doubao_21pro/build_report.py",
+      "compressed": false,
+      "original_size": 21052,
+      "archived_size": 21052,
+      "sha256_original": "ea3a6a664254237ff214d80f0a839abcd9493a3e7881750a514079a19da06234",
+      "sha256_archived": "ea3a6a664254237ff214d80f0a839abcd9493a3e7881750a514079a19da06234"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/fair.json",
+      "archived_path": "models/doubao_21pro/fair.json",
+      "compressed": false,
+      "original_size": 114,
+      "archived_size": 114,
+      "sha256_original": "1ab3784dfab7a924a1a35b521dd9d36504bf711d697cb7a952ad60828f12c985",
+      "sha256_archived": "1ab3784dfab7a924a1a35b521dd9d36504bf711d697cb7a952ad60828f12c985"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/make_charts.py",
+      "archived_path": "models/doubao_21pro/make_charts.py",
+      "compressed": false,
+      "original_size": 8117,
+      "archived_size": 8117,
+      "sha256_original": "24ef755ce9226e42e926aef75673dcfbadd22f2d41ed5298ce21ecf9c358d2a4",
+      "sha256_archived": "24ef755ce9226e42e926aef75673dcfbadd22f2d41ed5298ce21ecf9c358d2a4"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/make_charts2.py",
+      "archived_path": "models/doubao_21pro/make_charts2.py",
+      "compressed": false,
+      "original_size": 6476,
+      "archived_size": 6476,
+      "sha256_original": "506d81d0ba47e4da51c46cacf21bfd19db8ec6644e3a96e1f396468fe71473ce",
+      "sha256_archived": "506d81d0ba47e4da51c46cacf21bfd19db8ec6644e3a96e1f396468fe71473ce"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/make_charts3.py",
+      "archived_path": "models/doubao_21pro/make_charts3.py",
+      "compressed": false,
+      "original_size": 4928,
+      "archived_size": 4928,
+      "sha256_original": "7bbe8b865f2d76b7c4e9797db0ce83d59b1a1b835b0f5b888e0d065b53b79541",
+      "sha256_archived": "7bbe8b865f2d76b7c4e9797db0ce83d59b1a1b835b0f5b888e0d065b53b79541"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/make_r3.py",
+      "archived_path": "models/doubao_21pro/make_r3.py",
+      "compressed": false,
+      "original_size": 4499,
+      "archived_size": 4499,
+      "sha256_original": "4c0cb4f7b00f792f774480c13b4aeac7de7b16947bc484cb5f1671063eab871f",
+      "sha256_archived": "4c0cb4f7b00f792f774480c13b4aeac7de7b16947bc484cb5f1671063eab871f"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/parse_events.py",
+      "archived_path": "models/doubao_21pro/parse_events.py",
+      "compressed": false,
+      "original_size": 5054,
+      "archived_size": 5054,
+      "sha256_original": "2267b219998e2a532a9d152db6fda9bacb8a0ca04971747f191f8a47035deda6",
+      "sha256_archived": "2267b219998e2a532a9d152db6fda9bacb8a0ca04971747f191f8a47035deda6"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/report_narrative.py",
+      "archived_path": "models/doubao_21pro/report_narrative.py",
+      "compressed": false,
+      "original_size": 8489,
+      "archived_size": 8489,
+      "sha256_original": "fc7f4965053eeda50ff56df691745acd7d48c87b7220e7cccd26c731b3aef6ff",
+      "sha256_archived": "fc7f4965053eeda50ff56df691745acd7d48c87b7220e7cccd26c731b3aef6ff"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/trader_bot.py",
+      "archived_path": "models/doubao_21pro/trader_bot.py",
+      "compressed": false,
+      "original_size": 16343,
+      "archived_size": 16343,
+      "sha256_original": "5dce637fc3cb43cd73ded730095d7e7ef373d30e96fbe3be8722fb427aff8865",
+      "sha256_archived": "5dce637fc3cb43cd73ded730095d7e7ef373d30e96fbe3be8722fb427aff8865"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/watchdog.sh",
+      "archived_path": "models/doubao_21pro/watchdog.sh",
+      "compressed": false,
+      "original_size": 588,
+      "archived_size": 588,
+      "sha256_original": "cabc07cfb1d7a2b5f8d11b0b8fba222eb8730d982e129ee8907498a81638fbdd",
+      "sha256_archived": "cabc07cfb1d7a2b5f8d11b0b8fba222eb8730d982e129ee8907498a81638fbdd"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/临渊量化_逐局逐笔明细.html",
+      "archived_path": "models/doubao_21pro/临渊量化_逐局逐笔明细.html",
+      "compressed": false,
+      "original_size": 121929,
+      "archived_size": 121929,
+      "sha256_original": "9d5ff4ad10f40f8887b79ab568d329e64133bf516f6e88cea4ea9e907e7e5b20",
+      "sha256_archived": "9d5ff4ad10f40f8887b79ab568d329e64133bf516f6e88cea4ea9e907e7e5b20"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/临渊量化复盘长卷.html",
+      "archived_path": "models/doubao_21pro/临渊量化复盘长卷.html",
+      "compressed": false,
+      "original_size": 38781,
+      "archived_size": 38781,
+      "sha256_original": "43b40c4256c60d054fd1425b1d39fcf330ece3e10e221d9890992dedeb5c2989",
+      "sha256_archived": "43b40c4256c60d054fd1425b1d39fcf330ece3e10e221d9890992dedeb5c2989"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/临渊量化复盘长卷_权威版.html",
+      "archived_path": "models/doubao_21pro/临渊量化复盘长卷_权威版.html",
+      "compressed": false,
+      "original_size": 1445470,
+      "archived_size": 1445470,
+      "sha256_original": "f0ab53b9554534c936030f21e94653273d1c855c04cb017145f3c7cd52a8bf58",
+      "sha256_archived": "f0ab53b9554534c936030f21e94653273d1c855c04cb017145f3c7cd52a8bf58"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/临渊量化复盘长卷_自包含.html",
+      "archived_path": "models/doubao_21pro/临渊量化复盘长卷_自包含.html",
+      "compressed": false,
+      "original_size": 1146268,
+      "archived_size": 1146268,
+      "sha256_original": "0a68a94abf42238df3750e5371f8a8457139d6fdf2add89f7b2dcd269fe3aff4",
+      "sha256_archived": "0a68a94abf42238df3750e5371f8a8457139d6fdf2add89f7b2dcd269fe3aff4"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts/fig10_friend.png",
+      "archived_path": "models/doubao_21pro/charts/fig10_friend.png",
+      "compressed": false,
+      "original_size": 78211,
+      "archived_size": 78211,
+      "sha256_original": "9427e3e9aaee5ffa981ca8d27043edc2bb51469804410d65558bd7e8d466fdfd",
+      "sha256_archived": "9427e3e9aaee5ffa981ca8d27043edc2bb51469804410d65558bd7e8d466fdfd"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts/fig11_unlock.png",
+      "archived_path": "models/doubao_21pro/charts/fig11_unlock.png",
+      "compressed": false,
+      "original_size": 89868,
+      "archived_size": 89868,
+      "sha256_original": "7bf8441ae016eb7617aead6b81ea48a89316b2d8f9c948973b0a99e0c3712f38",
+      "sha256_archived": "7bf8441ae016eb7617aead6b81ea48a89316b2d8f9c948973b0a99e0c3712f38"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts/fig1_overview.png",
+      "archived_path": "models/doubao_21pro/charts/fig1_overview.png",
+      "compressed": false,
+      "original_size": 133644,
+      "archived_size": 133644,
+      "sha256_original": "f18d3c49ae4dcc57bfb1f40b8a2b7b8852ceaae6395257404a7288da6d507e76",
+      "sha256_archived": "f18d3c49ae4dcc57bfb1f40b8a2b7b8852ceaae6395257404a7288da6d507e76"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts/fig2_risk.png",
+      "archived_path": "models/doubao_21pro/charts/fig2_risk.png",
+      "compressed": false,
+      "original_size": 91986,
+      "archived_size": 91986,
+      "sha256_original": "b7adbc70a1e5fa5a0c395d2023e2bedfc8342f3ea99b06eaef6333ab257b7dd9",
+      "sha256_archived": "b7adbc70a1e5fa5a0c395d2023e2bedfc8342f3ea99b06eaef6333ab257b7dd9"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts/fig3_grid.png",
+      "archived_path": "models/doubao_21pro/charts/fig3_grid.png",
+      "compressed": false,
+      "original_size": 241255,
+      "archived_size": 241255,
+      "sha256_original": "097b49aafe56fe8fa997945d7d177c0fa8937493e73bf2d7c96123f6099fe38c",
+      "sha256_archived": "097b49aafe56fe8fa997945d7d177c0fa8937493e73bf2d7c96123f6099fe38c"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts/fig4_shanghai.png",
+      "archived_path": "models/doubao_21pro/charts/fig4_shanghai.png",
+      "compressed": false,
+      "original_size": 102009,
+      "archived_size": 102009,
+      "sha256_original": "c1c08bb5f567cdc7e1d2e9947d0fe8b810ee93ba3fdd58a055f11ee1434d66de",
+      "sha256_archived": "c1c08bb5f567cdc7e1d2e9947d0fe8b810ee93ba3fdd58a055f11ee1434d66de"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts/fig6_steps.png",
+      "archived_path": "models/doubao_21pro/charts/fig6_steps.png",
+      "compressed": false,
+      "original_size": 93637,
+      "archived_size": 93637,
+      "sha256_original": "5968f5c0d06e3a3df4312654fee7304442eec284c1d02a8f728dab0ed248bfdb",
+      "sha256_archived": "5968f5c0d06e3a3df4312654fee7304442eec284c1d02a8f728dab0ed248bfdb"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts2/c1_pnl.png",
+      "archived_path": "models/doubao_21pro/charts2/c1_pnl.png",
+      "compressed": false,
+      "original_size": 86669,
+      "archived_size": 86669,
+      "sha256_original": "9d094e8d5c751ab3a84ffb847e4bb24acecaae3b85fd5fe6d7d1888d8b441bd4",
+      "sha256_archived": "9d094e8d5c751ab3a84ffb847e4bb24acecaae3b85fd5fe6d7d1888d8b441bd4"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts2/c2_decomp.png",
+      "archived_path": "models/doubao_21pro/charts2/c2_decomp.png",
+      "compressed": false,
+      "original_size": 78398,
+      "archived_size": 78398,
+      "sha256_original": "2fdad307c5e5db7e4bfc1d4a2a7bb67921ce074c39b1ffb9c9cc8349c105f4ed",
+      "sha256_archived": "2fdad307c5e5db7e4bfc1d4a2a7bb67921ce074c39b1ffb9c9cc8349c105f4ed"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts2/c3_points.png",
+      "archived_path": "models/doubao_21pro/charts2/c3_points.png",
+      "compressed": false,
+      "original_size": 86690,
+      "archived_size": 86690,
+      "sha256_original": "a0475581b9f4937c892ee11ddca67bf90330444bbcf25f73cec175d93b889ef9",
+      "sha256_archived": "a0475581b9f4937c892ee11ddca67bf90330444bbcf25f73cec175d93b889ef9"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts2/c4_openbias.png",
+      "archived_path": "models/doubao_21pro/charts2/c4_openbias.png",
+      "compressed": false,
+      "original_size": 76182,
+      "archived_size": 76182,
+      "sha256_original": "6e6bb2fcc6ee376dafb73632408cc73f4be429698432e7ab4876fd4ebbfb8ee3",
+      "sha256_archived": "6e6bb2fcc6ee376dafb73632408cc73f4be429698432e7ab4876fd4ebbfb8ee3"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts2/c9_standings.png",
+      "archived_path": "models/doubao_21pro/charts2/c9_standings.png",
+      "compressed": false,
+      "original_size": 86217,
+      "archived_size": 86217,
+      "sha256_original": "3d48a3c147fdb3b19b6ee2eff05beeea590d820cf914df1c0cdb2e6774e17cae",
+      "sha256_archived": "3d48a3c147fdb3b19b6ee2eff05beeea590d820cf914df1c0cdb2e6774e17cae"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts2/d11_friend.png",
+      "archived_path": "models/doubao_21pro/charts2/d11_friend.png",
+      "compressed": false,
+      "original_size": 93183,
+      "archived_size": 93183,
+      "sha256_original": "a287ecff3a42c5503841ec2c66ad43293a820d0de572ba778f7454e4707f6a6c",
+      "sha256_archived": "a287ecff3a42c5503841ec2c66ad43293a820d0de572ba778f7454e4707f6a6c"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts2/d12_unlock.png",
+      "archived_path": "models/doubao_21pro/charts2/d12_unlock.png",
+      "compressed": false,
+      "original_size": 95741,
+      "archived_size": 95741,
+      "sha256_original": "559ee3bff1873627ef7425ed189086911cb9fcdd394c83d7f09608e904b12e06",
+      "sha256_archived": "559ee3bff1873627ef7425ed189086911cb9fcdd394c83d7f09608e904b12e06"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts2/d2_cuba.png",
+      "archived_path": "models/doubao_21pro/charts2/d2_cuba.png",
+      "compressed": false,
+      "original_size": 118718,
+      "archived_size": 118718,
+      "sha256_original": "06d1205e2a899564a40c85c705a4961856b3a005f17d08b6e58da509ed8a41a1",
+      "sha256_archived": "06d1205e2a899564a40c85c705a4961856b3a005f17d08b6e58da509ed8a41a1"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts2/d6_egg.png",
+      "archived_path": "models/doubao_21pro/charts2/d6_egg.png",
+      "compressed": false,
+      "original_size": 78057,
+      "archived_size": 78057,
+      "sha256_original": "a6cb45fc6b2616731d9c3a0af3f1b2ce7f3c94a9cf7f09df0427c4ce21bd2f2a",
+      "sha256_archived": "a6cb45fc6b2616731d9c3a0af3f1b2ce7f3c94a9cf7f09df0427c4ce21bd2f2a"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts2/d7_steps.png",
+      "archived_path": "models/doubao_21pro/charts2/d7_steps.png",
+      "compressed": false,
+      "original_size": 114713,
+      "archived_size": 114713,
+      "sha256_original": "48c38cdfdccf2d3b1a20d46a35a993c0715d95768df09f552563512334ee120e",
+      "sha256_archived": "48c38cdfdccf2d3b1a20d46a35a993c0715d95768df09f552563512334ee120e"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts2/d_posgrid.png",
+      "archived_path": "models/doubao_21pro/charts2/d_posgrid.png",
+      "compressed": false,
+      "original_size": 255982,
+      "archived_size": 255982,
+      "sha256_original": "f27591ddfef140eb0dc6256284f1b621bc23a3921bad53882e9fff14cfa2b462",
+      "sha256_archived": "f27591ddfef140eb0dc6256284f1b621bc23a3921bad53882e9fff14cfa2b462"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts2/r3_cuba_flip.png",
+      "archived_path": "models/doubao_21pro/charts2/r3_cuba_flip.png",
+      "compressed": false,
+      "original_size": 191532,
+      "archived_size": 191532,
+      "sha256_original": "455f90bffbd39fb0a4cb58547c7f0da928926713b2edfa04166c76fef461ce3c",
+      "sha256_archived": "455f90bffbd39fb0a4cb58547c7f0da928926713b2edfa04166c76fef461ce3c"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/charts2/r4_kimi_dump.png",
+      "archived_path": "models/doubao_21pro/charts2/r4_kimi_dump.png",
+      "compressed": false,
+      "original_size": 171184,
+      "archived_size": 171184,
+      "sha256_original": "c1aafab73ef55c9476dc533e46a12661a6770f51a3bbad5a9e157b467c4ae764",
+      "sha256_archived": "c1aafab73ef55c9476dc533e46a12661a6770f51a3bbad5a9e157b467c4ae764"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/actions.log",
+      "archived_path": "models/doubao_21pro/logs/actions.log",
+      "compressed": false,
+      "original_size": 349451,
+      "archived_size": 349451,
+      "sha256_original": "dc571ffe62b680a355e9a967ac9429ccd4638fe7a16660a9d416fed6d9afc718",
+      "sha256_archived": "dc571ffe62b680a355e9a967ac9429ccd4638fe7a16660a9d416fed6d9afc718"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/bot.log",
+      "archived_path": "models/doubao_21pro/logs/bot.log",
+      "compressed": false,
+      "original_size": 12130501,
+      "archived_size": 12130501,
+      "sha256_original": "fa371d1d927583af3faa39ece56020463b7c2147d7bcb0c154c0b5b907d4bdf2",
+      "sha256_archived": "fa371d1d927583af3faa39ece56020463b7c2147d7bcb0c154c0b5b907d4bdf2"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/events.log",
+      "archived_path": "models/doubao_21pro/logs/events.log",
+      "compressed": false,
+      "original_size": 3133792,
+      "archived_size": 3133792,
+      "sha256_original": "b6ca92e6867cb26eb0927368058eaf88994f7197580a915801fc6fa435835e1a",
+      "sha256_archived": "b6ca92e6867cb26eb0927368058eaf88994f7197580a915801fc6fa435835e1a"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/game_stats.json",
+      "archived_path": "models/doubao_21pro/logs/game_stats.json",
+      "compressed": false,
+      "original_size": 8875,
+      "archived_size": 8875,
+      "sha256_original": "ab3cd9beacd4886ebadffee14bde0d8267e646584b5a8c4b3897ea1cc0f5c43a",
+      "sha256_archived": "ab3cd9beacd4886ebadffee14bde0d8267e646584b5a8c4b3897ea1cc0f5c43a"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/my_archive.json",
+      "archived_path": "models/doubao_21pro/logs/my_archive.json",
+      "compressed": false,
+      "original_size": 269648,
+      "archived_size": 269648,
+      "sha256_original": "01888677bb70ada44530496a1f1e049e0a1354a5a151062d84c6762d8d45e973",
+      "sha256_archived": "01888677bb70ada44530496a1f1e049e0a1354a5a151062d84c6762d8d45e973"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/review_r1.json",
+      "archived_path": "models/doubao_21pro/logs/review_r1.json",
+      "compressed": false,
+      "original_size": 4341,
+      "archived_size": 4341,
+      "sha256_original": "eb0398184b4786536df7406f78677589a553379a9b144c2c3efd5d1c434455c7",
+      "sha256_archived": "eb0398184b4786536df7406f78677589a553379a9b144c2c3efd5d1c434455c7"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/review_r2.json",
+      "archived_path": "models/doubao_21pro/logs/review_r2.json",
+      "compressed": false,
+      "original_size": 62251,
+      "archived_size": 62251,
+      "sha256_original": "d37293b1aeb3b01a418acff4fe3c167501112d25a47fae0be443bcd2f1e7f840",
+      "sha256_archived": "d37293b1aeb3b01a418acff4fe3c167501112d25a47fae0be443bcd2f1e7f840"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/review_r3.json",
+      "archived_path": "models/doubao_21pro/logs/review_r3.json",
+      "compressed": false,
+      "original_size": 174280,
+      "archived_size": 174280,
+      "sha256_original": "dfff1312d2ab026c524dd38d23213f8cc6c931d8f0b8c9ddf3307697d8f30636",
+      "sha256_archived": "dfff1312d2ab026c524dd38d23213f8cc6c931d8f0b8c9ddf3307697d8f30636"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/review_r4.json",
+      "archived_path": "models/doubao_21pro/logs/review_r4.json",
+      "compressed": false,
+      "original_size": 171355,
+      "archived_size": 171355,
+      "sha256_original": "17f30d496ebbeffc7f92478d5098163b0d8a8a90db1df2c18594e44f2d253459",
+      "sha256_archived": "17f30d496ebbeffc7f92478d5098163b0d8a8a90db1df2c18594e44f2d253459"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/review_r5.json",
+      "archived_path": "models/doubao_21pro/logs/review_r5.json",
+      "compressed": false,
+      "original_size": 265285,
+      "archived_size": 265285,
+      "sha256_original": "1205d8caa1e58701b3b8a833d8d2809dafd524d6575d21466b1b70baeb7cd473",
+      "sha256_archived": "1205d8caa1e58701b3b8a833d8d2809dafd524d6575d21466b1b70baeb7cd473"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/signals.log",
+      "archived_path": "models/doubao_21pro/logs/signals.log",
+      "compressed": false,
+      "original_size": 5421,
+      "archived_size": 5421,
+      "sha256_original": "448beedc6fa7acfec2ca9556880746fb7a77e6b153fef1fd4c2b43b017aa8eed",
+      "sha256_archived": "448beedc6fa7acfec2ca9556880746fb7a77e6b153fef1fd4c2b43b017aa8eed"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/state_latest.json",
+      "archived_path": "models/doubao_21pro/logs/state_latest.json",
+      "compressed": false,
+      "original_size": 268356,
+      "archived_size": 268356,
+      "sha256_original": "356a21107d91ef13c6ea628a9094add23a9665d10f9707432110fbe5a815e820",
+      "sha256_archived": "356a21107d91ef13c6ea628a9094add23a9665d10f9707432110fbe5a815e820"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/stdout.log",
+      "archived_path": "models/doubao_21pro/logs/stdout.log",
+      "compressed": false,
+      "original_size": 0,
+      "archived_size": 0,
+      "sha256_original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archived": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/trades.log",
+      "archived_path": "models/doubao_21pro/logs/trades.log",
+      "compressed": false,
+      "original_size": 32296,
+      "archived_size": 32296,
+      "sha256_original": "56c5c82abe06808ca5cea9d344a7b420aac31650fb31df9a0cb128f888a53e76",
+      "sha256_archived": "56c5c82abe06808ca5cea9d344a7b420aac31650fb31df9a0cb128f888a53e76"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/watchdog.log",
+      "archived_path": "models/doubao_21pro/logs/watchdog.log",
+      "compressed": false,
+      "original_size": 44,
+      "archived_size": 44,
+      "sha256_original": "5a389da2ed53d0216e7d1bdeb5576ee2c0f68d54934cdd8fae0c9fc9596ac85e",
+      "sha256_archived": "5a389da2ed53d0216e7d1bdeb5576ee2c0f68d54934cdd8fae0c9fc9596ac85e"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-5/logs/watchdog_stdout.log",
+      "archived_path": "models/doubao_21pro/logs/watchdog_stdout.log",
+      "compressed": false,
+      "original_size": 0,
+      "archived_size": 0,
+      "sha256_original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archived": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/act.py",
+      "archived_path": "models/doubao_auto/act.py",
+      "compressed": false,
+      "original_size": 1029,
+      "archived_size": 1029,
+      "sha256_original": "989568ecb96dafafcd90f141bdfe31f3c64a753d76c1d41a37195b066f40417b",
+      "sha256_archived": "989568ecb96dafafcd90f141bdfe31f3c64a753d76c1d41a37195b066f40417b"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/build_report.py",
+      "archived_path": "models/doubao_auto/build_report.py",
+      "compressed": false,
+      "original_size": 53251,
+      "archived_size": 53251,
+      "sha256_original": "ab314a62be178a19623ece3df91d38077d76f50a00cedb89a84a5d078df09829",
+      "sha256_archived": "ab314a62be178a19623ece3df91d38077d76f50a00cedb89a84a5d078df09829"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/build_report2.py",
+      "archived_path": "models/doubao_auto/build_report2.py",
+      "compressed": false,
+      "original_size": 55023,
+      "archived_size": 55023,
+      "sha256_original": "91814f2bc128118e839fecfb1e28c5e9c9112c8adc44dd1dd8b11cbfe91740e9",
+      "sha256_archived": "91814f2bc128118e839fecfb1e28c5e9c9112c8adc44dd1dd8b11cbfe91740e9"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/events.log",
+      "archived_path": "models/doubao_auto/events.log",
+      "compressed": false,
+      "original_size": 3839054,
+      "archived_size": 3839054,
+      "sha256_original": "3566ed85df247f62563cbe69b1234fa3ff3cca803ec4d1691a52ec29ced426bd",
+      "sha256_archived": "3566ed85df247f62563cbe69b1234fa3ff3cca803ec4d1691a52ec29ced426bd"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/extract_report_data.py",
+      "archived_path": "models/doubao_auto/extract_report_data.py",
+      "compressed": false,
+      "original_size": 3832,
+      "archived_size": 3832,
+      "sha256_original": "fe89adfe5410c520ad43b73690d7efb627e1a7d075349b64e7d53bd405e3b3d0",
+      "sha256_archived": "fe89adfe5410c520ad43b73690d7efb627e1a7d075349b64e7d53bd405e3b3d0"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/feed.py",
+      "archived_path": "models/doubao_auto/feed.py",
+      "compressed": false,
+      "original_size": 2725,
+      "archived_size": 2725,
+      "sha256_original": "a37622f778aaec319df6bd9cab9ea6c9d475dddd191eef5ce5a539b48bdadbe7",
+      "sha256_archived": "a37622f778aaec319df6bd9cab9ea6c9d475dddd191eef5ce5a539b48bdadbe7"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/notes.md",
+      "archived_path": "models/doubao_auto/notes.md",
+      "compressed": false,
+      "original_size": 8172,
+      "archived_size": 8172,
+      "sha256_original": "4d3551b8e4b0c771755c070d11669615a14351e0d21503b6c8b412866b0dd14e",
+      "sha256_archived": "4d3551b8e4b0c771755c070d11669615a14351e0d21503b6c8b412866b0dd14e"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/report_data.json",
+      "archived_path": "models/doubao_auto/report_data.json",
+      "compressed": false,
+      "original_size": 106879,
+      "archived_size": 106879,
+      "sha256_original": "ce046dab949921e48655e25828729ac400e883ed7f9ee53db86f4ed61706cc2b",
+      "sha256_archived": "ce046dab949921e48655e25828729ac400e883ed7f9ee53db86f4ed61706cc2b"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/report_full.json",
+      "archived_path": "models/doubao_auto/report_full.json",
+      "compressed": false,
+      "original_size": 147588,
+      "archived_size": 147588,
+      "sha256_original": "c19ff7a47cc323c16486bb387f946599dcfd70036602023ae60092f6931ef551",
+      "sha256_archived": "c19ff7a47cc323c16486bb387f946599dcfd70036602023ae60092f6931ef551"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/settle_archive.jsonl",
+      "archived_path": "models/doubao_auto/settle_archive.jsonl.gz",
+      "compressed": true,
+      "original_size": 66228297,
+      "archived_size": 6165896,
+      "sha256_original": "1ab2d26e4504d3144e01796e5ffae23de1002f9b441c6dfd84ae6e126427538e",
+      "sha256_archived": "1ce10264319d17e48c2144b5e5587df14713f608aa90bdc6a58dc632363c63fe"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/state.json",
+      "archived_path": "models/doubao_auto/state.json",
+      "compressed": false,
+      "original_size": 129978,
+      "archived_size": 129978,
+      "sha256_original": "9e55674f198f67623969562838b25ecc6472d822bef84fcc6ddb1a95d6a17dc7",
+      "sha256_archived": "9e55674f198f67623969562838b25ecc6472d822bef84fcc6ddb1a95d6a17dc7"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/wait_phase.py",
+      "archived_path": "models/doubao_auto/wait_phase.py",
+      "compressed": false,
+      "original_size": 508,
+      "archived_size": 508,
+      "sha256_original": "84c4c44d3f906c329b10c280d632c192d53ed8904aa9a2079ad4a8e9bda2de11",
+      "sha256_archived": "84c4c44d3f906c329b10c280d632c192d53ed8904aa9a2079ad4a8e9bda2de11"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/临渊十二局复盘.html",
+      "archived_path": "models/doubao_auto/临渊十二局复盘.html",
+      "compressed": false,
+      "original_size": 444593,
+      "archived_size": 444593,
+      "sha256_original": "7f728b6c4aaf189ef640ea72a0c245ed68da81badea25c6b3b7bb255c1e2bc3e",
+      "sha256_archived": "7f728b6c4aaf189ef640ea72a0c245ed68da81badea25c6b3b7bb255c1e2bc3e"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/临渊十二局复盘.pdf",
+      "archived_path": "models/doubao_auto/临渊十二局复盘.pdf",
+      "compressed": false,
+      "original_size": 7802112,
+      "archived_size": 7802112,
+      "sha256_original": "d0b3667cf6d0b0c5c384ad4ff0d3167755ea14a9e6311c107b8baea5ee0b38bc",
+      "sha256_archived": "d0b3667cf6d0b0c5c384ad4ff0d3167755ea14a9e6311c107b8baea5ee0b38bc"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/assets/cover.jpg",
+      "archived_path": "models/doubao_auto/assets/cover.jpg",
+      "compressed": false,
+      "original_size": 2876693,
+      "archived_size": 2876693,
+      "sha256_original": "388f5c9c2abb8f7225600d4d937e5383afe336096abff239477ca1b5e7910bf4",
+      "sha256_archived": "388f5c9c2abb8f7225600d4d937e5383afe336096abff239477ca1b5e7910bf4"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/assets/cover_small.jpg",
+      "archived_path": "models/doubao_auto/assets/cover_small.jpg",
+      "compressed": false,
+      "original_size": 175763,
+      "archived_size": 175763,
+      "sha256_original": "b5db5d9e03966c730db7afc3ffe00b8dabfe6f69540233ad53ecfa64ad8601b4",
+      "sha256_archived": "b5db5d9e03966c730db7afc3ffe00b8dabfe6f69540233ad53ecfa64ad8601b4"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/赛后数据/report_full.json",
+      "archived_path": "models/doubao_auto/赛后数据/report_full.json",
+      "compressed": false,
+      "original_size": 147588,
+      "archived_size": 147588,
+      "sha256_original": "c19ff7a47cc323c16486bb387f946599dcfd70036602023ae60092f6931ef551",
+      "sha256_archived": "c19ff7a47cc323c16486bb387f946599dcfd70036602023ae60092f6931ef551"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-3/赛后数据/索引.md",
+      "archived_path": "models/doubao_auto/赛后数据/索引.md",
+      "compressed": false,
+      "original_size": 3138,
+      "archived_size": 3138,
+      "sha256_original": "01646143c50f6638e17969908d5a40a62f22612377e7aa3bfd4466db1ce99766",
+      "sha256_archived": "01646143c50f6638e17969908d5a40a62f22612377e7aa3bfd4466db1ce99766"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/authoritative.json",
+      "archived_path": "models/doubao_21lite/authoritative.json",
+      "compressed": false,
+      "original_size": 30020,
+      "archived_size": 30020,
+      "sha256_original": "7b7f1d59483f23d091708dd43c3a1cd8de54132864b496b3c3bfb73b3587e5a4",
+      "sha256_archived": "7b7f1d59483f23d091708dd43c3a1cd8de54132864b496b3c3bfb73b3587e5a4"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/build_charts.py",
+      "archived_path": "models/doubao_21lite/build_charts.py",
+      "compressed": false,
+      "original_size": 10265,
+      "archived_size": 10265,
+      "sha256_original": "f0f5a0e7115f3b097c80155b00bbe4608964ec8fcb582dbe1a425325a6c68ba6",
+      "sha256_archived": "f0f5a0e7115f3b097c80155b00bbe4608964ec8fcb582dbe1a425325a6c68ba6"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/client.py",
+      "archived_path": "models/doubao_21lite/client.py",
+      "compressed": false,
+      "original_size": 2561,
+      "archived_size": 2561,
+      "sha256_original": "c59668e76a8a0f0806bd8b6f28256459ff89fbe6772cf3c4cdac3ef254f726a8",
+      "sha256_archived": "c59668e76a8a0f0806bd8b6f28256459ff89fbe6772cf3c4cdac3ef254f726a8"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/clock.json",
+      "archived_path": "models/doubao_21lite/clock.json",
+      "compressed": false,
+      "original_size": 102,
+      "archived_size": 102,
+      "sha256_original": "3f3241d4484a877f6d5b8615d84300d2dec4b7f852d3faf6d924f5991340cbaf",
+      "sha256_archived": "3f3241d4484a877f6d5b8615d84300d2dec4b7f852d3faf6d924f5991340cbaf"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/creds.json",
+      "archived_path": "models/doubao_21lite/creds.json",
+      "compressed": false,
+      "original_size": 124,
+      "archived_size": 124,
+      "sha256_original": "f8697e93677138eb6fafad639bbb90a7d35e20dbbe5fae95f5f5e493274bf44e",
+      "sha256_archived": "f8697e93677138eb6fafad639bbb90a7d35e20dbbe5fae95f5f5e493274bf44e"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/events.log",
+      "archived_path": "models/doubao_21lite/events.log.gz",
+      "compressed": true,
+      "original_size": 1148124324,
+      "archived_size": 94147415,
+      "sha256_original": "d3c1ae37547105898099ee04f30df0ad4bd74d1f0802ff57a4fff9387952c758",
+      "sha256_archived": "2d43f4b123d977c531bca6a4ac26c2b52a0e0330cecc71630c6f4d2dbfef26a3"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/extract.py",
+      "archived_path": "models/doubao_21lite/extract.py",
+      "compressed": false,
+      "original_size": 3585,
+      "archived_size": 3585,
+      "sha256_original": "5c185694176054e526145b9767b81ad083259551ceb716be444813d545b016f2",
+      "sha256_archived": "5c185694176054e526145b9767b81ad083259551ceb716be444813d545b016f2"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/extracted.json",
+      "archived_path": "models/doubao_21lite/extracted.json.gz",
+      "compressed": true,
+      "original_size": 38100312,
+      "archived_size": 415541,
+      "sha256_original": "f2114ab47930c70e08f895544942393e7d7487eb391cd4e47b84304ffcd8fded",
+      "sha256_archived": "fa0fc5a831927141fcc7a1355e2761b34c084ae57d16810e098f22854f7c4b80"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/games_summary.json",
+      "archived_path": "models/doubao_21lite/games_summary.json",
+      "compressed": false,
+      "original_size": 3977,
+      "archived_size": 3977,
+      "sha256_original": "eab84249cd6b38f9d195deee87b4fbf1017478701cdec1d192738d9e407944cd",
+      "sha256_archived": "eab84249cd6b38f9d195deee87b4fbf1017478701cdec1d192738d9e407944cd"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/journal.md",
+      "archived_path": "models/doubao_21lite/journal.md",
+      "compressed": false,
+      "original_size": 10357,
+      "archived_size": 10357,
+      "sha256_original": "2332462b32d0950ece9410724bfaeb1ec9083a91200f7d37551698737da3a4d6",
+      "sha256_archived": "2332462b32d0950ece9410724bfaeb1ec9083a91200f7d37551698737da3a4d6"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/logger.out",
+      "archived_path": "models/doubao_21lite/logger.out",
+      "compressed": false,
+      "original_size": 0,
+      "archived_size": 0,
+      "sha256_original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archived": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/raw10.txt",
+      "archived_path": "models/doubao_21lite/raw10.txt",
+      "compressed": false,
+      "original_size": 822343,
+      "archived_size": 822343,
+      "sha256_original": "715a6eb28a09b5d8f3e356c0c6614d6d6d264b919e001ef47559154b9b54c4ff",
+      "sha256_archived": "715a6eb28a09b5d8f3e356c0c6614d6d6d264b919e001ef47559154b9b54c4ff"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/raw11.txt",
+      "archived_path": "models/doubao_21lite/raw11.txt",
+      "compressed": false,
+      "original_size": 265359,
+      "archived_size": 265359,
+      "sha256_original": "187e9c0abbe651c8cf5e5a2b21bae304ca15a51bb0c44a402b6ca76c515351de",
+      "sha256_archived": "187e9c0abbe651c8cf5e5a2b21bae304ca15a51bb0c44a402b6ca76c515351de"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/raw12.txt",
+      "archived_path": "models/doubao_21lite/raw12.txt",
+      "compressed": false,
+      "original_size": 848368,
+      "archived_size": 848368,
+      "sha256_original": "4a0987457e5a68de1ad6b1ac0b5ae9e183f1bb496aa5939548b1b1e89ce83c97",
+      "sha256_archived": "4a0987457e5a68de1ad6b1ac0b5ae9e183f1bb496aa5939548b1b1e89ce83c97"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/raw13.txt",
+      "archived_path": "models/doubao_21lite/raw13.txt",
+      "compressed": false,
+      "original_size": 276874,
+      "archived_size": 276874,
+      "sha256_original": "b9395cf59e80afe7d39aad723d97573d194fa109ca60f9fa04bda50ef16c6c59",
+      "sha256_archived": "b9395cf59e80afe7d39aad723d97573d194fa109ca60f9fa04bda50ef16c6c59"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/raw14.txt",
+      "archived_path": "models/doubao_21lite/raw14.txt",
+      "compressed": false,
+      "original_size": 1111631,
+      "archived_size": 1111631,
+      "sha256_original": "32493baf4b39d23c0be6ed70968e951b808019105b5356e208255969fce46115",
+      "sha256_archived": "32493baf4b39d23c0be6ed70968e951b808019105b5356e208255969fce46115"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/raw15.txt",
+      "archived_path": "models/doubao_21lite/raw15.txt",
+      "compressed": false,
+      "original_size": 2017408,
+      "archived_size": 2017408,
+      "sha256_original": "ebf027ed112a2baa49b16f92e61d5ce1ceb99dd7f3163c1887980bc2f9b87ff0",
+      "sha256_archived": "ebf027ed112a2baa49b16f92e61d5ce1ceb99dd7f3163c1887980bc2f9b87ff0"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/raw2.txt",
+      "archived_path": "models/doubao_21lite/raw2.txt",
+      "compressed": false,
+      "original_size": 456070,
+      "archived_size": 456070,
+      "sha256_original": "d2ba9dce6314366adfb76f5803fab45e2959968c00a00f2e70f3a4259352ddd5",
+      "sha256_archived": "d2ba9dce6314366adfb76f5803fab45e2959968c00a00f2e70f3a4259352ddd5"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/raw3.txt",
+      "archived_path": "models/doubao_21lite/raw3.txt",
+      "compressed": false,
+      "original_size": 1253957,
+      "archived_size": 1253957,
+      "sha256_original": "e569e825f07f1bf8ba23087d35a1b989e046a22b9c97fee76f1ff8ab849a5c6f",
+      "sha256_archived": "e569e825f07f1bf8ba23087d35a1b989e046a22b9c97fee76f1ff8ab849a5c6f"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/raw4.txt",
+      "archived_path": "models/doubao_21lite/raw4.txt",
+      "compressed": false,
+      "original_size": 29176,
+      "archived_size": 29176,
+      "sha256_original": "d03e70399bf6dfa592347130aa79389c5d8901363773e9b46cdfe8fee71df199",
+      "sha256_archived": "d03e70399bf6dfa592347130aa79389c5d8901363773e9b46cdfe8fee71df199"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/raw5.txt",
+      "archived_path": "models/doubao_21lite/raw5.txt",
+      "compressed": false,
+      "original_size": 286830,
+      "archived_size": 286830,
+      "sha256_original": "1c549a478bc0749dd79bb2bd76183eabd0d9b460c0c023f47bf054ba114f7c1c",
+      "sha256_archived": "1c549a478bc0749dd79bb2bd76183eabd0d9b460c0c023f47bf054ba114f7c1c"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/raw6.txt",
+      "archived_path": "models/doubao_21lite/raw6.txt",
+      "compressed": false,
+      "original_size": 956777,
+      "archived_size": 956777,
+      "sha256_original": "42d61a86abc940cc34bf9756a646eb15bdb08cb87de6edf59bf10442081537a7",
+      "sha256_archived": "42d61a86abc940cc34bf9756a646eb15bdb08cb87de6edf59bf10442081537a7"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/raw7.txt",
+      "archived_path": "models/doubao_21lite/raw7.txt",
+      "compressed": false,
+      "original_size": 583792,
+      "archived_size": 583792,
+      "sha256_original": "d80b9dbe0145399ced0c0a690efce01cfe3c12b7d6320509ffb8e6c93999c33b",
+      "sha256_archived": "d80b9dbe0145399ced0c0a690efce01cfe3c12b7d6320509ffb8e6c93999c33b"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/raw8.txt",
+      "archived_path": "models/doubao_21lite/raw8.txt",
+      "compressed": false,
+      "original_size": 68144,
+      "archived_size": 68144,
+      "sha256_original": "590dd8a79a3c2024d37b70d65d49d95c660e194f26283837eab27b877cc1f70d",
+      "sha256_archived": "590dd8a79a3c2024d37b70d65d49d95c660e194f26283837eab27b877cc1f70d"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/raw9.txt",
+      "archived_path": "models/doubao_21lite/raw9.txt",
+      "compressed": false,
+      "original_size": 581915,
+      "archived_size": 581915,
+      "sha256_original": "1d7c6a74dab901a3d71767cf9513b0ecc65b75dc0a46579448f4f71bf7137826",
+      "sha256_archived": "1d7c6a74dab901a3d71767cf9513b0ecc65b75dc0a46579448f4f71bf7137826"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/raw_sse.txt",
+      "archived_path": "models/doubao_21lite/raw_sse.txt",
+      "compressed": false,
+      "original_size": 149399,
+      "archived_size": 149399,
+      "sha256_original": "82e55ab4f9cb2ae6eb63299b3cbd56fb40d9297c98cf05e0c6495e4bfd918b12",
+      "sha256_archived": "82e55ab4f9cb2ae6eb63299b3cbd56fb40d9297c98cf05e0c6495e4bfd918b12"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/rebuild_charts.py",
+      "archived_path": "models/doubao_21lite/rebuild_charts.py",
+      "compressed": false,
+      "original_size": 6567,
+      "archived_size": 6567,
+      "sha256_original": "172438ce6bdc1e96f0e996f9264dc3f142a42bd5c6d2824d905ce4a6edd85bd9",
+      "sha256_archived": "172438ce6bdc1e96f0e996f9264dc3f142a42bd5c6d2824d905ce4a6edd85bd9"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/rebuild_data.py",
+      "archived_path": "models/doubao_21lite/rebuild_data.py",
+      "compressed": false,
+      "original_size": 3148,
+      "archived_size": 3148,
+      "sha256_original": "6efa956cdfd06e0ef3e22c4baea24dc9d1ea7d35156fc20355bd6cf5115622ef",
+      "sha256_archived": "6efa956cdfd06e0ef3e22c4baea24dc9d1ea7d35156fc20355bd6cf5115622ef"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/rebuild_report.py",
+      "archived_path": "models/doubao_21lite/rebuild_report.py",
+      "compressed": false,
+      "original_size": 26709,
+      "archived_size": 26709,
+      "sha256_original": "5a09ae0a7ed9cff2c3b1a9e9c84322f1809082da2fa285d341fb18ad8e8d5a42",
+      "sha256_archived": "5a09ae0a7ed9cff2c3b1a9e9c84322f1809082da2fa285d341fb18ad8e8d5a42"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/report_gen.py",
+      "archived_path": "models/doubao_21lite/report_gen.py",
+      "compressed": false,
+      "original_size": 33422,
+      "archived_size": 33422,
+      "sha256_original": "f6deafc271b358a15017b9bbd73d96f90bf2bb4d05d5c7d928012af772940442",
+      "sha256_archived": "f6deafc271b358a15017b9bbd73d96f90bf2bb4d05d5c7d928012af772940442"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/sse_logger.py",
+      "archived_path": "models/doubao_21lite/sse_logger.py",
+      "compressed": false,
+      "original_size": 2157,
+      "archived_size": 2157,
+      "sha256_original": "471c2f8eed69fe648717b55af02fb8116145c0a3f0b0be56cc44a1dad5f7833e",
+      "sha256_archived": "471c2f8eed69fe648717b55af02fb8116145c0a3f0b0be56cc44a1dad5f7833e"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/state.json",
+      "archived_path": "models/doubao_21lite/state.json",
+      "compressed": false,
+      "original_size": 117798,
+      "archived_size": 117798,
+      "sha256_original": "925826d7501acc174e62aadfc7e1421f17b85e7d5d904a902dcdac5b8bb1825d",
+      "sha256_archived": "925826d7501acc174e62aadfc7e1421f17b85e7d5d904a902dcdac5b8bb1825d"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/state_latest.json",
+      "archived_path": "models/doubao_21lite/state_latest.json",
+      "compressed": false,
+      "original_size": 108256,
+      "archived_size": 108256,
+      "sha256_original": "8778784ce1c8ddd618228e84ec434735ded5bad74e8579fbc4a8fdf3d24fdd23",
+      "sha256_archived": "8778784ce1c8ddd618228e84ec434735ded5bad74e8579fbc4a8fdf3d24fdd23"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/复盘报告_临渊量化_258334.html",
+      "archived_path": "models/doubao_21lite/复盘报告_临渊量化_258334.html",
+      "compressed": false,
+      "original_size": 727649,
+      "archived_size": 727649,
+      "sha256_original": "1a380c1609773c121ce6914612845c47480c3aaba8c3e694b6407258419876ec",
+      "sha256_archived": "1a380c1609773c121ce6914612845c47480c3aaba8c3e694b6407258419876ec"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/复盘报告_临渊量化_258334.pdf",
+      "archived_path": "models/doubao_21lite/复盘报告_临渊量化_258334.pdf",
+      "compressed": false,
+      "original_size": 5529164,
+      "archived_size": 5529164,
+      "sha256_original": "1c1551397ce15f27286290ea7b6edfefd3fd5b3a3dc686a2161e77284e97ef06",
+      "sha256_archived": "1c1551397ce15f27286290ea7b6edfefd3fd5b3a3dc686a2161e77284e97ef06"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/复盘报告_临渊量化_258334_权威版.html",
+      "archived_path": "models/doubao_21lite/复盘报告_临渊量化_258334_权威版.html",
+      "compressed": false,
+      "original_size": 1111268,
+      "archived_size": 1111268,
+      "sha256_original": "96e0448dd5c47bb0d158a90b45743e8500924e919f2c950205c0aa5aabf43a67",
+      "sha256_archived": "96e0448dd5c47bb0d158a90b45743e8500924e919f2c950205c0aa5aabf43a67"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/复盘报告_临渊量化_258334_权威版.pdf",
+      "archived_path": "models/doubao_21lite/复盘报告_临渊量化_258334_权威版.pdf",
+      "compressed": false,
+      "original_size": 7682446,
+      "archived_size": 7682446,
+      "sha256_original": "8b6221fff8eb8b387943e8c01c75e60734076ebc8ff0c36ee00fa1995415c9b9",
+      "sha256_archived": "8b6221fff8eb8b387943e8c01c75e60734076ebc8ff0c36ee00fa1995415c9b9"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/charts/01_score_progression.png",
+      "archived_path": "models/doubao_21lite/charts/01_score_progression.png",
+      "compressed": false,
+      "original_size": 88627,
+      "archived_size": 88627,
+      "sha256_original": "44e4d1e08e3baeec1ecde1f97064a3fec6a6335fa549213392417c740ad78ee1",
+      "sha256_archived": "44e4d1e08e3baeec1ecde1f97064a3fec6a6335fa549213392417c740ad78ee1"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/charts/02_truth_vs_close.png",
+      "archived_path": "models/doubao_21lite/charts/02_truth_vs_close.png",
+      "compressed": false,
+      "original_size": 89454,
+      "archived_size": 89454,
+      "sha256_original": "debf5005f1510becf169b4d1cc2f2607cbc244d8122dc91b8514ab7a3745983b",
+      "sha256_archived": "debf5005f1510becf169b4d1cc2f2607cbc244d8122dc91b8514ab7a3745983b"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/charts/03_trajectories.png",
+      "archived_path": "models/doubao_21lite/charts/03_trajectories.png",
+      "compressed": false,
+      "original_size": 183966,
+      "archived_size": 183966,
+      "sha256_original": "7f2e897d95948801975299afca4be3643125a3c424992a340b995aa41db35c85",
+      "sha256_archived": "7f2e897d95948801975299afca4be3643125a3c424992a340b995aa41db35c85"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/charts/04_final_standings.png",
+      "archived_path": "models/doubao_21lite/charts/04_final_standings.png",
+      "compressed": false,
+      "original_size": 95348,
+      "archived_size": 95348,
+      "sha256_original": "5d251adeca42c7052c1b7a9627f2ce97cc35f7932081146a1c55ac2b7e3b6a79",
+      "sha256_archived": "5d251adeca42c7052c1b7a9627f2ce97cc35f7932081146a1c55ac2b7e3b6a79"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/charts/05_estimate_accuracy.png",
+      "archived_path": "models/doubao_21lite/charts/05_estimate_accuracy.png",
+      "compressed": false,
+      "original_size": 56024,
+      "archived_size": 56024,
+      "sha256_original": "14fd27c0356f1a5a8696a93dbb302472f59b81bc082f53e97bb6e49dad6cf6c2",
+      "sha256_archived": "14fd27c0356f1a5a8696a93dbb302472f59b81bc082f53e97bb6e49dad6cf6c2"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/charts2/01_points.png",
+      "archived_path": "models/doubao_21lite/charts2/01_points.png",
+      "compressed": false,
+      "original_size": 82068,
+      "archived_size": 82068,
+      "sha256_original": "163e97eed059944b8369298c2c61d2dbb204783beb8281b7734983ac9fb9dbd3",
+      "sha256_archived": "163e97eed059944b8369298c2c61d2dbb204783beb8281b7734983ac9fb9dbd3"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/charts2/02_pnl.png",
+      "archived_path": "models/doubao_21lite/charts2/02_pnl.png",
+      "compressed": false,
+      "original_size": 69506,
+      "archived_size": 69506,
+      "sha256_original": "7e80cd81cf8fb9eab8338e8cb21b6e4587340f52eccd3984b2d110858c2dab95",
+      "sha256_archived": "7e80cd81cf8fb9eab8338e8cb21b6e4587340f52eccd3984b2d110858c2dab95"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/charts2/03_rank.png",
+      "archived_path": "models/doubao_21lite/charts2/03_rank.png",
+      "compressed": false,
+      "original_size": 68220,
+      "archived_size": 68220,
+      "sha256_original": "3a4cc40e1b6170aae6e7f9e96af1f84709531d3e28452af2f1faf5a9b0443f62",
+      "sha256_archived": "3a4cc40e1b6170aae6e7f9e96af1f84709531d3e28452af2f1faf5a9b0443f62"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/charts2/04_standings.png",
+      "archived_path": "models/doubao_21lite/charts2/04_standings.png",
+      "compressed": false,
+      "original_size": 98139,
+      "archived_size": 98139,
+      "sha256_original": "819dc0a5ecc2fceef317074cbb0d017275d91eb853c816d8a21265a5641c778a",
+      "sha256_archived": "819dc0a5ecc2fceef317074cbb0d017275d91eb853c816d8a21265a5641c778a"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/charts2/05_open_vs_settle.png",
+      "archived_path": "models/doubao_21lite/charts2/05_open_vs_settle.png",
+      "compressed": false,
+      "original_size": 132275,
+      "archived_size": 132275,
+      "sha256_original": "1b2e78726f251d23141c8d01d69a2faf7b2b07a61d4097aadc42675306c3924e",
+      "sha256_archived": "1b2e78726f251d23141c8d01d69a2faf7b2b07a61d4097aadc42675306c3924e"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/charts2/06_price_path.png",
+      "archived_path": "models/doubao_21lite/charts2/06_price_path.png",
+      "compressed": false,
+      "original_size": 267012,
+      "archived_size": 267012,
+      "sha256_original": "40ff26cda80ace9e5b1e195489223d3f5246240947aa35eeee817541732b45c4",
+      "sha256_archived": "40ff26cda80ace9e5b1e195489223d3f5246240947aa35eeee817541732b45c4"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-4/linyuan/charts2/07_estimate_error.png",
+      "archived_path": "models/doubao_21lite/charts2/07_estimate_error.png",
+      "compressed": false,
+      "original_size": 88997,
+      "archived_size": 88997,
+      "sha256_original": "5ccbf786da9135dc4def33c3ef49eca90a209d37f089c2d93620e31b0addfd41",
+      "sha256_archived": "5ccbf786da9135dc4def33c3ef49eca90a209d37f089c2d93620e31b0addfd41"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-7/临渊量化-复盘日记.md",
+      "archived_path": "models/qwen4/临渊量化-复盘日记.md",
+      "compressed": false,
+      "original_size": 7365,
+      "archived_size": 7365,
+      "sha256_original": "1a0d80d007a32b466c839148eed77995c2b53a15835e5a716b66c964edad627d",
+      "sha256_archived": "1a0d80d007a32b466c839148eed77995c2b53a15835e5a716b66c964edad627d"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-7/临渊量化-赛后复盘报告.html",
+      "archived_path": "models/qwen4/临渊量化-赛后复盘报告.html",
+      "compressed": false,
+      "original_size": 1916982,
+      "archived_size": 1916982,
+      "sha256_original": "a6e5334866e4f0d0d0e75937463a88cfdad8f2e4169104ebab2d4cbb9e39e58a",
+      "sha256_archived": "a6e5334866e4f0d0d0e75937463a88cfdad8f2e4169104ebab2d4cbb9e39e58a"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-12/临渊量化复盘报告.html",
+      "archived_path": "models/glm53/临渊量化复盘报告.html",
+      "compressed": false,
+      "original_size": 859261,
+      "archived_size": 859261,
+      "sha256_original": "5f7a058771c7d81445541c6bc555b7e60a299eaed65f780856e39d8597bf3072",
+      "sha256_archived": "5f7a058771c7d81445541c6bc555b7e60a299eaed65f780856e39d8597bf3072"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-12/自我迭代日志.md",
+      "archived_path": "models/glm53/自我迭代日志.md",
+      "compressed": false,
+      "original_size": 2947,
+      "archived_size": 2947,
+      "sha256_original": "4306f99db9cbdf412092b320c2b12f70308a306eb426494c1ed4d96f0a22b5a8",
+      "sha256_archived": "4306f99db9cbdf412092b320c2b12f70308a306eb426494c1ed4d96f0a22b5a8"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-8/build_report.py",
+      "archived_path": "models/kimi/build_report.py",
+      "compressed": false,
+      "original_size": 93103,
+      "archived_size": 93103,
+      "sha256_original": "d4b945aa7a27f70840875e29561a213ab65d1ef427a79996ee1acd37f26adf98",
+      "sha256_archived": "d4b945aa7a27f70840875e29561a213ab65d1ef427a79996ee1acd37f26adf98"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-8/events.jsonl",
+      "archived_path": "models/kimi/events.jsonl",
+      "compressed": false,
+      "original_size": 3025587,
+      "archived_size": 3025587,
+      "sha256_original": "79893b29dfa5f823f44ad1c90c67cd058746aa96d7c1d193ba3b7ab9935bb227",
+      "sha256_archived": "79893b29dfa5f823f44ad1c90c67cd058746aa96d7c1d193ba3b7ab9935bb227"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-8/latest_state.json",
+      "archived_path": "models/kimi/latest_state.json",
+      "compressed": false,
+      "original_size": 248352,
+      "archived_size": 248352,
+      "sha256_original": "378643ebed76c0478d5b8d7edc736f4f73eba095d8c6ea4016c09ed8998f6925",
+      "sha256_archived": "378643ebed76c0478d5b8d7edc736f4f73eba095d8c6ea4016c09ed8998f6925"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-8/strategy.json",
+      "archived_path": "models/kimi/strategy.json",
+      "compressed": false,
+      "original_size": 252,
+      "archived_size": 252,
+      "sha256_original": "bc1c24ddc3eab994f41c782c5f8b4f8c0572204267fc0a88c9ad223900d37b92",
+      "sha256_archived": "bc1c24ddc3eab994f41c782c5f8b4f8c0572204267fc0a88c9ad223900d37b92"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-8/trader.py",
+      "archived_path": "models/kimi/trader.py",
+      "compressed": false,
+      "original_size": 8662,
+      "archived_size": 8662,
+      "sha256_original": "4ec67b86af2b3663cb8aade5518040b032d96f064a72f3ffeaf6d7a891de7aed",
+      "sha256_archived": "4ec67b86af2b3663cb8aade5518040b032d96f064a72f3ffeaf6d7a891de7aed"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-8/临渊量化全场详细复盘-逐轮逐笔版.html",
+      "archived_path": "models/kimi/临渊量化全场详细复盘-逐轮逐笔版.html",
+      "compressed": false,
+      "original_size": 556731,
+      "archived_size": 556731,
+      "sha256_original": "aeca16b618dbbec865c9ca19c9b5f2095fecb805c56dd564d3e818c2c282662c",
+      "sha256_archived": "aeca16b618dbbec865c9ca19c9b5f2095fecb805c56dd564d3e818c2c282662c"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-8/临渊量化全场详细复盘.html",
+      "archived_path": "models/kimi/临渊量化全场详细复盘.html",
+      "compressed": false,
+      "original_size": 475081,
+      "archived_size": 475081,
+      "sha256_original": "2b6080fcf88f9da5273d93c00b3eb1e7e268d0e338720250665f7c22112a551e",
+      "sha256_archived": "2b6080fcf88f9da5273d93c00b3eb1e7e268d0e338720250665f7c22112a551e"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-21/new-chat-8/复盘记录.md",
+      "archived_path": "models/kimi/复盘记录.md",
+      "compressed": false,
+      "original_size": 12415,
+      "archived_size": 12415,
+      "sha256_original": "0e56aa8716892ddf3cceecf72e1d9f19018ac696a76239b311dc3d6379552893",
+      "sha256_archived": "0e56aa8716892ddf3cceecf72e1d9f19018ac696a76239b311dc3d6379552893"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/app_probe.js",
+      "archived_path": "models/workbuddy_hy4flash/app_probe.js",
+      "compressed": false,
+      "original_size": 43211,
+      "archived_size": 43211,
+      "sha256_original": "9d833b28b9ddcf02f7f56d83bf186f35d9e104dcef0d55a41dc3e7e81adbb439",
+      "sha256_archived": "9d833b28b9ddcf02f7f56d83bf186f35d9e104dcef0d55a41dc3e7e81adbb439"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/config.json",
+      "archived_path": "models/workbuddy_hy4flash/config.json",
+      "compressed": false,
+      "original_size": 187,
+      "archived_size": 187,
+      "sha256_original": "f9b9cac040404af26bfa7258acc55d44ba19ed550b239e880351e850bd8ca379",
+      "sha256_archived": "f9b9cac040404af26bfa7258acc55d44ba19ed550b239e880351e850bd8ca379"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/config555.json",
+      "archived_path": "models/workbuddy_hy4flash/config555.json",
+      "compressed": false,
+      "original_size": 282,
+      "archived_size": 282,
+      "sha256_original": "19dbf0856ee33cfee85402c08218a6f90329ccf989133e3999d957b0952c46d0",
+      "sha256_archived": "19dbf0856ee33cfee85402c08218a6f90329ccf989133e3999d957b0952c46d0"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/events.log",
+      "archived_path": "models/workbuddy_hy4flash/events.log",
+      "compressed": false,
+      "original_size": 1307182,
+      "archived_size": 1307182,
+      "sha256_original": "c98b29d8d8dbf06ac2c86b60691e4cd4cf386d62c13f707af791df8d89786af8",
+      "sha256_archived": "c98b29d8d8dbf06ac2c86b60691e4cd4cf386d62c13f707af791df8d89786af8"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/events555.log",
+      "archived_path": "models/workbuddy_hy4flash/events555.log",
+      "compressed": false,
+      "original_size": 2434,
+      "archived_size": 2434,
+      "sha256_original": "496a5f1ddd570a87f2c14fad72a70a01d4ea18c2f485b5b7f7b46e666b97cafc",
+      "sha256_archived": "496a5f1ddd570a87f2c14fad72a70a01d4ea18c2f485b5b7f7b46e666b97cafc"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/gen_report.py",
+      "archived_path": "models/workbuddy_hy4flash/gen_report.py",
+      "compressed": false,
+      "original_size": 28779,
+      "archived_size": 28779,
+      "sha256_original": "a69f23ebd98308cf11a651ef017964693040a84f0b6dc02d271ecb5f16e6c312",
+      "sha256_archived": "a69f23ebd98308cf11a651ef017964693040a84f0b6dc02d271ecb5f16e6c312"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/market-ui.js",
+      "archived_path": "models/workbuddy_hy4flash/market-ui.js",
+      "compressed": false,
+      "original_size": 88208,
+      "archived_size": 88208,
+      "sha256_original": "71ee403298f4c23833638f18201246b9c1f857eb6113b93cb921a8cd55cb7bb1",
+      "sha256_archived": "71ee403298f4c23833638f18201246b9c1f857eb6113b93cb921a8cd55cb7bb1"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/market_probe.js",
+      "archived_path": "models/workbuddy_hy4flash/market_probe.js",
+      "compressed": false,
+      "original_size": 27,
+      "archived_size": 27,
+      "sha256_original": "e002bcc07ae071bb5673155e03a36c16d3bc0c98bb0ca1ca2c49427c4521321a",
+      "sha256_archived": "e002bcc07ae071bb5673155e03a36c16d3bc0c98bb0ca1ca2c49427c4521321a"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/monitor.py",
+      "archived_path": "models/workbuddy_hy4flash/monitor.py",
+      "compressed": false,
+      "original_size": 9187,
+      "archived_size": 9187,
+      "sha256_original": "2fd8042e82174de315048c172148e479a32c398663334b5b6d1f47f5de15835f",
+      "sha256_archived": "2fd8042e82174de315048c172148e479a32c398663334b5b6d1f47f5de15835f"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/notes.md",
+      "archived_path": "models/workbuddy_hy4flash/notes.md",
+      "compressed": false,
+      "original_size": 11306,
+      "archived_size": 11306,
+      "sha256_original": "66acd4bfe59623b6f7e3e515db7493629cd859a6532542032a0c4411c23f90b4",
+      "sha256_archived": "66acd4bfe59623b6f7e3e515db7493629cd859a6532542032a0c4411c23f90b4"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/report_data.py",
+      "archived_path": "models/workbuddy_hy4flash/report_data.py",
+      "compressed": false,
+      "original_size": 7801,
+      "archived_size": 7801,
+      "sha256_original": "e3279472f19e5cfedade908080a57e917ecb80926019b5c77ac0366cebe7831b",
+      "sha256_archived": "e3279472f19e5cfedade908080a57e917ecb80926019b5c77ac0366cebe7831b"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/state-sync.js",
+      "archived_path": "models/workbuddy_hy4flash/state-sync.js",
+      "compressed": false,
+      "original_size": 1647,
+      "archived_size": 1647,
+      "sha256_original": "a85e8754febeeb4148535168bc1e1b361d40829fecdfca563d6a5e6628149e3e",
+      "sha256_archived": "a85e8754febeeb4148535168bc1e1b361d40829fecdfca563d6a5e6628149e3e"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/state.json",
+      "archived_path": "models/workbuddy_hy4flash/state.json",
+      "compressed": false,
+      "original_size": 128088,
+      "archived_size": 128088,
+      "sha256_original": "57c79662ae4b6b324d452cc801506cf139b1bddaf676d80a3d7bc814fcbd8ab1",
+      "sha256_archived": "57c79662ae4b6b324d452cc801506cf139b1bddaf676d80a3d7bc814fcbd8ab1"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/state555.json",
+      "archived_path": "models/workbuddy_hy4flash/state555.json",
+      "compressed": false,
+      "original_size": 71117,
+      "archived_size": 71117,
+      "sha256_original": "bed926c50ed0f6eea38ce4d1942ef219b1a69d1d227d54414d5c429d847c963c",
+      "sha256_archived": "bed926c50ed0f6eea38ce4d1942ef219b1a69d1d227d54414d5c429d847c963c"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/submit555.js",
+      "archived_path": "models/workbuddy_hy4flash/submit555.js",
+      "compressed": false,
+      "original_size": 1548,
+      "archived_size": 1548,
+      "sha256_original": "bd82c39557ba7e2059a7479974ce004d24118a1eb473ba022b1dc593c57446c4",
+      "sha256_archived": "bd82c39557ba7e2059a7479974ce004d24118a1eb473ba022b1dc593c57446c4"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/terminal555.js",
+      "archived_path": "models/workbuddy_hy4flash/terminal555.js",
+      "compressed": false,
+      "original_size": 5951,
+      "archived_size": 5951,
+      "sha256_original": "2b248b4bb6f321a5a108f6ad9e5369df2018866e985c0c515422d2b17b87e69a",
+      "sha256_archived": "2b248b4bb6f321a5a108f6ad9e5369df2018866e985c0c515422d2b17b87e69a"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/ws_probe.js",
+      "archived_path": "models/workbuddy_hy4flash/ws_probe.js",
+      "compressed": false,
+      "original_size": 2042,
+      "archived_size": 2042,
+      "sha256_original": "7491bab5d8a72cc0e4afc306b537a791728b8afa8967e5eed91c2a4611466232",
+      "sha256_archived": "7491bab5d8a72cc0e4afc306b537a791728b8afa8967e5eed91c2a4611466232"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/复盘报告.html",
+      "archived_path": "models/workbuddy_hy4flash/复盘报告.html",
+      "compressed": false,
+      "original_size": 61062,
+      "archived_size": 61062,
+      "sha256_original": "2a6f406078dd4d1930d4060080f34029d12d3358a358880b5a604c8039f54e1f",
+      "sha256_archived": "2a6f406078dd4d1930d4060080f34029d12d3358a358880b5a604c8039f54e1f"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/.workbuddy/memory/2026-11-22.md",
+      "archived_path": "models/workbuddy_hy4flash/.workbuddy/memory/2026-11-22.md",
+      "compressed": false,
+      "original_size": 1924,
+      "archived_size": 1924,
+      "sha256_original": "d3850de6468974c80182aaafe4dc89f1897c002887eb5e749e3f56f2f644865b",
+      "sha256_archived": "d3850de6468974c80182aaafe4dc89f1897c002887eb5e749e3f56f2f644865b"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00/.workbuddy/memory/2026-11-23.md",
+      "archived_path": "models/workbuddy_hy4flash/.workbuddy/memory/2026-11-23.md",
+      "compressed": false,
+      "original_size": 1825,
+      "archived_size": 1825,
+      "sha256_original": "bfe96415b371f1ca721132cce1d48ebfc66a0ae83326034cb20e3c45dc6b28ba",
+      "sha256_archived": "bfe96415b371f1ca721132cce1d48ebfc66a0ae83326034cb20e3c45dc6b28ba"
+    },
+    {
+      "source": "/Users/yuanf/.qoder/tmp/-Users-yuanf-Documents-Qoder------/attachments/8be60ac5-aa34-44ad-9219-36af9aa96dd6/4679a30f-25a1-449a-a2cf-2fa63eba7c3a.txt",
+      "archived_path": "models/workbuddy_hy4flash/transcripts/part1.txt",
+      "compressed": false,
+      "original_size": 49739,
+      "archived_size": 49739,
+      "sha256_original": "bf633832175b47f68420d184f89c80d9a8d638dc51f91bd5a3f37cf86d8aa8e7",
+      "sha256_archived": "bf633832175b47f68420d184f89c80d9a8d638dc51f91bd5a3f37cf86d8aa8e7"
+    },
+    {
+      "source": "/Users/yuanf/.qoder/tmp/-Users-yuanf-Documents-Qoder------/attachments/8be60ac5-aa34-44ad-9219-36af9aa96dd6/4b64ed93-4ac8-40a8-b44a-f8e4a3f335c3.txt",
+      "archived_path": "models/workbuddy_hy4flash/transcripts/part2.txt",
+      "compressed": false,
+      "original_size": 158824,
+      "archived_size": 158824,
+      "sha256_original": "2bc69ce7768214310dd9888dc60a4c103e005518f4619bdf39736f44a0bcdc38",
+      "sha256_archived": "2bc69ce7768214310dd9888dc60a4c103e005518f4619bdf39736f44a0bcdc38"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/actions.log.jsonl",
+      "archived_path": "models/workbuddy_hy4/source/actions.log.jsonl",
+      "compressed": false,
+      "original_size": 137486,
+      "archived_size": 137486,
+      "sha256_original": "632ab83f886dd33efded9d61f4ba745d82ed6b9db750cdc9b08a35158e67a23c",
+      "sha256_archived": "632ab83f886dd33efded9d61f4ba745d82ed6b9db750cdc9b08a35158e67a23c"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/alert.json",
+      "archived_path": "models/workbuddy_hy4/source/alert.json",
+      "compressed": false,
+      "original_size": 3061,
+      "archived_size": 3061,
+      "sha256_original": "86f50c96881427796e479f33df58ef8fb8362340559167a4b826141dcfe706d2",
+      "sha256_archived": "86f50c96881427796e479f33df58ef8fb8362340559167a4b826141dcfe706d2"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/auto_signal.py",
+      "archived_path": "models/workbuddy_hy4/source/auto_signal.py",
+      "compressed": false,
+      "original_size": 7341,
+      "archived_size": 7341,
+      "sha256_original": "a38e33bf0c009619365e2e478e303645c36f14f63cdee90a96b4cdb464b9a872",
+      "sha256_archived": "a38e33bf0c009619365e2e478e303645c36f14f63cdee90a96b4cdb464b9a872"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/bot.log",
+      "archived_path": "models/workbuddy_hy4/source/bot.log",
+      "compressed": false,
+      "original_size": 418,
+      "archived_size": 418,
+      "sha256_original": "3a3a19c6bba1f971eb41f86871d28ac73771e0e19e36fbef48e975a4da78dbce",
+      "sha256_archived": "3a3a19c6bba1f971eb41f86871d28ac73771e0e19e36fbef48e975a4da78dbce"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/bot.py",
+      "archived_path": "models/workbuddy_hy4/source/bot.py",
+      "compressed": false,
+      "original_size": 25711,
+      "archived_size": 25711,
+      "sha256_original": "560b5e666b37413d6540823ebf90dc3a75c5749588cafa7abfa1c299c77c864f",
+      "sha256_archived": "560b5e666b37413d6540823ebf90dc3a75c5749588cafa7abfa1c299c77c864f"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/control.json",
+      "archived_path": "models/workbuddy_hy4/source/control.json",
+      "compressed": false,
+      "original_size": 3722,
+      "archived_size": 3722,
+      "sha256_original": "1ebf69e24104ac48cbe1deaffa56f045340b8a7bd8fd051a5d0306a41fc767cc",
+      "sha256_archived": "1ebf69e24104ac48cbe1deaffa56f045340b8a7bd8fd051a5d0306a41fc767cc"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/errors.log.jsonl",
+      "archived_path": "models/workbuddy_hy4/source/errors.log.jsonl",
+      "compressed": false,
+      "original_size": 9016,
+      "archived_size": 9016,
+      "sha256_original": "eb72e10ef379a957800923dd507aac9ce3dcecdcb4823afb59e536dfd0cd747f",
+      "sha256_archived": "eb72e10ef379a957800923dd507aac9ce3dcecdcb4823afb59e536dfd0cd747f"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/heartbeat.json",
+      "archived_path": "models/workbuddy_hy4/source/heartbeat.json",
+      "compressed": false,
+      "original_size": 31831,
+      "archived_size": 31831,
+      "sha256_original": "7a302d5c23286f74cbb556a4fe5326b8f950769759dab62c7d61ab7ad750bf12",
+      "sha256_archived": "7a302d5c23286f74cbb556a4fe5326b8f950769759dab62c7d61ab7ad750bf12"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/join.json",
+      "archived_path": "models/workbuddy_hy4/source/join.json",
+      "compressed": false,
+      "original_size": 107,
+      "archived_size": 107,
+      "sha256_original": "8111e795a41a803d2a98aa79a5e4de79cf69eaa10cb2539875a2dd1f533abec9",
+      "sha256_archived": "8111e795a41a803d2a98aa79a5e4de79cf69eaa10cb2539875a2dd1f533abec9"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/postgame_replay.py",
+      "archived_path": "models/workbuddy_hy4/source/postgame_replay.py",
+      "compressed": false,
+      "original_size": 11722,
+      "archived_size": 11722,
+      "sha256_original": "bfea943dcc1258bb508095a59461529b432159da44b9d16742d3399c253424d5",
+      "sha256_archived": "bfea943dcc1258bb508095a59461529b432159da44b9d16742d3399c253424d5"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/postgame_replay.txt",
+      "archived_path": "models/workbuddy_hy4/source/postgame_replay.txt",
+      "compressed": false,
+      "original_size": 9660,
+      "archived_size": 9660,
+      "sha256_original": "325ef97bcd40a1b11b19acdf954d3d495107e7421e2a53b5dc95615f252d3832",
+      "sha256_archived": "325ef97bcd40a1b11b19acdf954d3d495107e7421e2a53b5dc95615f252d3832"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/react.py",
+      "archived_path": "models/workbuddy_hy4/source/react.py",
+      "compressed": false,
+      "original_size": 3283,
+      "archived_size": 3283,
+      "sha256_original": "6e72a1cece2937b6c5715ccc86a6f37408873ec36ae9d6e5013e1f6104fe2c06",
+      "sha256_archived": "6e72a1cece2937b6c5715ccc86a6f37408873ec36ae9d6e5013e1f6104fe2c06"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/reflect.md",
+      "archived_path": "models/workbuddy_hy4/source/reflect.md",
+      "compressed": false,
+      "original_size": 15388,
+      "archived_size": 15388,
+      "sha256_original": "1876a6cf7530eaf4a57ddb0a050f0cd4e0c1a9fcc464dc83c4e67f6b954772a5",
+      "sha256_archived": "1876a6cf7530eaf4a57ddb0a050f0cd4e0c1a9fcc464dc83c4e67f6b954772a5"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/reflect.md.jsonl",
+      "archived_path": "models/workbuddy_hy4/source/reflect.md.jsonl",
+      "compressed": false,
+      "original_size": 17332,
+      "archived_size": 17332,
+      "sha256_original": "491f7857130ba9f98a1768cfca6bda0e786d2509a7b2eb0cf9bcc8644d8a050a",
+      "sha256_archived": "491f7857130ba9f98a1768cfca6bda0e786d2509a7b2eb0cf9bcc8644d8a050a"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/signals.log.jsonl",
+      "archived_path": "models/workbuddy_hy4/source/signals.log.jsonl",
+      "compressed": false,
+      "original_size": 6899,
+      "archived_size": 6899,
+      "sha256_original": "d19f426e0b83fc5de90f8c6b3a817bfa398a69a42221afab0dc1162616e7691b",
+      "sha256_archived": "d19f426e0b83fc5de90f8c6b3a817bfa398a69a42221afab0dc1162616e7691b"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/signals.txt",
+      "archived_path": "models/workbuddy_hy4/source/signals.txt",
+      "compressed": false,
+      "original_size": 4425,
+      "archived_size": 4425,
+      "sha256_original": "d671c1bcddc648277697e1d8008d39e90a4b492a1dbf286c879fff02004ca7e1",
+      "sha256_archived": "d671c1bcddc648277697e1d8008d39e90a4b492a1dbf286c879fff02004ca7e1"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/sse2.txt",
+      "archived_path": "models/workbuddy_hy4/source/sse2.txt",
+      "compressed": false,
+      "original_size": 20000,
+      "archived_size": 20000,
+      "sha256_original": "a14c2878d4ba70bc4aab539b6b67486be4713cf37dca4feb9ced9bc98d4d8cae",
+      "sha256_archived": "a14c2878d4ba70bc4aab539b6b67486be4713cf37dca4feb9ced9bc98d4d8cae"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/sse_first.txt",
+      "archived_path": "models/workbuddy_hy4/source/sse_first.txt",
+      "compressed": false,
+      "original_size": 5120,
+      "archived_size": 5120,
+      "sha256_original": "577add092b5853037aece0ba2337ffc18be416d5193063c747acd7976b83577b",
+      "sha256_archived": "577add092b5853037aece0ba2337ffc18be416d5193063c747acd7976b83577b"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/states.jsonl",
+      "archived_path": "models/workbuddy_hy4/source/states.jsonl.gz",
+      "compressed": true,
+      "original_size": 97414286,
+      "archived_size": 1168016,
+      "sha256_original": "a88c7e0fa8ed0d956bacea0417f778550873f8d55b419f74eb9956bce358b6e3",
+      "sha256_archived": "d20e107de24ba0e0fe2b5bf3ca39580c09dc7f03ab695b1d1e0211fae5f30c52"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/watch.py",
+      "archived_path": "models/workbuddy_hy4/source/watch.py",
+      "compressed": false,
+      "original_size": 2229,
+      "archived_size": 2229,
+      "sha256_original": "d50014641a52ca72cb633f461de6977dcd3b9b5c167de790d5ffb447fcc4e2ad",
+      "sha256_archived": "d50014641a52ca72cb633f461de6977dcd3b9b5c167de790d5ffb447fcc4e2ad"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/我意识到了什么.md",
+      "archived_path": "models/workbuddy_hy4/source/我意识到了什么.md",
+      "compressed": false,
+      "original_size": 24847,
+      "archived_size": 24847,
+      "sha256_original": "94793b6b639f3a9d85ac303ade78bd3033a825d5d43f4882613b38ed1a38e3a1",
+      "sha256_archived": "94793b6b639f3a9d85ac303ade78bd3033a825d5d43f4882613b38ed1a38e3a1"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/linyuan/赛后量化回放.md",
+      "archived_path": "models/workbuddy_hy4/source/赛后量化回放.md",
+      "compressed": false,
+      "original_size": 10333,
+      "archived_size": 10333,
+      "sha256_original": "113e6d5c5b3b28e7caed1484897369719c88972ee9994f8c8d325c5ef93587d3",
+      "sha256_archived": "113e6d5c5b3b28e7caed1484897369719c88972ee9994f8c8d325c5ef93587d3"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-14-04/.workbuddy/memory/2026-11-21.md",
+      "archived_path": "models/workbuddy_hy4/memory/memory/2026-11-21.md",
+      "compressed": false,
+      "original_size": 6555,
+      "archived_size": 6555,
+      "sha256_original": "c3ca81df56d7408a9e68d27345deb04744b406da18bd05687ce788e12cd0255a",
+      "sha256_archived": "c3ca81df56d7408a9e68d27345deb04744b406da18bd05687ce788e12cd0255a"
+    },
+    {
+      "source": "/Users/yuanf/.qoder/tmp/-Users-yuanf-Documents-Qoder------/attachments/8be60ac5-aa34-44ad-9219-36af9aa96dd6/2f738276-1753-4fed-807b-804e4e27decd.txt",
+      "archived_path": "models/workbuddy_hy4/transcripts/part1.txt",
+      "compressed": false,
+      "original_size": 240104,
+      "archived_size": 240104,
+      "sha256_original": "a36c45d4ae15ae80cc7bb930a21b9ba958de58f274b95627321b3b4ac9ef0794",
+      "sha256_archived": "a36c45d4ae15ae80cc7bb930a21b9ba958de58f274b95627321b3b4ac9ef0794"
+    },
+    {
+      "source": "/Users/yuanf/.qoder/tmp/-Users-yuanf-Documents-Qoder------/attachments/8be60ac5-aa34-44ad-9219-36af9aa96dd6/65aeae16-9b15-492c-8bab-4c121af59917.txt",
+      "archived_path": "models/workbuddy_hy4/transcripts/part2.txt",
+      "compressed": false,
+      "original_size": 141148,
+      "archived_size": 141148,
+      "sha256_original": "ea3e620be372d6236c31c52c2a4fa123d0e2423af0e94aaaba8ce661542273d1",
+      "sha256_archived": "ea3e620be372d6236c31c52c2a4fa123d0e2423af0e94aaaba8ce661542273d1"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-20/.workbuddy/autotrade.py",
+      "archived_path": "models/workbuddy_fast/.workbuddy/autotrade.py",
+      "compressed": false,
+      "original_size": 5967,
+      "archived_size": 5967,
+      "sha256_original": "d60ee413ed8a49e66226108f9208f00b7f25647ae2748db192bb11989df30d69",
+      "sha256_archived": "d60ee413ed8a49e66226108f9208f00b7f25647ae2748db192bb11989df30d69"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-20/.workbuddy/game_data.json",
+      "archived_path": "models/workbuddy_fast/.workbuddy/game_data.json",
+      "compressed": false,
+      "original_size": 34839,
+      "archived_size": 34839,
+      "sha256_original": "396fd26ae1bfb48f5506d81b4fe9ac79329fa384ab6954fd86de14f0479c12a9",
+      "sha256_archived": "396fd26ae1bfb48f5506d81b4fe9ac79329fa384ab6954fd86de14f0479c12a9"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-20/.workbuddy/game_data_full.json",
+      "archived_path": "models/workbuddy_fast/.workbuddy/game_data_full.json",
+      "compressed": false,
+      "original_size": 54329,
+      "archived_size": 54329,
+      "sha256_original": "d1a188083484d9ed6c2856b254fdd3dde16b35164a6398b6df402eca604ca117",
+      "sha256_archived": "d1a188083484d9ed6c2856b254fdd3dde16b35164a6398b6df402eca604ca117"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-20/.workbuddy/scalper.py",
+      "archived_path": "models/workbuddy_fast/.workbuddy/scalper.py",
+      "compressed": false,
+      "original_size": 3815,
+      "archived_size": 3815,
+      "sha256_original": "9bd7115488da701f98fdc4f8ca2eadfae6af5acb9eb0a0739edb08a4cc54afe8",
+      "sha256_archived": "9bd7115488da701f98fdc4f8ca2eadfae6af5acb9eb0a0739edb08a4cc54afe8"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-20/.workbuddy/sse.log",
+      "archived_path": "models/workbuddy_fast/.workbuddy/sse.log.gz",
+      "compressed": true,
+      "original_size": 974085385,
+      "archived_size": 87190858,
+      "sha256_original": "fcfbcb58fea5c8e6bc9ea7130009d48496b9c64486d0dc939a567a249fdac834",
+      "sha256_archived": "be9d18e15f220f54f208ffa017a0c7e90b09393fb93e4eaabf55555f869f3f92"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-20/.workbuddy/trading_notes.md",
+      "archived_path": "models/workbuddy_fast/.workbuddy/trading_notes.md",
+      "compressed": false,
+      "original_size": 6530,
+      "archived_size": 6530,
+      "sha256_original": "0aadae4ae4541310d0cb2d18e1f00cb608c374f874f5a31d1005c9e98c349818",
+      "sha256_archived": "0aadae4ae4541310d0cb2d18e1f00cb608c374f874f5a31d1005c9e98c349818"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-20/.workbuddy/memory/2026-11-22.md",
+      "archived_path": "models/workbuddy_fast/.workbuddy/memory/2026-11-22.md",
+      "compressed": false,
+      "original_size": 952,
+      "archived_size": 952,
+      "sha256_original": "ca0dda43873334a662da92a016581d92d6958478ac73489f64918257659b5fc4",
+      "sha256_archived": "ca0dda43873334a662da92a016581d92d6958478ac73489f64918257659b5fc4"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-20/report/gen_report.py",
+      "archived_path": "models/workbuddy_fast/report/gen_report.py",
+      "compressed": false,
+      "original_size": 37881,
+      "archived_size": 37881,
+      "sha256_original": "b7893dc2d0f6af15ec31dc0742d7aa08a7861572695815afc0ab2d357bff15ff",
+      "sha256_archived": "b7893dc2d0f6af15ec31dc0742d7aa08a7861572695815afc0ab2d357bff15ff"
+    },
+    {
+      "source": "/Users/yuanf/WorkBuddy/2026-11-21-23-15-20/report/复盘报告.html",
+      "archived_path": "models/workbuddy_fast/report/复盘报告.html",
+      "compressed": false,
+      "original_size": 77591,
+      "archived_size": 77591,
+      "sha256_original": "ffce160d2bfe49cabb64992d5e636c1993d27e57c8d13ae9a60b2017a0819d86",
+      "sha256_archived": "ffce160d2bfe49cabb64992d5e636c1993d27e57c8d13ae9a60b2017a0819d86"
+    },
+    {
+      "source": "/Users/yuanf/.qoder/tmp/-Users-yuanf-Documents-Qoder------/attachments/8be60ac5-aa34-44ad-9219-36af9aa96dd6/2edb2d75-65ba-41c1-bbb5-e3918f924d29.txt",
+      "archived_path": "models/workbuddy_fast/transcript.txt",
+      "compressed": false,
+      "original_size": 177620,
+      "archived_size": 177620,
+      "sha256_original": "07b22958356269e7c7f9f07b7f7db3a25f841a116a1bde6687ee792ee500e10d",
+      "sha256_archived": "07b22958356269e7c7f9f07b7f7db3a25f841a116a1bde6687ee792ee500e10d"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/赛后数据/qoder-DeepSeek-自述复盘.md",
+      "archived_path": "models/qoder_deepseek/qoder-DeepSeek-自述复盘.md",
+      "compressed": false,
+      "original_size": 8647,
+      "archived_size": 8647,
+      "sha256_original": "2c0a535a85f2602ad2517eb9b38b5f2bfb59da114af78f8aa96a0d2db0859eb4",
+      "sha256_archived": "2c0a535a85f2602ad2517eb9b38b5f2bfb59da114af78f8aa96a0d2db0859eb4"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/临渊复盘·全量数据版.html",
+      "archived_path": "models/quwork_v41flash/reports/临渊复盘·全量数据版.html",
+      "compressed": false,
+      "original_size": 69915,
+      "archived_size": 69915,
+      "sha256_original": "21cb07c559ea133184a869b3283cd6919846f112f86ea48ff28c5cec565a179e",
+      "sha256_archived": "21cb07c559ea133184a869b3283cd6919846f112f86ea48ff28c5cec565a179e"
+    },
+    {
+      "source": "/Users/yuanf/DoubaoWork/chats/2026-11-19/new-chat-1/临渊复盘·全量数据版.pdf",
+      "archived_path": "models/quwork_v41flash/reports/临渊复盘·全量数据版.pdf",
+      "compressed": false,
+      "original_size": 2733371,
+      "archived_size": 2733371,
+      "sha256_original": "901fe308fb8f99fe699fc5446089dad6c5ce80cffae72d7190297249c2dc328b",
+      "sha256_archived": "901fe308fb8f99fe699fc5446089dad6c5ce80cffae72d7190297249c2dc328b"
+    }
+  ],
+  "round": "第一轮"
+}

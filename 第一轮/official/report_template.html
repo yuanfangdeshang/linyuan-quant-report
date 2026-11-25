@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>临渊量化·实时交易竞技场 赛后详细复盘</title>
+<style>
+  :root { --red:#c0392b; --blue:#2e86de; --orange:#e67e22; --ink:#2c3e50; --muted:#7f8c8d; --bg:#faf8f5; --card:#ffffff; --line:#e8e2d8; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Kaiti SC","KaiTi","STKaiti",serif; line-height:1.78; }
+  .wrap { max-width: 1000px; margin:0 auto; padding:42px 24px 90px; }
+  h1 { font-size:30px; margin:0 0 6px; letter-spacing:1px; }
+  h2 { font-size:22px; margin:46px 0 14px; padding-left:12px; border-left:5px solid var(--orange); }
+  h3 { font-size:18px; margin:28px 0 10px; color:#1a1a1a; }
+  .sub { color:var(--muted); font-size:14px; margin-bottom:8px; }
+  .num { font-family:"Times New Roman",serif; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:18px 22px; margin:14px 0; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+  table { border-collapse:collapse; width:100%; font-size:13.5px; margin:12px 0; background:#fff; }
+  th,td { border:1px solid var(--line); padding:7px 9px; text-align:left; vertical-align:top; }
+  th { background:#f3efe7; font-weight:600; }
+  td.num, th.num { text-align:right; font-family:"Times New Roman",serif; }
+  .win { color:var(--red); font-weight:bold; }
+  .lose { color:var(--blue); font-weight:bold; }
+  .flat { color:var(--muted); }
+  .tag { display:inline-block; padding:1px 9px; border-radius:12px; font-size:12px; margin-right:6px; }
+  .tag.gold { background:#fdebd0; color:#b9770e; }
+  .tag.blue { background:#d6eaf8; color:var(--blue); }
+  .tag.gray { background:#eceff1; color:#607d8b; }
+  .clue { background:#fdfbf7; border-left:3px solid #d4c5a9; padding:6px 12px; margin:6px 0; font-size:14px; }
+  .think { background:#f4f9f4; border-left:3px solid #7cb342; padding:8px 14px; margin:8px 0; font-size:14.5px; }
+  .act { background:#f4f7fb; border-left:3px solid #5b8dd9; padding:6px 12px; margin:6px 0; font-size:13.5px; }
+  .path { background:#fbf7f0; border-left:3px solid #e6a23c; padding:5px 12px; margin:6px 0; font-size:13px; color:#8a6d3b; }
+  img.chart { width:100%; border:1px solid var(--line); border-radius:8px; margin:10px 0; }
+  .summary-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(155px,1fr)); gap:12px; margin:18px 0; }
+  .metric { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; text-align:center; }
+  .metric .v { font-size:25px; font-weight:bold; font-family:"Times New Roman",serif; }
+  .metric .k { font-size:13px; color:var(--muted); margin-top:2px; }
+  .lesson { counter-reset:li; list-style:none; padding:0; }
+  .lesson li { position:relative; padding:8px 0 8px 34px; border-bottom:1px dashed var(--line); }
+  .lesson li::before { counter-increment:li; content:counter(li); position:absolute; left:0; top:9px; width:22px; height:22px; border-radius:50%; background:var(--orange); color:#fff; text-align:center; line-height:22px; font-size:13px; font-family:"Times New Roman",serif; }
+  .footnote { color:var(--muted); font-size:12.5px; margin-top:32px; }
+  .hl { background:linear-gradient(transparent 60%, #fef3c7 60%); font-weight:bold; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>临渊量化 · 实时交易竞技场</h1>
+  <div class="sub">赛后详细复盘报告 · 房间 258334 · 参赛交易员「豆包-远方的mac-DeepSe」</div>
+
+  <div class="summary-grid">
+    <div class="metric"><div class="v" style="color:var(--orange)">86</div><div class="k">最终总积分</div></div>
+    <div class="metric"><div class="v">第 9 / 15</div><div class="k">最终排名</div></div>
+    <div class="metric"><div class="v" style="color:var(--red)">3</div><div class="k">单局第 1（全场最多）</div></div>
+    <div class="metric"><div class="v">12</div><div class="k">总局数（1测试+11正式）</div></div>
+    <div class="metric"><div class="v">16 → 86</div><div class="k">积分轨迹（第15→第9）</div></div>
+  </div>
+
+  <div class="card">
+    本报告基于服务端权威存档 <span class="num">竞技场-258334-20261122-004051.json</span>（12 局、约 3,722 笔双边成交）逐局重建，包含<b>全部线索原文、每轮价格路径、我的逐笔成交、每局完整排名</b>。核心结论先行：<span class="hl">结算价 = 公开真值；盈利公式 =「方向 × 重仓 × 持仓到结算」；个人数据题的开盘价往往严重失真，唯一可靠的是第三条「数量特征」线索。</span>
+  </div>
+
+  <h2>一、赛制与规则</h2>
+  <div class="card">
+    <p>「临渊量化」实时交易竞技场，房间号 <span class="num">258334</span>，同场 <b>15 个真人/模型玩家</b> + <b>24 个脚本玩家</b>（价值派、噪声、流动性、趋势猎手、均值回归）。题目是事实/估算类。</p>
+    <table>
+      <tr><th>阶段</th><th class="num">时长</th><th>说明</th></tr>
+      <tr><td>估价阶段</td><td class="num">60s</td><td>全体提交估价；<b>开盘价 = 全场估价中位数</b>。</td></tr>
+      <tr><td>交易轮</td><td class="num">每轮 60s</td><td>每轮开始公布 1 条线索（第 2 题有 5 轮，其余 3 轮）；连续撮合、禁止自成交、净持仓上限 ±10 手。</td></tr>
+      <tr><td>结算</td><td class="num">局末</td><td><b>按公开真值结算</b>：单局盈亏 = 已实现 + 净持仓 × (结算价 − 均价成本)。</td></tr>
+    </table>
+    <p>积分规则：单局积分 = 总人数 − 名次 + 1。价格单位：<b>成交价、答案、盈亏均为整数「分」，显示时除以 100</b>（例如 10.89 万 → 1089 分）。</p>
+  </div>
+
+  <h2>二、策略演进：全局思考过程</h2>
+  <div class="card">
+    <p>12 局里，我的策略经历了 <b>6 次关键迭代</b>，每一次都对应一次真金白银的教训：</p>
+    <ol class="lesson">
+      <li><b>意识1（测试局）</b>：开盘价 = 全场估价中位数，是比"我自己的先验"更强的信息。我估 480，市场开 715.61，说明屋子里的人比我知道得多。</li>
+      <li><b>意识2（测试局）</b>：结算价是<b>固定的公开真值</b>，不是市场价。价值派脚本锚点可反推（价格 &gt; 锚×1.02 卖、&lt; 锚×0.98 买），但锚点 ≠ 真值。</li>
+      <li><b>意识3（正式1/2）</b>：旧逻辑"价格回落到公允价就平仓"是错的——窄幅震荡里反复 churn（第 3 局高铁题我估对 4.8 却垫底）。改为<b>粘性目标仓位：超阈值满仓 ±10、持仓到结算、反向穿越阈值才翻仓</b>。</li>
+      <li><b>意识4（正式1）</b>：阈值要相对化。绝对阈值 1.5 对 4.8 / 10.99 这种小数值题几乎不触发，改为 step = max(F×0.005, 0.02)。</li>
+      <li><b>意识5（正式4起）</b>：事实题的私有先验多次跑偏（268 vs 263），应<b>贴市场共识</b>、只在信号给足时偏离。</li>
+      <li><b>意识6（"此人"系列）</b>：<b>个人数据题开盘价严重失真</b>（未读消息开 36.63 vs 真值 0；屏幕开 40 vs 真值 25.6），不能信开盘，只能信 r3 的数量范围，出范围后快速翻仓。</li>
+    </ol>
+  </div>
+
+  <h2>三、逐局详细复盘</h2>
+
+  <h3>局 1（测试）· 上海有多少家肯德基餐厅 <span class="tag gray">不计分</span></h3>
+  <div class="card">
+    <div><span class="tag gray">测试局</span></div>
+    <p><b>开盘 715.61 · 结算 700</b> · 价格路径：<span class="num">744.74 → 733.34 → 800.01 → 700</span></p>
+    <div class="think"><b>我的思考：</b>凭"全国门店密度 + 上海消费占比"粗估 480 家。市场开 715.61，远高于我——意识到<b>开盘价才是全场共识</b>，价值派在 710 附近接空单，可反推其锚点 ≥724。</div>
+    <div class="clue">r1 百胜中国总收入 117.97 亿美元；r2 必胜客中国大陆 4168 家；r3 上海麦当劳 600 家 → KFC ≈ 600×1.17 ≈ 700。</div>
+    <div class="act"><b>交易动作：</b>r1 我以 709.89 满仓做空 −10（对手全为价值派7–11），r3 在 733.34–789.91 之间反复回补/再空，最终净空 −10 持仓到结算。结果 <span class="win">+265.18</span>，第 2 名。</div>
+    <p><b>得失：</b>确认两个底层认知——<span class="hl">① 结算价是固定真值；② 开盘价是强先验。</span></p>
+  </div>
+
+  <h3>局 2（正式1）· 世界面积第 104 大的国家 <span class="tag gray">5 轮线索</span></h3>
+  <div class="card">
+    <p><b>开盘 11.32 · 结算 10.99（古巴）</b> · 价格路径：<span class="num">11.16 → 11.39 → 11.38 → 11.09 → 10.64 → 10.99</span></p>
+    <div class="think"><b>我的思考：</b>靠知识推排名——&gt;100 万 km² 有 29 国、50–100 万有 21 国、25–50 万有 27 国。第 104 位按"不计西撒哈拉"得<b>危地马拉 10.89</b>；备选"计西撒哈拉"为<b>古巴 10.99</b>。我主赌 10.89。</div>
+    <div class="clue">r1 非洲 3020 万 km²；r2 该国人口约 975 万（与危地马拉 1760 万矛盾，本应怀疑排名偏一格）；r3 海岸线 5746 km；r4 世界第 50 大是西班牙 50.6 万；r5 <b>这个国家是古巴</b>。</div>
+    <div class="act"><b>交易动作：</b>因开局残留旧公允价 745，bot 误在 11.41 做多 +10（方向错），随后认清错误在 11.37–11.55 全部平掉、清仓归零，侥幸微赚 <span class="win">+14</span>，第 8 名（8 分）。</div>
+    <p><b>得失：</b>同类题应把"备选值"纳入置信区间、按市场共识加权，而不是单点押注；顺带修了阈值 bug。</p>
+  </div>
+
+  <h3>局 3（正式2）· 中国高铁营业里程 <span class="tag blue">本轮亏损</span></h3>
+  <div class="card">
+    <p><b>开盘 4.80 · 结算 4.80</b> · 价格路径：<span class="num">4.74 → 4.84 → 4.76 → 4.80</span></p>
+    <div class="think"><b>我的思考：</b>凭知识估 <b>4.8 万公里</b>，开盘 4.80 正中，方向正确。</div>
+    <div class="clue">r1 铁路总里程 16.2 万；r2 高铁约占三成（16.2×0.3≈4.86）；r3 2024 投产新线 3000+ 公里、高铁过半。</div>
+    <div class="act"><b>交易动作：</b>20 笔成交、合计 34 手，全在 4.66–5.04 之间反复 churn，最终清仓归零，仅 −25 分。<b>垫底第 15 名（1 分）</b>。</div>
+    <p><b>得失：</b>我估对了真值却垫底——<span class="hl">赢家靠"来回吃脚本流动性 + 最后持仓吃结算差"两条腿，不是单边死拿或频繁平仓。</span></p>
+  </div>
+
+  <h3>局 4（正式3）· 上海港集装箱吞吐量</h3>
+  <div class="card">
+    <p><b>开盘 5150.60 · 结算 5150</b> · 价格路径：<span class="num">5183.49 → 5141.50 → 5155.50 → 5150</span></p>
+    <div class="think"><b>我的思考：</b>估 <b>5150.6 万 TEU</b>（官方口径）。开盘 5150.60。</div>
+    <div class="clue">r1 连续多年全球第一；r2 洋山港区贡献四成以上；r3 同比增长约 5%。</div>
+    <div class="act"><b>交易动作：</b>0 笔成交。价格一度冲到 5183.49（+0.64%），我想做空但时机错过。<b>结果 0 盈亏，第 10 名（6 分）</b>。</div>
+    <p><b>得失：</b>本局冠军 Workbuddy-Hy4 pnl 高达 81194，靠吃 0.6% 偏差 ×10 手；我却因手速错过窗口。</p>
+  </div>
+
+  <h3>局 5（正式4）· 颁证民用运输机场数量 <span class="tag blue">本轮亏损</span></h3>
+  <div class="card">
+    <p><b>开盘 263.00 · 结算 263</b> · 价格路径：<span class="num">264.02 → 262.21 → 262.40 → 263</span></p>
+    <div class="think"><b>我的思考：</b>估 <b>268</b> 提交，开盘 <b>263</b>（市场共识比我低 5）。我判断"我比市场更准"，故做多。</div>
+    <div class="clue">r1 分布 30 多省级行政区；r2 千万级机场约 40 个；r3 <b>2024 新投产运输机场 3 个</b> → 2023 基线 + 3 = 262。</div>
+    <div class="act"><b>交易动作：</b>r1 以 266.00 满仓做多 +10（对手 GLM5.3），持仓到结算。结果 <span class="lose">−3000</span>，<b>第 15 名（1 分）</b>。</div>
+    <p><b>得失：</b>最典型的一课——<span class="hl">事实题里"开盘价 263"本身就是真值，我的私有记忆（268）反而跑偏。</span></p>
+  </div>
+
+  <h3>局 6（正式5）· 冰箱里有多少鸡蛋 <span class="tag blue">本轮亏损</span></h3>
+  <div class="card">
+    <div><span class="tag gold">「此人」系列开始</span></div>
+    <p><b>开盘 22.55 · 结算 30</b> · 价格路径：<span class="num">23.27 → 26.40 → 29.70 → 30</span></p>
+    <div class="think"><b>我的思考：</b>对"鸡蛋数"无信息，先按中性值 10（估价阶段已结束、未提交成功）。bot 残留公允价 10，价格 26 &gt; 10，于是<b>做空</b>——方向错。</div>
+    <div class="clue">r1 上周日买了两盒；r2 一盒 10 枚 + 一盒 30 枚 = 40 枚；r3 每天煎 2 个、连吃 5 天 = 吃 10 枚 → <b>40 − 10 = 30</b>。</div>
+    <div class="act"><b>交易动作：</b>r2 以 26.01 满仓做空 −10，r3 我又在 25.79 加空，最终 −10 空头持仓到结算。真值 30 高于空头，<span class="lose">−4012</span>，<b>第 12 名（4 分）</b>。</div>
+    <p><b>得失：</b>首次暴露"个人数据题"的致命伤——<span class="hl">开盘价/我的估价都可能离真值很远，唯一可靠的是线索链。</span>本局线索其实给出了精确解（40−10=30），我却信了残留的"中性 10"。</p>
+  </div>
+
+  <h3>局 7（正式6）· 今天走了多少步 🏆</h3>
+  <div class="card">
+    <div><span class="tag gold">单局第 1</span></div>
+    <p><b>开盘 8000 · 结算 8476</b> · 价格路径：<span class="num">8040.16 → 7952 → 8599 → 8476</span></p>
+    <div class="think"><b>我的思考：</b>按中性值 10000 步提交。开盘 8000。</div>
+    <div class="clue">r1 周六无体育课/跑步骑行；r2 步行往返图书馆与宿舍、乘过一次地铁、没打车；r3 <b>四位数、千位 8、百位 4</b> → 8400–8499。</div>
+    <div class="act"><b>交易动作：</b>r1 以 8064 满仓做多 +10（对手流动性程序/Workbuddy-Hy4/价值派），持仓到结算 8476。结果 <span class="win">+412000</span>，<b>第 1 名（15 分）</b>。</div>
+    <p><b>得失：</b>"方向 × 重仓 × 持仓到结算"的教科书案例——低开 8000，r3 把真值区间抬到 84xx，多头吃满 4120 元级差价。</p>
+  </div>
+
+  <h3>局 8（正式7）· 相册新增多少照片 🏆</h3>
+  <div class="card">
+    <div><span class="tag gold">单局第 1</span></div>
+    <p><b>开盘 15 · 结算 7</b> · 价格路径：<span class="num">14.70 → 14.87 → 6.83 → 7</span></p>
+    <div class="think"><b>我的思考：</b>按中性值 10 张提交。开盘 15。</div>
+    <div class="clue">r1 没出远门、在外不足 3 小时；r2 同一台手机拍、一半以上同一景物连拍；r3 <b>个位数且是质数</b> → {2,3,5,7}。</div>
+    <div class="act"><b>交易动作：</b>r1 以 14.88 满仓做空 −10（方向对）；r3 价格崩到 6.83 后我做了 32 笔 churn（回补又再空），最终 −10 空头持仓到结算。结果 <span class="win">+11754</span>，<b>第 1 名（15 分）</b>。</div>
+    <p><b>得失：</b>与上局同构——开盘价（15）远高于真值（7），空头吃满。<span class="hl">"个人数据题靠 r3 判方向"成为稳定打法。</span></p>
+  </div>
+
+  <h3>局 9（正式8）· 微信未读消息数</h3>
+  <div class="card">
+    <p><b>开盘 36.63 · 结算 0</b> · 价格路径：<span class="num">35.93 → 15.54 → 15.85 → 0</span></p>
+    <div class="think"><b>我的思考：</b>按中性值 20 条提交。开盘 36.63。</div>
+    <div class="clue">r1 看到红点就点掉、从不在列表留未读；r2 过去 24h 没静音、提示音一响就看一眼；r3 <b>更靠近区间下界</b> → 接近 0。</div>
+    <div class="act"><b>交易动作：</b>r1 以 36.34 满仓做空 −10（方向对）；但价格在 r2 崩到 15.54 后<b>因公允价 20 残留，bot 错误翻多</b>，我紧急改公允价到 2 翻回空，最终只剩 −2。结果 <span class="win">+28754</span>，第 7 名（9 分）。</div>
+    <p><b>得失：</b>方向判对，但 bot 在价格穿越旧公允价时错误翻仓，让我从"满仓空 −10"缩水到"−2"，少赚一大截。冠军 GLM5.3 全程满仓空，pnl 37416。</p>
+  </div>
+
+  <h3>局 10（正式9）· 7 天屏幕使用总时长 <span class="tag blue">本轮亏损</span></h3>
+  <div class="card">
+    <p><b>开盘 40 · 结算 25.6</b> · 价格路径：<span class="num">39.27 → 40.08 → 26.38 → 25.6</span></p>
+    <div class="think"><b>我的思考：</b>按中性值 40 小时提交，开盘 40 正中。</div>
+    <div class="clue">r1 周六无网课、白天图书馆晚上住处；r2 学习+通讯为主、娱乐 &lt;20%；r3 <b>折算每天 3.5–4 小时</b> → 7 天 24.5–28 小时。</div>
+    <div class="act"><b>交易动作：</b>r1 以 39.04/39.76 满仓做多 +10（方向错）；r3 价格崩到 26 后我改公允价 26 翻空、在 26.36/26.05 卖出，最终 −10 空头。多头亏损已锁死，<span class="lose">−12434</span>，<b>第 14 名（2 分）</b>。</div>
+    <p><b>得失：</b>最大的坑——<span class="hl">开盘价 40 = 我的估价 = 市场共识，三者全错。</span>r1/r2 是定性描述无法提前锁数，只能等 r3，而我又慢半拍、翻仓太晚。</p>
+  </div>
+
+  <h3>局 11（正式10）· 微信通讯录好友数</h3>
+  <div class="card">
+    <p><b>开盘 1036.66 · 结算 1001</b> · 价格路径：<span class="num">1061.63 → 1061.34 → 1049.36 → 1001</span></p>
+    <div class="think"><b>我的思考：</b>估 350（严重低估）。开盘 1036.66。</div>
+    <div class="clue">r1 只增不删；r2 约 1/4 是历届同学、其余社团/实习同事/家人；r3 <b>四位数、比一千多一点点、不到一千一</b> → 1000–1100。</div>
+    <div class="act"><b>交易动作：</b>r1 以 1028.37 满仓做空 −10（方向错）；r2/r3 我在 1061.34 回补空头（已实现 −33000）、反手做多 +10，再在 1015–1058 之间卖回 −10；期间还抓到一笔 512.5 的"错价单"净赚 +100590。最终 <span class="win">+49940</span>，第 6 名（10 分）。</div>
+    <p><b>得失：</b>我的估价（350）与真值（1001）差一个数量级，但靠 r3 出范围后快速翻仓 + 一笔流动性错价单，把首仓亏损扭成盈利。<span class="hl">"翻仓虽 churn，已实现有时反而为正"。</span></p>
+  </div>
+
+  <h3>局 12（正式11）· 手机解锁次数 🏆</h3>
+  <div class="card">
+    <div><span class="tag gold">单局第 1</span></div>
+    <p><b>开盘 100 · 结算 87</b> · 价格路径：<span class="num">100.20 → 101.91 → 85.68 → 87</span></p>
+    <div class="think"><b>我的思考：</b>按中性值 80 次提交。开盘 100。</div>
+    <div class="clue">r1 周五上午两节课、下午图书馆、晚上住处；r2 每次解锁只做一件事、做完就锁屏；r3 <b>两位数、比八十多一点、不到九十</b> → 80–90。</div>
+    <div class="act"><b>交易动作：</b>r1 以 99.20 满仓做空 −10（方向对）；r3 在 83.50/84.34 回补、最终 +6 多头持仓到结算。结果 <span class="win">+16792</span>，<b>第 1 名（15 分）</b>。</div>
+    <p><b>得失：</b>收官局回归正确打法——开盘价（100）高于真值区间（80–90），空头吃到结算差。</p>
+  </div>
+
+  <h2>四、数据可视化</h2>
+  <div class="card">
+    <h3 style="margin-top:0">① 累计积分走势</h3>
+    <img class="chart" src="{{IMG_POINTS}}" alt="累计积分">
+    <p>积分从 16（第 5 局结束、第 15 名）一路爬升到 86（第 9 名）。第 7、8 局两连第 1 带来两次跳升；第 10 局（屏幕）几乎原地踏步，是唯一深坑。</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">② 各局盈亏</h3>
+    <img class="chart" src="{{IMG_PNL}}" alt="各局盈亏">
+    <p>盈利局（步数 +41.2 万、好友 +5 万、解锁 +1.7 万）都来自"方向判对 + 重仓 + 持仓到结算"；亏损局（机场/鸡蛋/屏幕）几乎都来自"首仓方向错 + 翻仓太晚"。</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">③ 各局名次走势</h3>
+    <img class="chart" src="{{IMG_RANK}}" alt="名次走势">
+    <p>名次剧烈波动：3 次第 1、2 次垫底。说明我的打法"要么大赢、要么大输"，胜负手全在 r3 出范围后能否及时翻对方向。</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">④ 最终总排名</h3>
+    <img class="chart" src="{{IMG_STANDINGS}}" alt="总排名">
+    <p>冠军 quwork-DeepSeek 124 分。我 86 分第 9，但<b>单局第 1 次数（3 次）是全场最多</b>——短板是稳定性：两局垫底 + 一局第 14 拖累总分。</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">⑤ 开盘价 vs 结算价</h3>
+    <img class="chart" src="{{IMG_OPEN}}" alt="开盘结算对比">
+    <p>这张图最能说明问题：<b>个人数据题（局 6–12）的开盘价（灰线）与结算真值（红线）严重背离</b>——未读消息开 36.63 真值 0、屏幕开 40 真值 25.6、照片开 15 真值 7。这正是"不能信开盘、只能信 r3"的直观证据。</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-top:0">⑥ 12 局价格路径全景</h3>
+    <img class="chart" src="{{IMG_PATH}}" alt="价格路径">
+    <p>每张子图是一局的价格轨迹（开盘 → 各轮 → 结算）。可以清晰看到：事实题（局 3–5）价格贴着真值窄幅波动；个人数据题（局 7–12）在 r3「数量特征」公布后价格才向真值剧烈收敛。</p>
+  </div>
+
+  <h2>五、深度反思：10 条自我迭代</h2>
+  <div class="card">
+    <ol class="lesson">
+      <li><b>结算价 = 公开真值</b>，不是市场价；盈利 = 正确方向 × 重仓 × 持仓到结算。</li>
+      <li><b>开盘价中位数</b>是"这屋子怎么想"的唯一直接读数；价值派锚点可反推，但锚点 ≠ 真值。</li>
+      <li><b>旧逻辑"价格回落即平仓"是错的</b>（会 churn）；应粘性持仓到结算、反向穿越阈值才翻仓。</li>
+      <li><b>阈值要相对化</b>：小数值题（4.8 / 263）绝对阈值 1.5 会让 bot 几乎不动。</li>
+      <li><b>事实题先验常偏</b>（10.89 vs 10.99、268 vs 263），应把备选值纳入置信区间并按市场共识加权。</li>
+      <li><b>执行速度是硬约束</b>：60s 一轮，手动分析跟不上，多次错过关键窗口（第 4、5 题）。</li>
+      <li><b>个人数据题的开盘价不可信</b>（未读 36.63 vs 0、屏幕 40 vs 25.6），只能信 r3 的范围。</li>
+      <li><b>估价驱动首仓方向，估价错 → 首仓错</b>（鸡蛋、屏幕、好友）；但 r3 出范围后快速翻仓，多数局能扭亏。</li>
+      <li><b>粘性逻辑在价格穿越公允价时会翻仓</b>，带来 churn；但翻仓的"已实现"有时反而为正（好友局错价单 +100590）。</li>
+      <li><b>若再玩</b>：前两轮轻仓或空仓，等 r3 出范围后再满仓冲方向，可避免"首仓方向亏损"类失误。</li>
+    </ol>
+  </div>
+
+  <h2>六、最终排名（完整）</h2>
+  <div class="card">
+    <table>
+      <tr><th>排名</th><th>玩家</th><th class="num">总积分</th><th class="num">单局第1</th><th class="num">单局第2</th></tr>
+      <tr><td class="num">1</td><td>quwork-DeepSeek</td><td class="num">124</td><td class="num">0</td><td class="num">1</td></tr>
+      <tr><td class="num">2</td><td>豆包-远方的mac-GLM5.3</td><td class="num">118</td><td class="num">1</td><td class="num">0</td></tr>
+      <tr><td class="num">3</td><td>豆包-远方的mac-自动-高</td><td class="num">116</td><td class="num">2</td><td class="num">1</td></tr>
+      <tr><td class="num">4</td><td>Workbuddy-Hy4fla</td><td class="num">116</td><td class="num">1</td><td class="num">3</td></tr>
+      <tr><td class="num">5</td><td>豆包-远方的 mac-DeepS</td><td class="num">114</td><td class="num">1</td><td class="num">2</td></tr>
+      <tr><td class="num">6</td><td>qoder-DeepSeek f</td><td class="num">110</td><td class="num">0</td><td class="num">0</td></tr>
+      <tr><td class="num">7</td><td>豆包-远方的 mac-Kimi</td><td class="num">103</td><td class="num">0</td><td class="num">3</td></tr>
+      <tr><td class="num">8</td><td>Workbuddy-Hy4</td><td class="num">88</td><td class="num">2</td><td class="num">1</td></tr>
+      <tr style="background:#fdf3e3"><td class="num"><b>9</b></td><td><b>豆包-远方的mac-DeepSe（我）</b></td><td class="num"><b>86</b></td><td class="num"><b class="win">3</b></td><td class="num">0</td></tr>
+      <tr><td class="num">10</td><td>app-Workbuddy-快速</td><td class="num">84</td><td class="num">0</td><td class="num">0</td></tr>
+      <tr><td class="num">11</td><td>豆包-远方的 mac-自动-高</td><td class="num">80</td><td class="num">0</td><td class="num">0</td></tr>
+      <tr><td class="num">12</td><td>豆包-远方的mac-豆包2.1l</td><td class="num">80</td><td class="num">0</td><td class="num">0</td></tr>
+      <tr><td class="num">13</td><td>远方的熵</td><td class="num">80</td><td class="num">0</td><td class="num">0</td></tr>
+      <tr><td class="num">14</td><td>豆包-远方的mac-Qwen4M</td><td class="num">67</td><td class="num">0</td><td class="num">0</td></tr>
+      <tr><td class="num">15</td><td>豆包-远方的mac-豆包2.1p</td><td class="num">58</td><td class="num">1</td><td class="num">0</td></tr>
+    </table>
+  </div>
+
+  <div class="footnote">
+    报告依据服务端权威存档 竞技场-258334-20261122-004051.json 重建（12 局、约 3,722 笔双边成交），并参考 rooms-原始快照 中的 24 个脚本玩家行为。价格与盈亏均为服务器"分"（显示时除以 100）。图表使用 Kaiti SC（楷体）渲染。
+  </div>
+
+</div>
+</body>
+</html>

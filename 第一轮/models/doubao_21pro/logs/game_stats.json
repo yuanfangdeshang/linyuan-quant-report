@@ -1,0 +1,465 @@
+[
+  {
+    "label": "测试局·肯德基",
+    "start_ts": "23:12:04.635",
+    "end_ts": "23:21:14.396",
+    "opening": 715.61,
+    "close": 800.01,
+    "hi": 800.01,
+    "lo": 584.0,
+    "max_abs_pos": 7,
+    "final_realized": 522.25,
+    "final_pnl": 747.44,
+    "points": 0,
+    "n_events": 395,
+    "rounds": [
+      {
+        "round": 1,
+        "first": 715.61,
+        "last": 744.74,
+        "hi": 744.74,
+        "lo": 584.0
+      },
+      {
+        "round": 2,
+        "first": 744.74,
+        "last": 733.34,
+        "hi": 790.0,
+        "lo": 733.34
+      },
+      {
+        "round": 3,
+        "first": 733.34,
+        "last": 800.01,
+        "hi": 800.01,
+        "lo": 721.5
+      }
+    ],
+    "max_round_index": 3
+  },
+  {
+    "label": "正式第1题·古巴",
+    "start_ts": "23:21:20.571",
+    "end_ts": "23:30:18.201",
+    "opening": 11.32,
+    "close": 10.64,
+    "hi": 11.77,
+    "lo": 10.45,
+    "max_abs_pos": 8,
+    "final_realized": 21.25,
+    "final_pnl": 21.98,
+    "points": 15,
+    "n_events": 1547,
+    "rounds": [
+      {
+        "round": 1,
+        "first": 11.32,
+        "last": 11.16,
+        "hi": 11.72,
+        "lo": 10.5
+      },
+      {
+        "round": 2,
+        "first": 11.16,
+        "last": 11.39,
+        "hi": 11.66,
+        "lo": 10.48
+      },
+      {
+        "round": 3,
+        "first": 11.39,
+        "last": 11.38,
+        "hi": 11.48,
+        "lo": 10.7
+      },
+      {
+        "round": 4,
+        "first": 11.25,
+        "last": 11.09,
+        "hi": 11.77,
+        "lo": 10.45
+      },
+      {
+        "round": 5,
+        "first": 11.09,
+        "last": 10.64,
+        "hi": 11.76,
+        "lo": 10.5
+      }
+    ],
+    "max_round_index": 5
+  },
+  {
+    "label": "正式第2题·高铁",
+    "start_ts": "23:30:19.084",
+    "end_ts": "23:37:40.659",
+    "opening": 4.8,
+    "close": 4.76,
+    "hi": 5.06,
+    "lo": 4.76,
+    "max_abs_pos": 8,
+    "final_realized": 1.23,
+    "final_pnl": 1.23,
+    "points": 10,
+    "n_events": 841,
+    "rounds": [
+      {
+        "round": 1,
+        "first": 4.8,
+        "last": 4.94,
+        "hi": 5.06,
+        "lo": 4.76
+      },
+      {
+        "round": 3,
+        "first": 4.8,
+        "last": 4.76,
+        "hi": 4.84,
+        "lo": 4.76
+      }
+    ],
+    "max_round_index": 3
+  },
+  {
+    "label": "正式第3题·上海港",
+    "start_ts": "23:37:42.075",
+    "end_ts": "23:43:50.873",
+    "opening": 5150.6,
+    "close": 5155.5,
+    "hi": 5201.0,
+    "lo": 5078.49,
+    "max_abs_pos": 8,
+    "final_realized": 260.16,
+    "final_pnl": 266.99,
+    "points": 10,
+    "n_events": 1562,
+    "rounds": [
+      {
+        "round": 1,
+        "first": 5150.6,
+        "last": 5183.49,
+        "hi": 5201.0,
+        "lo": 5078.49
+      },
+      {
+        "round": 2,
+        "first": 5183.49,
+        "last": 5141.5,
+        "hi": 5196.5,
+        "lo": 5140.0
+      },
+      {
+        "round": 3,
+        "first": 5141.5,
+        "last": 5155.5,
+        "hi": 5159.0,
+        "lo": 5119.2
+      }
+    ],
+    "max_round_index": 3
+  },
+  {
+    "label": "正式第4题·机场",
+    "start_ts": "23:43:51.003",
+    "end_ts": "23:51:28.006",
+    "opening": 263.0,
+    "close": 262.4,
+    "hi": 270.5,
+    "lo": 261.5,
+    "max_abs_pos": 8,
+    "final_realized": 5.49,
+    "final_pnl": 5.49,
+    "points": 7,
+    "n_events": 2494,
+    "rounds": [
+      {
+        "round": 1,
+        "first": 263.0,
+        "last": 264.02,
+        "hi": 270.5,
+        "lo": 261.92
+      },
+      {
+        "round": 2,
+        "first": 264.02,
+        "last": 262.21,
+        "hi": 266.3,
+        "lo": 261.5
+      },
+      {
+        "round": 3,
+        "first": 262.21,
+        "last": 262.4,
+        "hi": 263.79,
+        "lo": 261.5
+      }
+    ],
+    "max_round_index": 3
+  },
+  {
+    "label": "正式第5题·鸡蛋",
+    "start_ts": "23:51:29.481",
+    "end_ts": "23:57:43.817",
+    "opening": 22.55,
+    "close": 29.7,
+    "hi": 30.12,
+    "lo": 22.01,
+    "max_abs_pos": 8,
+    "final_realized": -30.02,
+    "final_pnl": -59.37,
+    "points": 1,
+    "n_events": 2224,
+    "rounds": [
+      {
+        "round": 1,
+        "first": 22.55,
+        "last": 23.27,
+        "hi": 23.61,
+        "lo": 22.01
+      },
+      {
+        "round": 2,
+        "first": 23.27,
+        "last": 26.4,
+        "hi": 26.4,
+        "lo": 22.65
+      },
+      {
+        "round": 3,
+        "first": 26.4,
+        "last": 29.7,
+        "hi": 30.12,
+        "lo": 25.98
+      }
+    ],
+    "max_round_index": 3
+  },
+  {
+    "label": "正式第6题·步数",
+    "start_ts": "23:57:44.278",
+    "end_ts": "00:03:29.567",
+    "opening": 8000.0,
+    "close": 8599.0,
+    "hi": 8599.02,
+    "lo": 7920.0,
+    "max_abs_pos": 10,
+    "final_realized": -450.72,
+    "final_pnl": -1487.5,
+    "points": 3,
+    "n_events": 2090,
+    "rounds": [
+      {
+        "round": 1,
+        "first": 8000.0,
+        "last": 8040.16,
+        "hi": 8304.02,
+        "lo": 7920.0
+      },
+      {
+        "round": 2,
+        "first": 8040.16,
+        "last": 7952.0,
+        "hi": 8199.5,
+        "lo": 7920.0
+      },
+      {
+        "round": 3,
+        "first": 7952.0,
+        "last": 8599.0,
+        "hi": 8599.02,
+        "lo": 7952.0
+      }
+    ],
+    "max_round_index": 3
+  },
+  {
+    "label": "正式第7题·相册照片",
+    "start_ts": "00:03:30.317",
+    "end_ts": "00:09:34.822",
+    "opening": 15.0,
+    "close": 6.83,
+    "hi": 15.15,
+    "lo": 5.03,
+    "max_abs_pos": 8,
+    "final_realized": -66.27,
+    "final_pnl": -66.27,
+    "points": 1,
+    "n_events": 2063,
+    "rounds": [
+      {
+        "round": 1,
+        "first": 15.0,
+        "last": 14.7,
+        "hi": 15.15,
+        "lo": 14.64
+      },
+      {
+        "round": 2,
+        "first": 14.7,
+        "last": 14.87,
+        "hi": 14.95,
+        "lo": 14.63
+      },
+      {
+        "round": 3,
+        "first": 14.87,
+        "last": 6.83,
+        "hi": 15.14,
+        "lo": 5.03
+      }
+    ],
+    "max_round_index": 3
+  },
+  {
+    "label": "正式第8题·微信未读",
+    "start_ts": "00:09:36.071",
+    "end_ts": "00:16:21.970",
+    "opening": 36.63,
+    "close": 15.85,
+    "hi": 38.75,
+    "lo": 14.5,
+    "max_abs_pos": 10,
+    "final_realized": 242.54,
+    "final_pnl": 242.54,
+    "points": 7,
+    "n_events": 2348,
+    "rounds": [
+      {
+        "round": 1,
+        "first": 36.63,
+        "last": 35.93,
+        "hi": 38.75,
+        "lo": 15.0
+      },
+      {
+        "round": 2,
+        "first": 35.93,
+        "last": 15.54,
+        "hi": 38.13,
+        "lo": 14.5
+      },
+      {
+        "round": 3,
+        "first": 15.54,
+        "last": 15.85,
+        "hi": 15.87,
+        "lo": 15.23
+      }
+    ],
+    "max_round_index": 3
+  },
+  {
+    "label": "正式第9题·屏幕时长",
+    "start_ts": "00:16:22.043",
+    "end_ts": "00:22:19.679",
+    "opening": 40.0,
+    "close": 26.38,
+    "hi": 40.56,
+    "lo": 25.79,
+    "max_abs_pos": 8,
+    "final_realized": -140.19,
+    "final_pnl": -140.19,
+    "points": 1,
+    "n_events": 2037,
+    "rounds": [
+      {
+        "round": 1,
+        "first": 40.0,
+        "last": 39.27,
+        "hi": 40.56,
+        "lo": 38.03
+      },
+      {
+        "round": 2,
+        "first": 39.27,
+        "last": 40.08,
+        "hi": 40.55,
+        "lo": 38.65
+      },
+      {
+        "round": 3,
+        "first": 40.08,
+        "last": 26.38,
+        "hi": 40.08,
+        "lo": 25.79
+      }
+    ],
+    "max_round_index": 3
+  },
+  {
+    "label": "正式第10题·好友",
+    "start_ts": "00:22:20.225",
+    "end_ts": "00:28:40.439",
+    "opening": 1036.66,
+    "close": 1049.36,
+    "hi": 1093.31,
+    "lo": 487.5,
+    "max_abs_pos": 9,
+    "final_realized": -201.99,
+    "final_pnl": -201.99,
+    "points": 2,
+    "n_events": 1977,
+    "rounds": [
+      {
+        "round": 1,
+        "first": 1036.66,
+        "last": 1061.63,
+        "hi": 1093.31,
+        "lo": 997.27
+      },
+      {
+        "round": 2,
+        "first": 1061.63,
+        "last": 1061.34,
+        "hi": 1061.63,
+        "lo": 1044.62
+      },
+      {
+        "round": 3,
+        "first": 1061.34,
+        "last": 1049.36,
+        "hi": 1092.21,
+        "lo": 487.5
+      }
+    ],
+    "max_round_index": 3
+  },
+  {
+    "label": "正式第11题·解锁",
+    "start_ts": "00:28:42.548",
+    "end_ts": "00:40:59.723",
+    "opening": 100.0,
+    "close": 85.68,
+    "hi": 102.4,
+    "lo": 82.0,
+    "max_abs_pos": 9,
+    "final_realized": -117.81,
+    "final_pnl": -117.81,
+    "points": 1,
+    "n_events": 3116,
+    "rounds": [
+      {
+        "round": 1,
+        "first": 100.0,
+        "last": 100.2,
+        "hi": 101.4,
+        "lo": 98.6
+      },
+      {
+        "round": 2,
+        "first": 100.2,
+        "last": 101.91,
+        "hi": 102.4,
+        "lo": 99.4
+      },
+      {
+        "round": 3,
+        "first": 101.91,
+        "last": 85.68,
+        "hi": 101.91,
+        "lo": 82.0
+      }
+    ],
+    "max_round_index": 3
+  }
+]

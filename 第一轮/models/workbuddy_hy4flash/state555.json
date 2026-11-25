@@ -1,0 +1,3465 @@
+{
+  "code": "517435",
+  "config": {
+    "seconds": 90,
+    "bots": 1,
+    "rounds": 5,
+    "autoNext": false,
+    "mode": "continuous",
+    "scenario": "script",
+    "question": "世界上面积第 104 大的国家，面积约为多少万平方公里？（保留两位小数）",
+    "practice": false,
+    "priceDecimals": 2,
+    "unit": "万平方公里",
+    "initialPrice": null,
+    "scenarioId": "country-area-104",
+    "readingSeconds": 0,
+    "accounting": "lots-v1",
+    "positionLimit": 10,
+    "marketStructure": "human-v1",
+    "liquidity": true,
+    "firstClue": ""
+  },
+  "openingPrice": 2000,
+  "competition": {
+    "gameNumber": 4,
+    "practice": false,
+    "label": "正式第 3 题",
+    "scoredGameCount": 3,
+    "finalized": false,
+    "rosterLocked": false,
+    "games": [
+      {
+        "number": 1,
+        "question": "截至 2025 年 12 月 11 日，上海有多少家肯德基餐厅？",
+        "scenarioId": "shanghai-kfc-practice",
+        "practice": true,
+        "unit": "家",
+        "openingPrice": 165000,
+        "settlementPrice": 70000,
+        "ranking": [
+          {
+            "id": "aaeb2ba2fd85d36c",
+            "name": "吴文轩",
+            "pnl": 2785000,
+            "rank": 1,
+            "points": 0
+          },
+          {
+            "id": "7c62f88bdd19a725",
+            "name": "Jianyi",
+            "pnl": 2389700,
+            "rank": 2,
+            "points": 0
+          },
+          {
+            "id": "1593c5b9fa258642",
+            "name": "123",
+            "pnl": 1720000,
+            "rank": 3,
+            "points": 0
+          },
+          {
+            "id": "e82803a23d9d1db3",
+            "name": "徐子康",
+            "pnl": 1618200,
+            "rank": 4,
+            "points": 0
+          },
+          {
+            "id": "f67cc1b02a67434c",
+            "name": "曾加",
+            "pnl": 1127400,
+            "rank": 5,
+            "points": 0
+          },
+          {
+            "id": "12e100f035c7e290",
+            "name": "谢觐宇",
+            "pnl": 1010000,
+            "rank": 6,
+            "points": 0
+          },
+          {
+            "id": "0d5aa18a101b4239",
+            "name": "拆冬瓜补西瓜",
+            "pnl": 968500,
+            "rank": 7,
+            "points": 0
+          },
+          {
+            "id": "e8ac0b37ec32b7a7",
+            "name": "Nick",
+            "pnl": 876300,
+            "rank": 8,
+            "points": 0
+          },
+          {
+            "id": "43e743505a87d66f",
+            "name": "不言",
+            "pnl": 470300,
+            "rank": 9,
+            "points": 0
+          },
+          {
+            "id": "30500635bb76e06d",
+            "name": "赵C",
+            "pnl": 356400,
+            "rank": 10,
+            "points": 0
+          },
+          {
+            "id": "2085511fc27f80b7",
+            "name": "刘奕祥",
+            "pnl": 210000,
+            "rank": 11,
+            "points": 0
+          },
+          {
+            "id": "19103255c5eeacd3",
+            "name": "yuhan",
+            "pnl": 140000,
+            "rank": 12,
+            "points": 0
+          },
+          {
+            "id": "b4878872134feba2",
+            "name": "11",
+            "pnl": 123500,
+            "rank": 13,
+            "points": 0
+          },
+          {
+            "id": "7b1cffd060bef16e",
+            "name": "温敏宜",
+            "pnl": 40500,
+            "rank": 14,
+            "points": 0
+          },
+          {
+            "id": "7c702611c61a3c76",
+            "name": "Jamal",
+            "pnl": 0,
+            "rank": 15,
+            "points": 0
+          },
+          {
+            "id": "9a528ff1316de614",
+            "name": "234",
+            "pnl": 0,
+            "rank": 15,
+            "points": 0
+          },
+          {
+            "id": "b5989a869733eec2",
+            "name": "木木",
+            "pnl": 0,
+            "rank": 15,
+            "points": 0
+          },
+          {
+            "id": "445a6918e8bbd444",
+            "name": "王津菁",
+            "pnl": -7400,
+            "rank": 18,
+            "points": 0
+          },
+          {
+            "id": "2bdfb0f7e77e4217",
+            "name": "聪明的骑士",
+            "pnl": -95000,
+            "rank": 19,
+            "points": 0
+          },
+          {
+            "id": "67984cb4455862ab",
+            "name": "keke",
+            "pnl": -95000,
+            "rank": 19,
+            "points": 0
+          },
+          {
+            "id": "a828a2d59ff08c88",
+            "name": "周宇阳",
+            "pnl": -115000,
+            "rank": 21,
+            "points": 0
+          },
+          {
+            "id": "dfb06b2e1d9a8622",
+            "name": "钱多多",
+            "pnl": -160000,
+            "rank": 22,
+            "points": 0
+          },
+          {
+            "id": "5bf62bcd351023e2",
+            "name": "sun",
+            "pnl": -291000,
+            "rank": 23,
+            "points": 0
+          },
+          {
+            "id": "ee10635fabb773b1",
+            "name": "陈新怡",
+            "pnl": -490000,
+            "rank": 24,
+            "points": 0
+          },
+          {
+            "id": "47b3509179a001a0",
+            "name": "王彦泽",
+            "pnl": -688300,
+            "rank": 25,
+            "points": 0
+          },
+          {
+            "id": "0acbef85ef296976",
+            "name": "56",
+            "pnl": -824200,
+            "rank": 26,
+            "points": 0
+          },
+          {
+            "id": "061e487aa3c0df0c",
+            "name": "叶梓",
+            "pnl": -828300,
+            "rank": 27,
+            "points": 0
+          },
+          {
+            "id": "fd84145e75d4467c",
+            "name": "Renard",
+            "pnl": -3580500,
+            "rank": 28,
+            "points": 0
+          },
+          {
+            "id": "aa81a5a373032f0f",
+            "name": "杨博浩",
+            "pnl": -5210000,
+            "rank": 29,
+            "points": 0
+          }
+        ],
+        "scoredNumber": null,
+        "label": "测试版 · 不计分",
+        "review": {
+          "throughRound": 3,
+          "lazy": true,
+          "revision": "archived:1"
+        }
+      },
+      {
+        "number": 2,
+        "question": "2025 年全国共发展多少万名中国共产党党员？",
+        "scenarioId": "party-national-2025",
+        "practice": false,
+        "unit": "万名",
+        "openingPrice": 10000,
+        "settlementPrice": 20860,
+        "ranking": [
+          {
+            "id": "445a6918e8bbd444",
+            "name": "王津菁",
+            "pnl": 108990,
+            "rank": 1,
+            "points": 30
+          },
+          {
+            "id": "47b3509179a001a0",
+            "name": "王彦泽",
+            "pnl": 82870,
+            "rank": 2,
+            "points": 29
+          },
+          {
+            "id": "f67cc1b02a67434c",
+            "name": "曾加",
+            "pnl": 80790,
+            "rank": 3,
+            "points": 28
+          },
+          {
+            "id": "43e743505a87d66f",
+            "name": "不言",
+            "pnl": 67020,
+            "rank": 4,
+            "points": 27
+          },
+          {
+            "id": "aaeb2ba2fd85d36c",
+            "name": "吴文轩",
+            "pnl": 59890,
+            "rank": 5,
+            "points": 26
+          },
+          {
+            "id": "fd84145e75d4467c",
+            "name": "Renard",
+            "pnl": 41800,
+            "rank": 6,
+            "points": 25
+          },
+          {
+            "id": "5bf62bcd351023e2",
+            "name": "sun",
+            "pnl": 37160,
+            "rank": 7,
+            "points": 24
+          },
+          {
+            "id": "061e487aa3c0df0c",
+            "name": "叶梓",
+            "pnl": 32540,
+            "rank": 8,
+            "points": 23
+          },
+          {
+            "id": "19103255c5eeacd3",
+            "name": "yuhan",
+            "pnl": 29860,
+            "rank": 9,
+            "points": 22
+          },
+          {
+            "id": "30500635bb76e06d",
+            "name": "赵C",
+            "pnl": 28600,
+            "rank": 10,
+            "points": 21
+          },
+          {
+            "id": "0ed2db94ea79859d",
+            "name": "234-2",
+            "pnl": 25800,
+            "rank": 11,
+            "points": 20
+          },
+          {
+            "id": "e8ac0b37ec32b7a7",
+            "name": "Nick",
+            "pnl": 24630,
+            "rank": 12,
+            "points": 19
+          },
+          {
+            "id": "2085511fc27f80b7",
+            "name": "刘奕祥",
+            "pnl": 5000,
+            "rank": 13,
+            "points": 18
+          },
+          {
+            "id": "0acbef85ef296976",
+            "name": "56",
+            "pnl": 0,
+            "rank": 14,
+            "points": 16
+          },
+          {
+            "id": "67984cb4455862ab",
+            "name": "keke",
+            "pnl": 0,
+            "rank": 14,
+            "points": 16
+          },
+          {
+            "id": "9a528ff1316de614",
+            "name": "234",
+            "pnl": 0,
+            "rank": 14,
+            "points": 16
+          },
+          {
+            "id": "b5989a869733eec2",
+            "name": "木木",
+            "pnl": -3570,
+            "rank": 17,
+            "points": 14
+          },
+          {
+            "id": "dfb06b2e1d9a8622",
+            "name": "钱多多",
+            "pnl": -6230,
+            "rank": 18,
+            "points": 13
+          },
+          {
+            "id": "2bdfb0f7e77e4217",
+            "name": "聪明的骑士",
+            "pnl": -7790,
+            "rank": 19,
+            "points": 12
+          },
+          {
+            "id": "ee10635fabb773b1",
+            "name": "陈新怡",
+            "pnl": -17540,
+            "rank": 20,
+            "points": 11
+          },
+          {
+            "id": "b4878872134feba2",
+            "name": "11",
+            "pnl": -19600,
+            "rank": 21,
+            "points": 10
+          },
+          {
+            "id": "e82803a23d9d1db3",
+            "name": "徐子康",
+            "pnl": -39290,
+            "rank": 22,
+            "points": 9
+          },
+          {
+            "id": "7c702611c61a3c76",
+            "name": "Jamal",
+            "pnl": -43440,
+            "rank": 23,
+            "points": 8
+          },
+          {
+            "id": "0d5aa18a101b4239",
+            "name": "拆冬瓜补西瓜",
+            "pnl": -44100,
+            "rank": 24,
+            "points": 7
+          },
+          {
+            "id": "aa81a5a373032f0f",
+            "name": "杨博浩",
+            "pnl": -51870,
+            "rank": 25,
+            "points": 6
+          },
+          {
+            "id": "7b1cffd060bef16e",
+            "name": "温敏宜",
+            "pnl": -55020,
+            "rank": 26,
+            "points": 5
+          },
+          {
+            "id": "7c62f88bdd19a725",
+            "name": "Jianyi",
+            "pnl": -60340,
+            "rank": 27,
+            "points": 4
+          },
+          {
+            "id": "1593c5b9fa258642",
+            "name": "123",
+            "pnl": -77880,
+            "rank": 28,
+            "points": 3
+          },
+          {
+            "id": "a828a2d59ff08c88",
+            "name": "周宇阳",
+            "pnl": -108600,
+            "rank": 29,
+            "points": 2
+          },
+          {
+            "id": "12e100f035c7e290",
+            "name": "谢觐宇",
+            "pnl": -114600,
+            "rank": 30,
+            "points": 1
+          }
+        ],
+        "scoredNumber": 1,
+        "label": "正式第 1 题",
+        "review": {
+          "throughRound": 3,
+          "lazy": true,
+          "revision": "archived:2"
+        }
+      },
+      {
+        "number": 3,
+        "question": "截至 2025 年底，上海共有多少个居民委员会？",
+        "scenarioId": "shanghai-residents-2025",
+        "practice": false,
+        "unit": "个",
+        "openingPrice": 410000,
+        "settlementPrice": 512300,
+        "ranking": [
+          {
+            "id": "445a6918e8bbd444",
+            "name": "王津菁",
+            "pnl": 2342900,
+            "rank": 1,
+            "points": 32
+          },
+          {
+            "id": "f67cc1b02a67434c",
+            "name": "曾加",
+            "pnl": 2035800,
+            "rank": 2,
+            "points": 31
+          },
+          {
+            "id": "0acbef85ef296976",
+            "name": "56",
+            "pnl": 1636700,
+            "rank": 3,
+            "points": 30
+          },
+          {
+            "id": "ef07a7c70ef34ff5",
+            "name": "234A",
+            "pnl": 1582300,
+            "rank": 4,
+            "points": 29
+          },
+          {
+            "id": "8fad1a4b9a2987ac",
+            "name": "555",
+            "pnl": 1523100,
+            "rank": 5,
+            "points": 28
+          },
+          {
+            "id": "0ed2db94ea79859d",
+            "name": "234-2",
+            "pnl": 1261000,
+            "rank": 6,
+            "points": 27
+          },
+          {
+            "id": "a828a2d59ff08c88",
+            "name": "周宇阳",
+            "pnl": 1023000,
+            "rank": 7,
+            "points": 26
+          },
+          {
+            "id": "7c702611c61a3c76",
+            "name": "Jamal",
+            "pnl": 893800,
+            "rank": 8,
+            "points": 25
+          },
+          {
+            "id": "ee10635fabb773b1",
+            "name": "陈新怡",
+            "pnl": 884400,
+            "rank": 9,
+            "points": 24
+          },
+          {
+            "id": "b4878872134feba2",
+            "name": "11",
+            "pnl": 523800,
+            "rank": 10,
+            "points": 23
+          },
+          {
+            "id": "e82803a23d9d1db3",
+            "name": "徐子康",
+            "pnl": 283100,
+            "rank": 11,
+            "points": 22
+          },
+          {
+            "id": "2085511fc27f80b7",
+            "name": "刘奕祥",
+            "pnl": 140000,
+            "rank": 12,
+            "points": 21
+          },
+          {
+            "id": "43e743505a87d66f",
+            "name": "不言",
+            "pnl": 129000,
+            "rank": 13,
+            "points": 20
+          },
+          {
+            "id": "061e487aa3c0df0c",
+            "name": "叶梓",
+            "pnl": 0,
+            "rank": 14,
+            "points": 17.5
+          },
+          {
+            "id": "67984cb4455862ab",
+            "name": "keke",
+            "pnl": 0,
+            "rank": 14,
+            "points": 17.5
+          },
+          {
+            "id": "9a528ff1316de614",
+            "name": "234",
+            "pnl": 0,
+            "rank": 14,
+            "points": 17.5
+          },
+          {
+            "id": "aaeb2ba2fd85d36c",
+            "name": "吴文轩",
+            "pnl": 0,
+            "rank": 14,
+            "points": 17.5
+          },
+          {
+            "id": "dfb06b2e1d9a8622",
+            "name": "钱多多",
+            "pnl": -60000,
+            "rank": 18,
+            "points": 15
+          },
+          {
+            "id": "19103255c5eeacd3",
+            "name": "yuhan",
+            "pnl": -142000,
+            "rank": 19,
+            "points": 14
+          },
+          {
+            "id": "2bdfb0f7e77e4217",
+            "name": "聪明的骑士",
+            "pnl": -266600,
+            "rank": 20,
+            "points": 13
+          },
+          {
+            "id": "b5989a869733eec2",
+            "name": "木木",
+            "pnl": -384300,
+            "rank": 21,
+            "points": 12
+          },
+          {
+            "id": "12e100f035c7e290",
+            "name": "谢觐宇",
+            "pnl": -411700,
+            "rank": 22,
+            "points": 11
+          },
+          {
+            "id": "e8ac0b37ec32b7a7",
+            "name": "Nick",
+            "pnl": -482800,
+            "rank": 23,
+            "points": 10
+          },
+          {
+            "id": "fd84145e75d4467c",
+            "name": "Renard",
+            "pnl": -494100,
+            "rank": 24,
+            "points": 9
+          },
+          {
+            "id": "aa81a5a373032f0f",
+            "name": "杨博浩",
+            "pnl": -528000,
+            "rank": 25,
+            "points": 8
+          },
+          {
+            "id": "5bf62bcd351023e2",
+            "name": "sun",
+            "pnl": -626000,
+            "rank": 26,
+            "points": 7
+          },
+          {
+            "id": "7b1cffd060bef16e",
+            "name": "温敏宜",
+            "pnl": -650400,
+            "rank": 27,
+            "points": 6
+          },
+          {
+            "id": "7c62f88bdd19a725",
+            "name": "Jianyi",
+            "pnl": -1063000,
+            "rank": 28,
+            "points": 5
+          },
+          {
+            "id": "47b3509179a001a0",
+            "name": "王彦泽",
+            "pnl": -1119000,
+            "rank": 29,
+            "points": 4
+          },
+          {
+            "id": "1593c5b9fa258642",
+            "name": "123",
+            "pnl": -1176100,
+            "rank": 30,
+            "points": 3
+          },
+          {
+            "id": "30500635bb76e06d",
+            "name": "赵C",
+            "pnl": -1523000,
+            "rank": 31,
+            "points": 2
+          },
+          {
+            "id": "0d5aa18a101b4239",
+            "name": "拆冬瓜补西瓜",
+            "pnl": -5410000,
+            "rank": 32,
+            "points": 1
+          }
+        ],
+        "scoredNumber": 2,
+        "label": "正式第 2 题",
+        "review": {
+          "throughRound": 4,
+          "lazy": true,
+          "revision": "archived:3"
+        }
+      },
+      {
+        "number": 4,
+        "question": "世界上面积第 104 大的国家，面积约为多少万平方公里？（保留两位小数）",
+        "scenarioId": "country-area-104",
+        "practice": false,
+        "unit": "万平方公里",
+        "openingPrice": 2000,
+        "settlementPrice": 1099,
+        "ranking": [
+          {
+            "id": "ee10635fabb773b1",
+            "name": "陈新怡",
+            "pnl": 72005,
+            "rank": 1,
+            "points": 32
+          },
+          {
+            "id": "12e100f035c7e290",
+            "name": "谢觐宇",
+            "pnl": 35243,
+            "rank": 2,
+            "points": 31
+          },
+          {
+            "id": "445a6918e8bbd444",
+            "name": "王津菁",
+            "pnl": 28157,
+            "rank": 3,
+            "points": 30
+          },
+          {
+            "id": "aaeb2ba2fd85d36c",
+            "name": "吴文轩",
+            "pnl": 26959,
+            "rank": 4,
+            "points": 29
+          },
+          {
+            "id": "e8ac0b37ec32b7a7",
+            "name": "Nick",
+            "pnl": 24951,
+            "rank": 5,
+            "points": 28
+          },
+          {
+            "id": "47b3509179a001a0",
+            "name": "王彦泽",
+            "pnl": 19903,
+            "rank": 6,
+            "points": 27
+          },
+          {
+            "id": "7c62f88bdd19a725",
+            "name": "Jianyi",
+            "pnl": 18938,
+            "rank": 7,
+            "points": 26
+          },
+          {
+            "id": "e82803a23d9d1db3",
+            "name": "徐子康",
+            "pnl": 16777,
+            "rank": 8,
+            "points": 25
+          },
+          {
+            "id": "19103255c5eeacd3",
+            "name": "yuhan",
+            "pnl": 14856,
+            "rank": 9,
+            "points": 24
+          },
+          {
+            "id": "dfb06b2e1d9a8622",
+            "name": "钱多多",
+            "pnl": 14199,
+            "rank": 10,
+            "points": 23
+          },
+          {
+            "id": "7c702611c61a3c76",
+            "name": "Jamal",
+            "pnl": 10990,
+            "rank": 11,
+            "points": 22
+          },
+          {
+            "id": "43e743505a87d66f",
+            "name": "不言",
+            "pnl": 10610,
+            "rank": 12,
+            "points": 21
+          },
+          {
+            "id": "0d5aa18a101b4239",
+            "name": "拆冬瓜补西瓜",
+            "pnl": 9806,
+            "rank": 13,
+            "points": 20
+          },
+          {
+            "id": "30500635bb76e06d",
+            "name": "赵C",
+            "pnl": 9010,
+            "rank": 14,
+            "points": 18.5
+          },
+          {
+            "id": "fd84145e75d4467c",
+            "name": "Renard",
+            "pnl": 9010,
+            "rank": 14,
+            "points": 18.5
+          },
+          {
+            "id": "061e487aa3c0df0c",
+            "name": "叶梓",
+            "pnl": 6135,
+            "rank": 16,
+            "points": 17
+          },
+          {
+            "id": "1593c5b9fa258642",
+            "name": "123",
+            "pnl": 5793,
+            "rank": 17,
+            "points": 16
+          },
+          {
+            "id": "b5989a869733eec2",
+            "name": "木木",
+            "pnl": 5612,
+            "rank": 18,
+            "points": 15
+          },
+          {
+            "id": "5bf62bcd351023e2",
+            "name": "sun",
+            "pnl": 5303,
+            "rank": 19,
+            "points": 14
+          },
+          {
+            "id": "2085511fc27f80b7",
+            "name": "刘奕祥",
+            "pnl": 1254,
+            "rank": 20,
+            "points": 13
+          },
+          {
+            "id": "0acbef85ef296976",
+            "name": "56",
+            "pnl": 0,
+            "rank": 21,
+            "points": 9.5
+          },
+          {
+            "id": "0ed2db94ea79859d",
+            "name": "234-2",
+            "pnl": 0,
+            "rank": 21,
+            "points": 9.5
+          },
+          {
+            "id": "67984cb4455862ab",
+            "name": "keke",
+            "pnl": 0,
+            "rank": 21,
+            "points": 9.5
+          },
+          {
+            "id": "8fad1a4b9a2987ac",
+            "name": "555",
+            "pnl": 0,
+            "rank": 21,
+            "points": 9.5
+          },
+          {
+            "id": "9a528ff1316de614",
+            "name": "234",
+            "pnl": 0,
+            "rank": 21,
+            "points": 9.5
+          },
+          {
+            "id": "ef07a7c70ef34ff5",
+            "name": "234A",
+            "pnl": 0,
+            "rank": 21,
+            "points": 9.5
+          },
+          {
+            "id": "a828a2d59ff08c88",
+            "name": "周宇阳",
+            "pnl": -910,
+            "rank": 27,
+            "points": 6
+          },
+          {
+            "id": "2bdfb0f7e77e4217",
+            "name": "聪明的骑士",
+            "pnl": -1105,
+            "rank": 28,
+            "points": 5
+          },
+          {
+            "id": "7b1cffd060bef16e",
+            "name": "温敏宜",
+            "pnl": -5152,
+            "rank": 29,
+            "points": 4
+          },
+          {
+            "id": "b4878872134feba2",
+            "name": "11",
+            "pnl": -7923,
+            "rank": 30,
+            "points": 3
+          },
+          {
+            "id": "aa81a5a373032f0f",
+            "name": "杨博浩",
+            "pnl": -21762,
+            "rank": 31,
+            "points": 2
+          },
+          {
+            "id": "f67cc1b02a67434c",
+            "name": "曾加",
+            "pnl": -304834,
+            "rank": 32,
+            "points": 1
+          }
+        ],
+        "scoredNumber": 3,
+        "label": "正式第 3 题",
+        "review": {
+          "throughRound": 5,
+          "lazy": true,
+          "revision": "archived:4"
+        }
+      }
+    ],
+    "standings": [
+      {
+        "id": "445a6918e8bbd444",
+        "name": "王津菁",
+        "points": 92,
+        "wins": 2,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 1,
+            "points": 30
+          },
+          {
+            "number": 3,
+            "rank": 1,
+            "points": 32
+          },
+          {
+            "number": 4,
+            "rank": 3,
+            "points": 30
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "id": "aaeb2ba2fd85d36c",
+        "name": "吴文轩",
+        "points": 72.5,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 5,
+            "points": 26
+          },
+          {
+            "number": 3,
+            "rank": 14,
+            "points": 17.5
+          },
+          {
+            "number": 4,
+            "rank": 4,
+            "points": 29
+          }
+        ],
+        "rank": 2
+      },
+      {
+        "id": "43e743505a87d66f",
+        "name": "不言",
+        "points": 68,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 4,
+            "points": 27
+          },
+          {
+            "number": 3,
+            "rank": 13,
+            "points": 20
+          },
+          {
+            "number": 4,
+            "rank": 12,
+            "points": 21
+          }
+        ],
+        "rank": 3
+      },
+      {
+        "id": "ee10635fabb773b1",
+        "name": "陈新怡",
+        "points": 67,
+        "wins": 1,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 20,
+            "points": 11
+          },
+          {
+            "number": 3,
+            "rank": 9,
+            "points": 24
+          },
+          {
+            "number": 4,
+            "rank": 1,
+            "points": 32
+          }
+        ],
+        "rank": 4
+      },
+      {
+        "id": "47b3509179a001a0",
+        "name": "王彦泽",
+        "points": 60,
+        "wins": 0,
+        "seconds": 1,
+        "results": [
+          {
+            "number": 2,
+            "rank": 2,
+            "points": 29
+          },
+          {
+            "number": 3,
+            "rank": 29,
+            "points": 4
+          },
+          {
+            "number": 4,
+            "rank": 6,
+            "points": 27
+          }
+        ],
+        "rank": 5
+      },
+      {
+        "id": "f67cc1b02a67434c",
+        "name": "曾加",
+        "points": 60,
+        "wins": 0,
+        "seconds": 1,
+        "results": [
+          {
+            "number": 2,
+            "rank": 3,
+            "points": 28
+          },
+          {
+            "number": 3,
+            "rank": 2,
+            "points": 31
+          },
+          {
+            "number": 4,
+            "rank": 32,
+            "points": 1
+          }
+        ],
+        "rank": 5
+      },
+      {
+        "id": "19103255c5eeacd3",
+        "name": "yuhan",
+        "points": 60,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 9,
+            "points": 22
+          },
+          {
+            "number": 3,
+            "rank": 19,
+            "points": 14
+          },
+          {
+            "number": 4,
+            "rank": 9,
+            "points": 24
+          }
+        ],
+        "rank": 7
+      },
+      {
+        "id": "061e487aa3c0df0c",
+        "name": "叶梓",
+        "points": 57.5,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 8,
+            "points": 23
+          },
+          {
+            "number": 3,
+            "rank": 14,
+            "points": 17.5
+          },
+          {
+            "number": 4,
+            "rank": 16,
+            "points": 17
+          }
+        ],
+        "rank": 8
+      },
+      {
+        "id": "e8ac0b37ec32b7a7",
+        "name": "Nick",
+        "points": 57,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 12,
+            "points": 19
+          },
+          {
+            "number": 3,
+            "rank": 23,
+            "points": 10
+          },
+          {
+            "number": 4,
+            "rank": 5,
+            "points": 28
+          }
+        ],
+        "rank": 9
+      },
+      {
+        "id": "0ed2db94ea79859d",
+        "name": "234-2",
+        "points": 56.5,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 11,
+            "points": 20
+          },
+          {
+            "number": 3,
+            "rank": 6,
+            "points": 27
+          },
+          {
+            "number": 4,
+            "rank": 21,
+            "points": 9.5
+          }
+        ],
+        "rank": 10
+      },
+      {
+        "id": "e82803a23d9d1db3",
+        "name": "徐子康",
+        "points": 56,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 22,
+            "points": 9
+          },
+          {
+            "number": 3,
+            "rank": 11,
+            "points": 22
+          },
+          {
+            "number": 4,
+            "rank": 8,
+            "points": 25
+          }
+        ],
+        "rank": 11
+      },
+      {
+        "id": "0acbef85ef296976",
+        "name": "56",
+        "points": 55.5,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 14,
+            "points": 16
+          },
+          {
+            "number": 3,
+            "rank": 3,
+            "points": 30
+          },
+          {
+            "number": 4,
+            "rank": 21,
+            "points": 9.5
+          }
+        ],
+        "rank": 12
+      },
+      {
+        "id": "7c702611c61a3c76",
+        "name": "Jamal",
+        "points": 55,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 23,
+            "points": 8
+          },
+          {
+            "number": 3,
+            "rank": 8,
+            "points": 25
+          },
+          {
+            "number": 4,
+            "rank": 11,
+            "points": 22
+          }
+        ],
+        "rank": 13
+      },
+      {
+        "id": "fd84145e75d4467c",
+        "name": "Renard",
+        "points": 52.5,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 6,
+            "points": 25
+          },
+          {
+            "number": 3,
+            "rank": 24,
+            "points": 9
+          },
+          {
+            "number": 4,
+            "rank": 14,
+            "points": 18.5
+          }
+        ],
+        "rank": 14
+      },
+      {
+        "id": "2085511fc27f80b7",
+        "name": "刘奕祥",
+        "points": 52,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 13,
+            "points": 18
+          },
+          {
+            "number": 3,
+            "rank": 12,
+            "points": 21
+          },
+          {
+            "number": 4,
+            "rank": 20,
+            "points": 13
+          }
+        ],
+        "rank": 15
+      },
+      {
+        "id": "dfb06b2e1d9a8622",
+        "name": "钱多多",
+        "points": 51,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 18,
+            "points": 13
+          },
+          {
+            "number": 3,
+            "rank": 18,
+            "points": 15
+          },
+          {
+            "number": 4,
+            "rank": 10,
+            "points": 23
+          }
+        ],
+        "rank": 16
+      },
+      {
+        "id": "5bf62bcd351023e2",
+        "name": "sun",
+        "points": 45,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 7,
+            "points": 24
+          },
+          {
+            "number": 3,
+            "rank": 26,
+            "points": 7
+          },
+          {
+            "number": 4,
+            "rank": 19,
+            "points": 14
+          }
+        ],
+        "rank": 17
+      },
+      {
+        "id": "12e100f035c7e290",
+        "name": "谢觐宇",
+        "points": 43,
+        "wins": 0,
+        "seconds": 1,
+        "results": [
+          {
+            "number": 2,
+            "rank": 30,
+            "points": 1
+          },
+          {
+            "number": 3,
+            "rank": 22,
+            "points": 11
+          },
+          {
+            "number": 4,
+            "rank": 2,
+            "points": 31
+          }
+        ],
+        "rank": 18
+      },
+      {
+        "id": "67984cb4455862ab",
+        "name": "keke",
+        "points": 43,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 14,
+            "points": 16
+          },
+          {
+            "number": 3,
+            "rank": 14,
+            "points": 17.5
+          },
+          {
+            "number": 4,
+            "rank": 21,
+            "points": 9.5
+          }
+        ],
+        "rank": 19
+      },
+      {
+        "id": "9a528ff1316de614",
+        "name": "234",
+        "points": 43,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 14,
+            "points": 16
+          },
+          {
+            "number": 3,
+            "rank": 14,
+            "points": 17.5
+          },
+          {
+            "number": 4,
+            "rank": 21,
+            "points": 9.5
+          }
+        ],
+        "rank": 19
+      },
+      {
+        "id": "30500635bb76e06d",
+        "name": "赵C",
+        "points": 41.5,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 10,
+            "points": 21
+          },
+          {
+            "number": 3,
+            "rank": 31,
+            "points": 2
+          },
+          {
+            "number": 4,
+            "rank": 14,
+            "points": 18.5
+          }
+        ],
+        "rank": 21
+      },
+      {
+        "id": "b5989a869733eec2",
+        "name": "木木",
+        "points": 41,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 17,
+            "points": 14
+          },
+          {
+            "number": 3,
+            "rank": 21,
+            "points": 12
+          },
+          {
+            "number": 4,
+            "rank": 18,
+            "points": 15
+          }
+        ],
+        "rank": 22
+      },
+      {
+        "id": "ef07a7c70ef34ff5",
+        "name": "234A",
+        "points": 38.5,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": null,
+            "points": 0
+          },
+          {
+            "number": 3,
+            "rank": 4,
+            "points": 29
+          },
+          {
+            "number": 4,
+            "rank": 21,
+            "points": 9.5
+          }
+        ],
+        "rank": 23
+      },
+      {
+        "id": "8fad1a4b9a2987ac",
+        "name": "555",
+        "points": 37.5,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": null,
+            "points": 0
+          },
+          {
+            "number": 3,
+            "rank": 5,
+            "points": 28
+          },
+          {
+            "number": 4,
+            "rank": 21,
+            "points": 9.5
+          }
+        ],
+        "rank": 24
+      },
+      {
+        "id": "b4878872134feba2",
+        "name": "11",
+        "points": 36,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 21,
+            "points": 10
+          },
+          {
+            "number": 3,
+            "rank": 10,
+            "points": 23
+          },
+          {
+            "number": 4,
+            "rank": 30,
+            "points": 3
+          }
+        ],
+        "rank": 25
+      },
+      {
+        "id": "7c62f88bdd19a725",
+        "name": "Jianyi",
+        "points": 35,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 27,
+            "points": 4
+          },
+          {
+            "number": 3,
+            "rank": 28,
+            "points": 5
+          },
+          {
+            "number": 4,
+            "rank": 7,
+            "points": 26
+          }
+        ],
+        "rank": 26
+      },
+      {
+        "id": "a828a2d59ff08c88",
+        "name": "周宇阳",
+        "points": 34,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 29,
+            "points": 2
+          },
+          {
+            "number": 3,
+            "rank": 7,
+            "points": 26
+          },
+          {
+            "number": 4,
+            "rank": 27,
+            "points": 6
+          }
+        ],
+        "rank": 27
+      },
+      {
+        "id": "2bdfb0f7e77e4217",
+        "name": "聪明的骑士",
+        "points": 30,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 19,
+            "points": 12
+          },
+          {
+            "number": 3,
+            "rank": 20,
+            "points": 13
+          },
+          {
+            "number": 4,
+            "rank": 28,
+            "points": 5
+          }
+        ],
+        "rank": 28
+      },
+      {
+        "id": "0d5aa18a101b4239",
+        "name": "拆冬瓜补西瓜",
+        "points": 28,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 24,
+            "points": 7
+          },
+          {
+            "number": 3,
+            "rank": 32,
+            "points": 1
+          },
+          {
+            "number": 4,
+            "rank": 13,
+            "points": 20
+          }
+        ],
+        "rank": 29
+      },
+      {
+        "id": "1593c5b9fa258642",
+        "name": "123",
+        "points": 22,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 28,
+            "points": 3
+          },
+          {
+            "number": 3,
+            "rank": 30,
+            "points": 3
+          },
+          {
+            "number": 4,
+            "rank": 17,
+            "points": 16
+          }
+        ],
+        "rank": 30
+      },
+      {
+        "id": "aa81a5a373032f0f",
+        "name": "杨博浩",
+        "points": 16,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 25,
+            "points": 6
+          },
+          {
+            "number": 3,
+            "rank": 25,
+            "points": 8
+          },
+          {
+            "number": 4,
+            "rank": 31,
+            "points": 2
+          }
+        ],
+        "rank": 31
+      },
+      {
+        "id": "7b1cffd060bef16e",
+        "name": "温敏宜",
+        "points": 15,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 26,
+            "points": 5
+          },
+          {
+            "number": 3,
+            "rank": 27,
+            "points": 6
+          },
+          {
+            "number": 4,
+            "rank": 29,
+            "points": 4
+          }
+        ],
+        "rank": 32
+      },
+      {
+        "id": "0a0319b2a4e508a2",
+        "name": "mq",
+        "points": 0,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": null,
+            "points": 0
+          },
+          {
+            "number": 3,
+            "rank": null,
+            "points": 0
+          },
+          {
+            "number": 4,
+            "rank": null,
+            "points": 0
+          }
+        ],
+        "rank": 33
+      }
+    ]
+  },
+  "review": {
+    "throughRound": 5,
+    "lazy": true,
+    "revision": "4:5:34"
+  },
+  "lazyHistory": true,
+  "nextScenarios": [
+    {
+      "id": "shanghai-kfc-practice",
+      "name": "测试版 · 上海肯德基数量（不计分）",
+      "question": "截至 2025 年 12 月 11 日，上海有多少家肯德基餐厅？",
+      "unit": "家",
+      "priceDecimals": 0,
+      "description": "测试版，3 轮；保留交易复盘，不计入累计积分。",
+      "practice": true,
+      "rounds": 3
+    },
+    {
+      "id": "party-national-2025",
+      "name": "正式第 1 题 · 全国发展党员人数",
+      "question": "2025 年全国共发展多少万名中国共产党党员？",
+      "unit": "万名",
+      "priceDecimals": 1,
+      "description": "全国发展党员人数，3 轮。",
+      "practice": false,
+      "rounds": 3
+    },
+    {
+      "id": "shanghai-residents-2025",
+      "name": "正式第 2 题 · 上海居民委员会数量",
+      "question": "截至 2025 年底，上海共有多少个居民委员会？",
+      "unit": "个",
+      "priceDecimals": 0,
+      "description": "上海居民委员会数量，4 轮。结算依据：上海市民政局分区统计表。",
+      "practice": false,
+      "rounds": 4
+    },
+    {
+      "id": "country-area-104",
+      "name": "正式第 3 题 · 国家面积",
+      "question": "世界上面积第 104 大的国家，面积约为多少万平方公里？（保留两位小数）",
+      "unit": "万平方公里",
+      "priceDecimals": 2,
+      "description": "国家面积，5 轮；按国家面积排名，不把属地单独列入名次。",
+      "practice": false,
+      "rounds": 5
+    },
+    {
+      "id": "venezuela-oil-reserves",
+      "name": "委内瑞拉已探明原油储量",
+      "question": "估计委内瑞拉已探明的原油储量，单位为亿桶。",
+      "unit": "亿桶",
+      "priceDecimals": 0,
+      "description": "委内瑞拉已探明原油储量，5 轮。",
+      "practice": false,
+      "rounds": 5
+    },
+    {
+      "id": "sse-composite-cagr",
+      "name": "上证指数复合年化收益率",
+      "question": "估计上证指数自基日以来的复合年化收益率，单位为%。",
+      "unit": "%",
+      "priceDecimals": 2,
+      "description": "上证指数自基日以来的复合年化收益率，5 轮。",
+      "practice": false,
+      "rounds": 5
+    },
+    {
+      "id": "red-first-corps-long-march",
+      "name": "红一军团直属队长征行军里程",
+      "question": "根据公布的地形图复核结果，估计红一军团直属队的长征行军里程，单位为千米。",
+      "unit": "千米",
+      "priceDecimals": 0,
+      "description": "红一军团直属队的长征行军里程，4 轮。",
+      "practice": false,
+      "rounds": 4
+    },
+    {
+      "id": "earth-total-water",
+      "name": "地球上的水总量",
+      "question": "估计地球上的水总量，单位为亿立方千米，包含海水、冰川、地下水、河湖水和大气中的水。",
+      "unit": "亿立方千米",
+      "priceDecimals": 2,
+      "description": "地球上的水总量，5 轮。",
+      "practice": false,
+      "rounds": 5
+    },
+    {
+      "id": "earth-surface-triangle",
+      "name": "珠峰、挑战者深渊与泰山的地表三角形面积",
+      "question": "估计珠穆朗玛峰、马里亚纳海沟挑战者深渊和泰山玉皇顶三点在地球表面围成的三角形面积，单位为万平方公里。",
+      "unit": "万平方公里",
+      "priceDecimals": 1,
+      "description": "地表三角形面积，4 轮。",
+      "practice": false,
+      "rounds": 4
+    },
+    {
+      "id": "global-tree-count-2015",
+      "name": "全球树木总数",
+      "question": "根据2015年发表于《自然》的研究，估计全球树木总数，单位为亿棵。",
+      "unit": "亿棵",
+      "priceDecimals": 0,
+      "description": "全球树木总数，5 轮。",
+      "practice": false,
+      "rounds": 5
+    }
+  ],
+  "opening": {
+    "count": 25,
+    "required": 1,
+    "mine": null,
+    "ready": false,
+    "players": [
+      {
+        "name": "叶梓",
+        "submitted": true
+      },
+      {
+        "name": "Jianyi",
+        "submitted": true
+      },
+      {
+        "name": "王彦泽",
+        "submitted": true
+      },
+      {
+        "name": "sun",
+        "submitted": true
+      },
+      {
+        "name": "Nick",
+        "submitted": true
+      },
+      {
+        "name": "谢觐宇",
+        "submitted": true
+      },
+      {
+        "name": "陈新怡",
+        "submitted": true
+      },
+      {
+        "name": "徐子康",
+        "submitted": true
+      },
+      {
+        "name": "刘奕祥",
+        "submitted": true
+      },
+      {
+        "name": "曾加",
+        "submitted": true
+      },
+      {
+        "name": "周宇阳",
+        "submitted": true
+      },
+      {
+        "name": "杨博浩",
+        "submitted": true
+      },
+      {
+        "name": "钱多多",
+        "submitted": true
+      },
+      {
+        "name": "温敏宜",
+        "submitted": true
+      },
+      {
+        "name": "Renard",
+        "submitted": true
+      },
+      {
+        "name": "不言",
+        "submitted": true
+      },
+      {
+        "name": "王津菁",
+        "submitted": true
+      },
+      {
+        "name": "聪明的骑士",
+        "submitted": true
+      },
+      {
+        "name": "赵C",
+        "submitted": true
+      },
+      {
+        "name": "拆冬瓜补西瓜",
+        "submitted": true
+      },
+      {
+        "name": "11",
+        "submitted": true
+      },
+      {
+        "name": "yuhan",
+        "submitted": true
+      },
+      {
+        "name": "keke",
+        "submitted": true
+      },
+      {
+        "name": "123",
+        "submitted": true
+      },
+      {
+        "name": "Jamal",
+        "submitted": false
+      },
+      {
+        "name": "木木",
+        "submitted": true
+      },
+      {
+        "name": "吴文轩",
+        "submitted": false
+      },
+      {
+        "name": "56",
+        "submitted": false
+      },
+      {
+        "name": "234",
+        "submitted": false
+      },
+      {
+        "name": "234-2",
+        "submitted": false
+      },
+      {
+        "name": "234A",
+        "submitted": false
+      },
+      {
+        "name": "555",
+        "submitted": false
+      },
+      {
+        "name": "mq",
+        "submitted": false
+      }
+    ]
+  },
+  "liquidity": {
+    "enabled": true,
+    "humanVolume": 543,
+    "programVolume": 52,
+    "budget": null,
+    "remaining": 2,
+    "status": "程序已成交，6 秒后检查补单"
+  },
+  "phase": "finished",
+  "round": 5,
+  "price": 10000,
+  "bounds": {
+    "low": 0,
+    "high": 100000000000,
+    "unrestricted": true
+  },
+  "hostId": "061e487aa3c0df0c",
+  "deadline": null,
+  "nextAt": null,
+  "average": 3350.8,
+  "settlementPrice": 1099,
+  "initialWealth": 0,
+  "priceSeries": [
+    {
+      "at": 1795425261134,
+      "price": 2000,
+      "round": 1
+    },
+    {
+      "at": 1795425262550,
+      "price": 2000,
+      "round": 1
+    },
+    {
+      "at": 1795425263730,
+      "price": 2000,
+      "round": 1
+    },
+    {
+      "at": 1795425263842,
+      "price": 2000,
+      "round": 1
+    },
+    {
+      "at": 1795425265012,
+      "price": 2040,
+      "round": 1
+    },
+    {
+      "at": 1795425266742,
+      "price": 2000,
+      "round": 1
+    },
+    {
+      "at": 1795425266742,
+      "price": 2000,
+      "round": 1
+    },
+    {
+      "at": 1795425267788,
+      "price": 2000,
+      "round": 1
+    },
+    {
+      "at": 1795425268320,
+      "price": 2000,
+      "round": 1
+    },
+    {
+      "at": 1795425269547,
+      "price": 2000,
+      "round": 1
+    },
+    {
+      "at": 1795425269591,
+      "price": 2000,
+      "round": 1
+    },
+    {
+      "at": 1795425273260,
+      "price": 2000,
+      "round": 1
+    },
+    {
+      "at": 1795425279322,
+      "price": 2060,
+      "round": 1
+    },
+    {
+      "at": 1795425282882,
+      "price": 3000,
+      "round": 1
+    },
+    {
+      "at": 1795425287321,
+      "price": 5000,
+      "round": 1
+    },
+    {
+      "at": 1795425294543,
+      "price": 2065,
+      "round": 1
+    },
+    {
+      "at": 1795425296608,
+      "price": 2100,
+      "round": 1
+    },
+    {
+      "at": 1795425298203,
+      "price": 2000,
+      "round": 1
+    },
+    {
+      "at": 1795425302240,
+      "price": 2100,
+      "round": 1
+    },
+    {
+      "at": 1795425305062,
+      "price": 2200,
+      "round": 1
+    },
+    {
+      "at": 1795425309306,
+      "price": 2135,
+      "round": 1
+    },
+    {
+      "at": 1795425311037,
+      "price": 2100,
+      "round": 1
+    },
+    {
+      "at": 1795425314908,
+      "price": 2200,
+      "round": 1
+    },
+    {
+      "at": 1795425316408,
+      "price": 2200,
+      "round": 1
+    },
+    {
+      "at": 1795425318475,
+      "price": 2100,
+      "round": 1
+    },
+    {
+      "at": 1795425321134,
+      "price": 2200,
+      "round": 1
+    },
+    {
+      "at": 1795425328668,
+      "price": 2020,
+      "round": 1
+    },
+    {
+      "at": 1795425331190,
+      "price": 2020,
+      "round": 1
+    },
+    {
+      "at": 1795425337445,
+      "price": 2070,
+      "round": 1
+    },
+    {
+      "at": 1795425343017,
+      "price": 2000,
+      "round": 1
+    },
+    {
+      "at": 1795425343017,
+      "price": 2000,
+      "round": 1
+    },
+    {
+      "at": 1795425343017,
+      "price": 2000,
+      "round": 1
+    },
+    {
+      "at": 1795425352267,
+      "price": 2100,
+      "round": 2
+    },
+    {
+      "at": 1795425357800,
+      "price": 2100,
+      "round": 2
+    },
+    {
+      "at": 1795425375451,
+      "price": 1500,
+      "round": 2
+    },
+    {
+      "at": 1795425382675,
+      "price": 1500,
+      "round": 2
+    },
+    {
+      "at": 1795425389200,
+      "price": 1500,
+      "round": 2
+    },
+    {
+      "at": 1795425389200,
+      "price": 1500,
+      "round": 2
+    },
+    {
+      "at": 1795425399936,
+      "price": 1500,
+      "round": 2
+    },
+    {
+      "at": 1795425404953,
+      "price": 1358,
+      "round": 2
+    },
+    {
+      "at": 1795425413657,
+      "price": 1500,
+      "round": 2
+    },
+    {
+      "at": 1795425417292,
+      "price": 1600,
+      "round": 2
+    },
+    {
+      "at": 1795425421153,
+      "price": 1300,
+      "round": 2
+    },
+    {
+      "at": 1795425429712,
+      "price": 1500,
+      "round": 2
+    },
+    {
+      "at": 1795425445756,
+      "price": 1310,
+      "round": 3
+    },
+    {
+      "at": 1795425449812,
+      "price": 1500,
+      "round": 3
+    },
+    {
+      "at": 1795425449954,
+      "price": 1100,
+      "round": 3
+    },
+    {
+      "at": 1795425451727,
+      "price": 1700,
+      "round": 3
+    },
+    {
+      "at": 1795425451727,
+      "price": 1700,
+      "round": 3
+    },
+    {
+      "at": 1795425452756,
+      "price": 1200,
+      "round": 3
+    },
+    {
+      "at": 1795425465903,
+      "price": 1504,
+      "round": 3
+    },
+    {
+      "at": 1795425469742,
+      "price": 1800,
+      "round": 3
+    },
+    {
+      "at": 1795425482456,
+      "price": 1430,
+      "round": 3
+    },
+    {
+      "at": 1795425486963,
+      "price": 1800,
+      "round": 3
+    },
+    {
+      "at": 1795425496732,
+      "price": 1605,
+      "round": 3
+    },
+    {
+      "at": 1795425511369,
+      "price": 1500,
+      "round": 3
+    },
+    {
+      "at": 1795425518608,
+      "price": 1400,
+      "round": 3
+    },
+    {
+      "at": 1795425518608,
+      "price": 1300,
+      "round": 3
+    },
+    {
+      "at": 1795425522451,
+      "price": 1075,
+      "round": 3
+    },
+    {
+      "at": 1795425537051,
+      "price": 1270,
+      "round": 4
+    },
+    {
+      "at": 1795425547326,
+      "price": 1330,
+      "round": 4
+    },
+    {
+      "at": 1795425551548,
+      "price": 1200,
+      "round": 4
+    },
+    {
+      "at": 1795425554475,
+      "price": 1600,
+      "round": 4
+    },
+    {
+      "at": 1795425561308,
+      "price": 1545,
+      "round": 4
+    },
+    {
+      "at": 1795425570919,
+      "price": 1597,
+      "round": 4
+    },
+    {
+      "at": 1795425582251,
+      "price": 1470,
+      "round": 4
+    },
+    {
+      "at": 1795425591428,
+      "price": 1600,
+      "round": 4
+    },
+    {
+      "at": 1795425591428,
+      "price": 1800,
+      "round": 4
+    },
+    {
+      "at": 1795425591428,
+      "price": 1800,
+      "round": 4
+    },
+    {
+      "at": 1795425591428,
+      "price": 1800,
+      "round": 4
+    },
+    {
+      "at": 1795425591428,
+      "price": 1900,
+      "round": 4
+    },
+    {
+      "at": 1795425595269,
+      "price": 1400,
+      "round": 4
+    },
+    {
+      "at": 1795425596688,
+      "price": 1400,
+      "round": 4
+    },
+    {
+      "at": 1795425604899,
+      "price": 1649,
+      "round": 4
+    },
+    {
+      "at": 1795425610731,
+      "price": 1300,
+      "round": 4
+    },
+    {
+      "at": 1795425610731,
+      "price": 1200,
+      "round": 4
+    },
+    {
+      "at": 1795425610731,
+      "price": 1200,
+      "round": 4
+    },
+    {
+      "at": 1795425610731,
+      "price": 1000,
+      "round": 4
+    },
+    {
+      "at": 1795425610731,
+      "price": 1000,
+      "round": 4
+    },
+    {
+      "at": 1795425615747,
+      "price": 1999,
+      "round": 4
+    },
+    {
+      "at": 1795425615747,
+      "price": 2000,
+      "round": 4
+    },
+    {
+      "at": 1795425615747,
+      "price": 2000,
+      "round": 4
+    },
+    {
+      "at": 1795425615747,
+      "price": 2000,
+      "round": 4
+    },
+    {
+      "at": 1795425615747,
+      "price": 2100,
+      "round": 4
+    },
+    {
+      "at": 1795425637550,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425640966,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425640966,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425646520,
+      "price": 1100,
+      "round": 5
+    },
+    {
+      "at": 1795425646933,
+      "price": 1700,
+      "round": 5
+    },
+    {
+      "at": 1795425646933,
+      "price": 2200,
+      "round": 5
+    },
+    {
+      "at": 1795425646933,
+      "price": 2200,
+      "round": 5
+    },
+    {
+      "at": 1795425651167,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425651167,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425651742,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425653525,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425657136,
+      "price": 1500,
+      "round": 5
+    },
+    {
+      "at": 1795425657136,
+      "price": 2300,
+      "round": 5
+    },
+    {
+      "at": 1795425657136,
+      "price": 2300,
+      "round": 5
+    },
+    {
+      "at": 1795425657136,
+      "price": 2500,
+      "round": 5
+    },
+    {
+      "at": 1795425657136,
+      "price": 2600,
+      "round": 5
+    },
+    {
+      "at": 1795425663827,
+      "price": 1040,
+      "round": 5
+    },
+    {
+      "at": 1795425665481,
+      "price": 820,
+      "round": 5
+    },
+    {
+      "at": 1795425665481,
+      "price": 800,
+      "round": 5
+    },
+    {
+      "at": 1795425665481,
+      "price": 200,
+      "round": 5
+    },
+    {
+      "at": 1795425665481,
+      "price": 200,
+      "round": 5
+    },
+    {
+      "at": 1795425665481,
+      "price": 200,
+      "round": 5
+    },
+    {
+      "at": 1795425665481,
+      "price": 200,
+      "round": 5
+    },
+    {
+      "at": 1795425665481,
+      "price": 200,
+      "round": 5
+    },
+    {
+      "at": 1795425668123,
+      "price": 1200,
+      "round": 5
+    },
+    {
+      "at": 1795425670557,
+      "price": 1200,
+      "round": 5
+    },
+    {
+      "at": 1795425675900,
+      "price": 1500,
+      "round": 5
+    },
+    {
+      "at": 1795425675974,
+      "price": 1500,
+      "round": 5
+    },
+    {
+      "at": 1795425675974,
+      "price": 1500,
+      "round": 5
+    },
+    {
+      "at": 1795425675974,
+      "price": 1500,
+      "round": 5
+    },
+    {
+      "at": 1795425675974,
+      "price": 1500,
+      "round": 5
+    },
+    {
+      "at": 1795425675974,
+      "price": 1500,
+      "round": 5
+    },
+    {
+      "at": 1795425675974,
+      "price": 1500,
+      "round": 5
+    },
+    {
+      "at": 1795425675974,
+      "price": 1500,
+      "round": 5
+    },
+    {
+      "at": 1795425675974,
+      "price": 1500,
+      "round": 5
+    },
+    {
+      "at": 1795425675974,
+      "price": 1500,
+      "round": 5
+    },
+    {
+      "at": 1795425675974,
+      "price": 2300,
+      "round": 5
+    },
+    {
+      "at": 1795425680986,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425680986,
+      "price": 800,
+      "round": 5
+    },
+    {
+      "at": 1795425680986,
+      "price": 500,
+      "round": 5
+    },
+    {
+      "at": 1795425680986,
+      "price": 200,
+      "round": 5
+    },
+    {
+      "at": 1795425683891,
+      "price": 2000,
+      "round": 5
+    },
+    {
+      "at": 1795425683891,
+      "price": 2300,
+      "round": 5
+    },
+    {
+      "at": 1795425684251,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425688079,
+      "price": 2200,
+      "round": 5
+    },
+    {
+      "at": 1795425688079,
+      "price": 2600,
+      "round": 5
+    },
+    {
+      "at": 1795425688079,
+      "price": 3000,
+      "round": 5
+    },
+    {
+      "at": 1795425688079,
+      "price": 4000,
+      "round": 5
+    },
+    {
+      "at": 1795425693091,
+      "price": 2300,
+      "round": 5
+    },
+    {
+      "at": 1795425694532,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425694532,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425694532,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425694532,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425694532,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425694532,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425694532,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425694532,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425694532,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425694532,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425698142,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425698142,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425699099,
+      "price": 1600,
+      "round": 5
+    },
+    {
+      "at": 1795425699099,
+      "price": 2500,
+      "round": 5
+    },
+    {
+      "at": 1795425699099,
+      "price": 5000,
+      "round": 5
+    },
+    {
+      "at": 1795425699099,
+      "price": 5001,
+      "round": 5
+    },
+    {
+      "at": 1795425699099,
+      "price": 15000,
+      "round": 5
+    },
+    {
+      "at": 1795425703991,
+      "price": 1200,
+      "round": 5
+    },
+    {
+      "at": 1795425703991,
+      "price": 1200,
+      "round": 5
+    },
+    {
+      "at": 1795425703991,
+      "price": 1200,
+      "round": 5
+    },
+    {
+      "at": 1795425703991,
+      "price": 1200,
+      "round": 5
+    },
+    {
+      "at": 1795425703991,
+      "price": 1200,
+      "round": 5
+    },
+    {
+      "at": 1795425705595,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425705595,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425705595,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425705595,
+      "price": 1000,
+      "round": 5
+    },
+    {
+      "at": 1795425705595,
+      "price": 500,
+      "round": 5
+    },
+    {
+      "at": 1795425705595,
+      "price": 300,
+      "round": 5
+    },
+    {
+      "at": 1795425706672,
+      "price": 1200,
+      "round": 5
+    },
+    {
+      "at": 1795425708957,
+      "price": 1200,
+      "round": 5
+    },
+    {
+      "at": 1795425708957,
+      "price": 1200,
+      "round": 5
+    },
+    {
+      "at": 1795425708957,
+      "price": 1200,
+      "round": 5
+    },
+    {
+      "at": 1795425708957,
+      "price": 1200,
+      "round": 5
+    },
+    {
+      "at": 1795425708957,
+      "price": 1200,
+      "round": 5
+    },
+    {
+      "at": 1795425711795,
+      "price": 1390,
+      "round": 5
+    },
+    {
+      "at": 1795425711795,
+      "price": 4999,
+      "round": 5
+    },
+    {
+      "at": 1795425711795,
+      "price": 10000,
+      "round": 5
+    }
+  ],
+  "roundStarts": [
+    {
+      "at": 1795425257518,
+      "round": 1
+    },
+    {
+      "at": 1795425349194,
+      "round": 2
+    },
+    {
+      "at": 1795425440751,
+      "round": 3
+    },
+    {
+      "at": 1795425532033,
+      "round": 4
+    },
+    {
+      "at": 1795425623713,
+      "round": 5
+    }
+  ],
+  "resolution": {
+    "type": "resolution",
+    "round": 5,
+    "at": 1795425713770,
+    "price": 1099,
+    "note": "古巴面积为 109884 平方公里，即 10.9884 万平方公里；保留两位小数，以 10.99 结算。人口采用外交部 2024 年数据约 975 万人；海岸线采用联合国开发计划署资料约 5746 千米。",
+    "source": "https://www.mfa.gov.cn/gjhdq_676201/gj_676203/bmz_679954/1206_680302/1206x0_680304/"
+  },
+  "history": [
+    {
+      "round": 1,
+      "price": 1854,
+      "volume": 97,
+      "orders": 42,
+      "at": 1795425347680,
+      "noTrade": false
+    },
+    {
+      "round": 2,
+      "price": 1500,
+      "volume": 31,
+      "orders": 63,
+      "at": 1795425439277,
+      "noTrade": false
+    },
+    {
+      "round": 3,
+      "price": 1300,
+      "volume": 64,
+      "orders": 66,
+      "at": 1795425530871,
+      "noTrade": false
+    },
+    {
+      "round": 4,
+      "price": 2100,
+      "volume": 92,
+      "orders": 45,
+      "at": 1795425622210,
+      "noTrade": false
+    },
+    {
+      "round": 5,
+      "price": 10000,
+      "volume": 311,
+      "orders": 10,
+      "at": 1795425713770,
+      "noTrade": false
+    }
+  ],
+  "news": "",
+  "messages": [],
+  "signals": [
+    {
+      "title": "非洲面积",
+      "text": "非洲总面积约 3020 万平方公里。",
+      "source": "https://www.fmprc.gov.cn/wjdt_674879/zcjd/200606/t20060609_9711236.shtml",
+      "sourceName": "外交部 · 非洲概况",
+      "round": 1,
+      "at": 1795425257518
+    },
+    {
+      "title": "人口",
+      "text": "2024 年，该国人口约 975 万人。",
+      "source": "",
+      "sourceName": "",
+      "round": 2,
+      "at": 1795425349194
+    },
+    {
+      "title": "海岸线",
+      "text": "该国海岸线长约 5746 千米。",
+      "source": "",
+      "sourceName": "",
+      "round": 3,
+      "at": 1795425440751
+    },
+    {
+      "title": "世界第 50 大国家",
+      "text": "世界面积排名第 50 的国家是西班牙，面积约 50.6 万平方公里。",
+      "source": "https://www.ine.es/prodyser/espa_cifras/01_TERRITORIO_Y_MEDIO_AMBIENTE.pdf",
+      "sourceName": "西班牙国家统计局",
+      "round": 4,
+      "at": 1795425532033
+    },
+    {
+      "title": "国家名称",
+      "text": "这个国家是古巴。",
+      "source": "",
+      "sourceName": "",
+      "round": 5,
+      "at": 1795425623713
+    }
+  ],
+  "notice": "",
+  "publicValue": null,
+  "unrevealed": null,
+  "ranking": [
+    {
+      "id": "ee10635fabb773b1",
+      "name": "陈新怡",
+      "cash": 77500,
+      "shares": -5,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 72005,
+      "rank": 1
+    },
+    {
+      "id": "12e100f035c7e290",
+      "name": "谢觐宇",
+      "cash": 45134,
+      "shares": -9,
+      "isHost": false,
+      "online": true,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 35243,
+      "rank": 2
+    },
+    {
+      "id": "445a6918e8bbd444",
+      "name": "王津菁",
+      "cash": 34751,
+      "shares": -6,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 28157,
+      "rank": 3
+    },
+    {
+      "id": "aaeb2ba2fd85d36c",
+      "name": "吴文轩",
+      "cash": 37949,
+      "shares": -10,
+      "isHost": false,
+      "online": true,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 26959,
+      "rank": 4
+    },
+    {
+      "id": "e8ac0b37ec32b7a7",
+      "name": "Nick",
+      "cash": 23852,
+      "shares": 1,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 24951,
+      "rank": 5
+    },
+    {
+      "id": "47b3509179a001a0",
+      "name": "王彦泽",
+      "cash": 14408,
+      "shares": 5,
+      "isHost": false,
+      "online": true,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 19903,
+      "rank": 6
+    },
+    {
+      "id": "7c62f88bdd19a725",
+      "name": "Jianyi",
+      "cash": 14542,
+      "shares": 4,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 18938,
+      "rank": 7
+    },
+    {
+      "id": "e82803a23d9d1db3",
+      "name": "徐子康",
+      "cash": 7985,
+      "shares": 8,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 16777,
+      "rank": 8
+    },
+    {
+      "id": "19103255c5eeacd3",
+      "name": "yuhan",
+      "cash": 22549,
+      "shares": -7,
+      "isHost": false,
+      "online": true,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 14856,
+      "rank": 9
+    },
+    {
+      "id": "dfb06b2e1d9a8622",
+      "name": "钱多多",
+      "cash": 13100,
+      "shares": 1,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 14199,
+      "rank": 10
+    },
+    {
+      "id": "7c702611c61a3c76",
+      "name": "Jamal",
+      "cash": 0,
+      "shares": 10,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 10990,
+      "rank": 11
+    },
+    {
+      "id": "43e743505a87d66f",
+      "name": "不言",
+      "cash": 21600,
+      "shares": -10,
+      "isHost": false,
+      "online": true,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 10610,
+      "rank": 12
+    },
+    {
+      "id": "0d5aa18a101b4239",
+      "name": "拆冬瓜补西瓜",
+      "cash": 16400,
+      "shares": -6,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 9806,
+      "rank": 13
+    },
+    {
+      "id": "30500635bb76e06d",
+      "name": "赵C",
+      "cash": 20000,
+      "shares": -10,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 9010,
+      "rank": 14
+    },
+    {
+      "id": "fd84145e75d4467c",
+      "name": "Renard",
+      "cash": 20000,
+      "shares": -10,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 9010,
+      "rank": 14
+    },
+    {
+      "id": "061e487aa3c0df0c",
+      "name": "叶梓",
+      "cash": 11630,
+      "shares": -5,
+      "isHost": true,
+      "online": true,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 6135,
+      "rank": 16
+    },
+    {
+      "id": "1593c5b9fa258642",
+      "name": "123",
+      "cash": -1900,
+      "shares": 7,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 5793,
+      "rank": 17
+    },
+    {
+      "id": "b5989a869733eec2",
+      "name": "木木",
+      "cash": -4279,
+      "shares": 9,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 5612,
+      "rank": 18
+    },
+    {
+      "id": "5bf62bcd351023e2",
+      "name": "sun",
+      "cash": 8600,
+      "shares": -3,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 5303,
+      "rank": 19
+    },
+    {
+      "id": "2085511fc27f80b7",
+      "name": "刘奕祥",
+      "cash": 1254,
+      "shares": 0,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 1254,
+      "rank": 20
+    },
+    {
+      "id": "0acbef85ef296976",
+      "name": "56",
+      "cash": 0,
+      "shares": 0,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 0,
+      "rank": 21
+    },
+    {
+      "id": "0ed2db94ea79859d",
+      "name": "234-2",
+      "cash": 0,
+      "shares": 0,
+      "isHost": false,
+      "online": true,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 0,
+      "rank": 21
+    },
+    {
+      "id": "67984cb4455862ab",
+      "name": "keke",
+      "cash": 0,
+      "shares": 0,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 0,
+      "rank": 21
+    },
+    {
+      "id": "8fad1a4b9a2987ac",
+      "name": "555",
+      "cash": 0,
+      "shares": 0,
+      "isHost": false,
+      "online": true,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 0,
+      "rank": 21
+    },
+    {
+      "id": "9a528ff1316de614",
+      "name": "234",
+      "cash": 0,
+      "shares": 0,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 0,
+      "rank": 21
+    },
+    {
+      "id": "ef07a7c70ef34ff5",
+      "name": "234A",
+      "cash": 0,
+      "shares": 0,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": 0,
+      "rank": 21
+    },
+    {
+      "id": "a828a2d59ff08c88",
+      "name": "周宇阳",
+      "cash": -11900,
+      "shares": 10,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": -910,
+      "rank": 27
+    },
+    {
+      "id": "2bdfb0f7e77e4217",
+      "name": "聪明的骑士",
+      "cash": -1105,
+      "shares": 0,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": -1105,
+      "rank": 28
+    },
+    {
+      "id": "7b1cffd060bef16e",
+      "name": "温敏宜",
+      "cash": -8449,
+      "shares": 3,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": -5152,
+      "rank": 29
+    },
+    {
+      "id": "b4878872134feba2",
+      "name": "11",
+      "cash": -18913,
+      "shares": 10,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": -7923,
+      "rank": 30
+    },
+    {
+      "id": "aa81a5a373032f0f",
+      "name": "杨博浩",
+      "cash": -31653,
+      "shares": 9,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": -21762,
+      "rank": 31
+    },
+    {
+      "id": "f67cc1b02a67434c",
+      "name": "曾加",
+      "cash": -315824,
+      "shares": 10,
+      "isHost": false,
+      "online": false,
+      "isMaker": false,
+      "submitted": false,
+      "pnl": -304834,
+      "rank": 32
+    }
+  ],
+  "humans": 33,
+  "bots": 1,
+  "submitted": 0,
+  "makerId": null,
+  "makerQuote": null,
+  "missedQuotes": 0,
+  "election": [],
+  "roundVolume": 311,
+  "tradeCount": 338,
+  "trades": [
+    {
+      "id": 338,
+      "round": 5,
+      "price": 10000,
+      "qty": 5,
+      "at": 1795425711795,
+      "liquidity": false
+    }
+  ],
+  "replay": null,
+  "book": {
+    "buy": [],
+    "sell": []
+  },
+  "me": {
+    "id": "8fad1a4b9a2987ac",
+    "name": "555",
+    "cash": 0,
+    "shares": 0,
+    "position": 0,
+    "averageEntry": null,
+    "realizedPnl": 0,
+    "unrealizedPnl": 0,
+    "pnl": 0,
+    "available": {
+      "buyLots": 10,
+      "sellLots": 10,
+      "pendingBuyLots": 0,
+      "pendingSellLots": 0
+    },
+    "orders": [],
+    "fills": []
+  },
+  "isHost": false
+}

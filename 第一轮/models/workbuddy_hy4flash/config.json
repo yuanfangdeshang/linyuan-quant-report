@@ -1,0 +1,11 @@
+{
+  "mode": "value",
+  "threshold": 0.02,
+  "maxOrder": 2,
+  "maxPos": 10,
+  "aggressiveTh": 0.05,
+  "cooldown": 0.5,
+  "cancelStale": true,
+  "takeProfit": false,
+  "bookLogEvery": 15
+}

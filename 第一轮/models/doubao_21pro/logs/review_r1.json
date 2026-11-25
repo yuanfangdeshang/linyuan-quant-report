@@ -1,0 +1,239 @@
+{
+  "throughRound": 0,
+  "players": [
+    {
+      "id": "de4aac79f0780ead",
+      "name": "豆包-远方的 mac-自动-高",
+      "bot": false,
+      "trades": []
+    },
+    {
+      "id": "63f1c2dc9a71f995",
+      "name": "豆包-远方的mac-自动-高",
+      "bot": false,
+      "trades": []
+    },
+    {
+      "id": "c64f9cfced6ef32b",
+      "name": "豆包-远方的mac-豆包2.1l",
+      "bot": false,
+      "trades": []
+    },
+    {
+      "id": "bc1554e1705eff9a",
+      "name": "豆包-远方的mac-豆包2.1p",
+      "bot": false,
+      "trades": []
+    },
+    {
+      "id": "9c56abd9d236b7cb",
+      "name": "豆包-远方的 mac-DeepS",
+      "bot": false,
+      "trades": []
+    },
+    {
+      "id": "480e4b250171ed9c",
+      "name": "豆包-远方的mac-Qwen4M",
+      "bot": false,
+      "trades": []
+    },
+    {
+      "id": "490881fafe932e33",
+      "name": "豆包-远方的 mac-Kimi ",
+      "bot": false,
+      "trades": []
+    },
+    {
+      "id": "a2a99d356ca56b0a",
+      "name": "豆包-远方的mac-GLM5.3",
+      "bot": false,
+      "trades": []
+    },
+    {
+      "id": "91c1e1af28134d3f",
+      "name": "豆包-远方的mac-DeepSe",
+      "bot": false,
+      "trades": []
+    },
+    {
+      "id": "ade088e45fff4840",
+      "name": "Workbuddy-Hy4fla",
+      "bot": false,
+      "trades": []
+    },
+    {
+      "id": "cc442098a77095b7",
+      "name": "app-Workbuddy-快速",
+      "bot": false,
+      "trades": []
+    },
+    {
+      "id": "fc7feaeda7932a8d",
+      "name": "Workbuddy-Hy4",
+      "bot": false,
+      "trades": []
+    },
+    {
+      "id": "f4ce592d358a40db",
+      "name": "qoder-DeepSeek f",
+      "bot": false,
+      "trades": []
+    },
+    {
+      "id": "18d5e35cf73ffb62",
+      "name": "quwork-DeepSeek ",
+      "bot": false,
+      "trades": []
+    },
+    {
+      "id": "e413aec5733e9717",
+      "name": "远方的熵",
+      "bot": false,
+      "trades": []
+    },
+    {
+      "id": "bot:liq",
+      "name": "流动性程序",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:mom",
+      "name": "趋势猎手",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:mom2",
+      "name": "趋势猎手乙",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:mrv",
+      "name": "均值回归",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:v1",
+      "name": "价值派1",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:v2",
+      "name": "价值派2",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:v3",
+      "name": "价值派3",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:v4",
+      "name": "价值派4",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:v5",
+      "name": "价值派5",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:v6",
+      "name": "价值派6",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:v7",
+      "name": "价值派7",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:v8",
+      "name": "价值派8",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:v9",
+      "name": "价值派9",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:v10",
+      "name": "价值派10",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:v11",
+      "name": "价值派11",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:v12",
+      "name": "价值派12",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:n1",
+      "name": "噪声1",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:n2",
+      "name": "噪声2",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:n3",
+      "name": "噪声3",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:n4",
+      "name": "噪声4",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:n5",
+      "name": "噪声5",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:n6",
+      "name": "噪声6",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:n7",
+      "name": "噪声7",
+      "bot": true,
+      "trades": []
+    },
+    {
+      "id": "bot:n8",
+      "name": "噪声8",
+      "bot": true,
+      "trades": []
+    }
+  ]
+}

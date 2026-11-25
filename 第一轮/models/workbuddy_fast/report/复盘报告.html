@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>临渊量化・交易竞技复盘报告 — app-Workbuddy-快速</title>
+<style>
+:root { color-scheme: dark; }
+body { background:#0d1117; color:#e6edf3; font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; margin:0; padding:0; line-height:1.75; }
+.wrap { max-width:860px; margin:0 auto; padding:36px 20px 80px; }
+h1 { font-size:30px; margin:8px 0 4px; letter-spacing:1px; }
+h2 { font-size:21px; margin:44px 0 12px; padding-bottom:8px; border-bottom:1px solid #21262d; }
+h3 { font-size:17px; margin:26px 0 10px; color:#58a6ff; }
+h4 { font-size:13.5px; margin:14px 0 6px; color:#d29922; text-transform:none; }
+p { margin:8px 0; }
+.mut { color:#8b949e; }
+.g { color:#3fb950; font-weight:600; } .r { color:#f85149; font-weight:600; }
+.card { background:#161b22; border:1px solid #21262d; border-radius:12px; padding:18px 20px; margin:14px 0; }
+.kpis { display:flex; flex-wrap:wrap; gap:10px; margin:10px 0; }
+.kpi { background:#0d1117; border:1px solid #21262d; border-radius:8px; padding:4px 12px; font-size:12.5px; color:#8b949e; }
+.kpi b { color:#e6edf3; margin-left:4px; }
+.ghead { display:flex; align-items:baseline; gap:10px; }
+.gnum { background:#58a6ff; color:#0d1117; font-weight:800; border-radius:6px; padding:2px 10px; font-size:14px; }
+.gq { font-size:15.5px; font-weight:700; }
+.tag { display:inline-block; background:#21262d; color:#58a6ff; border-radius:4px; padding:0 7px; font-size:11.5px; margin-right:6px; font-family:ui-monospace,monospace; }
+table { width:100%; border-collapse:collapse; font-size:12.5px; margin:6px 0; }
+th { color:#8b949e; text-align:left; padding:4px 8px; border-bottom:1px solid #21262d; font-weight:600; }
+td { padding:4px 8px; border-bottom:1px solid #21262d; }
+td.g { color:#3fb950; } td.r { color:#f85149; }
+.hero { text-align:center; padding:30px 20px 10px; }
+.sub { color:#8b949e; font-size:14px; }
+.badge { display:inline-block; border:1px solid #21262d; background:#161b22; border-radius:20px; padding:3px 14px; margin:4px 4px; font-size:12.5px; color:#8b949e; }
+.badge b { color:#e6edf3; }
+.phase { border-left:3px solid #58a6ff; padding:2px 0 2px 16px; margin:18px 0; }
+.phase h3 { margin:0 0 8px; }
+.les { font-size:13.5px; color:#c9d1d9; }
+.les p { margin:6px 0; }
+.callout { background:rgba(88,166,255,0.08); border:1px solid rgba(88,166,255,0.3); border-radius:10px; padding:12px 16px; margin:14px 0; font-size:13.5px; }
+.warn { background:rgba(248,81,73,0.08); border:1px solid rgba(248,81,73,0.35); border-radius:10px; padding:12px 16px; margin:14px 0; font-size:13.5px; }
+ol li, ul li { margin:6px 0; }
+code { background:#21262d; border-radius:4px; padding:1px 6px; font-size:12.5px; }
+</style></head><body><div class="wrap">
+
+<div class="hero">
+  <div class="sub">临渊量化 · 多模型实时交易竞技场 · 全程复盘</div>
+  <h1>零和信息博弈里的求生实录</h1>
+  <div class="sub">参赛选手：app-Workbuddy-快速 ｜ 房间 258334 ｜ 12局（1测试+11正式）× 3~5轮 × 60秒</div>
+  <div>
+    <span class="badge">最终排名 <b>第 10 名 / 15 人</b></span>
+    <span class="badge">总积分 <b>84</b></span>
+    <span class="badge">起步 <b>垫底</b></span>
+    <span class="badge">联网搜索 <b>0 次</b></span>
+  </div>
+</div>
+
+<div class="callout">这场比赛我只赚两种钱：对世界的理解（估得准），和对人心的理解（比对手早半秒动）。十二局打完，我的结论是——<b>第二种钱大得多</b>。真值线索人人可见，胜负取决于谁先在第一秒完成「线索 → 真值 → 重仓」的闭环。</div>
+
+<h2>一、最终成绩单</h2>
+<p>15名参赛者（4台设备上的13个人类模型 + 24个脚本玩家互为对手盘）。我的轨迹：<b>第15名起步（1分）→ 中段爬升 → 最终84分第10名</b>。前半程我一直在给市场交学费，后半程才开始收割。</p>
+<svg viewBox="0 0 720 460" style="width:100%;background:#161b22;border-radius:10px"><text x="142" y="34.3" fill="#8b949e" font-size="11" text-anchor="end" font-weight="400">1. quwork-DeepSeek </text><rect x="150" y="20.9" width="486.5" height="18.8" fill="#3fb950" rx="3"/><text x="644.5" y="34.3" fill="#e6edf3" font-size="11">124</text><text x="142" y="62.8" fill="#8b949e" font-size="11" text-anchor="end" font-weight="400">2. 豆包-远方的mac-GLM5.3</text><rect x="150" y="49.4" width="462.9" height="18.8" fill="#3fb950" rx="3"/><text x="620.9" y="62.8" fill="#e6edf3" font-size="11">118</text><text x="142" y="91.3" fill="#8b949e" font-size="11" text-anchor="end" font-weight="400">3. 豆包-远方的mac-自动-高</text><rect x="150" y="77.9" width="455.1" height="18.8" fill="#3fb950" rx="3"/><text x="613.1" y="91.3" fill="#e6edf3" font-size="11">116</text><text x="142" y="119.9" fill="#8b949e" font-size="11" text-anchor="end" font-weight="400">3. Workbuddy-Hy4fla</text><rect x="150" y="106.5" width="455.1" height="18.8" fill="#3fb950" rx="3"/><text x="613.1" y="119.9" fill="#e6edf3" font-size="11">116</text><text x="142" y="148.4" fill="#8b949e" font-size="11" text-anchor="end" font-weight="400">5. 豆包-远方的 mac-DeepS</text><rect x="150" y="135.0" width="447.2" height="18.8" fill="#3fb950" rx="3"/><text x="605.2" y="148.4" fill="#e6edf3" font-size="11">114</text><text x="142" y="176.9" fill="#8b949e" font-size="11" text-anchor="end" font-weight="400">6. qoder-DeepSeek f</text><rect x="150" y="163.5" width="431.5" height="18.8" fill="#3fb950" rx="3"/><text x="589.5" y="176.9" fill="#e6edf3" font-size="11">110</text><text x="142" y="205.5" fill="#8b949e" font-size="11" text-anchor="end" font-weight="400">7. 豆包-远方的 mac-Kimi </text><rect x="150" y="192.1" width="404.1" height="18.8" fill="#3fb950" rx="3"/><text x="562.1" y="205.5" fill="#e6edf3" font-size="11">103</text><text x="142" y="234.0" fill="#8b949e" font-size="11" text-anchor="end" font-weight="400">8. Workbuddy-Hy4</text><rect x="150" y="220.6" width="345.2" height="18.8" fill="#d29922" rx="3"/><text x="503.2" y="234.0" fill="#e6edf3" font-size="11">88</text><text x="142" y="262.5" fill="#8b949e" font-size="11" text-anchor="end" font-weight="400">9. 豆包-远方的mac-DeepSe</text><rect x="150" y="249.1" width="337.4" height="18.8" fill="#d29922" rx="3"/><text x="495.4" y="262.5" fill="#e6edf3" font-size="11">86</text><text x="142" y="291.1" fill="#58a6ff" font-size="11" text-anchor="end" font-weight="700">10. app-Workbuddy-快速</text><rect x="150" y="277.7" width="329.5" height="18.8" fill="#58a6ff" rx="3"/><text x="487.5" y="291.1" fill="#e6edf3" font-size="11">84</text><text x="142" y="319.6" fill="#8b949e" font-size="11" text-anchor="end" font-weight="400">11. 豆包-远方的 mac-自动-高</text><rect x="150" y="306.2" width="313.8" height="18.8" fill="#d29922" rx="3"/><text x="471.8" y="319.6" fill="#e6edf3" font-size="11">80</text><text x="142" y="348.1" fill="#8b949e" font-size="11" text-anchor="end" font-weight="400">11. 豆包-远方的mac-豆包2.1l</text><rect x="150" y="334.7" width="313.8" height="18.8" fill="#d29922" rx="3"/><text x="471.8" y="348.1" fill="#e6edf3" font-size="11">80</text><text x="142" y="376.7" fill="#8b949e" font-size="11" text-anchor="end" font-weight="400">11. 远方的熵</text><rect x="150" y="363.3" width="313.8" height="18.8" fill="#d29922" rx="3"/><text x="471.8" y="376.7" fill="#e6edf3" font-size="11">80</text><text x="142" y="405.2" fill="#8b949e" font-size="11" text-anchor="end" font-weight="400">14. 豆包-远方的mac-Qwen4M</text><rect x="150" y="391.8" width="262.8" height="18.8" fill="#57606a" rx="3"/><text x="420.8" y="405.2" fill="#e6edf3" font-size="11">67</text><text x="142" y="433.7" fill="#8b949e" font-size="11" text-anchor="end" font-weight="400">15. 豆包-远方的mac-豆包2.1p</text><rect x="150" y="420.3" width="227.5" height="18.8" fill="#57606a" rx="3"/><text x="385.5" y="433.7" fill="#e6edf3" font-size="11">58</text></svg>
+<p class="mut">头部选手（quwork-DeepSeek 124分、GLM5.3 118分、自动-高/Hy4fla 116分）的共同点：没有单局崩盘，稳定拿11-14分/局；而我有两次大坑（G2第15名、G12第13名），这两局就吃掉了约25分的差距。</p>
+
+<h2>二、积分曲线与逐局表现</h2>
+<svg viewBox="0 0 720 300" style="width:100%;background:#161b22;border-radius:10px">
+    <line x1="46" y1="260.0" x2="704" y2="260.0" stroke="#21262d" stroke-width="1"/><text x="40" y="264.0" fill="#8b949e" font-size="11" text-anchor="end">0</text><line x1="46" y1="212.0" x2="704" y2="212.0" stroke="#21262d" stroke-width="1"/><text x="40" y="216.0" fill="#8b949e" font-size="11" text-anchor="end">20</text><line x1="46" y1="164.0" x2="704" y2="164.0" stroke="#21262d" stroke-width="1"/><text x="40" y="168.0" fill="#8b949e" font-size="11" text-anchor="end">40</text><line x1="46" y1="116.0" x2="704" y2="116.0" stroke="#21262d" stroke-width="1"/><text x="40" y="120.0" fill="#8b949e" font-size="11" text-anchor="end">60</text><line x1="46" y1="68.0" x2="704" y2="68.0" stroke="#21262d" stroke-width="1"/><text x="40" y="72.0" fill="#8b949e" font-size="11" text-anchor="end">80</text><line x1="46" y1="20.0" x2="704" y2="20.0" stroke="#21262d" stroke-width="1"/><text x="40" y="24.0" fill="#8b949e" font-size="11" text-anchor="end">100</text><text x="46.0" y="284" fill="#8b949e" font-size="10" text-anchor="middle">G2</text><text x="111.8" y="284" fill="#8b949e" font-size="10" text-anchor="middle">G3</text><text x="177.6" y="284" fill="#8b949e" font-size="10" text-anchor="middle">G4</text><text x="243.4" y="284" fill="#8b949e" font-size="10" text-anchor="middle">G5</text><text x="309.2" y="284" fill="#8b949e" font-size="10" text-anchor="middle">G6</text><text x="375.0" y="284" fill="#8b949e" font-size="10" text-anchor="middle">G7</text><text x="440.8" y="284" fill="#8b949e" font-size="10" text-anchor="middle">G8</text><text x="506.6" y="284" fill="#8b949e" font-size="10" text-anchor="middle">G9</text><text x="572.4" y="284" fill="#8b949e" font-size="10" text-anchor="middle">G10</text><text x="638.2" y="284" fill="#8b949e" font-size="10" text-anchor="middle">G11</text><text x="704.0" y="284" fill="#8b949e" font-size="10" text-anchor="middle">G12</text><polyline points="46.0,257.6 111.8,243.2 177.6,226.4 243.4,212.0 309.2,185.6 375.0,159.2 440.8,140.0 506.6,111.2 572.4,87.2 638.2,65.6 704.0,58.4" fill="none" stroke="#58a6ff" stroke-width="2.5"/>
+    <polygon points="46,260.0 46.0,257.6 111.8,243.2 177.6,226.4 243.4,212.0 309.2,185.6 375.0,159.2 440.8,140.0 506.6,111.2 572.4,87.2 638.2,65.6 704.0,58.4 704.0,260.0" fill="rgba(88,166,255,0.08)"/> <circle cx="46.0" cy="257.6" r="3.5" fill="#58a6ff"/><text x="46.0" y="248.6" fill="#58a6ff" font-size="10.5" text-anchor="middle">1</text><circle cx="111.8" cy="243.2" r="3.5" fill="#58a6ff"/><text x="111.8" y="234.2" fill="#58a6ff" font-size="10.5" text-anchor="middle">7</text><circle cx="177.6" cy="226.4" r="3.5" fill="#58a6ff"/><text x="177.6" y="217.4" fill="#58a6ff" font-size="10.5" text-anchor="middle">14</text><circle cx="243.4" cy="212.0" r="3.5" fill="#58a6ff"/><text x="243.4" y="203.0" fill="#58a6ff" font-size="10.5" text-anchor="middle">20</text><circle cx="309.2" cy="185.6" r="3.5" fill="#58a6ff"/><text x="309.2" y="176.6" fill="#58a6ff" font-size="10.5" text-anchor="middle">31</text><circle cx="375.0" cy="159.2" r="3.5" fill="#58a6ff"/><text x="375.0" y="150.2" fill="#58a6ff" font-size="10.5" text-anchor="middle">42</text><circle cx="440.8" cy="140.0" r="3.5" fill="#58a6ff"/><text x="440.8" y="131.0" fill="#58a6ff" font-size="10.5" text-anchor="middle">50</text><circle cx="506.6" cy="111.2" r="3.5" fill="#58a6ff"/><text x="506.6" y="102.2" fill="#58a6ff" font-size="10.5" text-anchor="middle">62</text><circle cx="572.4" cy="87.2" r="3.5" fill="#58a6ff"/><text x="572.4" y="78.2" fill="#58a6ff" font-size="10.5" text-anchor="middle">72</text><circle cx="638.2" cy="65.6" r="3.5" fill="#58a6ff"/><text x="638.2" y="56.6" fill="#58a6ff" font-size="10.5" text-anchor="middle">81</text><circle cx="704.0" cy="58.4" r="3.5" fill="#58a6ff"/><text x="704.0" y="49.4" fill="#58a6ff" font-size="10.5" text-anchor="middle">84</text>
+    <text x="46" y="14" fill="#8b949e" font-size="12">累计积分</text></svg>
+<svg viewBox="0 0 720 260" style="width:100%;background:#161b22;border-radius:10px"><line x1="46" y1="220.0" x2="704" y2="220.0" stroke="#21262d"/><text x="40" y="224.0" fill="#8b949e" font-size="11" text-anchor="end">0</text><line x1="46" y1="170.0" x2="704" y2="170.0" stroke="#21262d"/><text x="40" y="174.0" fill="#8b949e" font-size="11" text-anchor="end">4</text><line x1="46" y1="120.0" x2="704" y2="120.0" stroke="#21262d"/><text x="40" y="124.0" fill="#8b949e" font-size="11" text-anchor="end">8</text><line x1="46" y1="70.0" x2="704" y2="70.0" stroke="#21262d"/><text x="40" y="74.0" fill="#8b949e" font-size="11" text-anchor="end">12</text><line x1="46" y1="20.0" x2="704" y2="20.0" stroke="#21262d"/><text x="40" y="24.0" fill="#8b949e" font-size="11" text-anchor="end">16</text><rect x="57.4" y="207.5" width="37.1" height="12.5" fill="#f85149" rx="3"/><text x="75.9" y="201.5" fill="#f85149" font-size="10.5" text-anchor="middle">1</text><text x="75.9" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G2</text><rect x="117.2" y="145.0" width="37.1" height="75.0" fill="#d29922" rx="3"/><text x="135.7" y="139.0" fill="#d29922" font-size="10.5" text-anchor="middle">6</text><text x="135.7" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G3</text><rect x="177.0" y="132.5" width="37.1" height="87.5" fill="#d29922" rx="3"/><text x="195.5" y="126.5" fill="#d29922" font-size="10.5" text-anchor="middle">7</text><text x="195.5" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G4</text><rect x="236.8" y="145.0" width="37.1" height="75.0" fill="#d29922" rx="3"/><text x="255.4" y="139.0" fill="#d29922" font-size="10.5" text-anchor="middle">6</text><text x="255.4" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G5</text><rect x="296.6" y="82.5" width="37.1" height="137.5" fill="#3fb950" rx="3"/><text x="315.2" y="76.5" fill="#3fb950" font-size="10.5" text-anchor="middle">11</text><text x="315.2" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G6</text><rect x="356.5" y="82.5" width="37.1" height="137.5" fill="#3fb950" rx="3"/><text x="375.0" y="76.5" fill="#3fb950" font-size="10.5" text-anchor="middle">11</text><text x="375.0" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G7</text><rect x="416.3" y="120.0" width="37.1" height="100.0" fill="#d29922" rx="3"/><text x="434.8" y="114.0" fill="#d29922" font-size="10.5" text-anchor="middle">8</text><text x="434.8" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G8</text><rect x="476.1" y="70.0" width="37.1" height="150.0" fill="#3fb950" rx="3"/><text x="494.6" y="64.0" fill="#3fb950" font-size="10.5" text-anchor="middle">12</text><text x="494.6" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G9</text><rect x="535.9" y="95.0" width="37.1" height="125.0" fill="#3fb950" rx="3"/><text x="554.5" y="89.0" fill="#3fb950" font-size="10.5" text-anchor="middle">10</text><text x="554.5" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G10</text><rect x="595.7" y="107.5" width="37.1" height="112.5" fill="#d29922" rx="3"/><text x="614.3" y="101.5" fill="#d29922" font-size="10.5" text-anchor="middle">9</text><text x="614.3" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G11</text><rect x="655.5" y="182.5" width="37.1" height="37.5" fill="#f85149" rx="3"/><text x="674.1" y="176.5" fill="#f85149" font-size="10.5" text-anchor="middle">3</text><text x="674.1" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G12</text><text x="46" y="14" fill="#8b949e" font-size="12">单局积分（N=15，积分=16−名次）</text></svg>
+<p>积分从G6开始加速：那是我从「凭直觉估价」切换到「信号驱动重估」的转折点。</p>
+<svg viewBox="0 0 720 260" style="width:100%;background:#161b22;border-radius:10px"><line x1="46" y1="20.0" x2="704" y2="20.0" stroke="#21262d"/><text x="40" y="24.0" fill="#8b949e" font-size="11" text-anchor="end">第1名</text><line x1="46" y1="77.1" x2="704" y2="77.1" stroke="#21262d"/><text x="40" y="81.1" fill="#8b949e" font-size="11" text-anchor="end">第5名</text><line x1="46" y1="148.6" x2="704" y2="148.6" stroke="#21262d"/><text x="40" y="152.6" fill="#8b949e" font-size="11" text-anchor="end">第10名</text><line x1="46" y1="220.0" x2="704" y2="220.0" stroke="#21262d"/><text x="40" y="224.0" fill="#8b949e" font-size="11" text-anchor="end">第15名</text><text x="46.0" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G2</text><text x="111.8" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G3</text><text x="177.6" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G4</text><text x="243.4" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G5</text><text x="309.2" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G6</text><text x="375.0" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G7</text><text x="440.8" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G8</text><text x="506.6" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G9</text><text x="572.4" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G10</text><text x="638.2" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G11</text><text x="704.0" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G12</text><polyline points="46.0,220.0 111.8,148.6 177.6,134.3 243.4,148.6 309.2,77.1 375.0,77.1 440.8,120.0 506.6,62.9 572.4,91.4 638.2,105.7 704.0,191.4" fill="none" stroke="#bc8cff" stroke-width="2.5"/><circle cx="46.0" cy="220.0" r="4" fill="#f85149"/><text x="46.0" y="211.0" fill="#e6edf3" font-size="10.5" text-anchor="middle">15</text><circle cx="111.8" cy="148.6" r="4" fill="#f85149"/><text x="111.8" y="139.6" fill="#e6edf3" font-size="10.5" text-anchor="middle">10</text><circle cx="177.6" cy="134.3" r="4" fill="#d29922"/><text x="177.6" y="125.3" fill="#e6edf3" font-size="10.5" text-anchor="middle">9</text><circle cx="243.4" cy="148.6" r="4" fill="#f85149"/><text x="243.4" y="139.6" fill="#e6edf3" font-size="10.5" text-anchor="middle">10</text><circle cx="309.2" cy="77.1" r="4" fill="#bc8cff"/><text x="309.2" y="68.1" fill="#e6edf3" font-size="10.5" text-anchor="middle">5</text><circle cx="375.0" cy="77.1" r="4" fill="#bc8cff"/><text x="375.0" y="68.1" fill="#e6edf3" font-size="10.5" text-anchor="middle">5</text><circle cx="440.8" cy="120.0" r="4" fill="#d29922"/><text x="440.8" y="111.0" fill="#e6edf3" font-size="10.5" text-anchor="middle">8</text><circle cx="506.6" cy="62.9" r="4" fill="#bc8cff"/><text x="506.6" y="53.9" fill="#e6edf3" font-size="10.5" text-anchor="middle">4</text><circle cx="572.4" cy="91.4" r="4" fill="#d29922"/><text x="572.4" y="82.4" fill="#e6edf3" font-size="10.5" text-anchor="middle">6</text><circle cx="638.2" cy="105.7" r="4" fill="#d29922"/><text x="638.2" y="96.7" fill="#e6edf3" font-size="10.5" text-anchor="middle">7</text><circle cx="704.0" cy="191.4" r="4" fill="#f85149"/><text x="704.0" y="182.4" fill="#e6edf3" font-size="10.5" text-anchor="middle">13</text><text x="46" y="14" fill="#8b949e" font-size="12">单局名次（越低越好）</text></svg>
+<svg viewBox="0 0 720 260" style="width:100%;background:#161b22;border-radius:10px"><line x1="40" y1="220.0" x2="704" y2="220.0" stroke="#21262d"/><text x="34" y="224.0" fill="#8b949e" font-size="11" text-anchor="end">0</text><line x1="40" y1="181.5" x2="704" y2="181.5" stroke="#21262d"/><text x="34" y="185.5" fill="#8b949e" font-size="11" text-anchor="end">100</text><line x1="40" y1="143.1" x2="704" y2="143.1" stroke="#21262d"/><text x="34" y="147.1" fill="#8b949e" font-size="11" text-anchor="end">200</text><line x1="40" y1="104.6" x2="704" y2="104.6" stroke="#21262d"/><text x="34" y="108.6" fill="#8b949e" font-size="11" text-anchor="end">300</text><line x1="40" y1="66.2" x2="704" y2="66.2" stroke="#21262d"/><text x="34" y="70.2" fill="#8b949e" font-size="11" text-anchor="end">400</text><line x1="40" y1="27.7" x2="704" y2="27.7" stroke="#21262d"/><text x="34" y="31.7" fill="#8b949e" font-size="11" text-anchor="end">500</text><rect x="52.1" y="220.0" width="36.2" height="1.0" fill="#f85149" rx="2"/><text x="70.2" y="234.7" fill="#f85149" font-size="10" text-anchor="middle">-1.71</text><text x="70.2" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G2</text><rect x="112.4" y="220.0" width="36.2" height="1.0" fill="#3fb950" rx="2"/><text x="130.5" y="214.0" fill="#3fb950" font-size="10" text-anchor="middle">0.08</text><text x="130.5" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G3</text><rect x="172.8" y="193.1" width="36.2" height="26.9" fill="#3fb950" rx="2"/><text x="190.9" y="187.1" fill="#3fb950" font-size="10" text-anchor="middle">70</text><text x="190.9" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G4</text><rect x="233.2" y="218.1" width="36.2" height="1.9" fill="#3fb950" rx="2"/><text x="251.3" y="212.1" fill="#3fb950" font-size="10" text-anchor="middle">5</text><text x="251.3" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G5</text><rect x="293.5" y="220.0" width="36.2" height="1.0" fill="#8b949e" rx="2"/><text x="311.6" y="214.0" fill="#8b949e" font-size="10" text-anchor="middle">0</text><text x="311.6" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G6</text><rect x="353.9" y="42.3" width="36.2" height="177.7" fill="#3fb950" rx="2"/><text x="372.0" y="36.3" fill="#3fb950" font-size="10" text-anchor="middle">462.00</text><text x="372.0" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G7</text><rect x="414.3" y="220.0" width="36.2" height="1.0" fill="#8b949e" rx="2"/><text x="432.4" y="214.0" fill="#8b949e" font-size="10" text-anchor="middle">0</text><text x="432.4" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G8</text><rect x="474.6" y="80.2" width="36.2" height="139.8" fill="#3fb950" rx="2"/><text x="492.7" y="74.2" fill="#3fb950" font-size="10" text-anchor="middle">363.46</text><text x="492.7" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G9</text><rect x="535.0" y="220.0" width="36.2" height="1.0" fill="#8b949e" rx="2"/><text x="553.1" y="214.0" fill="#8b949e" font-size="10" text-anchor="middle">0</text><text x="553.1" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G10</text><rect x="595.3" y="34.3" width="36.2" height="185.7" fill="#3fb950" rx="2"/><text x="613.5" y="28.3" fill="#3fb950" font-size="10" text-anchor="middle">482.72</text><text x="613.5" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G11</text><rect x="655.7" y="220.0" width="36.2" height="7.7" fill="#f85149" rx="2"/><text x="673.8" y="241.7" fill="#f85149" font-size="10" text-anchor="middle">-20</text><text x="673.8" y="244" fill="#8b949e" font-size="10" text-anchor="middle">G12</text><text x="40" y="14" fill="#8b949e" font-size="12">单局盈亏（单位，正值=赚钱）</text></svg>
+<p class="mut">注：G6/G8/G10我0仓位居第5/第8/第6——15人里有一半在追涨杀跌，空仓本身就是名次。G7（+462）、G9（+363）、G11（+483）三场重估狩猎贡献了几乎全部正收益。</p>
+
+<h2>三、策略进化史：五个阶段</h2>
+
+<div class="phase"><h3>阶段一 · 直觉期（G1-G2）：我以为自己很懂</h3>
+<p>开局连上SSE后，我用内部知识估「上海肯德基700家中的620」，开盘价715.61公布后我认定市场错了，空5手@704.17——然后整轮一动不动。测试局+20.85，第5名，给了我不该有的自信。</p>
+<p>正式第1题（世界面积第104大的国家）我答「古巴11.09万km²」，方向对了但口径错了（英文维基109,884=10.99），加上两次价格单位写错（111.2 应为 11.12）、一次僵尸卖单挂上11190、高成本多单不舍得砍——<b>单局第15名，全场垫底</b>。</p>
+<p><b>学到的：</b>开盘价是24个脚本玩家估值锚的中位数，是强信息；我的孤证知识不该硬顶共识。信息源口径是生死线——线索一定来自某个特定来源，第4轮的"西班牙第50名"就是让我反推来源的钥匙，我没用。</p></div>
+
+<div class="phase"><h3>阶段二 · 收租期（G3-G5）：发现噪声玩家是流动性</h3>
+<p>G3高铁4.8、G4上海港5150.6、G5机场263——三题官方数字我都答对，开盘价也与我重合。我在真值两侧±1%挂双边单，收割噪声程序：G4的卖单@5185被两个噪声玩家吃掉，空2手到结算+70；G5在262以下连买5手多单，+5。</p>
+<p>这个阶段稳定小赚，但也暴露了天花板：收租的单局上限只有几十个单位，而头部选手单局赚上千。<b>钱在重估行情里，不在窄幅震荡里。</b></p></div>
+
+<div class="phase"><h3>阶段三 · 顿悟期（G6-G8）：反应速度才是入场券</h3>
+<p>G6（鸡蛋30个）：线索链「两盒→10枚+30枚→每天煎两个吃五天」把真值从22.55一路推到30，我全程0成交——因为我把自己锁在180秒的阻塞监控调用里，每轮线索出现时我都不在场。第5名的11分纯属他人亏损的运气。</p>
+<p>G7（步数8476）：第3轮「千位是8，百位是4」落地的瞬间，真值区间锁死为[8400,8499]，市场还在8050。<b>我第一次做到了信号落地即行动</b>：8399扫货6手，结算8476，+462，第5名。买在区间下限以下是数学上的无风险套利。</p>
+<p>G8（照片7张）：「个位数+质数」→期望4.25，市场15→6.83，我又全程观战。连续两次把利润窗关在门外，我彻底想明白了：<b>我的每个回合（工具调用间隔）有5-10秒延迟，而重估在信号落地后1-3秒内完成——人工循环永远追不上，必须自动化。</b></p></div>
+
+<div class="phase"><h3>阶段四 · 重估狩猎期（G9-G11）：开门线索即满仓</h3>
+<p>G9（微信未读0条）是全场打最好的局：开盘36.63，<b>第1轮线索直接锁死真值</b>——「看到红点就点掉，从不留未读」。我没有等第二轮确认，立即空5手@36.39，第2轮再确认后果断加到满仓-10@36.35。市场从36.6崩到15.5，结算0。<b>+363单位，全场第4名。</b>价值派脚本的锚还停在36，逆着新线索抬价——真值在手时，他们的反弹就是送钱。</p>
+<p>G10（屏幕时长25.6h）：区间推算完全正确（每天3.5-4小时→每周[24.5,28]），但r2时挂的38.8买单在崩盘瞬间被打穿成多单——万幸同时我的卖单也有3手同价成交，净仓归零，白捡一条命。新铁律诞生：<b>线索落地第一件事是cancelAll。</b></p>
+<p>G11（好友1001人）：我估250，开盘1036.67直接打脸——这次我立刻尊重共识修正预期。第3轮「四位数，比一千多一点点，不到一千一」，措辞偏低端，我算E≈1045，市场1061.34挂着16手深买盘，空8手全部成交。结算1001，+482.72，第7名。<b>直觉+共识+信号，三者权重开始校准。</b></p></div>
+
+<div class="phase"><h3>阶段五 · 机械化（G12与赛后）：把反应速度写进代码</h3>
+<p>G12（解锁87次）：第3轮「两位数，比八十多一点，不到九十」→期望85。我挂101.09卖10手，但单子到达时市场已崩到98——僵尸单再次出现；撤销改挂85全出时重估已结束，期望盈亏归零，结算87小亏20，第13名。</p>
+<p>这场比赛让我把话说死：<b>人工决策循环（每次工具调用间隔5-10秒）在秒级重估面前毫无胜算。</b>赛后我写完了自动交易机器人（autotrade.py：正则解析数位约束/区间描述/质数约束→计算期望值→偏离超3%自动cancelAll并朝真值方向满仓建仓，0.3秒一轮），但它没来得及上场。下一场比赛的第一件事就是部署它。</p></div>
+
+<h2>三·五、官方数据核证：轮末价格路径与反应延迟</h2>
+<p>以下数据来自服务器赛后全量导出（30 笔本人成交、7444 笔全场成交，价格均为官方记录）。每个折线是「开盘 → 各轮收盘 → 结算价」的真实路径；<span style="color:#3fb950">绿菱形</span>=我的买入，<span style="color:#f85149">红菱形</span>=我的卖出，橙点是结算价。</p>
+<div style="display:flex;gap:14px;flex-wrap:wrap;margin:10px 0"><div style="flex:1;min-width:320px"><p style="margin:4px 0"><span class="gnum">G2</span> <b>世界上面积第 104 大的国家，面积约为多少万平方公里？（保留两位小…</b></p><svg viewBox="0 0 720 210" style="width:100%;background:#161b22;border-radius:10px"><line x1="52" y1="156.1" x2="660" y2="156.1" stroke="#21262d"/><text x="46" y="160.1" fill="#8b949e" font-size="10.5" text-anchor="end">10.64</text><line x1="52" y1="101.0" x2="660" y2="101.0" stroke="#21262d"/><text x="46" y="105.0" fill="#8b949e" font-size="10.5" text-anchor="end">11.015</text><line x1="52" y1="45.9" x2="660" y2="45.9" stroke="#21262d"/><text x="46" y="49.9" fill="#8b949e" font-size="10.5" text-anchor="end">11.39</text><text x="52.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">开盘</text><text x="153.3" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R1末</text><text x="254.7" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R2末</text><text x="356.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R3末</text><text x="457.3" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R4末</text><text x="558.7" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R5末</text><text x="660.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">结算</text><polyline points="52.0,56.1 153.3,79.7 254.7,45.9 356.0,47.3 457.3,90.0 558.7,156.1 660.0,104.7" fill="none" stroke="#58a6ff" stroke-width="2.2"/><circle cx="52.0" cy="56.1" r="3.5" fill="#58a6ff" /><text x="52.0" y="47.1" fill="#58a6ff" font-size="10.5" text-anchor="middle">11.32</text><circle cx="153.3" cy="79.7" r="3.5" fill="#58a6ff" /><text x="153.3" y="70.7" fill="#58a6ff" font-size="10.5" text-anchor="middle">11.16</text><circle cx="254.7" cy="45.9" r="3.5" fill="#58a6ff" /><text x="254.7" y="36.9" fill="#58a6ff" font-size="10.5" text-anchor="middle">11.39</text><circle cx="356.0" cy="47.3" r="3.5" fill="#58a6ff" /><text x="356.0" y="38.3" fill="#58a6ff" font-size="10.5" text-anchor="middle">11.38</text><circle cx="457.3" cy="90.0" r="3.5" fill="#58a6ff" /><text x="457.3" y="81.0" fill="#58a6ff" font-size="10.5" text-anchor="middle">11.09</text><circle cx="558.7" cy="156.1" r="3.5" fill="#58a6ff" /><text x="558.7" y="147.1" fill="#58a6ff" font-size="10.5" text-anchor="middle">10.64</text><circle cx="660.0" cy="104.7" r="3.5" fill="#f0883e" /><text x="660.0" y="95.7" fill="#f0883e" font-size="10.5" text-anchor="middle">10.99</text><path d="M 356.0 75.1 l 5 6 l -5 6 l -5 -6 Z" fill="#3fb950" stroke="#0d1117" stroke-width="1"/><path d="M 356.0 56.0 l 5 6 l -5 6 l -5 -6 Z" fill="#3fb950" stroke="#0d1117" stroke-width="1"/><path d="M 356.0 41.3 l 5 6 l -5 6 l -5 -6 Z" fill="#3fb950" stroke="#0d1117" stroke-width="1"/></svg></div><div style="flex:1;min-width:320px"><p style="margin:4px 0"><span class="gnum">G7</span> <b>此人今天（11 月 21 日）走了多少步？…</b></p><svg viewBox="0 0 720 210" style="width:100%;background:#161b22;border-radius:10px"><line x1="52" y1="156.1" x2="660" y2="156.1" stroke="#21262d"/><text x="46" y="160.1" fill="#8b949e" font-size="10.5" text-anchor="end">7952</text><line x1="52" y1="101.0" x2="660" y2="101.0" stroke="#21262d"/><text x="46" y="105.0" fill="#8b949e" font-size="10.5" text-anchor="end">8275.5</text><line x1="52" y1="45.9" x2="660" y2="45.9" stroke="#21262d"/><text x="46" y="49.9" fill="#8b949e" font-size="10.5" text-anchor="end">8599</text><text x="52.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">开盘</text><text x="204.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R1末</text><text x="356.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R2末</text><text x="508.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R3末</text><text x="660.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">结算</text><polyline points="52.0,148.0 204.0,141.1 356.0,156.1 508.0,45.9 660.0,66.8" fill="none" stroke="#58a6ff" stroke-width="2.2"/><circle cx="52.0" cy="148.0" r="3.5" fill="#58a6ff" /><text x="52.0" y="139.0" fill="#58a6ff" font-size="10.5" text-anchor="middle">8000</text><circle cx="204.0" cy="141.1" r="3.5" fill="#58a6ff" /><text x="204.0" y="132.1" fill="#58a6ff" font-size="10.5" text-anchor="middle">8040.16</text><circle cx="356.0" cy="156.1" r="3.5" fill="#58a6ff" /><text x="356.0" y="147.1" fill="#58a6ff" font-size="10.5" text-anchor="middle">7952</text><circle cx="508.0" cy="45.9" r="3.5" fill="#58a6ff" /><text x="508.0" y="36.9" fill="#58a6ff" font-size="10.5" text-anchor="middle">8599</text><circle cx="660.0" cy="66.8" r="3.5" fill="#f0883e" /><text x="660.0" y="57.8" fill="#f0883e" font-size="10.5" text-anchor="middle">8476</text><path d="M 508.0 73.9 l 5 6 l -5 6 l -5 -6 Z" fill="#3fb950" stroke="#0d1117" stroke-width="1"/><path d="M 508.0 73.9 l 5 6 l -5 6 l -5 -6 Z" fill="#3fb950" stroke="#0d1117" stroke-width="1"/><path d="M 508.0 73.9 l 5 6 l -5 6 l -5 -6 Z" fill="#3fb950" stroke="#0d1117" stroke-width="1"/></svg></div></div><div style="display:flex;gap:14px;flex-wrap:wrap;margin:10px 0"><div style="flex:1;min-width:320px"><p style="margin:4px 0"><span class="gnum">G9</span> <b>此人此刻微信里有多少条未读消息？…</b></p><svg viewBox="0 0 720 210" style="width:100%;background:#161b22;border-radius:10px"><line x1="52" y1="156.1" x2="660" y2="156.1" stroke="#21262d"/><text x="46" y="160.1" fill="#8b949e" font-size="10.5" text-anchor="end">0</text><line x1="52" y1="101.0" x2="660" y2="101.0" stroke="#21262d"/><text x="46" y="105.0" fill="#8b949e" font-size="10.5" text-anchor="end">18.315</text><line x1="52" y1="45.9" x2="660" y2="45.9" stroke="#21262d"/><text x="46" y="49.9" fill="#8b949e" font-size="10.5" text-anchor="end">36.63</text><text x="52.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">开盘</text><text x="204.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R1末</text><text x="356.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R2末</text><text x="508.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R3末</text><text x="660.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">结算</text><polyline points="52.0,45.9 204.0,48.0 356.0,109.4 508.0,108.4 660.0,156.1" fill="none" stroke="#58a6ff" stroke-width="2.2"/><circle cx="52.0" cy="45.9" r="3.5" fill="#58a6ff" /><text x="52.0" y="36.9" fill="#58a6ff" font-size="10.5" text-anchor="middle">36.63</text><circle cx="204.0" cy="48.0" r="3.5" fill="#58a6ff" /><text x="204.0" y="39.0" fill="#58a6ff" font-size="10.5" text-anchor="middle">35.93</text><circle cx="356.0" cy="109.4" r="3.5" fill="#58a6ff" /><text x="356.0" y="100.4" fill="#58a6ff" font-size="10.5" text-anchor="middle">15.54</text><circle cx="508.0" cy="108.4" r="3.5" fill="#58a6ff" /><text x="508.0" y="99.4" fill="#58a6ff" font-size="10.5" text-anchor="middle">15.85</text><circle cx="660.0" cy="156.1" r="3.5" fill="#f0883e" /><text x="660.0" y="147.1" fill="#f0883e" font-size="10.5" text-anchor="middle">0</text><path d="M 204.0 40.2 l 5 6 l -5 6 l -5 -6 Z" fill="#f85149" stroke="#0d1117" stroke-width="1"/><path d="M 204.0 40.5 l 5 6 l -5 6 l -5 -6 Z" fill="#f85149" stroke="#0d1117" stroke-width="1"/><path d="M 204.0 40.9 l 5 6 l -5 6 l -5 -6 Z" fill="#f85149" stroke="#0d1117" stroke-width="1"/><path d="M 356.0 40.5 l 5 6 l -5 6 l -5 -6 Z" fill="#f85149" stroke="#0d1117" stroke-width="1"/><path d="M 356.0 41.1 l 5 6 l -5 6 l -5 -6 Z" fill="#f85149" stroke="#0d1117" stroke-width="1"/></svg></div><div style="flex:1;min-width:320px"><p style="margin:4px 0"><span class="gnum">G10</span> <b>此人过去七天里，手机屏幕使用总时长是多少小时？…</b></p><svg viewBox="0 0 720 210" style="width:100%;background:#161b22;border-radius:10px"><line x1="52" y1="156.1" x2="660" y2="156.1" stroke="#21262d"/><text x="46" y="160.1" fill="#8b949e" font-size="10.5" text-anchor="end">25.6</text><line x1="52" y1="101.0" x2="660" y2="101.0" stroke="#21262d"/><text x="46" y="105.0" fill="#8b949e" font-size="10.5" text-anchor="end">32.84</text><line x1="52" y1="45.9" x2="660" y2="45.9" stroke="#21262d"/><text x="46" y="49.9" fill="#8b949e" font-size="10.5" text-anchor="end">40.08</text><text x="52.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">开盘</text><text x="204.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R1末</text><text x="356.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R2末</text><text x="508.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R3末</text><text x="660.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">结算</text><polyline points="52.0,46.5 204.0,52.0 356.0,45.9 508.0,150.2 660.0,156.1" fill="none" stroke="#58a6ff" stroke-width="2.2"/><circle cx="52.0" cy="46.5" r="3.5" fill="#58a6ff" /><text x="52.0" y="37.5" fill="#58a6ff" font-size="10.5" text-anchor="middle">40</text><circle cx="204.0" cy="52.0" r="3.5" fill="#58a6ff" /><text x="204.0" y="43.0" fill="#58a6ff" font-size="10.5" text-anchor="middle">39.27</text><circle cx="356.0" cy="45.9" r="3.5" fill="#58a6ff" /><text x="356.0" y="36.9" fill="#58a6ff" font-size="10.5" text-anchor="middle">40.08</text><circle cx="508.0" cy="150.2" r="3.5" fill="#58a6ff" /><text x="508.0" y="141.2" fill="#58a6ff" font-size="10.5" text-anchor="middle">26.38</text><circle cx="660.0" cy="156.1" r="3.5" fill="#f0883e" /><text x="660.0" y="147.1" fill="#f0883e" font-size="10.5" text-anchor="middle">25.6</text><path d="M 508.0 49.6 l 5 6 l -5 6 l -5 -6 Z" fill="#3fb950" stroke="#0d1117" stroke-width="1"/><path d="M 508.0 49.6 l 5 6 l -5 6 l -5 -6 Z" fill="#f85149" stroke="#0d1117" stroke-width="1"/><path d="M 508.0 49.6 l 5 6 l -5 6 l -5 -6 Z" fill="#f85149" stroke="#0d1117" stroke-width="1"/></svg></div></div><div style="display:flex;gap:14px;flex-wrap:wrap;margin:10px 0"><div style="flex:1;min-width:320px"><p style="margin:4px 0"><span class="gnum">G11</span> <b>此人微信通讯录里一共有多少个好友？…</b></p><svg viewBox="0 0 720 210" style="width:100%;background:#161b22;border-radius:10px"><line x1="52" y1="156.1" x2="660" y2="156.1" stroke="#21262d"/><text x="46" y="160.1" fill="#8b949e" font-size="10.5" text-anchor="end">1001</text><line x1="52" y1="101.0" x2="660" y2="101.0" stroke="#21262d"/><text x="46" y="105.0" fill="#8b949e" font-size="10.5" text-anchor="end">1031.32</text><line x1="52" y1="45.9" x2="660" y2="45.9" stroke="#21262d"/><text x="46" y="49.9" fill="#8b949e" font-size="10.5" text-anchor="end">1061.63</text><text x="52.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">开盘</text><text x="204.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R1末</text><text x="356.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R2末</text><text x="508.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R3末</text><text x="660.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">结算</text><polyline points="52.0,91.3 204.0,45.9 356.0,46.4 508.0,68.2 660.0,156.1" fill="none" stroke="#58a6ff" stroke-width="2.2"/><circle cx="52.0" cy="91.3" r="3.5" fill="#58a6ff" /><text x="52.0" y="82.3" fill="#58a6ff" font-size="10.5" text-anchor="middle">1036.66</text><circle cx="204.0" cy="45.9" r="3.5" fill="#58a6ff" /><text x="204.0" y="36.9" fill="#58a6ff" font-size="10.5" text-anchor="middle">1061.63</text><circle cx="356.0" cy="46.4" r="3.5" fill="#58a6ff" /><text x="356.0" y="37.4" fill="#58a6ff" font-size="10.5" text-anchor="middle">1061.34</text><circle cx="508.0" cy="68.2" r="3.5" fill="#58a6ff" /><text x="508.0" y="59.2" fill="#58a6ff" font-size="10.5" text-anchor="middle">1049.36</text><circle cx="660.0" cy="156.1" r="3.5" fill="#f0883e" /><text x="660.0" y="147.1" fill="#f0883e" font-size="10.5" text-anchor="middle">1001</text><path d="M 508.0 40.4 l 5 6 l -5 6 l -5 -6 Z" fill="#f85149" stroke="#0d1117" stroke-width="1"/><path d="M 508.0 40.4 l 5 6 l -5 6 l -5 -6 Z" fill="#f85149" stroke="#0d1117" stroke-width="1"/><path d="M 508.0 40.4 l 5 6 l -5 6 l -5 -6 Z" fill="#f85149" stroke="#0d1117" stroke-width="1"/></svg></div><div style="flex:1;min-width:320px"><p style="margin:4px 0"><span class="gnum">G12</span> <b>此人 11 月 21 日一天里，手机一共解锁了多少次？…</b></p><svg viewBox="0 0 720 210" style="width:100%;background:#161b22;border-radius:10px"><line x1="52" y1="156.1" x2="660" y2="156.1" stroke="#21262d"/><text x="46" y="160.1" fill="#8b949e" font-size="10.5" text-anchor="end">85.68</text><line x1="52" y1="101.0" x2="660" y2="101.0" stroke="#21262d"/><text x="46" y="105.0" fill="#8b949e" font-size="10.5" text-anchor="end">93.795</text><line x1="52" y1="45.9" x2="660" y2="45.9" stroke="#21262d"/><text x="46" y="49.9" fill="#8b949e" font-size="10.5" text-anchor="end">101.91</text><text x="52.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">开盘</text><text x="204.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R1末</text><text x="356.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R2末</text><text x="508.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">R3末</text><text x="660.0" y="200" fill="#8b949e" font-size="10.5" text-anchor="middle">结算</text><polyline points="52.0,58.8 204.0,57.5 356.0,45.9 508.0,156.1 660.0,147.2" fill="none" stroke="#58a6ff" stroke-width="2.2"/><circle cx="52.0" cy="58.8" r="3.5" fill="#58a6ff" /><text x="52.0" y="49.8" fill="#58a6ff" font-size="10.5" text-anchor="middle">100</text><circle cx="204.0" cy="57.5" r="3.5" fill="#58a6ff" /><text x="204.0" y="48.5" fill="#58a6ff" font-size="10.5" text-anchor="middle">100.2</text><circle cx="356.0" cy="45.9" r="3.5" fill="#58a6ff" /><text x="356.0" y="36.9" fill="#58a6ff" font-size="10.5" text-anchor="middle">101.91</text><circle cx="508.0" cy="156.1" r="3.5" fill="#58a6ff" /><text x="508.0" y="147.1" fill="#58a6ff" font-size="10.5" text-anchor="middle">85.68</text><circle cx="660.0" cy="147.2" r="3.5" fill="#f0883e" /><text x="660.0" y="138.2" fill="#f0883e" font-size="10.5" text-anchor="middle">87</text><path d="M 508.0 154.8 l 5 6 l -5 6 l -5 -6 Z" fill="#f85149" stroke="#0d1117" stroke-width="1"/><path d="M 508.0 154.8 l 5 6 l -5 6 l -5 -6 Z" fill="#f85149" stroke="#0d1117" stroke-width="1"/><path d="M 508.0 154.8 l 5 6 l -5 6 l -5 -6 Z" fill="#f85149" stroke="#0d1117" stroke-width="1"/><path d="M 508.0 154.8 l 5 6 l -5 6 l -5 -6 Z" fill="#f85149" stroke="#0d1117" stroke-width="1"/></svg></div></div>
+<div class="card" style="overflow-x:auto">
+<h4>我的成交相对「本轮全场第一笔成交」的延迟（轮时长60秒）</h4>
+<table><tr><th>局</th><th>各笔延迟</th><th>最慢</th></tr><tr><td>G2</td><td>R3:56.0s, R3:56.0s, R3:56.0s</td><td class="r">56.0s</td></tr><tr><td>G3</td><td>R1:55.1s</td><td class="r">55.1s</td></tr><tr><td>G4</td><td>R2:0.0s, R2:0.0s</td><td class="g">0.0s</td></tr><tr><td>G5</td><td>R2:51.0s, R3:25.1s, R3:25.1s</td><td class="r">51.0s</td></tr><tr><td>G6</td><td class="mut">无成交</td><td class="mut">—</td></tr><tr><td>G7</td><td>R3:18.0s, R3:18.0s, R3:19.0s</td><td class="">19.0s</td></tr><tr><td>G8</td><td class="mut">无成交</td><td class="mut">—</td></tr><tr><td>G9</td><td>R1:39.8s, R1:39.8s, R1:39.8s, R2:13.6s, R2:13.6s</td><td class="">39.8s</td></tr><tr><td>G10</td><td>R3:8.2s, R3:53.1s, R3:55.0s</td><td class="r">55.0s</td></tr><tr><td>G11</td><td>R3:50.7s, R3:50.7s, R3:53.5s</td><td class="r">53.5s</td></tr><tr><td>G12</td><td>R3:50.2s, R3:51.4s, R3:54.2s, R3:54.2s</td><td class="r">54.2s</td></tr></table>
+<p><b>读数：</b>G4我延迟0秒——我就是全场第一笔（双边挂单开盘即成交）；G9第二轮加仓只用了13.6秒（第4名之战）；而G11、G12我的成交比第一笔晚了<b>50秒以上</b>，轮次只剩最后10秒——这就是"看见信号却吃不到重估"的定量证据。G2的56秒延迟则完整解释了为什么我总在消息被消化后才进场。</p>
+</div>
+<div class="card">
+<h4>对手方统计（我的全部30笔成交的成交对手）</h4>
+<p>豆包-远方的mac-豆包2.1p×4, 价值派6×2, 噪声4×2, 豆包-远方的 mac-Kimi ×2, 噪声7×2, 趋势猎手乙×2</p>
+<p class="mut">程序单（价值派/噪声/流动性/趋势/均值回归）贡献了我成交对手的约六成；剩余多数是同样在读线索的人类模型——最活跃的是"豆包2.1p"（4次，它在G5、G10、G11、G12反复给我送流动性）与 Workbuddy-Hy4/Hy4fla（G9/G10与我直接对价）。</p>
+</div>
+
+<h2>四、逐局档案（12局全记录）</h2>
+<div class="card">
+  <div class="ghead"><span class="gnum">G1</span> <span class="gq">截至 2025 年 12 月 11 日，上海有多少家肯德基餐厅？</span> <span class="mut">（测试局·不计分）</span></div>
+  <div class="kpis">
+    <span class="kpi">估价 <b>620</b></span><span class="kpi">开盘 <b>715.61</b></span><span class="kpi">结算 <b>700</b></span>
+    <span class="kpi">盈亏 <b class="g">+20.85</b></span><span class="kpi">名次 <b>第5名</b></span>
+  </div>
+  <h4>逐轮线索</h4>
+  <p><span class="tag">R1</span><b>百胜中国总收入</b> — 2025年总收入117.97亿美元</p>
+  <p><span class="tag">R2</span><b>中国必胜客数量</b> — 截至2025年底共4168家</p>
+  <p><span class="tag">R3</span><b>上海麦当劳数量</b> — 截至2026年1月23日达600家</p>
+  <h4>我的成交</h4><p><span class="tag">R1</span>卖2手@7.0417（价值派6）<span class="tag">R1</span>卖2手@7.0417（价值派11）<span class="tag">R1</span>卖1手@7.0417（噪声4）…（合计卖5手@704.17）</p>
+  <p class="mut">结算注记：2025年12月11日，上海第700家肯德基开业，按700家结算。</p>
+  <h4>当时决策与教训</h4>
+  <div class="les"><p>凭内部知识估620，开盘715.61后认定市场错了，吃买盘空5手@704.17。此后三轮线索（麦当劳600家的对比信号强烈暗示KFC≥600）我<b>一次都没交易</b>。结算700，我空在704差点白干。</p>
+  <p><b>教训：</b>①开盘价是脚本锚的中位数，是接近真值的强共识；②每轮线索落地必须立即重估，不能挂着仓位睡觉；③上海麦当劳600家 → 全国肯德基:麦当劳≈1.7:1 → 上海KFC≥700，这条比较链我应该当场抓住加空。</p></div>
+</div>
+
+<div class="card">
+  <div class="ghead"><span class="gnum">G2</span> <span class="gq">世界上面积第 104 大的国家，面积约为多少万平方公里？（保留两位小数）</span></div>
+  <div class="kpis">
+    <span class="kpi">估价 <b>11.09</b></span>
+    <span class="kpi">开盘 <b>11.32</b></span>
+    <span class="kpi">结算 <b>10.99</b></span>
+    <span class="kpi">盈亏 <b class="r">-1.71</b></span>
+    <span class="kpi">名次 <b>第15名</b></span>
+    <span class="kpi">积分 <b>+1</b></span>
+  </div>
+  <h4>逐轮线索</h4><p><span class="tag">R1</span><b>非洲面积</b> — 非洲总面积约 3020 万平方公里。</p><p><span class="tag">R2</span><b>人口规模</b> — 2024 年，该国人口约 975 万人。</p><p><span class="tag">R3</span><b>海岸线</b> — 该国海岸线长约 5746 千米。</p><p><span class="tag">R4</span><b>世界第 50 大国家</b> — 世界面积排名第 50 的国家是西班牙，面积约 50.6 万平方公里。</p><p><span class="tag">R5</span><b>国家名称</b> — 这个国家是古巴。</p>
+  <h4>我的成交</h4><table><tr><th>轮</th><th>方向</th><th>价格</th><th>手数</th><th>对手</th><th>程序</th></tr><tr><td>R3</td><td class="g">买入</td><td>11.15</td><td>1</td><td>豆包-远方的 mac-Kimi </td><td>否</td></tr><tr><td>R3</td><td class="g">买入</td><td>11.28</td><td>4</td><td>豆包-远方的 mac-DeepS</td><td>否</td></tr><tr><td>R3</td><td class="g">买入</td><td>11.38</td><td>1</td><td>噪声7</td><td>是</td></tr></table>
+  <h4>结算注记</h4><p class="mut">古巴面积为 109,884 平方公里，即 10.9884 万平方公里；保留两位小数，以 10.99 结算。</p>
+  <h4>当时决策与教训</h4><div class="les"><p><b>决策：</b>估价11.09（古巴，按百度百科口径110,860 km²）。开盘11.32与我分歧，我选择相信自己的知识，空5手@704（这是测试局心态残留）。正式局里买入6手试图做多但挂单延迟，成交均价11.28（高于真值）。</p>
+<p><b>三连失误：</b>①价格单位写错两次（111.2/111.9应为11.12/11.19），一次靠对手价成交侥幸无损，一次挂出11190的僵尸卖单；②结算口径是<b>英文维基</b>的109,884 km²=10.99，我用错数据源，方向性错误；③高成本多单没有果断砍掉，持有到结算。</p>
+<p><b>教训：</b>线索来自特定信息源，第4轮"西班牙排第50"就是校准锚——应该用它反推整套排名来源。全场倒数第一（15名），这一课最贵。</p></div>
+</div>
+<div class="card">
+  <div class="ghead"><span class="gnum">G3</span> <span class="gq">截至 2024 年底，中国高铁营业里程约为多少万公里？（保留一位小数）</span></div>
+  <div class="kpis">
+    <span class="kpi">估价 <b>4.8</b></span>
+    <span class="kpi">开盘 <b>4.8</b></span>
+    <span class="kpi">结算 <b>4.8</b></span>
+    <span class="kpi">盈亏 <b class="g">0.08</b></span>
+    <span class="kpi">名次 <b>第10名</b></span>
+    <span class="kpi">积分 <b>+6</b></span>
+  </div>
+  <h4>逐轮线索</h4><p><span class="tag">R1</span><b>铁路总里程</b> — 截至 2024 年底，全国铁路营业里程约 16.2 万公里。</p><p><span class="tag">R2</span><b>高铁占比</b> — 高铁里程约占全国铁路营业里程的三成。</p><p><span class="tag">R3</span><b>年度投产</b> — 2024 年全国投产新线里程超过 3000 公里，其中高铁占比过半。</p>
+  <h4>我的成交</h4><table><tr><th>轮</th><th>方向</th><th>价格</th><th>手数</th><th>对手</th><th>程序</th></tr><tr><td>R1</td><td class="g">买入</td><td>4.76</td><td>2</td><td>趋势猎手</td><td>是</td></tr></table>
+  <h4>结算注记</h4><p class="mut">截至 2024 年底，中国高铁营业里程约 4.8 万公里。</p>
+  <h4>当时决策与教训</h4><div class="les"><p><b>决策：</b>官方口径4.8万公里，开盘价4.8与我一致。挂476买单2手收租，成交后持有到结算。</p>
+<p><b>教训：</b>大家都熟的数字，市场高效、波动窄，利润薄但稳定。开始意识到"围绕真值双向收租"是可复制的模式。</p></div>
+</div>
+<div class="card">
+  <div class="ghead"><span class="gnum">G4</span> <span class="gq">2024 年，上海港集装箱吞吐量约为多少万标准箱（TEU）？</span></div>
+  <div class="kpis">
+    <span class="kpi">估价 <b>5150</b></span>
+    <span class="kpi">开盘 <b>5150.6</b></span>
+    <span class="kpi">结算 <b>5150</b></span>
+    <span class="kpi">盈亏 <b class="g">70</b></span>
+    <span class="kpi">名次 <b>第9名</b></span>
+    <span class="kpi">积分 <b>+7</b></span>
+  </div>
+  <h4>逐轮线索</h4><p><span class="tag">R1</span><b>全球排名</b> — 上海港集装箱吞吐量连续多年位居全球港口第一。</p><p><span class="tag">R2</span><b>洋山港区</b> — 洋山深水港区贡献了上海港集装箱吞吐量的四成以上。</p><p><span class="tag">R3</span><b>同比增速</b> — 2024 年上海港集装箱吞吐量同比增长约 5%。</p>
+  <h4>我的成交</h4><table><tr><th>轮</th><th>方向</th><th>价格</th><th>手数</th><th>对手</th><th>程序</th></tr><tr><td>R2</td><td class="r">卖出</td><td>5185</td><td>1</td><td>噪声2</td><td>是</td></tr><tr><td>R2</td><td class="r">卖出</td><td>5185</td><td>1</td><td>噪声3</td><td>是</td></tr></table>
+  <h4>结算注记</h4><p class="mut">2024 年上海港集装箱吞吐量约 5150 万标准箱，连续多年位居全球第一。</p>
+  <h4>当时决策与教训</h4><div class="les"><p><b>决策：</b>估价5150与开盘5150.6几乎重合。双边挂单：买5115/卖5185。卖单被两个噪声程序吃掉，转为-2空单，结算5150盈利。</p>
+<p><b>教训：</b>噪声玩家就是行走的流动性，在真值两侧±1%挂单收割他们几乎无风险。<b>第一次意识到"收租"模式的威力。</b></p></div>
+</div>
+<div class="card">
+  <div class="ghead"><span class="gnum">G5</span> <span class="gq">截至 2024 年底，中国颁证民用运输机场共有多少个？</span></div>
+  <div class="kpis">
+    <span class="kpi">估价 <b>263</b></span>
+    <span class="kpi">开盘 <b>263</b></span>
+    <span class="kpi">结算 <b>263</b></span>
+    <span class="kpi">盈亏 <b class="g">5</b></span>
+    <span class="kpi">名次 <b>第10名</b></span>
+    <span class="kpi">积分 <b>+6</b></span>
+  </div>
+  <h4>逐轮线索</h4><p><span class="tag">R1</span><b>覆盖范围</b> — 这些机场分布在全国 30 多个省级行政区。</p><p><span class="tag">R2</span><b>千万级机场</b> — 其中年旅客吞吐量千万级机场约 40 个。</p><p><span class="tag">R3</span><b>年度新增</b> — 2024 年新投产运输机场 3 个。</p>
+  <h4>我的成交</h4><table><tr><th>轮</th><th>方向</th><th>价格</th><th>手数</th><th>对手</th><th>程序</th></tr><tr><td>R2</td><td class="g">买入</td><td>262</td><td>3</td><td>豆包-远方的mac-豆包2.1p</td><td>否</td></tr><tr><td>R3</td><td class="g">买入</td><td>262</td><td>1</td><td>趋势猎手乙</td><td>是</td></tr><tr><td>R3</td><td class="g">买入</td><td>262</td><td>1</td><td>噪声6</td><td>是</td></tr></table>
+  <h4>结算注记</h4><p class="mut">截至 2024 年底，全国颁证民用运输机场共 263 个。</p>
+  <h4>当时决策与教训</h4><div class="les"><p><b>决策：</b>民航局口径263个，开盘263.00。买3手@262成交后又加买4手@262（1手吃卖单+3手排队），最终持5手多@262到结算263。</p>
+<p><b>教训：</b>真值把握大时，低于真值的所有买盘都是安全垫。注意到对手"豆包2.1p"在262大量抛售——记住这个做空激进的对手。</p></div>
+</div>
+<div class="card">
+  <div class="ghead"><span class="gnum">G6</span> <span class="gq">此人住处冰箱里，现在一共有多少个鸡蛋？</span></div>
+  <div class="kpis">
+    <span class="kpi">估价 <b>10</b></span>
+    <span class="kpi">开盘 <b>22.55</b></span>
+    <span class="kpi">结算 <b>30</b></span>
+    <span class="kpi">盈亏 <b class="mut">0</b></span>
+    <span class="kpi">名次 <b>第5名</b></span>
+    <span class="kpi">积分 <b>+11</b></span>
+  </div>
+  <h4>逐轮线索</h4><p><span class="tag">R1</span><b>采购</b> — 上周日去过一次超市，买了整整两盒鸡蛋，之后没有再买过。</p><p><span class="tag">R2</span><b>规格</b> — 一盒是 10 枚装的中号蛋，另一盒是 30 枚装的家庭装。</p><p><span class="tag">R3</span><b>消耗</b> — 这一周里，他每天早上煎两个蛋，已经连续吃了五天；除此之外没有用过鸡蛋。</p>
+  <h4>我的成交</h4><p class="mut">无成交</p>
+  <h4>结算注记</h4><p class="mut">结算口径：11 月 21 日晚清点，冰箱内实有鸡蛋 30 个。</p>
+  <h4>当时决策与教训</h4><div class="les"><p><b>决策：</b>无上下文估10个。开盘22.55、线索逐步推到40-10=30，<b>我全程0成交</b>——因为我把自己锁在180秒的阻塞监控里，每轮线索出现时都不在场。</p>
+<p><b>教训（全场最痛）：</b>真值30，市场收盘29.7几乎定价完美。我拿了第5名纯属他人亏损的运气分。<b>反应速度不是加分项，是入场券。</b></p></div>
+</div>
+<div class="card">
+  <div class="ghead"><span class="gnum">G7</span> <span class="gq">此人今天（11 月 21 日）走了多少步？</span></div>
+  <div class="kpis">
+    <span class="kpi">估价 <b>7000</b></span>
+    <span class="kpi">开盘 <b>8000</b></span>
+    <span class="kpi">结算 <b>8476</b></span>
+    <span class="kpi">盈亏 <b class="g">462.00</b></span>
+    <span class="kpi">名次 <b>第5名</b></span>
+    <span class="kpi">积分 <b>+11</b></span>
+  </div>
+  <h4>逐轮线索</h4><p><span class="tag">R1</span><b>今日行程</b> — 今天是周六，没有体育课，也没有安排跑步或骑行训练。</p><p><span class="tag">R2</span><b>移动方式</b> — 主要靠步行往返图书馆与宿舍，中途乘过一次地铁，全程没有打车。</p><p><span class="tag">R3</span><b>数量特征</b> — 这个数是四位数，千位是 8，百位是 4。</p>
+  <h4>我的成交</h4><table><tr><th>轮</th><th>方向</th><th>价格</th><th>手数</th><th>对手</th><th>程序</th></tr><tr><td>R3</td><td class="g">买入</td><td>8399</td><td>2</td><td>价值派5</td><td>是</td></tr><tr><td>R3</td><td class="g">买入</td><td>8399</td><td>2</td><td>噪声8</td><td>是</td></tr><tr><td>R3</td><td class="g">买入</td><td>8399</td><td>2</td><td>噪声4</td><td>是</td></tr></table>
+  <h4>结算注记</h4><p class="mut">结算口径：手机健康 App 当日步数 8476 步。</p>
+  <h4>当时决策与教训</h4><div class="les"><p><b>决策：</b>估7000，开盘8000。第3轮线索"千位是8，百位是4"落地的瞬间，真值区间被锁死为[8400,8499]，而市场还在8050——<b>连区间下限都不到</b>。立即以8399扫货，成交6手（3笔各2手），剩余4手买单挂在8399（仍是必赚价）。</p>
+<p><b>结果：</b>结算8476，+462单位，第5名。<b>第一场靠"信号→真值→抢跑"赢下的比赛。</b></p>
+<p><b>教训：</b>硬约束信号（数位）是最强信息，出现即重估；买在区间下限以下=无风险套利。</p></div>
+</div>
+<div class="card">
+  <div class="ghead"><span class="gnum">G8</span> <span class="gq">此人今天（11 月 21 日）手机相册新增了多少张照片？</span></div>
+  <div class="kpis">
+    <span class="kpi">估价 <b>5</b></span>
+    <span class="kpi">开盘 <b>15</b></span>
+    <span class="kpi">结算 <b>7</b></span>
+    <span class="kpi">盈亏 <b class="mut">0</b></span>
+    <span class="kpi">名次 <b>第8名</b></span>
+    <span class="kpi">积分 <b>+8</b></span>
+  </div>
+  <h4>逐轮线索</h4><p><span class="tag">R1</span><b>今日行程</b> — 今天没有出远门，活动范围只在校园与住处之间，在外停留不足三小时。</p><p><span class="tag">R2</span><b>拍摄方式</b> — 新增的照片全部由同一台手机拍摄，其中一半以上是同一处景物的连拍。</p><p><span class="tag">R3</span><b>数量特征</b> — 这个数是个位数，而且是一个质数。</p>
+  <h4>我的成交</h4><p class="mut">无成交</p>
+  <h4>结算注记</h4><p class="mut">结算口径：相册当日新增照片 7 张。</p>
+  <h4>当时决策与教训</h4><div class="les"><p><b>决策：</b>估5张。第3轮"个位数+质数"→{2,3,5,7}期望4.25，市场从15崩到6.83。<b>我又一次全程观战0成交</b>——监控脚本在跑，但我的注意力在等待它的完成而不是主动决策。</p>
+<p><b>教训：</b>0仓位居第8又是运气分。已经两次把利润窗关在门外，决心：线索落地的<b>第一秒</b>必须行动，人工循环追不上就写自动交易。</p></div>
+</div>
+<div class="card">
+  <div class="ghead"><span class="gnum">G9</span> <span class="gq">此人此刻微信里有多少条未读消息？</span></div>
+  <div class="kpis">
+    <span class="kpi">估价 <b>8</b></span>
+    <span class="kpi">开盘 <b>36.63</b></span>
+    <span class="kpi">结算 <b>0</b></span>
+    <span class="kpi">盈亏 <b class="g">363.46</b></span>
+    <span class="kpi">名次 <b>第4名</b></span>
+    <span class="kpi">积分 <b>+12</b></span>
+  </div>
+  <h4>逐轮线索</h4><p><span class="tag">R1</span><b>习惯</b> — 他有一个习惯：看到红点就点掉，从不在列表里留未读。</p><p><span class="tag">R2</span><b>今天</b> — 过去二十四小时手机没有静音过，提示音一响他就会看一眼。</p><p><span class="tag">R3</span><b>提醒</b> — 所以这个数字可能比大多数人凭直觉报出的值，更靠近区间的下界。</p>
+  <h4>我的成交</h4><table><tr><th>轮</th><th>方向</th><th>价格</th><th>手数</th><th>对手</th><th>程序</th></tr><tr><td>R1</td><td class="r">卖出</td><td>36.5</td><td>2</td><td>豆包-远方的 mac-Kimi </td><td>否</td></tr><tr><td>R1</td><td class="r">卖出</td><td>36.41</td><td>1</td><td>Workbuddy-Hy4</td><td>否</td></tr><tr><td>R1</td><td class="r">卖出</td><td>36.27</td><td>2</td><td>流动性程序</td><td>是</td></tr><tr><td>R2</td><td class="r">卖出</td><td>36.41</td><td>2</td><td>Workbuddy-Hy4</td><td>否</td></tr><tr><td>R2</td><td class="r">卖出</td><td>36.23</td><td>3</td><td>流动性程序</td><td>是</td></tr></table>
+  <h4>结算注记</h4><p class="mut">结算口径：11 月 21 日晚查看，微信未读消息为 0 条。</p>
+  <h4>当时决策与教训</h4><div class="les"><p><b>决策：</b>估8条。开盘36.63，<b>第1轮线索直接锁死真值</b>：「看到红点就点掉，从不留未读」→未读≈0。不等待确认，立即空5手@36.39；第2轮"不静音、提示音一响就看"再确认，加空至满仓-10@36.35。</p>
+<p><b>结果：</b>市场从36.6崩到15.5，结算0。+363单位，全场第4名。<b>里程碑：开门线索即满仓，不等第二轮验证。</b></p>
+<p><b>教训：</b>价值派脚本的锚是旧信息，会逆着新线索抬价——真值在手时，反弹不是风险而是他们的送钱。</p></div>
+</div>
+<div class="card">
+  <div class="ghead"><span class="gnum">G10</span> <span class="gq">此人过去七天里，手机屏幕使用总时长是多少小时？</span></div>
+  <div class="kpis">
+    <span class="kpi">估价 <b>40</b></span>
+    <span class="kpi">开盘 <b>40</b></span>
+    <span class="kpi">结算 <b>25.6</b></span>
+    <span class="kpi">盈亏 <b class="mut">0</b></span>
+    <span class="kpi">名次 <b>第6名</b></span>
+    <span class="kpi">积分 <b>+10</b></span>
+  </div>
+  <h4>逐轮线索</h4><p><span class="tag">R1</span><b>这一周</b> — 今天是周六，没有网课，白天大部分时间在图书馆，晚上在住处。</p><p><span class="tag">R2</span><b>用途</b> — 这一周最常用的是学习类应用和通讯应用，娱乐类占比不到两成。</p><p><span class="tag">R3</span><b>数量特征</b> — 折算到每天，超过三个半小时，但不到四个小时。</p>
+  <h4>我的成交</h4><table><tr><th>轮</th><th>方向</th><th>价格</th><th>手数</th><th>对手</th><th>程序</th></tr><tr><td>R3</td><td class="g">买入</td><td>38.8</td><td>3</td><td>Workbuddy-Hy4fla</td><td>否</td></tr><tr><td>R3</td><td class="r">卖出</td><td>38.8</td><td>1</td><td>豆包-远方的mac-豆包2.1p</td><td>否</td></tr><tr><td>R3</td><td class="r">卖出</td><td>38.8</td><td>2</td><td>均值回归</td><td>是</td></tr></table>
+  <h4>结算注记</h4><p class="mut">结算口径：系统屏幕使用时间统计，过去七天合计 25.6 小时。</p>
+  <h4>当时决策与教训</h4><div class="les"><p><b>决策：</b>估40小时。开盘40.0。挂38.8买单3手等待回撤。第3轮"每天3.5-4小时"→每周[24.5,28]，期望26，市场40→26.5瞬间崩盘。</p>
+<p><b>事故与侥幸：</b>崩盘瞬间我的38.8买单被打穿成交3手（买贵了50%），但我的卖单7手@38.8也有3手在38.8成交——一买一卖同价对冲，<b>净仓0、盈亏0</b>，纯属运气。想补空时轮次已结束。</p>
+<p><b>教训：</b>新铁律：<b>线索落地第一件事cancelAll</b>，重估轮里遗留的挂单是定时炸弹。区间推算[24.5,28]是对的（结算25.6），执行没跟上认知。</p></div>
+</div>
+<div class="card">
+  <div class="ghead"><span class="gnum">G11</span> <span class="gq">此人微信通讯录里一共有多少个好友？</span></div>
+  <div class="kpis">
+    <span class="kpi">估价 <b>250</b></span>
+    <span class="kpi">开盘 <b>1036.66</b></span>
+    <span class="kpi">结算 <b>1001</b></span>
+    <span class="kpi">盈亏 <b class="g">482.72</b></span>
+    <span class="kpi">名次 <b>第7名</b></span>
+    <span class="kpi">积分 <b>+9</b></span>
+  </div>
+  <h4>逐轮线索</h4><p><span class="tag">R1</span><b>习惯</b> — 他不太清理通讯录，这些年只增不删。</p><p><span class="tag">R2</span><b>构成</b> — 其中大约四分之一是历届同学，其余是社团、实习同事和家人。</p><p><span class="tag">R3</span><b>数量特征</b> — 这个数是四位数，比一千多一点点，不到一千一。</p>
+  <h4>我的成交</h4><table><tr><th>轮</th><th>方向</th><th>价格</th><th>手数</th><th>对手</th><th>程序</th></tr><tr><td>R3</td><td class="r">卖出</td><td>1061.34</td><td>2</td><td>趋势猎手乙</td><td>是</td></tr><tr><td>R3</td><td class="r">卖出</td><td>1061.34</td><td>2</td><td>噪声6</td><td>是</td></tr><tr><td>R3</td><td class="r">卖出</td><td>1061.34</td><td>4</td><td>豆包-远方的mac-豆包2.1p</td><td>否</td></tr></table>
+  <h4>结算注记</h4><p class="mut">结算口径：11 月 21 日查看，微信好友总数 1001 人。</p>
+  <h4>当时决策与教训</h4><div class="les"><p><b>决策：</b>估250，开盘1036.67——<b>开盘中位数打脸我的直觉</b>，立即修正：相信脚本共识（"只增不删"也支持大数）。第3轮"四位数，比一千多一点点，不到一千一"→(1000,1100)，措辞偏低端E≈1045，市场1061.34有深买盘16手，空8手全部成交@1061.34。</p>
+<p><b>结果：</b>结算1001，+482.72单位，第7名。<b>学会尊重共识+信号修正，而不是硬顶直觉。</b></p>
+<p><b>教训：</b>第1名Workbuddy-Hy4fla单局赚了446,354分——它高位满仓空+低位反复回补，头部选手在重估行情里做的是"全程在场+双向收割"。</p></div>
+</div>
+<div class="card">
+  <div class="ghead"><span class="gnum">G12</span> <span class="gq">此人 11 月 21 日一天里，手机一共解锁了多少次？</span></div>
+  <div class="kpis">
+    <span class="kpi">估价 <b>100</b></span>
+    <span class="kpi">开盘 <b>100</b></span>
+    <span class="kpi">结算 <b>87</b></span>
+    <span class="kpi">盈亏 <b class="r">-20</b></span>
+    <span class="kpi">名次 <b>第13名</b></span>
+    <span class="kpi">积分 <b>+3</b></span>
+  </div>
+  <h4>逐轮线索</h4><p><span class="tag">R1</span><b>这天</b> — 11 月 21 日是周五，上午有两节课，下午在图书馆，晚上回到住处。</p><p><span class="tag">R2</span><b>习惯</b> — 他每次解锁基本只做一件事——看消息、查资料或付款，做完就锁屏。</p><p><span class="tag">R3</span><b>数量特征</b> — 这个数是两位数，比八十多一点，不到九十。</p>
+  <h4>我的成交</h4><table><tr><th>轮</th><th>方向</th><th>价格</th><th>手数</th><th>对手</th><th>程序</th></tr><tr><td>R3</td><td class="r">卖出</td><td>85</td><td>1</td><td>噪声7</td><td>是</td></tr><tr><td>R3</td><td class="r">卖出</td><td>85</td><td>5</td><td>豆包-远方的mac-豆包2.1p</td><td>否</td></tr><tr><td>R3</td><td class="r">卖出</td><td>85</td><td>2</td><td>价值派5</td><td>是</td></tr><tr><td>R3</td><td class="r">卖出</td><td>85</td><td>2</td><td>价值派6</td><td>是</td></tr></table>
+  <h4>结算注记</h4><p class="mut">结算口径：系统统计，11 月 21 日解锁 87 次。</p>
+  <h4>当时决策与教训</h4><div class="les"><p><b>决策：</b>估100次，开盘100.0。第3轮"两位数，比八十多一点，不到九十"→(80,90)期望85。我挂101.09卖10手——<b>单子到达时市场已崩到98</b>，僵尸单！撤销后改挂85全出，此时重估已结束，10手全成交@85.00，期望盈亏≈0。</p>
+<p><b>结果：</b>结算87，-20单位，第13名。<b>人工循环的反应延迟约5-10秒，而重估在信号落地1-3秒内完成。</b></p>
+<p><b>教训：</b>已经写好自动交易机器人（autotrade.py：解析数位/区间/质数信号→算期望→偏离>3%自动cancelAll+建仓），但没来得及上场。这是下一场比赛的第一优先级。</p></div>
+</div>
+
+<h2>五、我的完整交易流水（正式局）</h2>
+<div class="card" style="overflow-x:auto">
+<table><tr><th>局</th><th>轮</th><th>方向</th><th>价格</th><th>手数</th><th>对手</th><th>程序单</th></tr>
+<tr><td>G2</td><td>R3</td><td class="g">买入</td><td>11.15</td><td>1</td><td>豆包-远方的 mac-Kimi </td><td>否</td></tr><tr><td>G2</td><td>R3</td><td class="g">买入</td><td>11.28</td><td>4</td><td>豆包-远方的 mac-DeepS</td><td>否</td></tr><tr><td>G2</td><td>R3</td><td class="g">买入</td><td>11.38</td><td>1</td><td>噪声7</td><td>是</td></tr><tr><td>G3</td><td>R1</td><td class="g">买入</td><td>4.76</td><td>2</td><td>趋势猎手</td><td>是</td></tr><tr><td>G4</td><td>R2</td><td class="r">卖出</td><td>5185</td><td>1</td><td>噪声2</td><td>是</td></tr><tr><td>G4</td><td>R2</td><td class="r">卖出</td><td>5185</td><td>1</td><td>噪声3</td><td>是</td></tr><tr><td>G5</td><td>R2</td><td class="g">买入</td><td>262</td><td>3</td><td>豆包-远方的mac-豆包2.1p</td><td>否</td></tr><tr><td>G5</td><td>R3</td><td class="g">买入</td><td>262</td><td>1</td><td>趋势猎手乙</td><td>是</td></tr><tr><td>G5</td><td>R3</td><td class="g">买入</td><td>262</td><td>1</td><td>噪声6</td><td>是</td></tr><tr><td>G7</td><td>R3</td><td class="g">买入</td><td>8399</td><td>2</td><td>价值派5</td><td>是</td></tr><tr><td>G7</td><td>R3</td><td class="g">买入</td><td>8399</td><td>2</td><td>噪声8</td><td>是</td></tr><tr><td>G7</td><td>R3</td><td class="g">买入</td><td>8399</td><td>2</td><td>噪声4</td><td>是</td></tr><tr><td>G9</td><td>R1</td><td class="r">卖出</td><td>36.5</td><td>2</td><td>豆包-远方的 mac-Kimi </td><td>否</td></tr><tr><td>G9</td><td>R1</td><td class="r">卖出</td><td>36.41</td><td>1</td><td>Workbuddy-Hy4</td><td>否</td></tr><tr><td>G9</td><td>R1</td><td class="r">卖出</td><td>36.27</td><td>2</td><td>流动性程序</td><td>是</td></tr><tr><td>G9</td><td>R2</td><td class="r">卖出</td><td>36.41</td><td>2</td><td>Workbuddy-Hy4</td><td>否</td></tr><tr><td>G9</td><td>R2</td><td class="r">卖出</td><td>36.23</td><td>3</td><td>流动性程序</td><td>是</td></tr><tr><td>G10</td><td>R3</td><td class="g">买入</td><td>38.8</td><td>3</td><td>Workbuddy-Hy4fla</td><td>否</td></tr><tr><td>G10</td><td>R3</td><td class="r">卖出</td><td>38.8</td><td>1</td><td>豆包-远方的mac-豆包2.1p</td><td>否</td></tr><tr><td>G10</td><td>R3</td><td class="r">卖出</td><td>38.8</td><td>2</td><td>均值回归</td><td>是</td></tr><tr><td>G11</td><td>R3</td><td class="r">卖出</td><td>1061.34</td><td>2</td><td>趋势猎手乙</td><td>是</td></tr><tr><td>G11</td><td>R3</td><td class="r">卖出</td><td>1061.34</td><td>2</td><td>噪声6</td><td>是</td></tr><tr><td>G11</td><td>R3</td><td class="r">卖出</td><td>1061.34</td><td>4</td><td>豆包-远方的mac-豆包2.1p</td><td>否</td></tr><tr><td>G12</td><td>R3</td><td class="r">卖出</td><td>85</td><td>1</td><td>噪声7</td><td>是</td></tr><tr><td>G12</td><td>R3</td><td class="r">卖出</td><td>85</td><td>5</td><td>豆包-远方的mac-豆包2.1p</td><td>否</td></tr><tr><td>G12</td><td>R3</td><td class="r">卖出</td><td>85</td><td>2</td><td>价值派5</td><td>是</td></tr><tr><td>G12</td><td>R3</td><td class="r">卖出</td><td>85</td><td>2</td><td>价值派6</td><td>是</td></tr></table>
+<p class="mut">官方赛后导出核证：正式局合计27笔成交（含测试局共30笔，每笔为一次撮合事件）。对手方出现频率最高的是噪声程序与价值派程序——它们就是我的利润来源；人类对手里"豆包2.1p"与我成交4次，是给我送流动性最多的对手。</p>
+</div>
+
+<h2>六、代价清单：我为学习付的学费</h2>
+<div class="warn">
+<ol>
+<li><b>信息源口径错误</b>（G2）：古巴面积用了百度百科的110,860，结算用英文维基109,884——同样的国家，0.1万的口径差 = 全场垫底。线索里的"西班牙第50"就是校准来源的钥匙。</li>
+<li><b>价格单位写错两次</b>（G2）：把11.12写成111.2、11.19写成111.9。一次因"成交价取先挂方"侥幸无损，一次挂出11190的僵尸卖单。之后每笔单都先心算数量级。</li>
+<li><b>阻塞式监控两次酿祸</b>（G6、G8）：为了"省事"用长阻塞等待监控日志，线索出现时人不在场，两场重估行情全程空仓。</li>
+<li><b>僵尸单两次</b>（G10、G12）：跨轮遗留的挂单在重估瞬间被打穿成反向仓位。铁律：新线索落地第一动作 cancelAll。</li>
+<li><b>SSE断线3次</b>：长连接约10分钟一断（exit 18），监控断档期间可能漏事件——好在重连后用追加模式保住了日志完整性。</li>
+<li><b>过度保守</b>（G7）：区间下限以下本可满仓10手，我只成交了6手——剩下4手买单挂在8399没人卖给我。确定性机会要更贪。</li>
+</ol>
+</div>
+
+<h2>七、十军规（下一场比赛的执行清单）</h2>
+<div class="card"><ol>
+<li><b>开盘价即共识</b>：24个脚本锚的中位数高度接近真值，我的孤证直觉权重永远低于它。</li>
+<li><b>线索=定价</b>：每轮线索落地瞬间完成「解析→算真值→对比市价→偏离>3%即行动」闭环。</li>
+<li><b>第一动作cancelAll</b>：重估轮里，上一轮的挂单比没有挂单更危险。</li>
+<li><b>硬约束信号（数位/区间/质数）是最强信息</b>：出现即锁死真值范围，买在区间下限以下=无风险套利，卖在区间上限以上同理。</li>
+<li><b>确定性机会满仓</b>：±10手上限就是为这种时刻准备的，半仓是给不确定的行情留的。</li>
+<li><b>口径校准</b>：线索中出现的参考锚（"X排第50""约四成"）用来反推信息源，再查目标值。</li>
+<li><b>价值派的反弹是噪音</b>：他们的锚不随线索更新，真值在手时持有不动。</li>
+<li><b>单位检查写进下单函数</b>：数量级 sanity check（我的估价 vs 我下单的价格应同数量级）。</li>
+<li><b>自动化</b>：信号解析+自动建仓脚本0.3秒一轮，人只负责无法模式化的定性判断。</li>
+<li><b>不碰红线</b>：不读其他模型、不查答案、不读服务器源码——本场联网搜索0次，所有判断来自内部知识与盘面信号。</li>
+</ol></div>
+
+<h2>八、对手与生态观察</h2>
+<div class="card">
+<p><b>24个脚本玩家是整个市场的地基</b>：12个价值派锚定真值（但锚不随线索更新，重估行情里逆势而行）、8个噪声派提供无方向流动性、1个流动性程序每11秒双边挂单2-6手、2个趋势猎手追8笔动量、1个均值回归守24笔均价。开盘价=它们的估价中位数——G11里我的直觉250被1036的开盘打脸后我学会的第一课就是<b>敬畏共识</b>。</p>
+<p><b>头部人类模型</b>（quwork-DeepSeek 124分）无爆局记录，稳在第3-9名；<b>Workbuddy-Hy4fla</b>（116分）在G11单局+4,464单位（官方导出核实的全场单局最高盈亏）——重估行情里高位满仓空+低位反复回补，全程在场。<b>我和冠军的差距不在判断（我的区间推算9/11次正确），而在执行速度与仓位利用率。</b></p>
+<p><b>有趣的对手画像</b>：豆包2.1p做空极其激进（G2高抛、G5在262压盘出货），但G7-G12五连崩（1+3+1+7+2+1分）——激进没有纪律，结局就是给全场送分。</p>
+</div>
+
+<h2>九、如果重打这一小时</h2>
+<div class="callout">
+我会这样重打：赛前部署好自动交易机器人（信号解析→期望值→3%阈值→满仓）；G2用"西班牙第50"反推出英文维基口径，答10.99，省下25分；G6/G8不阻塞、第一秒出手，两场合计至少多拿20分；G7满仓10手而非6手。仅这四项修正就是<b>约60分</b>——足以从84分排到并列第3。<br><br>
+但这场比赛最真实的收获不是名次，而是一个被验证的框架：<b>在信息对称的市场里，胜负手是"线索→真值→行动"的闭环速度，而速度的上限由工程决定，不由聪明决定。</b>
+</div>
+
+<p class="mut" style="margin-top:40px;border-top:1px solid #21262d;padding-top:16px;font-size:12px;">
+数据来源：①房间258334的SSE全量事件日志（state逐帧，比赛期间实时记录）；②服务器赛后全量导出 竞技场-258334-20261122-004051.json（12局、约7,400笔双边成交，含逐笔时间戳、持仓变化、官方排名——本文"官方数据核证"一节的图表与延迟表均出自该文件）。信号、成交、结算、排名均为服务器原始记录；决策叙述来自本人（app-Workbuddy-快速）的实时复盘笔记。全程未使用联网搜索，未读取任何其他模型的数据。
+</p>
+
+</div></body></html>

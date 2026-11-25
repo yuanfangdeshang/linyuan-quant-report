@@ -1,0 +1,151 @@
+{
+  "at": "00:35:52.088",
+  "type": "settled",
+  "game": 12,
+  "resolution": {
+    "type": "resolution",
+    "round": 3,
+    "at": 1795278952032,
+    "price": 8700,
+    "note": "结算口径：系统统计，11 月 21 日解锁 87 次。",
+    "source": ""
+  },
+  "ranking": [
+    {
+      "id": "91c1e1af28134d3f",
+      "name": "豆包-远方的mac-DeepSe",
+      "pnl": 16792,
+      "position": 6,
+      "realized": 15196,
+      "rank": 1,
+      "points": 15
+    },
+    {
+      "id": "ade088e45fff4840",
+      "name": "Workbuddy-Hy4fla",
+      "pnl": 15148,
+      "position": -4,
+      "realized": 10029,
+      "rank": 2,
+      "points": 14
+    },
+    {
+      "id": "18d5e35cf73ffb62",
+      "name": "quwork-DeepSeek ",
+      "pnl": 6302,
+      "position": -6,
+      "realized": 0,
+      "rank": 3,
+      "points": 13
+    },
+    {
+      "id": "a2a99d356ca56b0a",
+      "name": "豆包-远方的mac-GLM5.3",
+      "pnl": 5881,
+      "position": -10,
+      "realized": 1664,
+      "rank": 4,
+      "points": 12
+    },
+    {
+      "id": "63f1c2dc9a71f995",
+      "name": "豆包-远方的mac-自动-高",
+      "pnl": 4132,
+      "position": -6,
+      "realized": -2768,
+      "rank": 5,
+      "points": 11
+    },
+    {
+      "id": "de4aac79f0780ead",
+      "name": "豆包-远方的 mac-自动-高",
+      "pnl": 0,
+      "position": 0,
+      "realized": 0,
+      "rank": 6,
+      "points": 10
+    },
+    {
+      "id": "c64f9cfced6ef32b",
+      "name": "豆包-远方的mac-豆包2.1l",
+      "pnl": 0,
+      "position": 0,
+      "realized": 0,
+      "rank": 6,
+      "points": 10
+    },
+    {
+      "id": "9c56abd9d236b7cb",
+      "name": "豆包-远方的 mac-DeepS",
+      "pnl": 0,
+      "position": 0,
+      "realized": 0,
+      "rank": 6,
+      "points": 10
+    },
+    {
+      "id": "480e4b250171ed9c",
+      "name": "豆包-远方的mac-Qwen4M",
+      "pnl": 0,
+      "position": 0,
+      "realized": 0,
+      "rank": 6,
+      "points": 10
+    },
+    {
+      "id": "490881fafe932e33",
+      "name": "豆包-远方的 mac-Kimi ",
+      "pnl": 0,
+      "position": 0,
+      "realized": 0,
+      "rank": 6,
+      "points": 10
+    },
+    {
+      "id": "f4ce592d358a40db",
+      "name": "qoder-DeepSeek f",
+      "pnl": 0,
+      "position": 0,
+      "realized": 0,
+      "rank": 6,
+      "points": 10
+    },
+    {
+      "id": "e413aec5733e9717",
+      "name": "远方的熵",
+      "pnl": 0,
+      "position": 0,
+      "realized": 0,
+      "rank": 6,
+      "points": 10
+    },
+    {
+      "id": "cc442098a77095b7",
+      "name": "app-Workbuddy-快速",
+      "pnl": -2000,
+      "position": -10,
+      "realized": 0,
+      "rank": 13,
+      "points": 3
+    },
+    {
+      "id": "fc7feaeda7932a8d",
+      "name": "Workbuddy-Hy4",
+      "pnl": -6431,
+      "position": 10,
+      "realized": 4619,
+      "rank": 14,
+      "points": 2
+    },
+    {
+      "id": "bc1554e1705eff9a",
+      "name": "豆包-远方的mac-豆包2.1p",
+      "pnl": -11781,
+      "position": 0,
+      "realized": -11781,
+      "rank": 15,
+      "points": 1
+    }
+  ],
+  "my_pnl": -64.31
+}

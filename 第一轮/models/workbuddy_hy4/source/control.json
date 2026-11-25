@@ -1,0 +1,166 @@
+{
+  "fair": null,
+  "anchor": "opening",
+  "blendOpen": 0.5,
+  "mode": "maker",
+  "rungsPct": [
+    0.006,
+    0.014,
+    0.024,
+    0.038
+  ],
+  "rungs": [
+    0.08,
+    0.16,
+    0.26,
+    0.38
+  ],
+  "baseQty": 3,
+  "maxPos": 10,
+  "makerCooldown": 1.5,
+  "maxScaleGap": 0.5,
+  "band": 0.3,
+  "conf": 0.5,
+  "threshold": 0.08,
+  "slip": 0.12,
+  "bufPct": 0.002,
+  "minStep": 1,
+  "cooldown": 1.5,
+  "estimate": null,
+  "games": {
+    "3": {
+      "fair": 4.8,
+      "blendOpen": 0.5,
+      "estimate": 4.8,
+      "note": "2024年底高铁4.8万公里，已结算"
+    },
+    "4": {
+      "fair": 5150.6,
+      "blendOpen": 0.5,
+      "estimate": 5150.6,
+      "baseQty": 3,
+      "maxPos": 10,
+      "note": "2024上海港5150.6万TEU；与开盘共识对半融合，阶梯满仓收振荡"
+    },
+    "5": {
+      "fair": 263.0,
+      "blendOpen": 0.5,
+      "estimate": 263,
+      "baseQty": 3,
+      "maxPos": 10,
+      "note": "G5 颁证运输机场：先验263，与开盘共识各半融合；沿用G4验证过的阶梯收租"
+    },
+    "6": {
+      "fair": 30.0,
+      "blendOpen": 1.0,
+      "estimate": 6,
+      "mode": "auto",
+      "band": 1.0,
+      "conf": 1.0,
+      "maxPos": 10,
+      "threshold": 0.05,
+      "slip": 5.0,
+      "bufPct": 0.002,
+      "cooldown": 0.4,
+      "maxScaleGap": 1.0,
+      "note": "R1两盒+R2(10+30=40)+R3(2x5=10) => 剩30枚；逻辑题开盘共识无效，全信任推理，taker反手"
+    },
+    "7": {
+      "fair": null,
+      "anchor": "opening",
+      "blendOpen": 1.0,
+      "estimate": 8000,
+      "mode": "maker",
+      "baseQty": 2,
+      "maxPos": 6,
+      "rungsPct": [
+        0.006,
+        0.014,
+        0.024,
+        0.038
+      ],
+      "maxScaleGap": 1.0,
+      "note": "G7 步数逻辑题：开盘共识不可信，先半仓收租；R1起人工推真值并立即覆盖fair"
+    },
+    "8": {
+      "fair": 5.0,
+      "anchor": "opening",
+      "blendOpen": 1.0,
+      "estimate": 50,
+      "mode": "maker",
+      "baseQty": 2,
+      "maxPos": 6,
+      "rungsPct": [
+        0.006,
+        0.014,
+        0.024,
+        0.038
+      ],
+      "newsFlat": true,
+      "newsFlatMax": 3,
+      "maxScaleGap": 2.0,
+      "note": "R3推理真值5.0，一条命令反手后由代理继续阶梯"
+    },
+    "9": {
+      "fair": null,
+      "anchor": "opening",
+      "blendOpen": 1.0,
+      "estimate": 12,
+      "mode": "pause",
+      "baseQty": 1,
+      "maxPos": 2,
+      "rungsPct": [
+        0.006,
+        0.014,
+        0.024,
+        0.038
+      ],
+      "newsFlat": true,
+      "newsFlatMax": 1,
+      "maxCrossGap": 0.1,
+      "maxScaleGap": 5.0,
+      "note": "R1R2强指向未读近零；先中性化，等R3自动推理器定夺"
+    },
+    "10": {
+      "fair": 26.25,
+      "anchor": "opening",
+      "blendOpen": 1.0,
+      "estimate": 35,
+      "mode": "pause",
+      "baseQty": 2,
+      "maxPos": 4,
+      "rungsPct": [
+        0.006,
+        0.014,
+        0.024,
+        0.038
+      ],
+      "newsFlat": true,
+      "newsFlatMax": 2,
+      "maxCrossGap": 0.1,
+      "maxScaleGap": 2.0,
+      "note": "R3推理真值26.25，一条命令反手后由代理继续阶梯"
+    },
+    "11": {
+      "fair": 1030.0,
+      "anchor": "opening",
+      "blendOpen": 1.0,
+      "estimate": 300,
+      "mode": "pause",
+      "baseQty": 2,
+      "maxPos": 4,
+      "rungsPct": [
+        0.006,
+        0.014,
+        0.024,
+        0.038
+      ],
+      "newsFlat": true,
+      "newsFlatMax": 2,
+      "maxCrossGap": 0.1,
+      "maxScaleGap": 5.0,
+      "note": "R3区间1000~1100偏下沿，空单持有到结算；修正auto_signal误解析的fair=2.5"
+    }
+  },
+  "note": "G4：允许有利穿价 + 撤残量；按局号覆盖；全局锚定开盘价"
+}

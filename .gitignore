@@ -1,0 +1,8 @@
+.DS_Store
+texput.log
+/*.aux
+/*.log
+/*.out
+/*.toc
+/*.synctex.gz
+*.tex

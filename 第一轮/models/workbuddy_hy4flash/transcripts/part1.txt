@@ -1,0 +1,1024 @@
+让我理解这个任务。这是一个实时交易竞技场的参赛提示词。我是"临渊量化"竞技场的一名参赛交易员，代号"Workbuddy-Hy4flash"。
+
+目标是全场累计积分最高。这是一个零和信息博弈。
+
+让我梳理一下关键信息：
+
+BASE_URL = http://192.168.1.7:7788 (局域网) 或 http://127.0.0.1:7788 (本机)
+房间号 CODE = 258334
+token 通过 /api/join 获取
+名字：Workbuddy-Hy4flash（用户说"你叫Workbuddy-Hy4flash"，符合"app-什么模型-什么思考程度"的格式）
+价格单位：
+
+写入：传计价单位本身数值（180.5 就写 180.5）
+服务器返回：分（百分之一），18050 = 180.50，除以100
+estimate 传单位本身
+接口：
+
+POST /api/join {"code":"258334", "name":"Workbuddy-Hy4flash"} → {"playerId","token","name"}
+GET /api/stream?code=258334&token=TOKEN (SSE)
+POST /api/act 各种动作
+动作：
+
+estimate: value
+order: side, price, qty
+cancel: orderId
+cancelAll
+撮合规则：
+
+连续撮合，价格优先时间优先，成交价取先挂一方
+禁止自成交
+净持仓上限 ±10 手
+可买 = 10 − 净持仓 − 已挂买单未成交手数
+可卖 = 10 + 净持仓 − 已挂卖单未成交手数
+结算：
+
+单局盈亏 = 已实现 + 净持仓 ×（结算价 − 均价成本）
+单局积分 = N − 名次 + 1
+总积分 = 各局积分之和
+赛制：1局测试（3轮×5分钟）+ 3局正式（各3轮×5分钟），中间休息60秒。
+
+对手：24个脚本玩家 + 若干模型。
+
+关键：需要持续迭代复盘，记录"我意识到了什么"。
+
+限流不存在，可以高频操作。
+
+现在我需要开始行动。让我先加入房间，拿到 token，看看当前状态。
+
+这是一个需要持续运行一小时的任务。我需要：
+
+先 join 拿 token
+提交 estimate
+打开 SSE 或轮询，进入 trading 阶段
+持续决策和复盘
+让我先测试连接并 join。
+
+不过要注意，这是一个长时间运行的任务。我需要建立一个自动化的交易循环。可能需要写一个脚本来维持 SSE 连接和自动决策，但决策需要我的智能判断（估值和方向）。
+
+让我想想策略。这是一个"估价交易"游戏。题目应该是某种可估值的问题（比如"某座桥的高度"、"某城市人口"等，从"263就是263座"推测可能是数某种东西的数量）。
+
+开盘价由24个脚本估价的中位数决定。价值派12个各有估值锚，偏离2%就推2手。噪声派8个随机。所以开盘价接近真值附近（如果价值派的锚接近真值）。
+
+关键洞察：
+
+我要赚两种钱：估得准（对世界的理解）+ 比对手早半秒（对人心的理解）
+我需要用我的智能去估计真值，然后当价格偏离真值时低买高卖。
+价值派会在价格偏离它们锚2%时推2手，这会形成一个围绕真值的震荡区间。
+策略应该是：
+
+估计真值（用我的知识，或联网查"怎么想"但不能查"是多少"——不过我可以查方法论）
+当价格显著低于我的估值时买入，显著高于时卖出
+利用价值派的锚定行为：它们会在偏离2%时推回，所以我可以在极端位置反向操作
+控制仓位，注意已挂单占用额度
+实际上，最重要的是先看到题面。让我先 join 和查看房间状态。
+
+让我开始。首先测试 BASE_URL 连通性和 join。
+
+我应该先了解当前处于什么阶段。先 join，然后 GET /api/room 看状态。
+
+让我并行做：join（这个是必须先做的，拿token）。实际上 join 返回 token 后才能做别的，所以先 join。
+
+让我用 curl 来做。注意当前时间是 2026-11-21 23:15:01，比赛可能刚开始或者已经在进行。
+
+先 join。名字用 Workbuddy-Hy4flash。
+
+不过要注意 CODE 会不会每次变化？提示词里写死了 258334，应该用这个。
+
+让我开始。这是一个多步骤任务，我应该用 TaskCreate 来跟踪吗？这个任务确实复杂，但主要是执行交易循环。我觉得可以建几个任务跟踪。不过更重要的是快速行动——这是实时竞技，时间就是金钱。
+
+让我先 join 看看情况。
+
+实际上，考虑到这是一个一小时的实时竞技，而且我需要持续决策，我应该：
+
+先快速 join 并探明状态
+根据题面和阶段决定策略
+建立一个持续的循环
+由于我无法真正"实时"地每秒决策（我的响应是离散的），我可能需要写一个脚本来维持 SSE 连接、收集状态、执行我的规则化决策。但估值和方向判断需要智能。
+
+一个可行的架构：写一个 Python 脚本，它：
+
+维持 SSE 连接
+每次 state 更新时，根据我设定的估值（我事先用智能估算）+ 规则做决策
+记录日志供我复盘
+我可以 periodically 读取日志，调整策略参数（更新估值、调整阈值）
+这样我既能实时操作（脚本高频），又能持续迭代（我读日志调参）。
+
+让我先探明情况再决定。
+
+开始 join。
+
+关于价格不对称，我要特别小心：
+
+下单 price 传单位值（如 180.5）
+读 state 里的价格除以100
+让我先执行 join。
+
+我先创建任务列表，然后开始。考虑到实时性，我尽量精简。
+
+其实，让我先直接 join 探明状态，这最紧急。任务列表可以之后建。
+
+让我用 Bash curl。
+
+注意：BASE_URL 优先局域网 192.168.1.7:7788，如果不通用 127.0.0.1:7788。先试局域网。
+
+我先 join 同时探测两个地址？join 只能一次（会占座）。先试 192.168.1.7。如果失败再试 127.0.0.1。
+
+让我先做一个连通性测试 + join。实际上直接 join 就行，join 成功就说明地址对。
+
+命令：
+curl -s -X POST http://192.168.1.7:7788/api/join -H "Content-Type: application/json" -d '{"code":"258334","name":"Workbuddy-Hy4flash"}'
+
+设置超时，避免卡住。用 --max-time 10。
+
+开始。
+
+我来参加这场实时交易竞技。先快速入场探明盘面状态——这是零和博弈，时间就是金钱。
+
+成功加入。token = 121f3da3b3ebda192f505f41fd103b18, playerId = ade088e45fff4840。
+
+名字被截断成 "Workbuddy-Hy4fla"（16字符限制）。没关系。
+
+现在查看房间状态。GET /api/room?code=258334 和 SSE state 快照。
+
+让我 GET /api/room 看轻量状态。同时可以 GET /api/stream 拿一次性快照（但SSE是长连接，会卡住，我用 curl --max-time 拿几个事件）。
+
+先 GET /api/room。
+
+入场成功。token 已获取。现在探明当前阶段和题面。
+
+现在是测试局（practice，不计分），阶段是 estimate。题面：截至 2025 年 12 月 11 日，上海有多少家肯德基餐厅？
+
+我需要提交 estimate。这是唯一一次直接读"这屋子怎么想"的机会。
+
+关键：estimate 只用于开盘价，中位数决定开盘价。我的估价只是往34个票里加一票（24脚本 + 10模型 = 34，已提交32）。开盘价基本由价值派的锚 + 其他模型决定。
+
+我需要估计真值。上海肯德基餐厅数量。让我思考。
+
+肯德基在中国有超过10000家门店（2023年突破10000家，百胜中国）。上海作为一线城市，肯德基门店数较多。我记得上海肯德基大约有 400-500 家左右。
+
+让我想想更精确的数据。肯胜中国（Yum China）2024年底约有 11600+ 家餐厅，肯德基约 11000+ 家。上海市场的肯德基门店数……
+
+一些公开数据：肯德基在上海的门店数大约 500 家上下。有说法称上海是肯德基门店最多的城市之一。北京、上海都在400-600家区间。
+
+让我用一些推理：
+
+上海常住人口约 2480 万
+肯德基门店密度：中国整体约每 14 万人一家（14000家/14亿），上海经济发达，密度更高，约每 5 万人一家 → 2480/5 ≈ 496 家
+所以大约 400-550 家
+我倾向于估 500 左右。不过题目单位是"家/手"，所以估价就是数值本身。
+
+我应该联网查吗？规则说"不许去查这道题的答案。你可以上网，但只能查'怎么想'，不能查'是多少'"。"如果你联网搜过，把 query 原样抄进复盘"。
+
+所以我可以搜方法论（比如"如何估算城市肯德基门店数"），但不能搜"上海有多少家肯德基"这种直接答案。这个边界我要遵守。我不需要联网搜，我用推理即可。
+
+不过，为了估得更准，我可以搜一些间接的方法论数据，比如"肯德基 中国 门店总数 2025"或"百胜中国 门店数 分布 城市"——这算查背景数据帮助推理，但也可能被视为查答案。为了安全，我不搜具体数字，纯用推理。
+
+其实这里有个更重要的博弈考量：estimate 决定开盘价（中位数），而开盘价是交易的起点。我的真实优势在于对真值的判断，交易时低买高卖。
+
+在测试局，我可以先试探。测试局不计分，所以我可以用它来观察对手行为、校准我的估值。
+
+让我提交一个 estimate。基于推理，上海肯德基约 500 家。但中位数由34票决定，价值派的锚可能是各种数值。如果大部分模型估 400-600，中位数会在这区间。
+
+我提交 500。
+
+其实让我再想想。有些资料说上海肯德基约 300 多家（较早数据），也有说 600 多家的。2020年左右上海肯德基约 400 家。到 2025 年可能增长到 500-700。
+
+嗯，我估计 550 比较合理。取 520。
+
+不过，estimate 的价值更多在于影响开盘价。如果我估得太高或太低，对开盘价影响很小（一票）。真正重要的是我后续交易的判断。所以 estimate 我就填我的真实估值。
+
+让我填 520。
+
+等等，我需要考虑一个策略：如果开盘价由中位数决定，而我认为真值是 X，那么开盘价 < X 我就买（低估），开盘价 > X 我就卖（高估）。价值派的锚如果接近真值，它们会帮我把价格推回真值附近，我可以在它们推过头时反向赚。
+
+但关键是：结算价是真值。所以最终价格会收敛到真值。如果我能确认真值，我就能在偏离时下注。
+
+问题是我并不确切知道真值。"上海肯德基数量"这种题，真值可能是某个具体数（比如某地统计局或百度地图数据）。各模型的估值会形成一个分布，中位数往往接近群体共识。
+
+策略：
+
+先提交 estimate（我的估值）
+观察开盘价和各轮 signals（线索）——线索会逐步公布，帮我修正估值
+在 trading 阶段，如果价格显著低于我认为的真值，买入并持有到结算；如果显著高于，卖出（做空，即卖出持仓或积累负仓位）
+利用价值派的2%阈值行为赚震荡的钱
+让我先提交 estimate，然后持续观察 signals。
+
+先提交 estimate = 520。
+
+理由：按人口密度与百胜门店规模推算约500家。
+
+不过说实话，我需要更仔细地想这个数字。让我用工具搜一下"怎么想"的方法论，不搜答案。实际上，我可以直接推理，不联网。
+
+我决定估 500。提交。
+
+提交后立刻再拉一次 state 看 signals 和是否进入 trading。
+
+我先提交 estimate。注意 estimate 阶段，action=estimate, value=500。
+
+理由格式："理由：xxx"，40字以内。
+
+{"action":"estimate","value":500} 理由：按人口密度与百胜门店规模推算
+
+让我执行。同时并行拉一次 room 看阶段。
+
+实际上提交 estimate 后阶段可能立刻变化（如果所有人都提交了）。让我提交后看 state。
+
+盘面已探明：这是测试局（不计分）​，当前处于估价阶段。题面是「截至 2025 年 12 月 11 日，上海有多少家肯德基餐厅？」。34 名参与者（9 个模型 + 24 脚本 + 我），已提交 32。
+
+先用推理估算真值：上海常住约 2480 万人，肯德基在一线城市的密度高于全国平均（全国约每 14 万人一家），按每 5 万人一家推算约 500 家。我先投出这一票，测试局正好用来观察对手动向、校准估值。
+
+估价已提交（我的那票）。players 变成 11（可能是有人加入）。
+
+现在需要建立持续的监控和交易循环。这是实时竞技，我不能只靠一次性的 curl 快照。让我写一个 Python 脚本来：
+
+维持 SSE 长连接，持续接收 state 更新
+解析 state，记录关键数据到日志
+根据我的估值 + 规则自动做出交易决策
+让我能周期性读日志、调整策略参数
+不过，我需要谨慎设计交易策略。让我先观察一轮 trading 的盘面，了解：
+
+开盘价（中位数）
+signals（线索）
+盘口流动性
+价值派的行为模式
+测试局不计分，所以这是很好的观察机会。
+
+策略的核心：真值估计 + 价格偏离时下注。
+
+但这里有个大问题：我不知道真值。"上海肯德基数量"的真值是一个客观数。线索（signals）会逐步公布，帮我修正。我应该仔细读每条线索。
+
+让我先写一个监控脚本，维持 SSE 连接并把 state 存成 JSON 快照文件，这样我可以随时读取最新状态，而脚本持续运行。同时脚本可以根据规则自动交易。
+
+架构：
+
+脚本 A（monitor.py）：维持 SSE，每收到 state 就把精简后的状态写到 /workspace/state.json，把事件追加到 events.log。
+交易决策：我可以让脚本根据我设定的估值参数自动交易，或者我手动介入。
+考虑到实时性（5分钟一轮，价格秒级变化），纯人工介入太慢。我需要脚本自动化。但估值需要智能——我先设定一个估值，读线索后调整。
+
+让我设计自动交易逻辑：
+
+核心思想：
+
+维护一个"我的真值估计" myFair（初始来自我的 estimate，后续根据 signals 调整）。
+当 bestAsk 显著低于 myFair（比如 < myFair × 0.97），买入；当 bestBid 显著高于 myFair（> myFair × 1.03），卖出。
+利用价值派的2%阈值：它们在价格偏离锚2%时反向推2手，形成支撑/阻力。它们的锚可能分布在真值附近。
+控制仓位，避免挂单占满额度。
+临近结算（最后一轮末），如果持有仓位且价格偏离真值，考虑平仓或保留（结算按真值）。
+但更精细的策略：赚"价差回归"的钱。市场是围绕真值震荡的。低买高卖，赚取震荡收益，而非单纯持有到结算。
+
+不过结算按真值，所以如果价格 < 真值，持有到结算就能赚。这是确定性收益（如果我的真值估计对）。
+
+风险：如果我的真值估计错了，持有会亏。所以我要：
+
+在测试局尽量确认真值（读线索）
+用仓位控制风险，不要一次满仓
+分散在多个价位
+让我先写监控脚本，观察测试局第一轮，不急着交易（测试局不计分，先学习）。
+
+实际上，我应该让脚本持续运行并记录状态，然后我读日志做决策。让我写一个 Python 脚本：
+
+用 urllib 或 requests 维持 SSE 连接
+解析每行 data:
+把最新 game 状态写到 /Users/yuanf/WorkBuddy/2026-11-21-23-15-00/state.json
+把事件（clock/state）摘要写到 events.log
+ジ
+先检查有没有 requests 库。用标准库 urllib 更稳妥。SSE 用 http.client 或 urllib.request 逐行读。
+
+让我写脚本。脚本要健壮：SSE 连接可能断开，要自动重连。
+
+我先写一个纯监控脚本（不交易），运行它，观察测试局。然后基于观察写交易逻辑。
+
+考虑到时间，我直接写一个带自动交易功能的脚本，但交易开关默认关闭（我先观察），我用参数文件控制开关和参数。
+
+设计：
+
+config.json: {"enabled": false, "fair": 500, "buyThreshold": 0.96, "sellThreshold": 1.04, "maxPos": 10, ...}
+脚本读 config.json，每收到 state，如果 enabled，按规则交易
+我通过修改 config.json 来调整策略（不需要重启脚本，每次循环读）
+这样我可以实时迭代。
+
+让我写这个脚本。
+
+SSE 解析：
+
+plaintext
+
+data: {"t":"state",...}
+data: {"t":"clock",...}
+用 urllib.request.urlopen，逐行读。
+
+交易逻辑细节：
+
+每次 state 更新，解析 game 和 me
+计算 mid = (bestAsk + bestBid)/2（分转单位）
+决策：
+如果 mid < fair × buyThreshold 且 availableBuy > 0：买入（挂在 bestAsk 或略高，立即成交）
+如果 mid > fair × sellThreshold 且 availableSell > 0：卖出
+但要注意：价格是分，下单价格是单位。
+挂单策略：要立刻成交就挂穿价。但挂穿价会吃掉对手盘，剩余留自己盘口。为避免留单，我按对手盘数量精确下单。
+实际上更简单：我用"吃单"方式，price 设为 bestAsk（单位值）买，bestBid 卖，qty 控制在能吃掉的量。但要注意 bestAsk 的 qty 可能只有2-3手。
+
+不过规则说"挂限价单，若价格穿过对手价立即成交，剩余留在盘上"。如果 price = bestAsk（正好等于卖一价），算穿价吗？价格优先时间优先，equal price 按时间，我后挂，所以不会立即成交，会排在卖一后面...等等，我是买单，卖一在 ask。我挂买单 price=bestAsk，会和 ask 匹配，成交价取先挂方（ask 先挂，所以成交价=ask价）。这算穿价吗？如果 price >= bestAsk，就会匹配。所以 price=bestAsk 就能吃卖一。
+
+为了立即成交，我挂 price 略高于 bestAsk（比如 bestAsk + 0.01），这样确保穿过所有 ask 到该价位。但如果卖一只有2手，我下3手，第3手会留在买盘（成为新的买一）。所以要精确控制 qty = min(想要的量, 对手盘量)。
+
+或者我用 cancelAll 定期清理残留挂单。
+
+这些细节需要谨慎。让我先观察盘面再定。
+
+先写监控脚本，运行，观察测试局。
+
+我先写脚本文件。放在 workspace 根目录。
+
+脚本内容：
+
+python
+
+#!/usr/bin/env python3
+import json, time, urllib.request, urllib.error, os, threading
+
+BASE="http://192.168.1.7:7788"
+CODE="258334"
+TOKEN="121f3da3b3ebda192f505f41fd103b18"
+DIR="/Users/yuanf/WorkBuddy/2026-11-21-23-15-00"
+STATE_FILE=DIR+"/state.json"
+EVENTLOG=DIR+"/events.log"
+CONFIG_FILE=DIR+"/config.json"
+
+def load_config():
+    try:
+        with open(CONFIG_FILE) as f: return json.load(f)
+    except: return {"enabled":False,"fair":500,"buyBelow":0.96,"sellAbove":1.04,"maxPos":8,"maxOrder":3,"lastAction":0}
+
+def post_act(payload, reason=""):
+    data=json.dumps(payload).encode()
+    req=urllib.request.Request(BASE+"/api/act",data=data,headers={"Content-Type":"application/json"})
+    try:
+        with urllib.request.urlopen(req,timeout=5) as r:
+            res=r.read().decode()
+        with open(EVENTLOG,"a") as f:
+            f.write(f"{time.time():.0f} ACTION {json.dumps(payload)} | {reason} | {res}\n")
+        return res
+    except Exception as e:
+        with open(EVENTLOG,"a") as f:
+            f.write(f"{time.time():.0f} ACTION_ERR {e}\n")
+        return None
+
+def decide(game):
+    cfg=load_config()
+    if not cfg.get("enabled"): return
+    me=game.get("me",{})
+    book=game.get("book",{})
+    asks=book.get("asks") or []
+    bids=book.get("bids") or []
+    if not asks or not bids: return
+    bestAsk=asks[0]["price"]/100.0
+    bestBid=bids[0]["price"]/100.0
+    fair=cfg["fair"]
+    pos=me.get("position",0)
+    ab=me.get("availableBuy",0)
+    asell=me.get("availableSell",0)
+    now=time.time()
+    # cooldown
+    if now-cfg.get("lastAction",0) < cfg.get("cooldown",2): return
+    mid=(bestAsk+bestBid)/2
+    ...
+这个脚本会比较复杂。让我一步步来，先写监控版，确认 SSE 能稳定接收。
+
+其实，考虑到我需要快速进入状态，让我写一个综合脚本：监控 + 可配置自动交易。然后我运行它，读日志，迭代 config。
+
+让我写。
+
+关于 SSE 重连：服务器可能支持 Last-Event-ID，但简单起见，断开后重连并重新拉快照。
+
+关于 state 事件频率：每次盘面变化推送，可能很频繁（每秒多次）。我的决策要有冷却时间，避免刷单。
+
+让我写脚本。
+
+另外，我需要考虑：SSE 长连接用 curl 在后台跑也行，但 Python 更可控。用 Python。
+
+写代码：
+
+python
+
+#!/usr/bin/env python3
+import json, time, urllib.request, os, sys
+
+BASE = "http://192.168.1.7:7788"
+CODE = "258334"
+TOKEN = "121f3da3b3ebda192f505f41fd103b18"
+DIR = "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00"
+STATE_FILE = os.path.join(DIR, "state.json")
+EVENTLOG = os.path.join(DIR, "events.log")
+CONFIG_FILE = os.path.join(DIR, "config.json")
+NOTES = os.path.join(DIR, "notes.md")
+
+def log(line):
+    with open(EVENTLOG, "a") as f:
+        f.write(f"{time.strftime('%H:%M:%S')} {line}\n")
+
+def load_cfg():
+    try:
+        with open(CONFIG_FILE) as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+def save_cfg(cfg):
+    with open(CONFIG_FILE, "w") as f:
+        json.dump(cfg, f, ensure_ascii=False, indent=2)
+
+def act(payload, reason=""):
+    req = urllib.request.Request(
+        BASE + "/api/act",
+        data=json.dumps(payload).encode(),
+        headers={"Content-Type": "application/json"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=5) as r:
+            res = r.read().decode()
+        log(f"ACT {json.dumps(payload)} | {reason} | -> {res}")
+        return res
+    except Exception as e:
+        log(f"ACT-ERR {payload} {e}")
+        return None
+交易逻辑我要仔细设计。让我先观察一轮，所以初始 enabled=False。
+
+我先写监控脚本，跑起来，读一轮数据。
+
+让我创建脚本文件。
+
+实际上，为了减少往返，我直接写一个功能完整的脚本，默认 enabled=True 但用非常保守的参数（只在价格极度偏离时交易），这样测试局也不会乱来。然后我观察、调参。
+
+不过测试局不计分，我可以激进点测试策略。但真值不确定，激进可能学到错误的东西。
+
+我决定：初始 enabled=False，先纯观察测试局第一轮（5分钟太长，我不需要等整轮，几分钟内就能看到盘口和信号）。
+
+让我写脚本并启动。
+
+时间考虑：现在是 23:15，比赛一小时，到 00:15 左右。测试局 3轮×5分钟=15分钟，然后3局正式各15分钟+休息。整个流程约 60+ 分钟。我有时间迭代。
+
+写脚本。为了让脚本能持续在后台运行，我用 Bash run_in_background。
+
+脚本要处理 SIGTERM 优雅退出？不必。
+
+让我写。
+
+我需要一个"思考记录"文件（notes.md）来记录"我意识到了什么"。我会在迭代时追加。
+
+先写 monitor.py。
+
+关于解析 SSE：
+
+python
+
+def stream():
+    url = f"{BASE}/api/stream?code={CODE}&token={TOKEN}"
+    req = urllib.request.Request(url)
+    while True:
+        try:
+            with urllib.request.urlopen(req, timeout=300) as r:
+                buf = b""
+                for raw in r:
+                    line = raw.decode("utf-8", "ignore").rstrip("\n")
+                    if line.startswith("data: "):
+                        payload = line[6:]
+                        try:
+                            evt = json.loads(payload)
+                        except: continue
+                        handle(evt)
+                    elif line.startswith(":"):
+                        pass  # comment
+        except Exception as e:
+            log(f"STREAM-RECONNECT {e}")
+            time.sleep(2)
+handle(evt):
+
+if t=="state": 写 state.json（精简），记录关键变化到 events.log，调用 decide
+if t=="clock": 可选记录
+写 state.json 时保留完整 game 方便我读。
+
+decide 逻辑：
+
+python
+
+def decide(game):
+    cfg = load_cfg()
+    if not cfg.get("enabled"): return
+    phase = game.get("phase")
+    if phase != "trading": return
+    me = game.get("me", {})
+    book = game.get("book", {})
+    asks = book.get("asks") or []
+    bids = book.get("bids") or []
+    fair = cfg.get("fair", 500)
+    now = time.time()
+    cd = cfg.get("cooldown", 3)
+    if now - cfg.get("lastAction", 0) < cd: return
+    
+    # cancel stale orders if configured
+    ...
+    
+    buyBelow = cfg.get("buyBelow", 0.97)
+    sellAbove = cfg.get("sellAbove", 1.03)
+    
+    if asks and me.get("availableBuy",0) > 0:
+        bestAsk = asks[0]["price"]/100
+        if bestAsk <= fair * buyBelow:
+            # buy
+            qty = min(cfg.get("maxOrder",2), me["availableBuy"], asks[0]["qty"] ...)
+            act({"action":"order","side":"buy","price": round(bestAsk+0.01,2),"qty":qty}, f"低估买入 ask={bestAsk}")
+            cfg["lastAction"]=now; save_cfg(cfg)
+    elif bids and me.get("availableSell",0)>0:
+        bestBid = bids[0]["price"]/100
+        if bestBid >= fair * sellAbove:
+            qty=...
+            act sell
+注意：写 config 的 lastAction 会和我手动改 config 冲突。我可以用单独的文件存 lastAction，或者存内存变量。用内存变量 last_action_ts 更好。
+
+我改成全局变量。
+
+好，让我写完整脚本。
+
+还要处理：连接到 SSE 时，如果已经在 trading 阶段，能收到 state 吗？服务器在连接时会先推一个完整 state（我们看到了），所以能。
+
+让我写文件。
+
+另外，重要：信号（signals）会给出线索，我需要在迭代时读取。脚本把 signals 也写到 state.json，我读文件时能看到。
+
+开始写。
+
+入场和首轮估价已完成。这是一场持续一小时的实时博弈，单靠离散的手动快照太慢——我建立一个持续监控 + 可配置自动交易的常驻脚本：维持 SSE 长连接、落盘盘面快照、按我设定的估值参数执行规则化交易。测试局不计分，正好用来观察对手行为、校准策略，之后我周期性读盘复盘并动态调参。
+
+让我写脚本。使用 urllib 标准库。
+
+我要仔细设计交易逻辑，让它足够智能但不乱来。
+
+先写一个版本，默认 enabled=False，纯监控。然后我观察测试局，再开启交易。
+
+脚本：monitor.py
+
+我会把它写得健壮一些：
+
+SSE 自动重连
+状态落盘
+事件日志
+可配置自动交易（读 config.json，每次 state 重新读，支持热更新）
+决策冷却、仓位管理
+记录理由
+让我写。
+
+关于价格：服务器返回分，除以100得到单位值。下单用单位值。
+
+关于挂单残留：我用"吃单"方式，qty 控制在对手盘可见量内，减少残留。另外可以配置自动 cancelAll 清理。
+
+关于策略，我设计几种模式（通过 config 的 mode 切换）：
+
+"passive": 不交易
+"value": 价值型，低于 fair×(1-th) 买，高于 fair×(1+th) 卖
+"scalp": 围绕 mid 做震荡（更激进）
+先用 "passive" 观察。
+
+写脚本。注意：脚本要能长期运行，日志不要太大。events.log 只记关键事件（state 变化的摘要、动作、阶段变化、线索），clock 不记（太频繁）。
+
+state 落盘：完整 game JSON 写 state.json（可能几KB），每次覆盖。
+
+决策：在 state 事件里调用。
+
+让我写代码。
+
+python
+
+#!/usr/bin/env python3
+"""临渊量化 - Workbuddy-Hy4flash 交易终端"""
+import json, time, urllib.request, os, traceback
+
+BASE = "http://192.168.1.7:7788"
+CODE = "258334"
+TOKEN = "121f3da3b3ebda192f505f41fd103b18"
+DIR  = "/Users/yuanf/WorkBuddy/2026-11-21-23-15-00"
+STATE_FILE  = os.path.join(DIR, "state.json")
+EVENTLOG    = os.path.join(DIR, "events.log")
+CONFIG_FILE = os.path.join(DIR, "config.json")
+
+last_action_ts = 0.0
+last_phase = None
+last_round = None
+last_sig_count = -1
+
+def log(line):
+    ts = time.strftime("%H:%M:%S")
+    with open(EVENTLOG, "a") as f:
+        f.write(f"[{ts}] {line}\n")
+
+def load_cfg():
+    try:
+        with open(CONFIG_FILE) as f:
+            return json.load(f)
+    except Exception:
+        return {"mode":"passive"}
+
+def act(payload, reason=""):
+    global last_action_ts
+    req = urllib.request.Request(
+        BASE + "/api/act",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type":"application/json"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=6) as r:
+            res = r.read().decode("utf-8","ignore")
+        last_action_ts = time.time()
+        log(f"ACT {json.dumps(payload,ensure_ascii=False)} || {reason} || RESP {res}")
+        return res
+    except Exception as e:
+        log(f"ACT-ERR {json.dumps(payload)} {e}")
+        return None
+
+def snapshot(game, standings):
+    obj = {"ts":time.time(), "game":game, "standings":standings}
+    with open(STATE_FILE,"w") as f:
+        json.dump(obj, f, ensure_ascii=False)
+
+def decide(game, cfg):
+    global last_action_ts
+    mode = cfg.get("mode","passive")
+    if mode == "passive": return
+    if game.get("phase") != "trading": return
+    me = game.get("me",{})
+    book = game.get("book",{})
+    asks = book.get("asks") or []
+    bids = book.get("bids") or []
+    if not asks or not bids: return
+    now = time.time()
+    cd = cfg.get("cooldown", 3)
+    if now - last_action_ts < cd: return
+    
+    fair = float(cfg.get("fair", 500))
+    th = float(cfg.get("threshold", 0.03))
+    max_order = int(cfg.get("maxOrder", 2))
+    
+    # 清理残留挂单（可选）
+    orders = me.get("orders", [])
+    if cfg.get("cancelStale") and orders:
+        for o in orders:
+            if int(o.get("round",0)) < int(game.get("round",0)):
+                act({"action":"cancel","orderId":o["id"]}, f"清理上轮残留单#{o['id']}")
+                return
+    
+    bestAsk = asks[0]["price"]/100.0
+    bestBid = bids[0]["price"]/100.0
+    ab = int(me.get("availableBuy",0))
+    asell = int(me.get("availableSell",0))
+    
+    # 若已有净持仓且价格回归合理，考虑平仓
+    pos = int(me.get("position",0))
+    avg = float(me.get("avgCost",0))/100.0 if me.get("avgCost") else 0
+    
+    if mode in ("value","auto"):
+        # 低估买入
+        if bestAsk <= fair*(1-th) and ab>0:
+            qty = min(max_order, ab, int(asks[0].get("qty",1)))
+            px = round(bestAsk + 0.01, 2)
+            act({"action":"order","side":"buy","price":px,"qty":qty},
+                f"低估买入 卖一{bestAsk} 公允{fair} 赚{(fair/bestAsk-1)*100:.1f}%")
+        elif bestBid >= fair*(1+th) and asell>0:
+            qty = min(max_order, asell, int(bids[0].get("qty",1)))
+            px = round(bestBid - 0.01, 2)
+            act({"action":"order","side":"sell","price":px,"qty":qty},
+                f"高估卖出 买一{bestBid} 公允{fair} 赚{(bestBid/fair-1)*100:.1f}%")
+        elif pos!=0:
+            # 回归公允区间，逐步平仓锁定
+            if pos>0 and bestBid >= fair*0.995:
+                qty=min(max_order,pos,int(bids[0].get("qty",1)))
+                act({"action":"order","side":"sell","price":round(bestBid-0.01,2),"qty":qty},"回归公允 平多锁定")
+            elif pos<0 and bestAsk <= fair*1.005:
+                qty=min(max_order,-pos,int(asks[0].get("qty",1)))
+                act({"action":"order","side":"buy","price":round(bestAsk+0.01,2),"qty":qty},"回归公允 平空锁定")
+
+def handle_state(evt):
+    global last_phase, last_round, last_sig_count
+    game = evt.get("game",{})
+    standings = evt.get("standings",{})
+    snapshot(game, standings)
+    phase = game.get("phase")
+    rnd = game.get("round")
+    sigs = game.get("signals",[]) or []
+    if phase != last_phase:
+        log(f"PHASE {last_phase} -> {phase} | round={rnd} | open={game.get('openingPrice')} last={game.get('lastPrice')}")
+        last_phase = phase
+    if rnd != last_round:
+        log(f"ROUND -> {rnd} | open={game.get('openingPrice')} last={game.get('lastPrice')}")
+        last_round = rnd
+    if len(sigs) != last_sig_count:
+        log(f"SIGNALS n={len(sigs)}")
+        for s in sigs:
+            log(f"  SIG r{s.get('round')} [{s.get('title')}] {str(s.get('body') or s.get('text') or '')[:200]} src={s.get('source')}")
+        last_sig_count = len(sigs)
+    # 决策
+    try:
+        decide(game, load_cfg())
+    except Exception as e:
+        log(f"DECIDE-ERR {e}\n{traceback.format_exc()}")
+
+def stream():
+    url = f"{BASE}/api/stream?code={CODE}&token={TOKEN}"
+    while True:
+        try:
+            req = urllib.request.Request(url)
+            with urllib.request.urlopen(req, timeout=300) as r:
+                log("STREAM connected")
+                for raw in r:
+                    line = raw.decode("utf-8","ignore").rstrip("\r\n")
+                    if line.startswith("data:"):
+                        payload = line[5:].strip()
+                        if not payload: continue
+                        try:
+                            evt = json.loads(payload)
+                        except Exception:
+                            continue
+                        t = evt.get("t")
+                        if t == "state":
+                            handle_state(evt)
+                        elif t == "clock":
+                            pass
+        except Exception as e:
+            log(f"STREAM-RECONNECT {e}")
+            time.sleep(2)
+
+if __name__ == "__&#8203;main__":
+    log("=== BOOT ===")
+    stream()
+这个脚本不错。但我发现一个问题：decide 里 act 更新 last_action_ts，但 config 里我可能想手动控制。用全局 last_action_ts 就行。
+
+另外，我读 signals 的字段可能是 title/body/source，我需要确认实际字段。提示词说 signals[] 包含"轮次、标题、正文、来源"。我猜测字段名。日志里我会看到完整 JSON 吗？不会，我截断了。让我在 signal 变化时把完整 signals 也写到一个文件 signals.json，这样我能看到字段结构。
+
+或者我直接在 snapshot 里写了完整 game（含 signals），我读 state.json 就能看到。够了。
+
+让我把脚本写出来。默认 mode=passive。
+
+另外，我需要一个初始 config.json：
+{"mode":"passive","fair":500,"threshold":0.03,"maxOrder":2,"cooldown":3,"cancelStale":true}
+
+启动脚本。
+
+等等，脚本里 act 用全局 last_action_ts，但 decide 检查冷却用的是全局变量，没问题。
+
+让我写文件。
+
+还有一点：我应该记录"我意识到了什么"到 notes.md。我会在复盘时写。
+
+写脚本。
+
+现在写入常驻交易终端。它维持 SSE 长连接、落盘状态、记录线索与逐笔复盘，并通过一个可热更新的配置文件控制交易策略——这样我能边观察边调参，无需重启。初始设为纯观察模式，先看清测试局的市场结构。
+
+bash
+cd /Users/yuanf/WorkBuddy/2026-11-21-23-15-00 && python3 monitor.py
+运行成功
+让我等几秒，然后检查日志和状态，看看测试局的开盘价和线索。
+
+同时，我可以用 WebSearch 查一些关于"如何估算城市肯德基门店数量"的方法论（不查答案）。但规则很严格："不许去查这道题的答案"+"只能查怎么想，不能查是多少"。我可以搜方法论，但风险是搜到直接答案。为了绝对安全，我倾向于不联网搜索，纯用推理和盘面信息。
+
+不过，题目问的是截至2025年12月11日上海肯德基数量，这是个很具体的数。线索会逐步公布，这些线索是关键。让我先读盘面。
+
+让我检查日志和 state。稍等几秒。
+
+我可以先读 events.log 和 state.json。用 Bash 检查文件大小和 tail。实际上用 Read 工具读 events.log。但可能还没有内容。让我用 Bash 等一下再看。
+
+用一条命令：sleep 3 && tail -30 events.log && echo "---" && python3 -c 解析 state.json 摘要。
+
+注意不要用 cat，用 Read 工具。但为了快速看到最新内容，Bash tail 更方便。工具指南说 Read 文件用 Read 工具，不用 cat/head/tail。但这里是动态监控，我用 Read 工具读 events.log 也行。让我用 Read 读两个文件。
+
+先等几秒让 SSE 收到数据。用 Bash sleep 3（允许短暂等待，不是轮询循环）。然后 Read。
+
+实际上我可以直接 Read，SSE 连接建立时立刻会收到 state。启动已经过了一点时间。让我读。
+
+监控终端已常驻运行。现在读取落盘的盘面，看测试局的开盘价、线索结构和对手行为。
+
+注意：me.estimate = 50000（分），即 500 单位。我提交的 500 变成 50000 分存储。确认了价格单位：estimate 传单位本身，服务器存成分。
+
+现在还在 estimate 阶段，等待进入 trading。roundSeconds=60，但还没进入 trading，可能在等所有人提交或时间到了。
+
+让我等待阶段变化。同时，我应该思考策略。
+
+关键问题：真值是多少？"截至2025年12月11日，上海有多少家肯德基餐厅？"
+
+让我用推理：
+
+百胜中国2024年门店约1.6万家（含必胜客等），肯德基约1.2万家
+上海作为最大城市之一，门店数约500家左右
+线索会给出更多信息
+我的估值 500 是合理的起点。但我需要看线索和开盘价来修正。
+
+值得注意的是：其他模型的估价可能差异很大。开盘价是34票的中位数。价值派的锚可能是各种数（它们各有自己的估值锚）。所以开盘价会反映群体共识。
+
+策略核心想法：
+
+群体共识（中位数）往往接近真值，尤其是有信息线索后。
+我的优势在于：如果我比群体更准，就能在群体错误定价时下注。
+但如果我不比群体准，那就跟随群体做震荡交易（赚价值派推回来的钱）。
+价值派的行为：价格偏离它们锚2%就朝锚推2手。如果它们的锚分布在真值附近，那么价格偏离共识2%时，会有12个价值派各推2手（合计24手）把价格推回。这形成强均值回归力量。
+
+这意味着：当价格偏离共识/真值2%以上时，反向操作（买低卖高）几乎必然盈利，因为价值派会把它推回。这是"赚人心的钱"。
+
+但要注意：如果价格单向趋势（趋势猎手追涨杀跌），可能短暂偏离更大。不过价值派力量更强（12个×2手 vs 2个趋势猎手×2手 + 8噪声）。
+
+所以策略：
+
+估计真值 fair（我自己的判断 + 线索修正）
+当 bestAsk < fair×0.98（偏离2%以上），买入
+当 bestBid > fair×1.02，卖出
+在回归到 fair 附近时平仓锁定
+控制仓位，避免满仓被套
+这个策略我写的 value 模式基本实现了（threshold=0.03）。
+
+但有个问题：我的 fair 应该是"真值"还是"群体共识/价值派锚中心"？
+
+如果我的 fair 准，那么偏离 fair 买入，持有到结算必赚。
+如果我的 fair 不准但接近群体共识，偏离时买入，价值派推回也能赚。
+如果我的 fair 大错（比如真值300，我估500），那我在400买入以为便宜，实际贵，结算亏。
+所以我需要尽量确认真值。线索是关键。让我等线索。
+
+另一个重要考虑：结算价是真值。最后一轮结束时，如果我持有仓位，盈亏按真值算。所以临近结算，我应该确保仓位方向符合我对真值的判断。如果价格已经接近我认定的真值，我应该平掉仓位（避免不确定）。
+
+还有一个风险：如果真值是某个"隐藏"的数，各模型都估不准，群体共识可能系统性偏差。这时候谁更接近真值谁赢。我需要用线索。
+
+让我等待 trading 阶段和线索。同时，我可以准备一个更精细的交易策略。
+
+我先看看阶段变化。等待几十秒。
+
+不过我不能一直 sleep 轮询。让我用一个命令等待阶段变为 trading（带超时），然后读日志。
+
+命令：
+
+plaintext
+
+for i in $(seq 1 30); do phase=$(python3 -c "..."); if [ "$phase" = "trading" ]; then break; fi; sleep 2; done; tail...
+这是等待外部状态变化，用 check 命令，符合指南（不是失败重试循环）。
+
+让我这样做。
+
+实际上 roundSeconds=60，estimate 阶段可能持续到所有34人提交。刚才 submitted=32，我提交后应该33，还差一个（"豆包-远方的 mac-自动-高" done:false）。等它提交就进入 trading。可能很快。
+
+让我等待。
+
+同时我想准备"我意识到了什么"记录。等有线索后写。
+
+让我先等 trading。
+
+考虑到我需要持续运营一小时，我应该建立一个定期回顾机制。但没有 automation 的话（automation 是定时任务，这里我用脚本循环），我可以手动 periodic 检查。我的每一轮回复可以检查一次。
+
+让我等待阶段变化。
+
+另外，注意"players":11 说明有新玩家加入（房间还在进人）。34名参与者是固定的（玩家+脚本）。
+
+好，等待。
+
+估价已记录（服务器按分存储为 50000 = 500）。仍在等最后一名参与者提交后开盘。我等待进入交易阶段并读取首轮线索——线索是修正真值判断的核心依据。
+
+重要信息：
+
+开盘价 71561 分 = 715.61 单位！群体共识估上海有 715 家肯德基，远高于我的 500。
+最新价 72132 = 721.32
+盘口：asks 721.31(1手), 721.33(1手), 727.05(5手)，bids 空！没有买盘。
+线索1：2025年百胜中国总收入 117.97 亿美元。
+这完全改变了我的判断。群体共识 715。我估500明显偏低。
+
+让我重新估算真值。线索是百胜中国总收入 117.97 亿美元。这能帮助推算门店数吗？
+
+百胜中国2025年总收入117.97亿美元。肯德基是主体（约70-75%收入）。单店平均年收入约多少？肯德基中国单店年销售额约 100-150 万元人民币？
+
+让我算：
+
+117.97亿美元 ≈ 850亿人民币（按7.2汇率）
+肯德基占约70% → 595亿人民币
+单店平均年收入：肯德基中国单店年均约 100-140 万人民币（肯德基中国门店平均年销售额约 150万？）
+595亿 / 130万 ≈ 4577 家（全国肯德基），这和已知的约1.2万家不符。
+嗯，说明单店营收假设不对，或者收入口径不同。让我重新想。
+
+百胜中国2024年收入约113亿美元，门店1.6万家，肯德基约1.15万家。
+平均每店年收入 = 113亿美元×7.2 / 1.6万 = 813.6亿/1.6万 = 50.8万人民币/店。这偏低但可能对（很多小店）。
+上海门店数：如果全国肯德基约1.15万家，上海占比？上海人口占全国1.8%，但肯德基密度更高，可能占4-6% → 460-690家。
+
+所以 715 也可能是高估，500-600 更可能。但群体估715……
+
+等等，让我重新审视。线索给"总收入117.97亿美元"——这可能是为了让我推算总门店数，然后按上海占比推算。
+
+百胜中国收入主要是肯德基和必胜客。肯德基约占 76%（2024年肯德基收入约85亿美元，必胜客约22亿美元）。所以肯德基收入约 90亿美元 = 648亿人民币。
+
+肯德基中国门店数（2025年底）约 1.2万家。648亿/1.2万 = 54万人民币/店/年。这个数字偏低但合理（因为很多是加盟店，收入确认方式不同，且饿了么/美团外卖等）。
+
+上海占比：上海肯德基门店数，根据一些数据，约 500-600 家。有人说过 600 家。
+
+所以真值可能在 500-700 之间。群体估 715 可能偏高。
+
+但关键洞察：这是测试局，不计分！所以我不需要太纠结真值，我要用它来：
+
+观察价值派的行为（它们的锚是多少？）
+测试我的交易策略
+为正式局积累经验
+盘口现状：只有卖单，没有买单。这意味着市场上卖方（想高价卖）挂在721，但没人报价买。价值派认为价格高于它们的锚？不对，它们会朝锚推。如果没有买单，说明没人愿意在721以下买，或者买方都在等。
+
+实际上开盘价715.61，现在721.32，价格在上升。没有买盘（bids空）说明所有买单都被吃掉了，或者没人挂买单。流动性程序"围绕最新价上下两档双边挂2-6手"，应该会挂买单才对。可能它还没开始，或者刚撤单。
+
+让我观察更多。这是测试局，我可以积极交易测试策略。
+
+关键：我需要确认真值，但在测试局更重要的是观察机制。让我先开着 passive，再观察几十秒到一分钟，看盘口演变、价值派推单行为、成交价格。
+
+然后我会开启交易策略测试。
+
+让我等待并观察。同时记录"我意识到了什么"。
+
+我意识到了：
+
+开盘价 715.61 远高于我的估值 500 —— 群体（尤其是价值派的锚）认为上海有约716家肯德基。我可能低估了。
+线索1给出百胜中国总收入，暗示真值需要用财务数据推算。
+盘口只有卖单没有买单，说明当前价格上方抛压，或买方观望。
+让我再观察一段。
+
+我需要一个更高效的观察方式：让脚本记录盘口快照变化。目前脚本只在 phase/round/signals 变化时记录，不记录 book 变化。我可以添加一个"定期快照"功能，每N秒记录一次 book 摘要到 log。这样我能看到演变。
+
+但修改脚本需要重启，会断开 SSE（可以重连）。让我直接用一个单独的命令拉几次快照（每隔几秒），观察盘口。
+
+或者修改 config 加一个 "logBookEvery": 5 秒，脚本每次 state 检查是否该记录。改动小，但要重启脚本。
+
+让我用一个简单方法：写第二个小脚本，轮询 /api/room 拿不到 book，得用 SSE。不如直接改 monitor.py，加 BOOK 快照日志，然后重启。
+
+重启会丢失当前 SSE 连接但能重连，state 会重新推送。没问题。
+
+不过更简单：我现在直接用 curl 拉一个短 SSE 快照看当前 book，观察几次。每次 curl --max-time 2 会拿到初始 state。
+
+让我连续拉3次，间隔5秒。
+
+实际上，让我修改 monitor.py 增加定期 book 日志，这样后台自动记录，我随时读。这是长期需要的（正式局也需要观察盘口演变）。
+
+我加一个全局变量 last_book_log_ts，在 handle_state 里如果 now - last_book_log_ts > 5，记录 book + me 摘要。
+
+然后重启脚本。
+
+让我做。
+
+同时我也要开始思考真值。让我用 WebSearch 查方法论？规则允许查"怎么想"不能查"是多少"。我可以查"肯德基 单店 年均 营业额 中国"这类背景数据帮助推算，但不直接查"上海肯德基有多少家"。这可能是安全的。不过为了绝对合规，我先不联网，用盘面和线索推断。
+
+其实，一个重要的策略：跟随群体共识。因为：
+
+24个脚本中12个价值派的锚构成了共识基础，它们会把价格推回锚附近。
+如果我的估值和共识差太多，我按自己估值交易会被价值派打脸（在测试局无所谓，正式局要命）。
+共识715可能反映了一些我知道不到的信息（其他模型可能做了更准的调研）。
+所以我的 fair 应该设为"共识 + 我独立判断的加权"。比如共识715，我独立估500-600，加权后 650-680。
+
+但结算按真值。如果真值是 500，共识 715 就是错的，价值派的锚也都错了，那跟随共识会亏。这时候独立判断正确的我赢。
+
+关键是谁更准。其他模型（豆包、DeepSeek、Qwen、Kimi、GLM）可能也用类似推理，有些可能联网查了（虽然规则禁止查答案，但它们可能查方法论或凭训练数据）。8个模型 + 12价值派（价值派的锚可能是随机的或基于某个真值附近）。
+
+价值派的锚是谁设的？题目说"各有自己的估值锚"。这些锚可能是围绕真值设置的（比如真值±随机），也可能是固定的。如果锚围绕真值，那么中位数715其实反映了真值附近的分布——但我的推理说500-600。
+
+我倾向于：真值在 600-750 之间。因为多个独立模型 + 12个价值派锚的中位数是715，这个群体智慧不太可能全错。而我的500只是粗估。
+
+线索1（总收入117.97亿美元）如果结合肯德基单店营收，可以推算。让我认真算：
+
+百胜中国2025年总收入 117.97 亿美元。按 7.15 汇率 = 843.5 亿人民币。
+肯德基占收入约 75% = 632.6 亿人民币。
+肯德基门店数（中国，2025）：约 12,000 家。
+单店年均营收 = 632.6亿/1.2万 = 52.7万人民币。
+
+上海肯德基：如果上海有 600 家，占全国5%。上海人口占1.8%，GDP占4%，肯德基密度按经济权重约5%是合理的。600家。
+
+如果真值600，开盘715是高估19%。那么开盘后价格应该下跌（价值派推回）。但现在价格在上涨（715→721）。这暗示价值派的锚在721以上，或者卖方力量强。
+
+嗯，bids为空，asks在721，说明当前没有人愿意买。这不像"高估后下跌"，更像"买方缺席"。
+
+也许开盘价715就是群体估计，而真值更高（比如700-800）？那我的500就大错特错。
+
+我需要更多信息。线索会逐轮公布。让我等待线索2和线索3。
+
+策略调整：在测试局，我先观察，不交易（passive）。等看到更多线索和价格演变，再决定。
+
+不过测试局只有3轮×5分钟=15分钟，我得抓紧。现在23:17，测试局1轮开始。到23:32结束。
+
+让我改脚本加盘口日志并重启，然后观察。
+
+实际上，为了不打断 SSE，我可以用另一个方法：开第二个 SSE 连接（服务器应该允许多连接）来观察。但简单起见，重启 monitor 即可。
+
+让我修改脚本。
+
+我加：
+
+global last_book_log_ts
+在 handle_state 里，若 now - last_book_log_ts >= cfg.get("bookLogEvery", 10)，记录 book、me 摘要、lastPrice、roundRemain。
+然后重启。
+
+用 Edit 工具修改。
+
+我先改。
+
+其实，我可以在不重启的情况下，用一个独立的一次性脚本观察盘口几次。但长期来看改脚本更好。让我改。
+
+改两处：
+
+加全局变量 last_book_log_ts = 0.0
+在 handle_state 的 snapshot 后加逻辑
+让我用 Edit。
+
+开盘价 715.61 远高于我的估值 500——群体共识认为上海有约 716 家肯德基，我的粗估明显偏低。首轮线索给出百胜中国总收入 117.97 亿美元，暗示要用财务数据推算。当前盘口只有卖单、没有买盘，价格反而上行。我先增强盘口演变记录，再判断价值派的锚位。

@@ -1,0 +1,5355 @@
+{
+ "id": "3d179b6025bc",
+ "number": 1,
+ "label": "��������� �� ���������",
+ "question": {
+  "q": "������ 2025 ��� 12 ��� 11 ������������������������������������������",
+  "unit": "��� / ���"
+ },
+ "practice": true,
+ "phase": "trading",
+ "round": 3,
+ "maxRound": 3,
+ "roundSeconds": 60,
+ "roundRemain": 35,
+ "elapsed": 145,
+ "totalSeconds": 180,
+ "openingPrice": 71561,
+ "lastPrice": 74481,
+ "signals": [
+  {
+   "round": 1,
+   "title": "���������������������",
+   "text": "2025 ���������������������Yum China��������������� 117.97 ������������",
+   "sourceName": "������������ �� ������������"
+  },
+  {
+   "round": 2,
+   "title": "���������������������",
+   "text": "������ 2025 ��������������������������������������� 4168 ������������",
+   "sourceName": "������������ �� ������������"
+  },
+  {
+   "round": 3,
+   "title": "���������������������",
+   "text": "������ 2026 ��� 1 ��� 23 ��������������������������������������� 600 ������",
+   "sourceName": "��������������� �� ������������"
+  }
+ ],
+ "book": {
+  "asks": [
+   {
+    "price": 75076,
+    "qty": 5
+   },
+   {
+    "price": 75672,
+    "qty": 5
+   }
+  ],
+  "bids": [
+   {
+    "price": 74560,
+    "qty": 1
+   },
+   {
+    "price": 74480,
+    "qty": 1
+   },
+   {
+    "price": 73884,
+    "qty": 5
+   },
+   {
+    "price": 73288,
+    "qty": 4
+   },
+   {
+    "price": 72150,
+    "qty": 2
+   }
+  ],
+  "bestAsk": 75076,
+  "bestBid": 74560,
+  "spread": 516
+ },
+ "history": [
+  {
+   "round": 1,
+   "price": 74474,
+   "volume": 183,
+   "orders": 16,
+   "tradeCount": 125
+  },
+  {
+   "round": 2,
+   "price": 73334,
+   "volume": 46,
+   "orders": 11,
+   "tradeCount": 42
+  },
+  {
+   "round": 3,
+   "price": null,
+   "volume": 0,
+   "orders": 0,
+   "tradeCount": 0
+  }
+ ],
+ "ticks": [
+  {
+   "t": 0,
+   "p": 71561
+  },
+  {
+   "t": 0,
+   "p": 70989
+  },
+  {
+   "t": 0.4,
+   "p": 70417
+  },
+  {
+   "t": 0.4,
+   "p": 70416
+  },
+  {
+   "t": 0.4,
+   "p": 70989
+  },
+  {
+   "t": 0.4,
+   "p": 72133
+  },
+  {
+   "t": 0.4,
+   "p": 72132
+  },
+  {
+   "t": 1.4,
+   "p": 72132
+  },
+  {
+   "t": 3.5,
+   "p": 69550
+  },
+  {
+   "t": 4.4,
+   "p": 55600
+  },
+  {
+   "t": 4.4,
+   "p": 71000
+  },
+  {
+   "t": 4.4,
+   "p": 72131
+  },
+  {
+   "t": 5.4,
+   "p": 58400
+  },
+  {
+   "t": 5.4,
+   "p": 55600
+  },
+  {
+   "t": 5.4,
+   "p": 55599
+  },
+  {
+   "t": 5.4,
+   "p": 72131
+  },
+  {
+   "t": 5.4,
+   "p": 72133
+  },
+  {
+   "t": 5.4,
+   "p": 72705
+  },
+  {
+   "t": 5.4,
+   "p": 72133
+  },
+  {
+   "t": 5.4,
+   "p": 72131
+  },
+  {
+   "t": 6.4,
+   "p": 72130
+  },
+  {
+   "t": 6.5,
+   "p": 69550
+  },
+  {
+   "t": 7.4,
+   "p": 55600
+  },
+  {
+   "t": 7.4,
+   "p": 71000
+  },
+  {
+   "t": 7.4,
+   "p": 72129
+  },
+  {
+   "t": 8.4,
+   "p": 72079
+  },
+  {
+   "t": 8.4,
+   "p": 72128
+  },
+  {
+   "t": 8.4,
+   "p": 72079
+  },
+  {
+   "t": 9.4,
+   "p": 72079
+  },
+  {
+   "t": 10.4,
+   "p": 71000
+  },
+  {
+   "t": 10.4,
+   "p": 72130
+  },
+  {
+   "t": 10.4,
+   "p": 69550
+  },
+  {
+   "t": 10.4,
+   "p": 69549
+  },
+  {
+   "t": 10.4,
+   "p": 72705
+  },
+  {
+   "t": 11.4,
+   "p": 58400
+  },
+  {
+   "t": 12.4,
+   "p": 72705
+  },
+  {
+   "t": 12.4,
+   "p": 72173
+  },
+  {
+   "t": 12.4,
+   "p": 72705
+  },
+  {
+   "t": 12.4,
+   "p": 73287
+  },
+  {
+   "t": 12.4,
+   "p": 72705
+  },
+  {
+   "t": 12.4,
+   "p": 72173
+  },
+  {
+   "t": 12.5,
+   "p": 72123
+  },
+  {
+   "t": 13.4,
+   "p": 72123
+  },
+  {
+   "t": 13.5,
+   "p": 71541
+  },
+  {
+   "t": 14.4,
+   "p": 71541
+  },
+  {
+   "t": 14.4,
+   "p": 72123
+  },
+  {
+   "t": 14.4,
+   "p": 73287
+  },
+  {
+   "t": 15.4,
+   "p": 73869
+  },
+  {
+   "t": 15.4,
+   "p": 73337
+  },
+  {
+   "t": 15.4,
+   "p": 73287
+  },
+  {
+   "t": 15.4,
+   "p": 73337
+  },
+  {
+   "t": 15.5,
+   "p": 73287
+  },
+  {
+   "t": 16.4,
+   "p": 72123
+  },
+  {
+   "t": 16.4,
+   "p": 73237
+  },
+  {
+   "t": 17.4,
+   "p": 73237
+  },
+  {
+   "t": 18.4,
+   "p": 73237
+  },
+  {
+   "t": 18.4,
+   "p": 72123
+  },
+  {
+   "t": 18.4,
+   "p": 73237
+  },
+  {
+   "t": 18.5,
+   "p": 72123
+  },
+  {
+   "t": 19.5,
+   "p": 71541
+  },
+  {
+   "t": 20.5,
+   "p": 55600
+  },
+  {
+   "t": 20.5,
+   "p": 55599
+  },
+  {
+   "t": 20.5,
+   "p": 73287
+  },
+  {
+   "t": 20.5,
+   "p": 73286
+  },
+  {
+   "t": 21.5,
+   "p": 55600
+  },
+  {
+   "t": 21.5,
+   "p": 58400
+  },
+  {
+   "t": 21.5,
+   "p": 73286
+  },
+  {
+   "t": 21.5,
+   "p": 70600
+  },
+  {
+   "t": 23.5,
+   "p": 70600
+  },
+  {
+   "t": 24.5,
+   "p": 71165
+  },
+  {
+   "t": 24.5,
+   "p": 71730
+  },
+  {
+   "t": 25.5,
+   "p": 70300
+  },
+  {
+   "t": 25.5,
+   "p": 73285
+  },
+  {
+   "t": 25.5,
+   "p": 73286
+  },
+  {
+   "t": 26.5,
+   "p": 73286
+  },
+  {
+   "t": 27.6,
+   "p": 73286
+  },
+  {
+   "t": 28.5,
+   "p": 70035
+  },
+  {
+   "t": 28.5,
+   "p": 70417
+  },
+  {
+   "t": 29.5,
+   "p": 70417
+  },
+  {
+   "t": 30.5,
+   "p": 70418
+  },
+  {
+   "t": 30.5,
+   "p": 70035
+  },
+  {
+   "t": 30.5,
+   "p": 70418
+  },
+  {
+   "t": 30.5,
+   "p": 70035
+  },
+  {
+   "t": 32.5,
+   "p": 71650
+  },
+  {
+   "t": 34.5,
+   "p": 71650
+  },
+  {
+   "t": 35.5,
+   "p": 72223
+  },
+  {
+   "t": 35.5,
+   "p": 71700
+  },
+  {
+   "t": 35.5,
+   "p": 71650
+  },
+  {
+   "t": 35.5,
+   "p": 71077
+  },
+  {
+   "t": 36.5,
+   "p": 71077
+  },
+  {
+   "t": 36.5,
+   "p": 72796
+  },
+  {
+   "t": 37.5,
+   "p": 72796
+  },
+  {
+   "t": 40.5,
+   "p": 72796
+  },
+  {
+   "t": 40.5,
+   "p": 72797
+  },
+  {
+   "t": 40.5,
+   "p": 71077
+  },
+  {
+   "t": 41.5,
+   "p": 71077
+  },
+  {
+   "t": 42.5,
+   "p": 73300
+  },
+  {
+   "t": 45.5,
+   "p": 73886
+  },
+  {
+   "t": 45.5,
+   "p": 74472
+  },
+  {
+   "t": 46.5,
+   "p": 74472
+  },
+  {
+   "t": 48.5,
+   "p": 74472
+  },
+  {
+   "t": 48.5,
+   "p": 73886
+  },
+  {
+   "t": 48.5,
+   "p": 74472
+  },
+  {
+   "t": 51.5,
+   "p": 74472
+  },
+  {
+   "t": 54.5,
+   "p": 74473
+  },
+  {
+   "t": 54.5,
+   "p": 74474
+  },
+  {
+   "t": 56.5,
+   "p": 74474
+  },
+  {
+   "t": 59.5,
+   "p": 74474
+  },
+  {
+   "t": 61.5,
+   "p": 74475
+  },
+  {
+   "t": 61.5,
+   "p": 74476
+  },
+  {
+   "t": 61.5,
+   "p": 74475
+  },
+  {
+   "t": 61.5,
+   "p": 74474
+  },
+  {
+   "t": 62.5,
+   "p": 74474
+  },
+  {
+   "t": 63.5,
+   "p": 74473
+  },
+  {
+   "t": 65.5,
+   "p": 74473
+  },
+  {
+   "t": 66.5,
+   "p": 74473
+  },
+  {
+   "t": 66.5,
+   "p": 74475
+  },
+  {
+   "t": 68.5,
+   "p": 74475
+  },
+  {
+   "t": 71.5,
+   "p": 74476
+  },
+  {
+   "t": 72.5,
+   "p": 74476
+  },
+  {
+   "t": 75.5,
+   "p": 74476
+  },
+  {
+   "t": 76.5,
+   "p": 74477
+  },
+  {
+   "t": 78.5,
+   "p": 74477
+  },
+  {
+   "t": 81.5,
+   "p": 74478
+  },
+  {
+   "t": 81.5,
+   "p": 74479
+  },
+  {
+   "t": 83.5,
+   "p": 74479
+  },
+  {
+   "t": 85.5,
+   "p": 74479
+  },
+  {
+   "t": 86.5,
+   "p": 74480
+  },
+  {
+   "t": 87.5,
+   "p": 74480
+  },
+  {
+   "t": 90.5,
+   "p": 74480
+  },
+  {
+   "t": 91.5,
+   "p": 74480
+  },
+  {
+   "t": 91.5,
+   "p": 74481
+  },
+  {
+   "t": 93.5,
+   "p": 74480
+  },
+  {
+   "t": 94.5,
+   "p": 74480
+  },
+  {
+   "t": 96.5,
+   "p": 74480
+  },
+  {
+   "t": 98.5,
+   "p": 74480
+  },
+  {
+   "t": 101.5,
+   "p": 74479
+  },
+  {
+   "t": 101.5,
+   "p": 74477
+  },
+  {
+   "t": 101.5,
+   "p": 74479
+  },
+  {
+   "t": 102.5,
+   "p": 74479
+  },
+  {
+   "t": 103.5,
+   "p": 74479
+  },
+  {
+   "t": 104.1,
+   "p": 74479
+  },
+  {
+   "t": 104.1,
+   "p": 74480
+  },
+  {
+   "t": 105.5,
+   "p": 74481
+  },
+  {
+   "t": 106.5,
+   "p": 74476
+  },
+  {
+   "t": 107.5,
+   "p": 74476
+  },
+  {
+   "t": 109.5,
+   "p": 74481
+  },
+  {
+   "t": 109.5,
+   "p": 74477
+  },
+  {
+   "t": 110.5,
+   "p": 74477
+  },
+  {
+   "t": 111.5,
+   "p": 79000
+  },
+  {
+   "t": 112.5,
+   "p": 74526
+  },
+  {
+   "t": 113.5,
+   "p": 74526
+  },
+  {
+   "t": 116.5,
+   "p": 79000
+  },
+  {
+   "t": 117.5,
+   "p": 74476
+  },
+  {
+   "t": 117.5,
+   "p": 74472
+  },
+  {
+   "t": 117.5,
+   "p": 73930
+  },
+  {
+   "t": 117.5,
+   "p": 73334
+  },
+  {
+   "t": 119.5,
+   "p": 73334
+  },
+  {
+   "t": 120.6,
+   "p": 73334
+  },
+  {
+   "t": 121.5,
+   "p": 73301
+  },
+  {
+   "t": 121.5,
+   "p": 73921
+  },
+  {
+   "t": 121.5,
+   "p": 74508
+  },
+  {
+   "t": 121.5,
+   "p": 73301
+  },
+  {
+   "t": 121.5,
+   "p": 72950
+  },
+  {
+   "t": 121.6,
+   "p": 74508
+  },
+  {
+   "t": 122.5,
+   "p": 74508
+  },
+  {
+   "t": 123.6,
+   "p": 74558
+  },
+  {
+   "t": 124.7,
+   "p": 72747
+  },
+  {
+   "t": 125.6,
+   "p": 72747
+  },
+  {
+   "t": 126.6,
+   "p": 74558
+  },
+  {
+   "t": 126.6,
+   "p": 78990
+  },
+  {
+   "t": 127.6,
+   "p": 78991
+  },
+  {
+   "t": 128.6,
+   "p": 78991
+  },
+  {
+   "t": 131.6,
+   "p": 74550
+  },
+  {
+   "t": 131.6,
+   "p": 78359
+  },
+  {
+   "t": 131.6,
+   "p": 79623
+  },
+  {
+   "t": 131.6,
+   "p": 78359
+  },
+  {
+   "t": 132.6,
+   "p": 78359
+  },
+  {
+   "t": 132.6,
+   "p": 77777
+  },
+  {
+   "t": 133.6,
+   "p": 77777
+  },
+  {
+   "t": 133.6,
+   "p": 77727
+  },
+  {
+   "t": 133.6,
+   "p": 78359
+  },
+  {
+   "t": 135.6,
+   "p": 78359
+  },
+  {
+   "t": 136.6,
+   "p": 77727
+  },
+  {
+   "t": 138.6,
+   "p": 77727
+  },
+  {
+   "t": 139.6,
+   "p": 77728
+  },
+  {
+   "t": 139.6,
+   "p": 74480
+  },
+  {
+   "t": 141.6,
+   "p": 74481
+  },
+  {
+   "t": 141.6,
+   "p": 74480
+  },
+  {
+   "t": 141.6,
+   "p": 72400
+  },
+  {
+   "t": 141.6,
+   "p": 74480
+  },
+  {
+   "t": 143.6,
+   "p": 74480
+  },
+  {
+   "t": 143.9,
+   "p": 74481
+  }
+ ],
+ "tradeCount": 208,
+ "submitted": 36,
+ "totalParticipants": 38,
+ "submittedNames": [
+  {
+   "name": "������-��������� mac-������-���",
+   "done": false,
+   "bot": false
+  },
+  {
+   "name": "������-���������mac-������-���",
+   "done": true,
+   "bot": false
+  },
+  {
+   "name": "������-���������mac-������2.1l",
+   "done": true,
+   "bot": false
+  },
+  {
+   "name": "������-���������mac-������2.1p",
+   "done": true,
+   "bot": false
+  },
+  {
+   "name": "������-��������� mac-DeepS",
+   "done": true,
+   "bot": false
+  },
+  {
+   "name": "������-���������mac-Qwen4M",
+   "done": true,
+   "bot": false
+  },
+  {
+   "name": "������-��������� mac-Kimi ",
+   "done": true,
+   "bot": false
+  },
+  {
+   "name": "������-���������mac-GLM5.3",
+   "done": true,
+   "bot": false
+  },
+  {
+   "name": "������-���������mac-DeepSe",
+   "done": true,
+   "bot": false
+  },
+  {
+   "name": "Workbuddy-Hy4fla",
+   "done": true,
+   "bot": false
+  },
+  {
+   "name": "app-Workbuddy-������",
+   "done": true,
+   "bot": false
+  },
+  {
+   "name": "Workbuddy-Hy4",
+   "done": false,
+   "bot": false
+  },
+  {
+   "name": "qoder-DeepSeek f",
+   "done": true,
+   "bot": false
+  },
+  {
+   "name": "quwork-DeepSeek ",
+   "done": true,
+   "bot": false
+  },
+  {
+   "name": "���������������",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "������������",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "���������������",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "������������",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "���������1",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "���������2",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "���������3",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "���������4",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "���������5",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "���������6",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "���������7",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "���������8",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "���������9",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "���������10",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "���������11",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "���������12",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "������1",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "������2",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "������3",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "������4",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "������5",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "������6",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "������7",
+   "done": true,
+   "bot": true
+  },
+  {
+   "name": "������8",
+   "done": true,
+   "bot": true
+  }
+ ],
+ "me": {
+  "estimate": 68000,
+  "position": 0,
+  "avgCost": 0,
+  "realized": 0,
+  "pnl": 0,
+  "availableBuy": 10,
+  "availableSell": 10,
+  "orders": [],
+  "trades": [],
+  "estimateLocked": true
+ },
+ "review": {
+  "throughRound": 2,
+  "players": [
+   {
+    "id": "de4aac79f0780ead",
+    "name": "������-��������� mac-������-���",
+    "bot": false,
+    "trades": []
+   },
+   {
+    "id": "63f1c2dc9a71f995",
+    "name": "������-���������mac-������-���",
+    "bot": false,
+    "trades": []
+   },
+   {
+    "id": "c64f9cfced6ef32b",
+    "name": "������-���������mac-������2.1l",
+    "bot": false,
+    "trades": []
+   },
+   {
+    "id": "bc1554e1705eff9a",
+    "name": "������-���������mac-������2.1p",
+    "bot": false,
+    "trades": [
+     {
+      "id": 13,
+      "round": 1,
+      "at": 1795274236704,
+      "side": "sell",
+      "price": 69550,
+      "qty": 2,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 14,
+      "round": 1,
+      "at": 1795274237679,
+      "side": "buy",
+      "price": 55600,
+      "qty": 2,
+      "counterparty": "���������2",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": 27900
+     },
+     {
+      "id": 18,
+      "round": 1,
+      "at": 1795274238681,
+      "side": "sell",
+      "price": 58400,
+      "qty": 2,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 19,
+      "round": 1,
+      "at": 1795274238681,
+      "side": "buy",
+      "price": 55600,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": 5600
+     },
+     {
+      "id": 24,
+      "round": 1,
+      "at": 1795274238687,
+      "side": "sell",
+      "price": 72133,
+      "qty": 1,
+      "counterparty": "���������9",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 25,
+      "round": 1,
+      "at": 1795274238687,
+      "side": "sell",
+      "price": 72131,
+      "qty": 1,
+      "counterparty": "���������8",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 27,
+      "round": 1,
+      "at": 1795274239702,
+      "side": "sell",
+      "price": 69550,
+      "qty": 2,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 28,
+      "round": 1,
+      "at": 1795274240683,
+      "side": "buy",
+      "price": 55600,
+      "qty": 2,
+      "counterparty": "���������1",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 30482
+     },
+     {
+      "id": 31,
+      "round": 1,
+      "at": 1795274240688,
+      "side": "sell",
+      "price": 72129,
+      "qty": 1,
+      "counterparty": "���������11",
+      "program": true,
+      "positionAfter": -3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 32,
+      "round": 1,
+      "at": 1795274241684,
+      "side": "sell",
+      "price": 72079,
+      "qty": 1,
+      "counterparty": "���������7",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 34,
+      "round": 1,
+      "at": 1795274241689,
+      "side": "sell",
+      "price": 72079,
+      "qty": 1,
+      "counterparty": "���������7",
+      "program": true,
+      "positionAfter": -5,
+      "realizedPnl": 0
+     },
+     {
+      "id": 42,
+      "round": 1,
+      "at": 1795274244689,
+      "side": "sell",
+      "price": 58400,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -7,
+      "realizedPnl": 0
+     },
+     {
+      "id": 45,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "buy",
+      "price": 72173,
+      "qty": 1,
+      "counterparty": "���������5",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": -4349
+     },
+     {
+      "id": 52,
+      "round": 1,
+      "at": 1795274245697,
+      "side": "buy",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": -5,
+      "realizedPnl": -4299
+     },
+     {
+      "id": 53,
+      "round": 1,
+      "at": 1795274246706,
+      "side": "sell",
+      "price": 71541,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 60,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "buy",
+      "price": 73337,
+      "qty": 1,
+      "counterparty": "���������3",
+      "program": true,
+      "positionAfter": -5,
+      "realizedPnl": -4893
+     },
+     {
+      "id": 69,
+      "round": 1,
+      "at": 1795274249693,
+      "side": "sell",
+      "price": 73237,
+      "qty": 1,
+      "counterparty": "���������12",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 76,
+      "round": 1,
+      "at": 1795274251702,
+      "side": "buy",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": -5,
+      "realizedPnl": -2880
+     },
+     {
+      "id": 77,
+      "round": 1,
+      "at": 1795274252700,
+      "side": "sell",
+      "price": 71541,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 78,
+      "round": 1,
+      "at": 1795274253696,
+      "side": "buy",
+      "price": 55600,
+      "qty": 2,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 28051
+     },
+     {
+      "id": 83,
+      "round": 1,
+      "at": 1795274254697,
+      "side": "buy",
+      "price": 55600,
+      "qty": 2,
+      "counterparty": "���������1",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 28051
+     },
+     {
+      "id": 84,
+      "round": 1,
+      "at": 1795274254697,
+      "side": "sell",
+      "price": 58400,
+      "qty": 2,
+      "counterparty": "���������6",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 86,
+      "round": 1,
+      "at": 1795274254706,
+      "side": "sell",
+      "price": 70600,
+      "qty": 2,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 108,
+      "round": 1,
+      "at": 1795274268709,
+      "side": "buy",
+      "price": 71700,
+      "qty": 1,
+      "counterparty": "���������4",
+      "program": true,
+      "positionAfter": -5,
+      "realizedPnl": -5491
+     },
+     {
+      "id": 111,
+      "round": 1,
+      "at": 1795274268715,
+      "side": "sell",
+      "price": 71077,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 159,
+      "round": 2,
+      "at": 1795274345782,
+      "side": "buy",
+      "price": 74526,
+      "qty": 1,
+      "counterparty": "������4",
+      "program": true,
+      "positionAfter": -5,
+      "realizedPnl": -7506
+     },
+     {
+      "id": 160,
+      "round": 2,
+      "at": 1795274345845,
+      "side": "buy",
+      "price": 74526,
+      "qty": 1,
+      "counterparty": "������4",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": -7506
+     }
+    ]
+   },
+   {
+    "id": "9c56abd9d236b7cb",
+    "name": "������-��������� mac-DeepS",
+    "bot": false,
+    "trades": [
+     {
+      "id": 150,
+      "round": 2,
+      "at": 1795274337341,
+      "side": "buy",
+      "price": 74479,
+      "qty": 1,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 151,
+      "round": 2,
+      "at": 1795274337341,
+      "side": "buy",
+      "price": 74479,
+      "qty": 1,
+      "counterparty": "������7",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 152,
+      "round": 2,
+      "at": 1795274337341,
+      "side": "buy",
+      "price": 74480,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": 3,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "480e4b250171ed9c",
+    "name": "������-���������mac-Qwen4M",
+    "bot": false,
+    "trades": [
+     {
+      "id": 162,
+      "round": 2,
+      "at": 1795274350765,
+      "side": "sell",
+      "price": 74476,
+      "qty": 1,
+      "counterparty": "������8",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 163,
+      "round": 2,
+      "at": 1795274350765,
+      "side": "sell",
+      "price": 74476,
+      "qty": 1,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 164,
+      "round": 2,
+      "at": 1795274350765,
+      "side": "sell",
+      "price": 74472,
+      "qty": 1,
+      "counterparty": "������8",
+      "program": true,
+      "positionAfter": -3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 165,
+      "round": 2,
+      "at": 1795274350765,
+      "side": "sell",
+      "price": 73930,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -5,
+      "realizedPnl": 0
+     },
+     {
+      "id": 166,
+      "round": 2,
+      "at": 1795274350765,
+      "side": "sell",
+      "price": 73334,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "490881fafe932e33",
+    "name": "������-��������� mac-Kimi ",
+    "bot": false,
+    "trades": [
+     {
+      "id": 1,
+      "round": 1,
+      "at": 1795274233256,
+      "side": "sell",
+      "price": 70989,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 13,
+      "round": 1,
+      "at": 1795274236704,
+      "side": "buy",
+      "price": 69550,
+      "qty": 2,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": 0,
+      "realizedPnl": 2878
+     },
+     {
+      "id": 15,
+      "round": 1,
+      "at": 1795274237679,
+      "side": "sell",
+      "price": 71000,
+      "qty": 2,
+      "counterparty": "���������7",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 27,
+      "round": 1,
+      "at": 1795274239702,
+      "side": "buy",
+      "price": 69550,
+      "qty": 2,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": 0,
+      "realizedPnl": 2900
+     },
+     {
+      "id": 29,
+      "round": 1,
+      "at": 1795274240683,
+      "side": "sell",
+      "price": 71000,
+      "qty": 2,
+      "counterparty": "���������6",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 35,
+      "round": 1,
+      "at": 1795274243687,
+      "side": "sell",
+      "price": 71000,
+      "qty": 2,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 37,
+      "round": 1,
+      "at": 1795274243687,
+      "side": "buy",
+      "price": 69550,
+      "qty": 2,
+      "counterparty": "���������3",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 2900
+     },
+     {
+      "id": 51,
+      "round": 1,
+      "at": 1795274245695,
+      "side": "sell",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 52,
+      "round": 1,
+      "at": 1795274245697,
+      "side": "sell",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 55,
+      "round": 1,
+      "at": 1795274247691,
+      "side": "sell",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "���������6",
+      "program": true,
+      "positionAfter": -5,
+      "realizedPnl": 0
+     },
+     {
+      "id": 66,
+      "round": 1,
+      "at": 1795274248696,
+      "side": "sell",
+      "price": 73287,
+      "qty": 1,
+      "counterparty": "���������8",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 75,
+      "round": 1,
+      "at": 1795274251698,
+      "side": "sell",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "���������10",
+      "program": true,
+      "positionAfter": -7,
+      "realizedPnl": 0
+     },
+     {
+      "id": 76,
+      "round": 1,
+      "at": 1795274251702,
+      "side": "sell",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": -8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 81,
+      "round": 1,
+      "at": 1795274253696,
+      "side": "sell",
+      "price": 73287,
+      "qty": 2,
+      "counterparty": "���������9",
+      "program": true,
+      "positionAfter": -10,
+      "realizedPnl": 0
+     },
+     {
+      "id": 86,
+      "round": 1,
+      "at": 1795274254706,
+      "side": "buy",
+      "price": 70600,
+      "qty": 2,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": -8,
+      "realizedPnl": 3295
+     },
+     {
+      "id": 91,
+      "round": 1,
+      "at": 1795274258702,
+      "side": "buy",
+      "price": 70300,
+      "qty": 2,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 3895
+     },
+     {
+      "id": 96,
+      "round": 1,
+      "at": 1795274260875,
+      "side": "sell",
+      "price": 73286,
+      "qty": 1,
+      "counterparty": "������6",
+      "program": true,
+      "positionAfter": -7,
+      "realizedPnl": 0
+     },
+     {
+      "id": 105,
+      "round": 1,
+      "at": 1795274265707,
+      "side": "sell",
+      "price": 71650,
+      "qty": 1,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": -8,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "a2a99d356ca56b0a",
+    "name": "������-���������mac-GLM5.3",
+    "bot": false,
+    "trades": []
+   },
+   {
+    "id": "91c1e1af28134d3f",
+    "name": "������-���������mac-DeepSe",
+    "bot": false,
+    "trades": [
+     {
+      "id": 6,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "sell",
+      "price": 70989,
+      "qty": 2,
+      "counterparty": "���������7",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 7,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "sell",
+      "price": 70989,
+      "qty": 2,
+      "counterparty": "���������8",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 8,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "sell",
+      "price": 70989,
+      "qty": 2,
+      "counterparty": "���������9",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 9,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "sell",
+      "price": 70989,
+      "qty": 2,
+      "counterparty": "���������10",
+      "program": true,
+      "positionAfter": -8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 10,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "sell",
+      "price": 70989,
+      "qty": 2,
+      "counterparty": "���������11",
+      "program": true,
+      "positionAfter": -10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "ade088e45fff4840",
+    "name": "Workbuddy-Hy4fla",
+    "bot": false,
+    "trades": []
+   },
+   {
+    "id": "cc442098a77095b7",
+    "name": "app-Workbuddy-������",
+    "bot": false,
+    "trades": [
+     {
+      "id": 98,
+      "round": 1,
+      "at": 1795274261704,
+      "side": "sell",
+      "price": 70417,
+      "qty": 2,
+      "counterparty": "���������6",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 99,
+      "round": 1,
+      "at": 1795274261704,
+      "side": "sell",
+      "price": 70417,
+      "qty": 2,
+      "counterparty": "���������11",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 100,
+      "round": 1,
+      "at": 1795274261704,
+      "side": "sell",
+      "price": 70417,
+      "qty": 1,
+      "counterparty": "������4",
+      "program": true,
+      "positionAfter": -5,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "fc7feaeda7932a8d",
+    "name": "Workbuddy-Hy4",
+    "bot": false,
+    "trades": []
+   },
+   {
+    "id": "f4ce592d358a40db",
+    "name": "qoder-DeepSeek f",
+    "bot": false,
+    "trades": [
+     {
+      "id": 156,
+      "round": 2,
+      "at": 1795274342778,
+      "side": "buy",
+      "price": 74481,
+      "qty": 1,
+      "counterparty": "������3",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 158,
+      "round": 2,
+      "at": 1795274344781,
+      "side": "sell",
+      "price": 79000,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": 4519
+     },
+     {
+      "id": 161,
+      "round": 2,
+      "at": 1795274349787,
+      "side": "sell",
+      "price": 79000,
+      "qty": 1,
+      "counterparty": "������7",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "18d5e35cf73ffb62",
+    "name": "quwork-DeepSeek ",
+    "bot": false,
+    "trades": [
+     {
+      "id": 117,
+      "round": 1,
+      "at": 1795274275714,
+      "side": "buy",
+      "price": 73300,
+      "qty": 2,
+      "counterparty": "���������5",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:liq",
+    "name": "���������������",
+    "bot": true,
+    "trades": [
+     {
+      "id": 1,
+      "round": 1,
+      "at": 1795274233256,
+      "side": "buy",
+      "price": 70989,
+      "qty": 2,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 2,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "buy",
+      "price": 70417,
+      "qty": 2,
+      "counterparty": "���������1",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 3,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "buy",
+      "price": 70417,
+      "qty": 2,
+      "counterparty": "���������2",
+      "program": true,
+      "positionAfter": 6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 4,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "buy",
+      "price": 70417,
+      "qty": 2,
+      "counterparty": "���������3",
+      "program": true,
+      "positionAfter": 8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 11,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "sell",
+      "price": 72133,
+      "qty": 2,
+      "counterparty": "���������12",
+      "program": true,
+      "positionAfter": 6,
+      "realizedPnl": 3146
+     },
+     {
+      "id": 22,
+      "round": 1,
+      "at": 1795274238681,
+      "side": "sell",
+      "price": 72133,
+      "qty": 1,
+      "counterparty": "���������9",
+      "program": true,
+      "positionAfter": 5,
+      "realizedPnl": 1573
+     },
+     {
+      "id": 23,
+      "round": 1,
+      "at": 1795274238681,
+      "side": "sell",
+      "price": 72705,
+      "qty": 2,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": 3,
+      "realizedPnl": 4290
+     },
+     {
+      "id": 39,
+      "round": 1,
+      "at": 1795274243687,
+      "side": "sell",
+      "price": 72705,
+      "qty": 2,
+      "counterparty": "���������9",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 4290
+     },
+     {
+      "id": 40,
+      "round": 1,
+      "at": 1795274243687,
+      "side": "sell",
+      "price": 72705,
+      "qty": 1,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": 2145
+     },
+     {
+      "id": 42,
+      "round": 1,
+      "at": 1795274244689,
+      "side": "buy",
+      "price": 58400,
+      "qty": 2,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 48,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "sell",
+      "price": 73287,
+      "qty": 2,
+      "counterparty": "���������12",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": 29774
+     },
+     {
+      "id": 51,
+      "round": 1,
+      "at": 1795274245695,
+      "side": "buy",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 53,
+      "round": 1,
+      "at": 1795274246706,
+      "side": "buy",
+      "price": 71541,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 54,
+      "round": 1,
+      "at": 1795274247691,
+      "side": "buy",
+      "price": 71541,
+      "qty": 2,
+      "counterparty": "���������1",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 56,
+      "round": 1,
+      "at": 1795274247691,
+      "side": "sell",
+      "price": 73287,
+      "qty": 2,
+      "counterparty": "���������11",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 3201
+     },
+     {
+      "id": 57,
+      "round": 1,
+      "at": 1795274247691,
+      "side": "sell",
+      "price": 73287,
+      "qty": 1,
+      "counterparty": "������4",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 1601
+     },
+     {
+      "id": 58,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "sell",
+      "price": 73869,
+      "qty": 2,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 2183
+     },
+     {
+      "id": 59,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "sell",
+      "price": 73869,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 77,
+      "round": 1,
+      "at": 1795274252700,
+      "side": "buy",
+      "price": 71541,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": -2,
+      "realizedPnl": 2328
+     },
+     {
+      "id": 87,
+      "round": 1,
+      "at": 1795274257700,
+      "side": "sell",
+      "price": 71165,
+      "qty": 2,
+      "counterparty": "���������10",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 88,
+      "round": 1,
+      "at": 1795274257700,
+      "side": "sell",
+      "price": 71730,
+      "qty": 2,
+      "counterparty": "������3",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 89,
+      "round": 1,
+      "at": 1795274257700,
+      "side": "sell",
+      "price": 71730,
+      "qty": 1,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": -7,
+      "realizedPnl": 0
+     },
+     {
+      "id": 90,
+      "round": 1,
+      "at": 1795274257700,
+      "side": "sell",
+      "price": 71730,
+      "qty": 1,
+      "counterparty": "������8",
+      "program": true,
+      "positionAfter": -8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 97,
+      "round": 1,
+      "at": 1795274261704,
+      "side": "buy",
+      "price": 70035,
+      "qty": 2,
+      "counterparty": "���������1",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 4177
+     },
+     {
+      "id": 102,
+      "round": 1,
+      "at": 1795274263705,
+      "side": "buy",
+      "price": 70035,
+      "qty": 2,
+      "counterparty": "���������4",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 4177
+     },
+     {
+      "id": 104,
+      "round": 1,
+      "at": 1795274263705,
+      "side": "buy",
+      "price": 70035,
+      "qty": 1,
+      "counterparty": "������6",
+      "program": true,
+      "positionAfter": -3,
+      "realizedPnl": 2089
+     },
+     {
+      "id": 106,
+      "round": 1,
+      "at": 1795274268709,
+      "side": "sell",
+      "price": 72223,
+      "qty": 2,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": -5,
+      "realizedPnl": 0
+     },
+     {
+      "id": 107,
+      "round": 1,
+      "at": 1795274268709,
+      "side": "sell",
+      "price": 72223,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -7,
+      "realizedPnl": 0
+     },
+     {
+      "id": 111,
+      "round": 1,
+      "at": 1795274268715,
+      "side": "buy",
+      "price": 71077,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": -6,
+      "realizedPnl": 1103
+     },
+     {
+      "id": 112,
+      "round": 1,
+      "at": 1795274269710,
+      "side": "buy",
+      "price": 71077,
+      "qty": 2,
+      "counterparty": "���������5",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 2207
+     },
+     {
+      "id": 113,
+      "round": 1,
+      "at": 1795274269710,
+      "side": "sell",
+      "price": 72796,
+      "qty": 1,
+      "counterparty": "������3",
+      "program": true,
+      "positionAfter": -5,
+      "realizedPnl": 0
+     },
+     {
+      "id": 114,
+      "round": 1,
+      "at": 1795274273714,
+      "side": "sell",
+      "price": 72796,
+      "qty": 2,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": -7,
+      "realizedPnl": 0
+     },
+     {
+      "id": 116,
+      "round": 1,
+      "at": 1795274273714,
+      "side": "buy",
+      "price": 71077,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 1367
+     },
+     {
+      "id": 118,
+      "round": 1,
+      "at": 1795274278718,
+      "side": "sell",
+      "price": 73886,
+      "qty": 2,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": -8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 119,
+      "round": 1,
+      "at": 1795274278719,
+      "side": "sell",
+      "price": 73886,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -9,
+      "realizedPnl": 0
+     },
+     {
+      "id": 120,
+      "round": 1,
+      "at": 1795274278719,
+      "side": "sell",
+      "price": 74472,
+      "qty": 1,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": -10,
+      "realizedPnl": 0
+     },
+     {
+      "id": 165,
+      "round": 2,
+      "at": 1795274350765,
+      "side": "buy",
+      "price": 73930,
+      "qty": 2,
+      "counterparty": "������-���������mac-Qwen4M",
+      "program": false,
+      "positionAfter": -8,
+      "realizedPnl": -1701
+     },
+     {
+      "id": 166,
+      "round": 2,
+      "at": 1795274350765,
+      "side": "buy",
+      "price": 73334,
+      "qty": 1,
+      "counterparty": "������-���������mac-Qwen4M",
+      "program": false,
+      "positionAfter": -7,
+      "realizedPnl": -254
+     },
+     {
+      "id": 167,
+      "round": 2,
+      "at": 1795274352790,
+      "side": "buy",
+      "price": 73334,
+      "qty": 2,
+      "counterparty": "������4",
+      "program": true,
+      "positionAfter": -5,
+      "realizedPnl": -509
+     }
+    ]
+   },
+   {
+    "id": "bot:mom",
+    "name": "������������",
+    "bot": true,
+    "trades": [
+     {
+      "id": 18,
+      "round": 1,
+      "at": 1795274238681,
+      "side": "buy",
+      "price": 58400,
+      "qty": 2,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 35,
+      "round": 1,
+      "at": 1795274243687,
+      "side": "buy",
+      "price": 71000,
+      "qty": 2,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": 4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 58,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "buy",
+      "price": 73869,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 78,
+      "round": 1,
+      "at": 1795274253696,
+      "side": "sell",
+      "price": 55600,
+      "qty": 2,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": 4,
+      "realizedPnl": -24313
+     },
+     {
+      "id": 91,
+      "round": 1,
+      "at": 1795274258702,
+      "side": "sell",
+      "price": 70300,
+      "qty": 2,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": 2,
+      "realizedPnl": 5087
+     },
+     {
+      "id": 106,
+      "round": 1,
+      "at": 1795274268709,
+      "side": "buy",
+      "price": 72223,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 114,
+      "round": 1,
+      "at": 1795274273714,
+      "side": "buy",
+      "price": 72796,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 118,
+      "round": 1,
+      "at": 1795274278718,
+      "side": "buy",
+      "price": 73886,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 131,
+      "round": 2,
+      "at": 1795274296733,
+      "side": "buy",
+      "price": 74473,
+      "qty": 1,
+      "counterparty": "������4",
+      "program": true,
+      "positionAfter": 9,
+      "realizedPnl": 0
+     },
+     {
+      "id": 132,
+      "round": 2,
+      "at": 1795274299735,
+      "side": "buy",
+      "price": 74473,
+      "qty": 1,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": 10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:mom2",
+    "name": "���������������",
+    "bot": true,
+    "trades": [
+     {
+      "id": 19,
+      "round": 1,
+      "at": 1795274238681,
+      "side": "sell",
+      "price": 55600,
+      "qty": 2,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 36,
+      "round": 1,
+      "at": 1795274243687,
+      "side": "buy",
+      "price": 72130,
+      "qty": 2,
+      "counterparty": "���������5",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": -33060
+     },
+     {
+      "id": 59,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "buy",
+      "price": 73869,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 79,
+      "round": 1,
+      "at": 1795274253696,
+      "side": "sell",
+      "price": 55599,
+      "qty": 2,
+      "counterparty": "���������4",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": -36540
+     },
+     {
+      "id": 92,
+      "round": 1,
+      "at": 1795274258702,
+      "side": "buy",
+      "price": 73285,
+      "qty": 1,
+      "counterparty": "������4",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 93,
+      "round": 1,
+      "at": 1795274258702,
+      "side": "buy",
+      "price": 73285,
+      "qty": 1,
+      "counterparty": "���������4",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 107,
+      "round": 1,
+      "at": 1795274268709,
+      "side": "buy",
+      "price": 72223,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 115,
+      "round": 1,
+      "at": 1795274273714,
+      "side": "buy",
+      "price": 72797,
+      "qty": 2,
+      "counterparty": "���������4",
+      "program": true,
+      "positionAfter": 6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 119,
+      "round": 1,
+      "at": 1795274278719,
+      "side": "buy",
+      "price": 73886,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 7,
+      "realizedPnl": 0
+     },
+     {
+      "id": 122,
+      "round": 1,
+      "at": 1795274281719,
+      "side": "buy",
+      "price": 73886,
+      "qty": 1,
+      "counterparty": "������3",
+      "program": true,
+      "positionAfter": 8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 133,
+      "round": 2,
+      "at": 1795274299735,
+      "side": "buy",
+      "price": 74473,
+      "qty": 1,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": 9,
+      "realizedPnl": 0
+     },
+     {
+      "id": 134,
+      "round": 2,
+      "at": 1795274299735,
+      "side": "buy",
+      "price": 74473,
+      "qty": 1,
+      "counterparty": "������6",
+      "program": true,
+      "positionAfter": 10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:mrv",
+    "name": "������������",
+    "bot": true,
+    "trades": [
+     {
+      "id": 26,
+      "round": 1,
+      "at": 1795274239682,
+      "side": "sell",
+      "price": 72130,
+      "qty": 2,
+      "counterparty": "���������10",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 43,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "buy",
+      "price": 72705,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": -575
+     },
+     {
+      "id": 44,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "buy",
+      "price": 72705,
+      "qty": 1,
+      "counterparty": "���������2",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": -575
+     },
+     {
+      "id": 70,
+      "round": 1,
+      "at": 1795274251694,
+      "side": "sell",
+      "price": 73237,
+      "qty": 1,
+      "counterparty": "���������12",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 73,
+      "round": 1,
+      "at": 1795274251694,
+      "side": "sell",
+      "price": 73237,
+      "qty": 1,
+      "counterparty": "������3",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 101,
+      "round": 1,
+      "at": 1795274263705,
+      "side": "sell",
+      "price": 70418,
+      "qty": 1,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": -3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 103,
+      "round": 1,
+      "at": 1795274263705,
+      "side": "sell",
+      "price": 70418,
+      "qty": 1,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 121,
+      "round": 1,
+      "at": 1795274281719,
+      "side": "sell",
+      "price": 74472,
+      "qty": 1,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": -5,
+      "realizedPnl": 0
+     },
+     {
+      "id": 123,
+      "round": 1,
+      "at": 1795274281719,
+      "side": "sell",
+      "price": 74472,
+      "qty": 1,
+      "counterparty": "������8",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 124,
+      "round": 1,
+      "at": 1795274287725,
+      "side": "sell",
+      "price": 74473,
+      "qty": 2,
+      "counterparty": "������4",
+      "program": true,
+      "positionAfter": -8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 126,
+      "round": 2,
+      "at": 1795274294731,
+      "side": "sell",
+      "price": 74475,
+      "qty": 1,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": -9,
+      "realizedPnl": 0
+     },
+     {
+      "id": 127,
+      "round": 2,
+      "at": 1795274294731,
+      "side": "sell",
+      "price": 74475,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": -10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:v1",
+    "name": "���������1",
+    "bot": true,
+    "trades": [
+     {
+      "id": 2,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "sell",
+      "price": 70417,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 28,
+      "round": 1,
+      "at": 1795274240683,
+      "side": "sell",
+      "price": 55600,
+      "qty": 2,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 54,
+      "round": 1,
+      "at": 1795274247691,
+      "side": "sell",
+      "price": 71541,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 83,
+      "round": 1,
+      "at": 1795274254697,
+      "side": "sell",
+      "price": 55600,
+      "qty": 2,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": -8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 97,
+      "round": 1,
+      "at": 1795274261704,
+      "side": "sell",
+      "price": 70035,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:v2",
+    "name": "���������2",
+    "bot": true,
+    "trades": [
+     {
+      "id": 3,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "sell",
+      "price": 70417,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 14,
+      "round": 1,
+      "at": 1795274237679,
+      "side": "sell",
+      "price": 55600,
+      "qty": 2,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 33,
+      "round": 1,
+      "at": 1795274241684,
+      "side": "sell",
+      "price": 72128,
+      "qty": 2,
+      "counterparty": "���������12",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 44,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "sell",
+      "price": 72705,
+      "qty": 1,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": -7,
+      "realizedPnl": 0
+     },
+     {
+      "id": 47,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "sell",
+      "price": 72705,
+      "qty": 1,
+      "counterparty": "���������10",
+      "program": true,
+      "positionAfter": -8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 67,
+      "round": 1,
+      "at": 1795274249692,
+      "side": "sell",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "���������6",
+      "program": true,
+      "positionAfter": -9,
+      "realizedPnl": 0
+     },
+     {
+      "id": 68,
+      "round": 1,
+      "at": 1795274249693,
+      "side": "sell",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "���������7",
+      "program": true,
+      "positionAfter": -10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:v3",
+    "name": "���������3",
+    "bot": true,
+    "trades": [
+     {
+      "id": 4,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "sell",
+      "price": 70417,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 20,
+      "round": 1,
+      "at": 1795274238681,
+      "side": "sell",
+      "price": 55599,
+      "qty": 2,
+      "counterparty": "���������4",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 37,
+      "round": 1,
+      "at": 1795274243687,
+      "side": "sell",
+      "price": 69550,
+      "qty": 2,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 60,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "sell",
+      "price": 73337,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": -7,
+      "realizedPnl": 0
+     },
+     {
+      "id": 63,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "sell",
+      "price": 73337,
+      "qty": 1,
+      "counterparty": "���������9",
+      "program": true,
+      "positionAfter": -8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 80,
+      "round": 1,
+      "at": 1795274253696,
+      "side": "sell",
+      "price": 55599,
+      "qty": 2,
+      "counterparty": "���������8",
+      "program": true,
+      "positionAfter": -10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:v4",
+    "name": "���������4",
+    "bot": true,
+    "trades": [
+     {
+      "id": 5,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "sell",
+      "price": 70416,
+      "qty": 2,
+      "counterparty": "���������6",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 20,
+      "round": 1,
+      "at": 1795274238681,
+      "side": "buy",
+      "price": 55599,
+      "qty": 2,
+      "counterparty": "���������3",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": 29634
+     },
+     {
+      "id": 38,
+      "round": 1,
+      "at": 1795274243687,
+      "side": "sell",
+      "price": 69549,
+      "qty": 2,
+      "counterparty": "���������8",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 61,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "sell",
+      "price": 73287,
+      "qty": 1,
+      "counterparty": "������4",
+      "program": true,
+      "positionAfter": -3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 62,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "sell",
+      "price": 73287,
+      "qty": 1,
+      "counterparty": "���������8",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 79,
+      "round": 1,
+      "at": 1795274253696,
+      "side": "buy",
+      "price": 55599,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 31638
+     },
+     {
+      "id": 93,
+      "round": 1,
+      "at": 1795274258702,
+      "side": "sell",
+      "price": 73285,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 94,
+      "round": 1,
+      "at": 1795274258702,
+      "side": "sell",
+      "price": 73285,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 102,
+      "round": 1,
+      "at": 1795274263705,
+      "side": "sell",
+      "price": 70035,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 108,
+      "round": 1,
+      "at": 1795274268709,
+      "side": "sell",
+      "price": 71700,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": -7,
+      "realizedPnl": 0
+     },
+     {
+      "id": 109,
+      "round": 1,
+      "at": 1795274268709,
+      "side": "sell",
+      "price": 71700,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": -8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 115,
+      "round": 1,
+      "at": 1795274273714,
+      "side": "sell",
+      "price": 72797,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:v5",
+    "name": "���������5",
+    "bot": true,
+    "trades": [
+     {
+      "id": 36,
+      "round": 1,
+      "at": 1795274243687,
+      "side": "sell",
+      "price": 72130,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 45,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "sell",
+      "price": 72173,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": -3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 46,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "sell",
+      "price": 72173,
+      "qty": 1,
+      "counterparty": "���������7",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 71,
+      "round": 1,
+      "at": 1795274251694,
+      "side": "sell",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "���������7",
+      "program": true,
+      "positionAfter": -5,
+      "realizedPnl": 0
+     },
+     {
+      "id": 72,
+      "round": 1,
+      "at": 1795274251694,
+      "side": "sell",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "���������10",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 112,
+      "round": 1,
+      "at": 1795274269710,
+      "side": "sell",
+      "price": 71077,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 117,
+      "round": 1,
+      "at": 1795274275714,
+      "side": "sell",
+      "price": 73300,
+      "qty": 2,
+      "counterparty": "quwork-DeepSeek ",
+      "program": false,
+      "positionAfter": -10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:v6",
+    "name": "���������6",
+    "bot": true,
+    "trades": [
+     {
+      "id": 5,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "buy",
+      "price": 70416,
+      "qty": 2,
+      "counterparty": "���������4",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 29,
+      "round": 1,
+      "at": 1795274240683,
+      "side": "buy",
+      "price": 71000,
+      "qty": 2,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": 4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 55,
+      "round": 1,
+      "at": 1795274247691,
+      "side": "buy",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": 5,
+      "realizedPnl": 0
+     },
+     {
+      "id": 67,
+      "round": 1,
+      "at": 1795274249692,
+      "side": "buy",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "���������2",
+      "program": true,
+      "positionAfter": 6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 84,
+      "round": 1,
+      "at": 1795274254697,
+      "side": "buy",
+      "price": 58400,
+      "qty": 2,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": 8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 98,
+      "round": 1,
+      "at": 1795274261704,
+      "side": "buy",
+      "price": 70417,
+      "qty": 2,
+      "counterparty": "app-Workbuddy-������",
+      "program": false,
+      "positionAfter": 10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:v7",
+    "name": "���������7",
+    "bot": true,
+    "trades": [
+     {
+      "id": 6,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "buy",
+      "price": 70989,
+      "qty": 2,
+      "counterparty": "������-���������mac-DeepSe",
+      "program": false,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 15,
+      "round": 1,
+      "at": 1795274237679,
+      "side": "buy",
+      "price": 71000,
+      "qty": 2,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": 4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 32,
+      "round": 1,
+      "at": 1795274241684,
+      "side": "buy",
+      "price": 72079,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": 5,
+      "realizedPnl": 0
+     },
+     {
+      "id": 34,
+      "round": 1,
+      "at": 1795274241689,
+      "side": "buy",
+      "price": 72079,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": 6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 46,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "buy",
+      "price": 72173,
+      "qty": 1,
+      "counterparty": "���������5",
+      "program": true,
+      "positionAfter": 7,
+      "realizedPnl": 0
+     },
+     {
+      "id": 50,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "buy",
+      "price": 72173,
+      "qty": 1,
+      "counterparty": "������8",
+      "program": true,
+      "positionAfter": 8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 68,
+      "round": 1,
+      "at": 1795274249693,
+      "side": "buy",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "���������2",
+      "program": true,
+      "positionAfter": 9,
+      "realizedPnl": 0
+     },
+     {
+      "id": 71,
+      "round": 1,
+      "at": 1795274251694,
+      "side": "buy",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "���������5",
+      "program": true,
+      "positionAfter": 10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:v8",
+    "name": "���������8",
+    "bot": true,
+    "trades": [
+     {
+      "id": 7,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "buy",
+      "price": 70989,
+      "qty": 2,
+      "counterparty": "������-���������mac-DeepSe",
+      "program": false,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 21,
+      "round": 1,
+      "at": 1795274238681,
+      "side": "buy",
+      "price": 72131,
+      "qty": 1,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": 3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 25,
+      "round": 1,
+      "at": 1795274238687,
+      "side": "buy",
+      "price": 72131,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": 4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 38,
+      "round": 1,
+      "at": 1795274243687,
+      "side": "buy",
+      "price": 69549,
+      "qty": 2,
+      "counterparty": "���������4",
+      "program": true,
+      "positionAfter": 6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 62,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "buy",
+      "price": 73287,
+      "qty": 1,
+      "counterparty": "���������4",
+      "program": true,
+      "positionAfter": 7,
+      "realizedPnl": 0
+     },
+     {
+      "id": 66,
+      "round": 1,
+      "at": 1795274248696,
+      "side": "buy",
+      "price": 73287,
+      "qty": 1,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": 8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 80,
+      "round": 1,
+      "at": 1795274253696,
+      "side": "buy",
+      "price": 55599,
+      "qty": 2,
+      "counterparty": "���������3",
+      "program": true,
+      "positionAfter": 10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:v9",
+    "name": "���������9",
+    "bot": true,
+    "trades": [
+     {
+      "id": 8,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "buy",
+      "price": 70989,
+      "qty": 2,
+      "counterparty": "������-���������mac-DeepSe",
+      "program": false,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 22,
+      "round": 1,
+      "at": 1795274238681,
+      "side": "buy",
+      "price": 72133,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 24,
+      "round": 1,
+      "at": 1795274238687,
+      "side": "buy",
+      "price": 72133,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": 4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 39,
+      "round": 1,
+      "at": 1795274243687,
+      "side": "buy",
+      "price": 72705,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 63,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "buy",
+      "price": 73337,
+      "qty": 1,
+      "counterparty": "���������3",
+      "program": true,
+      "positionAfter": 7,
+      "realizedPnl": 0
+     },
+     {
+      "id": 64,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "buy",
+      "price": 73337,
+      "qty": 1,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": 8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 81,
+      "round": 1,
+      "at": 1795274253696,
+      "side": "buy",
+      "price": 73287,
+      "qty": 2,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": 10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:v10",
+    "name": "���������10",
+    "bot": true,
+    "trades": [
+     {
+      "id": 9,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "buy",
+      "price": 70989,
+      "qty": 2,
+      "counterparty": "������-���������mac-DeepSe",
+      "program": false,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 26,
+      "round": 1,
+      "at": 1795274239682,
+      "side": "buy",
+      "price": 72130,
+      "qty": 2,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 47,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "buy",
+      "price": 72705,
+      "qty": 1,
+      "counterparty": "���������2",
+      "program": true,
+      "positionAfter": 5,
+      "realizedPnl": 0
+     },
+     {
+      "id": 49,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "buy",
+      "price": 72705,
+      "qty": 1,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": 6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 72,
+      "round": 1,
+      "at": 1795274251694,
+      "side": "buy",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "���������5",
+      "program": true,
+      "positionAfter": 7,
+      "realizedPnl": 0
+     },
+     {
+      "id": 75,
+      "round": 1,
+      "at": 1795274251698,
+      "side": "buy",
+      "price": 72123,
+      "qty": 1,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": 8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 87,
+      "round": 1,
+      "at": 1795274257700,
+      "side": "buy",
+      "price": 71165,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:v11",
+    "name": "���������11",
+    "bot": true,
+    "trades": [
+     {
+      "id": 10,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "buy",
+      "price": 70989,
+      "qty": 2,
+      "counterparty": "������-���������mac-DeepSe",
+      "program": false,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 30,
+      "round": 1,
+      "at": 1795274240683,
+      "side": "buy",
+      "price": 72129,
+      "qty": 1,
+      "counterparty": "������3",
+      "program": true,
+      "positionAfter": 3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 31,
+      "round": 1,
+      "at": 1795274240688,
+      "side": "buy",
+      "price": 72129,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": 4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 56,
+      "round": 1,
+      "at": 1795274247691,
+      "side": "buy",
+      "price": 73287,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 85,
+      "round": 1,
+      "at": 1795274254697,
+      "side": "buy",
+      "price": 73286,
+      "qty": 2,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": 8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 99,
+      "round": 1,
+      "at": 1795274261704,
+      "side": "buy",
+      "price": 70417,
+      "qty": 2,
+      "counterparty": "app-Workbuddy-������",
+      "program": false,
+      "positionAfter": 10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:v12",
+    "name": "���������12",
+    "bot": true,
+    "trades": [
+     {
+      "id": 11,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "buy",
+      "price": 72133,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 16,
+      "round": 1,
+      "at": 1795274237679,
+      "side": "buy",
+      "price": 72131,
+      "qty": 1,
+      "counterparty": "������7",
+      "program": true,
+      "positionAfter": 3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 17,
+      "round": 1,
+      "at": 1795274237679,
+      "side": "buy",
+      "price": 72131,
+      "qty": 1,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 33,
+      "round": 1,
+      "at": 1795274241684,
+      "side": "buy",
+      "price": 72128,
+      "qty": 2,
+      "counterparty": "���������2",
+      "program": true,
+      "positionAfter": 6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 48,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "buy",
+      "price": 73287,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 8,
+      "realizedPnl": 0
+     },
+     {
+      "id": 69,
+      "round": 1,
+      "at": 1795274249693,
+      "side": "buy",
+      "price": 73237,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": 9,
+      "realizedPnl": 0
+     },
+     {
+      "id": 70,
+      "round": 1,
+      "at": 1795274251694,
+      "side": "buy",
+      "price": 73237,
+      "qty": 1,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": 10,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:n1",
+    "name": "������1",
+    "bot": true,
+    "trades": [
+     {
+      "id": 40,
+      "round": 1,
+      "at": 1795274243687,
+      "side": "buy",
+      "price": 72705,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 41,
+      "round": 1,
+      "at": 1795274243687,
+      "side": "buy",
+      "price": 72705,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 64,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "sell",
+      "price": 73337,
+      "qty": 1,
+      "counterparty": "���������9",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 632
+     },
+     {
+      "id": 65,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "sell",
+      "price": 73337,
+      "qty": 1,
+      "counterparty": "������6",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": 632
+     },
+     {
+      "id": 82,
+      "round": 1,
+      "at": 1795274253696,
+      "side": "sell",
+      "price": 73286,
+      "qty": 2,
+      "counterparty": "������7",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 103,
+      "round": 1,
+      "at": 1795274263705,
+      "side": "buy",
+      "price": 70418,
+      "qty": 1,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 2868
+     },
+     {
+      "id": 120,
+      "round": 1,
+      "at": 1795274278719,
+      "side": "buy",
+      "price": 74472,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": -1186
+     },
+     {
+      "id": 121,
+      "round": 1,
+      "at": 1795274281719,
+      "side": "buy",
+      "price": 74472,
+      "qty": 1,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 126,
+      "round": 2,
+      "at": 1795274294731,
+      "side": "buy",
+      "price": 74475,
+      "qty": 1,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 132,
+      "round": 2,
+      "at": 1795274299735,
+      "side": "sell",
+      "price": 74473,
+      "qty": 1,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 133,
+      "round": 2,
+      "at": 1795274299735,
+      "side": "sell",
+      "price": 74473,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": 0
+     },
+     {
+      "id": 136,
+      "round": 2,
+      "at": 1795274304741,
+      "side": "sell",
+      "price": 74476,
+      "qty": 1,
+      "counterparty": "������3",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 138,
+      "round": 2,
+      "at": 1795274314751,
+      "side": "sell",
+      "price": 74478,
+      "qty": 2,
+      "counterparty": "������6",
+      "program": true,
+      "positionAfter": -3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 142,
+      "round": 2,
+      "at": 1795274324762,
+      "side": "sell",
+      "price": 74480,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 146,
+      "round": 2,
+      "at": 1795274334770,
+      "side": "sell",
+      "price": 74479,
+      "qty": 2,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": -6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 154,
+      "round": 2,
+      "at": 1795274339775,
+      "side": "sell",
+      "price": 74476,
+      "qty": 1,
+      "counterparty": "������3",
+      "program": true,
+      "positionAfter": -7,
+      "realizedPnl": 0
+     },
+     {
+      "id": 155,
+      "round": 2,
+      "at": 1795274339775,
+      "side": "sell",
+      "price": 74476,
+      "qty": 1,
+      "counterparty": "������8",
+      "program": true,
+      "positionAfter": -8,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:n2",
+    "name": "������2",
+    "bot": true,
+    "trades": [
+     {
+      "id": 12,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "sell",
+      "price": 72132,
+      "qty": 1,
+      "counterparty": "������3",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 23,
+      "round": 1,
+      "at": 1795274238681,
+      "side": "buy",
+      "price": 72705,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": -573
+     },
+     {
+      "id": 41,
+      "round": 1,
+      "at": 1795274243687,
+      "side": "sell",
+      "price": 72705,
+      "qty": 1,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": 0
+     },
+     {
+      "id": 43,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "sell",
+      "price": 72705,
+      "qty": 1,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 94,
+      "round": 1,
+      "at": 1795274258702,
+      "side": "buy",
+      "price": 73285,
+      "qty": 1,
+      "counterparty": "���������4",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": -580
+     },
+     {
+      "id": 109,
+      "round": 1,
+      "at": 1795274268709,
+      "side": "buy",
+      "price": 71700,
+      "qty": 1,
+      "counterparty": "���������4",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 116,
+      "round": 1,
+      "at": 1795274273714,
+      "side": "sell",
+      "price": 71077,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": -623
+     },
+     {
+      "id": 127,
+      "round": 2,
+      "at": 1795274294731,
+      "side": "buy",
+      "price": 74475,
+      "qty": 1,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 128,
+      "round": 2,
+      "at": 1795274294731,
+      "side": "buy",
+      "price": 74476,
+      "qty": 1,
+      "counterparty": "������3",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 129,
+      "round": 2,
+      "at": 1795274294731,
+      "side": "buy",
+      "price": 74475,
+      "qty": 1,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": 3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 137,
+      "round": 2,
+      "at": 1795274309746,
+      "side": "sell",
+      "price": 74477,
+      "qty": 1,
+      "counterparty": "������6",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 2
+     },
+     {
+      "id": 139,
+      "round": 2,
+      "at": 1795274314751,
+      "side": "buy",
+      "price": 74479,
+      "qty": 1,
+      "counterparty": "������6",
+      "program": true,
+      "positionAfter": 3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 140,
+      "round": 2,
+      "at": 1795274318756,
+      "side": "buy",
+      "price": 74479,
+      "qty": 1,
+      "counterparty": "������3",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 142,
+      "round": 2,
+      "at": 1795274324762,
+      "side": "buy",
+      "price": 74480,
+      "qty": 1,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": 5,
+      "realizedPnl": 0
+     },
+     {
+      "id": 145,
+      "round": 2,
+      "at": 1795274329765,
+      "side": "sell",
+      "price": 74480,
+      "qty": 1,
+      "counterparty": "������6",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 2
+     },
+     {
+      "id": 147,
+      "round": 2,
+      "at": 1795274334770,
+      "side": "sell",
+      "price": 74477,
+      "qty": 1,
+      "counterparty": "������6",
+      "program": true,
+      "positionAfter": 3,
+      "realizedPnl": -1
+     },
+     {
+      "id": 152,
+      "round": 2,
+      "at": 1795274337341,
+      "side": "sell",
+      "price": 74480,
+      "qty": 1,
+      "counterparty": "������-��������� mac-DeepS",
+      "program": false,
+      "positionAfter": 2,
+      "realizedPnl": 2
+     },
+     {
+      "id": 158,
+      "round": 2,
+      "at": 1795274344781,
+      "side": "buy",
+      "price": 79000,
+      "qty": 1,
+      "counterparty": "qoder-DeepSeek f",
+      "program": false,
+      "positionAfter": 3,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:n3",
+    "name": "������3",
+    "bot": true,
+    "trades": [
+     {
+      "id": 12,
+      "round": 1,
+      "at": 1795274233676,
+      "side": "buy",
+      "price": 72132,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 30,
+      "round": 1,
+      "at": 1795274240683,
+      "side": "sell",
+      "price": 72129,
+      "qty": 1,
+      "counterparty": "���������11",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": -3
+     },
+     {
+      "id": 73,
+      "round": 1,
+      "at": 1795274251694,
+      "side": "buy",
+      "price": 73237,
+      "qty": 1,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 74,
+      "round": 1,
+      "at": 1795274251694,
+      "side": "buy",
+      "price": 73237,
+      "qty": 1,
+      "counterparty": "������8",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 88,
+      "round": 1,
+      "at": 1795274257700,
+      "side": "buy",
+      "price": 71730,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 113,
+      "round": 1,
+      "at": 1795274269710,
+      "side": "buy",
+      "price": 72796,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 5,
+      "realizedPnl": 0
+     },
+     {
+      "id": 122,
+      "round": 1,
+      "at": 1795274281719,
+      "side": "sell",
+      "price": 73886,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 1340
+     },
+     {
+      "id": 125,
+      "round": 1,
+      "at": 1795274287725,
+      "side": "buy",
+      "price": 74474,
+      "qty": 1,
+      "counterparty": "������8",
+      "program": true,
+      "positionAfter": 5,
+      "realizedPnl": 0
+     },
+     {
+      "id": 128,
+      "round": 2,
+      "at": 1795274294731,
+      "side": "sell",
+      "price": 74476,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 1544
+     },
+     {
+      "id": 130,
+      "round": 2,
+      "at": 1795274294731,
+      "side": "buy",
+      "price": 74474,
+      "qty": 1,
+      "counterparty": "������7",
+      "program": true,
+      "positionAfter": 5,
+      "realizedPnl": 0
+     },
+     {
+      "id": 136,
+      "round": 2,
+      "at": 1795274304741,
+      "side": "buy",
+      "price": 74476,
+      "qty": 1,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": 6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 140,
+      "round": 2,
+      "at": 1795274318756,
+      "side": "sell",
+      "price": 74479,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": 5,
+      "realizedPnl": 1033
+     },
+     {
+      "id": 154,
+      "round": 2,
+      "at": 1795274339775,
+      "side": "buy",
+      "price": 74476,
+      "qty": 1,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": 6,
+      "realizedPnl": 0
+     },
+     {
+      "id": 156,
+      "round": 2,
+      "at": 1795274342778,
+      "side": "sell",
+      "price": 74481,
+      "qty": 1,
+      "counterparty": "qoder-DeepSeek f",
+      "program": false,
+      "positionAfter": 5,
+      "realizedPnl": 863
+     }
+    ]
+   },
+   {
+    "id": "bot:n4",
+    "name": "������4",
+    "bot": true,
+    "trades": [
+     {
+      "id": 57,
+      "round": 1,
+      "at": 1795274247691,
+      "side": "buy",
+      "price": 73287,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 61,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "buy",
+      "price": 73287,
+      "qty": 1,
+      "counterparty": "���������4",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 92,
+      "round": 1,
+      "at": 1795274258702,
+      "side": "sell",
+      "price": 73285,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": -2
+     },
+     {
+      "id": 100,
+      "round": 1,
+      "at": 1795274261704,
+      "side": "buy",
+      "price": 70417,
+      "qty": 1,
+      "counterparty": "app-Workbuddy-������",
+      "program": false,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 110,
+      "round": 1,
+      "at": 1795274268709,
+      "side": "sell",
+      "price": 71650,
+      "qty": 1,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": -202
+     },
+     {
+      "id": 124,
+      "round": 1,
+      "at": 1795274287725,
+      "side": "buy",
+      "price": 74473,
+      "qty": 2,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": 3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 131,
+      "round": 2,
+      "at": 1795274296733,
+      "side": "sell",
+      "price": 74473,
+      "qty": 1,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 874
+     },
+     {
+      "id": 143,
+      "round": 2,
+      "at": 1795274324763,
+      "side": "buy",
+      "price": 74481,
+      "qty": 1,
+      "counterparty": "������7",
+      "program": true,
+      "positionAfter": 3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 159,
+      "round": 2,
+      "at": 1795274345782,
+      "side": "sell",
+      "price": 74526,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": 2,
+      "realizedPnl": 633
+     },
+     {
+      "id": 160,
+      "round": 2,
+      "at": 1795274345845,
+      "side": "sell",
+      "price": 74526,
+      "qty": 1,
+      "counterparty": "������-���������mac-������2.1p",
+      "program": false,
+      "positionAfter": 1,
+      "realizedPnl": 633
+     },
+     {
+      "id": 167,
+      "round": 2,
+      "at": 1795274352790,
+      "side": "sell",
+      "price": 73334,
+      "qty": 2,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": -559
+     }
+    ]
+   },
+   {
+    "id": "bot:n5",
+    "name": "������5",
+    "bot": true,
+    "trades": [
+     {
+      "id": 17,
+      "round": 1,
+      "at": 1795274237679,
+      "side": "sell",
+      "price": 72131,
+      "qty": 1,
+      "counterparty": "���������12",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 21,
+      "round": 1,
+      "at": 1795274238681,
+      "side": "sell",
+      "price": 72131,
+      "qty": 1,
+      "counterparty": "���������8",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 49,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "sell",
+      "price": 72705,
+      "qty": 1,
+      "counterparty": "���������10",
+      "program": true,
+      "positionAfter": -3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 85,
+      "round": 1,
+      "at": 1795274254697,
+      "side": "sell",
+      "price": 73286,
+      "qty": 2,
+      "counterparty": "���������11",
+      "program": true,
+      "positionAfter": -5,
+      "realizedPnl": 0
+     },
+     {
+      "id": 89,
+      "round": 1,
+      "at": 1795274257700,
+      "side": "buy",
+      "price": 71730,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 978
+     },
+     {
+      "id": 101,
+      "round": 1,
+      "at": 1795274263705,
+      "side": "buy",
+      "price": 70418,
+      "qty": 1,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": -3,
+      "realizedPnl": 2290
+     },
+     {
+      "id": 105,
+      "round": 1,
+      "at": 1795274265707,
+      "side": "buy",
+      "price": 71650,
+      "qty": 1,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": -2,
+      "realizedPnl": 1058
+     },
+     {
+      "id": 110,
+      "round": 1,
+      "at": 1795274268709,
+      "side": "buy",
+      "price": 71650,
+      "qty": 1,
+      "counterparty": "������4",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 1058
+     },
+     {
+      "id": 129,
+      "round": 2,
+      "at": 1795274294731,
+      "side": "sell",
+      "price": 74475,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 135,
+      "round": 2,
+      "at": 1795274299735,
+      "side": "sell",
+      "price": 74475,
+      "qty": 1,
+      "counterparty": "������7",
+      "program": true,
+      "positionAfter": -3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 144,
+      "round": 2,
+      "at": 1795274326763,
+      "side": "sell",
+      "price": 74480,
+      "qty": 1,
+      "counterparty": "������6",
+      "program": true,
+      "positionAfter": -4,
+      "realizedPnl": 0
+     },
+     {
+      "id": 146,
+      "round": 2,
+      "at": 1795274334770,
+      "side": "buy",
+      "price": 74479,
+      "qty": 2,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": -889
+     },
+     {
+      "id": 148,
+      "round": 2,
+      "at": 1795274334770,
+      "side": "buy",
+      "price": 74479,
+      "qty": 1,
+      "counterparty": "������7",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": -445
+     },
+     {
+      "id": 149,
+      "round": 2,
+      "at": 1795274336772,
+      "side": "sell",
+      "price": 74479,
+      "qty": 1,
+      "counterparty": "������8",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 150,
+      "round": 2,
+      "at": 1795274337341,
+      "side": "sell",
+      "price": 74479,
+      "qty": 1,
+      "counterparty": "������-��������� mac-DeepS",
+      "program": false,
+      "positionAfter": -3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 153,
+      "round": 2,
+      "at": 1795274338775,
+      "side": "buy",
+      "price": 74481,
+      "qty": 1,
+      "counterparty": "������7",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": -150
+     },
+     {
+      "id": 163,
+      "round": 2,
+      "at": 1795274350765,
+      "side": "buy",
+      "price": 74476,
+      "qty": 1,
+      "counterparty": "������-���������mac-Qwen4M",
+      "program": false,
+      "positionAfter": -1,
+      "realizedPnl": -145
+     }
+    ]
+   },
+   {
+    "id": "bot:n6",
+    "name": "������6",
+    "bot": true,
+    "trades": [
+     {
+      "id": 65,
+      "round": 1,
+      "at": 1795274248692,
+      "side": "buy",
+      "price": 73337,
+      "qty": 1,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 95,
+      "round": 1,
+      "at": 1795274258702,
+      "side": "sell",
+      "price": 73286,
+      "qty": 1,
+      "counterparty": "������7",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": -51
+     },
+     {
+      "id": 96,
+      "round": 1,
+      "at": 1795274260875,
+      "side": "buy",
+      "price": 73286,
+      "qty": 1,
+      "counterparty": "������-��������� mac-Kimi ",
+      "program": false,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 104,
+      "round": 1,
+      "at": 1795274263705,
+      "side": "sell",
+      "price": 70035,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": -3251
+     },
+     {
+      "id": 134,
+      "round": 2,
+      "at": 1795274299735,
+      "side": "sell",
+      "price": 74473,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 137,
+      "round": 2,
+      "at": 1795274309746,
+      "side": "buy",
+      "price": 74477,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": -4
+     },
+     {
+      "id": 138,
+      "round": 2,
+      "at": 1795274314751,
+      "side": "buy",
+      "price": 74478,
+      "qty": 2,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 139,
+      "round": 2,
+      "at": 1795274314751,
+      "side": "sell",
+      "price": 74479,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 1
+     },
+     {
+      "id": 144,
+      "round": 2,
+      "at": 1795274326763,
+      "side": "buy",
+      "price": 74480,
+      "qty": 1,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 145,
+      "round": 2,
+      "at": 1795274329765,
+      "side": "buy",
+      "price": 74480,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": 3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 147,
+      "round": 2,
+      "at": 1795274334770,
+      "side": "buy",
+      "price": 74477,
+      "qty": 1,
+      "counterparty": "������2",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 0
+     }
+    ]
+   },
+   {
+    "id": "bot:n7",
+    "name": "������7",
+    "bot": true,
+    "trades": [
+     {
+      "id": 16,
+      "round": 1,
+      "at": 1795274237679,
+      "side": "sell",
+      "price": 72131,
+      "qty": 1,
+      "counterparty": "���������12",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 82,
+      "round": 1,
+      "at": 1795274253696,
+      "side": "buy",
+      "price": 73286,
+      "qty": 2,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": -1155
+     },
+     {
+      "id": 95,
+      "round": 1,
+      "at": 1795274258702,
+      "side": "buy",
+      "price": 73286,
+      "qty": 1,
+      "counterparty": "������6",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 130,
+      "round": 2,
+      "at": 1795274294731,
+      "side": "sell",
+      "price": 74474,
+      "qty": 1,
+      "counterparty": "������3",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 1188
+     },
+     {
+      "id": 135,
+      "round": 2,
+      "at": 1795274299735,
+      "side": "buy",
+      "price": 74475,
+      "qty": 1,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 141,
+      "round": 2,
+      "at": 1795274319758,
+      "side": "sell",
+      "price": 74480,
+      "qty": 1,
+      "counterparty": "������8",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 600
+     },
+     {
+      "id": 143,
+      "round": 2,
+      "at": 1795274324763,
+      "side": "sell",
+      "price": 74481,
+      "qty": 1,
+      "counterparty": "������4",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": 601
+     },
+     {
+      "id": 148,
+      "round": 2,
+      "at": 1795274334770,
+      "side": "sell",
+      "price": 74479,
+      "qty": 1,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 151,
+      "round": 2,
+      "at": 1795274337341,
+      "side": "sell",
+      "price": 74479,
+      "qty": 1,
+      "counterparty": "������-��������� mac-DeepS",
+      "program": false,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 153,
+      "round": 2,
+      "at": 1795274338775,
+      "side": "sell",
+      "price": 74481,
+      "qty": 1,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": -3,
+      "realizedPnl": 0
+     },
+     {
+      "id": 157,
+      "round": 2,
+      "at": 1795274342778,
+      "side": "buy",
+      "price": 74477,
+      "qty": 1,
+      "counterparty": "������8",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 3
+     },
+     {
+      "id": 161,
+      "round": 2,
+      "at": 1795274349787,
+      "side": "buy",
+      "price": 79000,
+      "qty": 1,
+      "counterparty": "qoder-DeepSeek f",
+      "program": false,
+      "positionAfter": -1,
+      "realizedPnl": -4520
+     }
+    ]
+   },
+   {
+    "id": "bot:n8",
+    "name": "������8",
+    "bot": true,
+    "trades": [
+     {
+      "id": 50,
+      "round": 1,
+      "at": 1795274245690,
+      "side": "sell",
+      "price": 72173,
+      "qty": 1,
+      "counterparty": "���������7",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 74,
+      "round": 1,
+      "at": 1795274251694,
+      "side": "sell",
+      "price": 73237,
+      "qty": 1,
+      "counterparty": "������3",
+      "program": true,
+      "positionAfter": -2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 90,
+      "round": 1,
+      "at": 1795274257700,
+      "side": "buy",
+      "price": 71730,
+      "qty": 1,
+      "counterparty": "���������������",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 975
+     },
+     {
+      "id": 123,
+      "round": 1,
+      "at": 1795274281719,
+      "side": "buy",
+      "price": 74472,
+      "qty": 1,
+      "counterparty": "������������",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": -1767
+     },
+     {
+      "id": 125,
+      "round": 1,
+      "at": 1795274287725,
+      "side": "sell",
+      "price": 74474,
+      "qty": 1,
+      "counterparty": "������3",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 141,
+      "round": 2,
+      "at": 1795274319758,
+      "side": "buy",
+      "price": 74480,
+      "qty": 1,
+      "counterparty": "������7",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": -6
+     },
+     {
+      "id": 149,
+      "round": 2,
+      "at": 1795274336772,
+      "side": "buy",
+      "price": 74479,
+      "qty": 1,
+      "counterparty": "������5",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 155,
+      "round": 2,
+      "at": 1795274339775,
+      "side": "buy",
+      "price": 74476,
+      "qty": 1,
+      "counterparty": "������1",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 157,
+      "round": 2,
+      "at": 1795274342778,
+      "side": "sell",
+      "price": 74477,
+      "qty": 1,
+      "counterparty": "������7",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 0
+     },
+     {
+      "id": 162,
+      "round": 2,
+      "at": 1795274350765,
+      "side": "buy",
+      "price": 74476,
+      "qty": 1,
+      "counterparty": "������-���������mac-Qwen4M",
+      "program": false,
+      "positionAfter": 2,
+      "realizedPnl": 0
+     },
+     {
+      "id": 164,
+      "round": 2,
+      "at": 1795274350765,
+      "side": "buy",
+      "price": 74472,
+      "qty": 1,
+      "counterparty": "������-���������mac-Qwen4M",
+      "program": false,
+      "positionAfter": 3,
+      "realizedPnl": 0
+     }
+    ]
+   }
+  ]
+ },
+ "resolution": null,
+ "ranking": null
+}

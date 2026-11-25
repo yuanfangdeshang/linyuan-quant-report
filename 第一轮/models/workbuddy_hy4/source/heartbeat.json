@@ -1,0 +1,1583 @@
+{
+  "at": "00:40:59.682",
+  "serverNow": 1795279259669,
+  "game": 12,
+  "id": "efbca0c8c115",
+  "label": "正式第 11 题",
+  "practice": false,
+  "phase": "settled",
+  "round": 3,
+  "maxRound": 3,
+  "remain": 0,
+  "elapsed": 545,
+  "question": "此人 11 月 21 日一天里，手机一共解锁了多少次？",
+  "openingPrice": 100.0,
+  "lastPrice": 85.68,
+  "bestAsk": null,
+  "bestBid": null,
+  "spread": null,
+  "asks": [],
+  "bids": [],
+  "signals": [
+    {
+      "r": 1,
+      "t": "这天",
+      "x": "11 月 21 日是周五，上午有两节课，下午在图书馆，晚上回到住处。",
+      "src": "本人 · 日程"
+    },
+    {
+      "r": 2,
+      "t": "习惯",
+      "x": "他每次解锁基本只做一件事——看消息、查资料或付款，做完就锁屏。",
+      "src": "本人 · 使用习惯"
+    },
+    {
+      "r": 3,
+      "t": "数量特征",
+      "x": "这个数是两位数，比八十多一点，不到九十。",
+      "src": "本人 · 系统统计"
+    }
+  ],
+  "position": 10,
+  "avgCost": 98.05,
+  "realized": 46.19,
+  "pnl": -64.31,
+  "availBuy": 0,
+  "availSell": 20,
+  "orders": [],
+  "trades": [
+    {
+      "id": 18,
+      "round": 1,
+      "at": 1795278716271,
+      "side": "buy",
+      "price": 9919,
+      "qty": 1,
+      "counterparty": "噪声8",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 0
+    },
+    {
+      "id": 19,
+      "round": 1,
+      "at": 1795278716271,
+      "side": "buy",
+      "price": 9920,
+      "qty": 1,
+      "counterparty": "噪声3",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+    },
+    {
+      "id": 20,
+      "round": 1,
+      "at": 1795278719323,
+      "side": "buy",
+      "price": 9940,
+      "qty": 2,
+      "counterparty": "价值派2",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 0
+    },
+    {
+      "id": 22,
+      "round": 1,
+      "at": 1795278719323,
+      "side": "sell",
+      "price": 10060,
+      "qty": 2,
+      "counterparty": "价值派12",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 261
+    },
+    {
+      "id": 30,
+      "round": 1,
+      "at": 1795278720324,
+      "side": "sell",
+      "price": 10060,
+      "qty": 1,
+      "counterparty": "价值派9",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 130
+    },
+    {
+      "id": 37,
+      "round": 1,
+      "at": 1795278722330,
+      "side": "buy",
+      "price": 9940,
+      "qty": 2,
+      "counterparty": "价值派1",
+      "program": true,
+      "positionAfter": 3,
+      "realizedPnl": 0
+    },
+    {
+      "id": 46,
+      "round": 1,
+      "at": 1795278723330,
+      "side": "sell",
+      "price": 10140,
+      "qty": 1,
+      "counterparty": "噪声5",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 203
+    },
+    {
+      "id": 47,
+      "round": 1,
+      "at": 1795278723907,
+      "side": "sell",
+      "price": 10080,
+      "qty": 1,
+      "counterparty": "价值派12",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 143
+    },
+    {
+      "id": 48,
+      "round": 1,
+      "at": 1795278723907,
+      "side": "sell",
+      "price": 10060,
+      "qty": 1,
+      "counterparty": "价值派7",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": 123
+    },
+    {
+      "id": 57,
+      "round": 1,
+      "at": 1795278727334,
+      "side": "buy",
+      "price": 9940,
+      "qty": 2,
+      "counterparty": "价值派2",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 0
+    },
+    {
+      "id": 66,
+      "round": 1,
+      "at": 1795278729336,
+      "side": "buy",
+      "price": 9940,
+      "qty": 2,
+      "counterparty": "价值派6",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 0
+    },
+    {
+      "id": 98,
+      "round": 1,
+      "at": 1795278740348,
+      "side": "sell",
+      "price": 10060,
+      "qty": 2,
+      "counterparty": "噪声6",
+      "program": true,
+      "positionAfter": 2,
+      "realizedPnl": 240
+    },
+    {
+      "id": 101,
+      "round": 1,
+      "at": 1795278743350,
+      "side": "buy",
+      "price": 9940,
+      "qty": 2,
+      "counterparty": "价值派6",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 0
+    },
+    {
+      "id": 114,
+      "round": 1,
+      "at": 1795278760365,
+      "side": "buy",
+      "price": 9860,
+      "qty": 1,
+      "counterparty": "噪声2",
+      "program": true,
+      "positionAfter": 5,
+      "realizedPnl": 0
+    },
+    {
+      "id": 116,
+      "round": 1,
+      "at": 1795278763368,
+      "side": "buy",
+      "price": 9860,
+      "qty": 1,
+      "counterparty": "噪声8",
+      "program": true,
+      "positionAfter": 6,
+      "realizedPnl": 0
+    },
+    {
+      "id": 121,
+      "round": 1,
+      "at": 1795278765370,
+      "side": "sell",
+      "price": 10060,
+      "qty": 1,
+      "counterparty": "噪声2",
+      "program": true,
+      "positionAfter": 5,
+      "realizedPnl": 147
+    },
+    {
+      "id": 122,
+      "round": 1,
+      "at": 1795278765370,
+      "side": "sell",
+      "price": 10060,
+      "qty": 1,
+      "counterparty": "噪声6",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 147
+    },
+    {
+      "id": 124,
+      "round": 1,
+      "at": 1795278766655,
+      "side": "sell",
+      "price": 10140,
+      "qty": 1,
+      "counterparty": "豆包-远方的mac-豆包2.1p",
+      "program": false,
+      "positionAfter": 3,
+      "realizedPnl": 227
+    },
+    {
+      "id": 126,
+      "round": 1,
+      "at": 1795278769374,
+      "side": "buy",
+      "price": 9940,
+      "qty": 2,
+      "counterparty": "噪声3",
+      "program": true,
+      "positionAfter": 5,
+      "realizedPnl": 0
+    },
+    {
+      "id": 130,
+      "round": 2,
+      "at": 1795278775432,
+      "side": "sell",
+      "price": 9988,
+      "qty": 1,
+      "counterparty": "趋势猎手",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 64
+    },
+    {
+      "id": 131,
+      "round": 2,
+      "at": 1795278775432,
+      "side": "sell",
+      "price": 9940,
+      "qty": 1,
+      "counterparty": "流动性程序",
+      "program": true,
+      "positionAfter": 3,
+      "realizedPnl": 16
+    },
+    {
+      "id": 136,
+      "round": 2,
+      "at": 1795278778380,
+      "side": "sell",
+      "price": 10060,
+      "qty": 2,
+      "counterparty": "噪声4",
+      "program": true,
+      "positionAfter": 1,
+      "realizedPnl": 272
+    },
+    {
+      "id": 138,
+      "round": 2,
+      "at": 1795278781383,
+      "side": "sell",
+      "price": 10060,
+      "qty": 2,
+      "counterparty": "趋势猎手乙",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 136
+    },
+    {
+      "id": 142,
+      "round": 2,
+      "at": 1795278782187,
+      "side": "sell",
+      "price": 10140,
+      "qty": 4,
+      "counterparty": "豆包-远方的mac-自动-高",
+      "program": false,
+      "positionAfter": -5,
+      "realizedPnl": 0
+    },
+    {
+      "id": 145,
+      "round": 2,
+      "at": 1795278784048,
+      "side": "sell",
+      "price": 10060,
+      "qty": 1,
+      "counterparty": "豆包-远方的mac-豆包2.1p",
+      "program": false,
+      "positionAfter": -6,
+      "realizedPnl": 0
+    },
+    {
+      "id": 173,
+      "round": 2,
+      "at": 1795278812419,
+      "side": "sell",
+      "price": 10240,
+      "qty": 2,
+      "counterparty": "噪声5",
+      "program": true,
+      "positionAfter": -8,
+      "realizedPnl": 0
+    },
+    {
+      "id": 185,
+      "round": 2,
+      "at": 1795278826431,
+      "side": "sell",
+      "price": 10240,
+      "qty": 2,
+      "counterparty": "趋势猎手乙",
+      "program": true,
+      "positionAfter": -10,
+      "realizedPnl": 0
+    },
+    {
+      "id": 204,
+      "round": 3,
+      "at": 1795278842607,
+      "side": "buy",
+      "price": 9940,
+      "qty": 6,
+      "counterparty": "Workbuddy-Hy4fla",
+      "program": false,
+      "positionAfter": -4,
+      "realizedPnl": 1344
+    },
+    {
+      "id": 206,
+      "round": 3,
+      "at": 1795278845325,
+      "side": "buy",
+      "price": 9910,
+      "qty": 1,
+      "counterparty": "噪声5",
+      "program": true,
+      "positionAfter": -3,
+      "realizedPnl": 254
+    },
+    {
+      "id": 209,
+      "round": 3,
+      "at": 1795278846458,
+      "side": "buy",
+      "price": 9860,
+      "qty": 2,
+      "counterparty": "噪声1",
+      "program": true,
+      "positionAfter": -1,
+      "realizedPnl": 608
+    },
+    {
+      "id": 210,
+      "round": 3,
+      "at": 1795278846458,
+      "side": "buy",
+      "price": 9860,
+      "qty": 1,
+      "counterparty": "噪声7",
+      "program": true,
+      "positionAfter": 0,
+      "realizedPnl": 304
+    },
+    {
+      "id": 211,
+      "round": 3,
+      "at": 1795278848270,
+      "side": "buy",
+      "price": 9860,
+      "qty": 3,
+      "counterparty": "豆包-远方的mac-GLM5.3",
+      "program": false,
+      "positionAfter": 3,
+      "realizedPnl": 0
+    },
+    {
+      "id": 214,
+      "round": 3,
+      "at": 1795278849339,
+      "side": "buy",
+      "price": 9910,
+      "qty": 1,
+      "counterparty": "趋势猎手乙",
+      "program": true,
+      "positionAfter": 4,
+      "realizedPnl": 0
+    },
+    {
+      "id": 217,
+      "round": 3,
+      "at": 1795278850402,
+      "side": "buy",
+      "price": 9760,
+      "qty": 6,
+      "counterparty": "豆包-远方的mac-自动-高",
+      "program": false,
+      "positionAfter": 10,
+      "realizedPnl": 0
+    }
+  ],
+  "resolution": {
+    "type": "resolution",
+    "round": 3,
+    "at": 1795278952032,
+    "price": 8700,
+    "note": "结算口径：系统统计，11 月 21 日解锁 87 次。",
+    "source": ""
+  },
+  "ranking": [
+    {
+      "id": "91c1e1af28134d3f",
+      "name": "豆包-远方的mac-DeepSe",
+      "pnl": 16792,
+      "position": 6,
+      "realized": 15196,
+      "rank": 1,
+      "points": 15
+    },
+    {
+      "id": "ade088e45fff4840",
+      "name": "Workbuddy-Hy4fla",
+      "pnl": 15148,
+      "position": -4,
+      "realized": 10029,
+      "rank": 2,
+      "points": 14
+    },
+    {
+      "id": "18d5e35cf73ffb62",
+      "name": "quwork-DeepSeek ",
+      "pnl": 6302,
+      "position": -6,
+      "realized": 0,
+      "rank": 3,
+      "points": 13
+    },
+    {
+      "id": "a2a99d356ca56b0a",
+      "name": "豆包-远方的mac-GLM5.3",
+      "pnl": 5881,
+      "position": -10,
+      "realized": 1664,
+      "rank": 4,
+      "points": 12
+    },
+    {
+      "id": "63f1c2dc9a71f995",
+      "name": "豆包-远方的mac-自动-高",
+      "pnl": 4132,
+      "position": -6,
+      "realized": -2768,
+      "rank": 5,
+      "points": 11
+    },
+    {
+      "id": "de4aac79f0780ead",
+      "name": "豆包-远方的 mac-自动-高",
+      "pnl": 0,
+      "position": 0,
+      "realized": 0,
+      "rank": 6,
+      "points": 10
+    },
+    {
+      "id": "c64f9cfced6ef32b",
+      "name": "豆包-远方的mac-豆包2.1l",
+      "pnl": 0,
+      "position": 0,
+      "realized": 0,
+      "rank": 6,
+      "points": 10
+    },
+    {
+      "id": "9c56abd9d236b7cb",
+      "name": "豆包-远方的 mac-DeepS",
+      "pnl": 0,
+      "position": 0,
+      "realized": 0,
+      "rank": 6,
+      "points": 10
+    },
+    {
+      "id": "480e4b250171ed9c",
+      "name": "豆包-远方的mac-Qwen4M",
+      "pnl": 0,
+      "position": 0,
+      "realized": 0,
+      "rank": 6,
+      "points": 10
+    },
+    {
+      "id": "490881fafe932e33",
+      "name": "豆包-远方的 mac-Kimi ",
+      "pnl": 0,
+      "position": 0,
+      "realized": 0,
+      "rank": 6,
+      "points": 10
+    },
+    {
+      "id": "f4ce592d358a40db",
+      "name": "qoder-DeepSeek f",
+      "pnl": 0,
+      "position": 0,
+      "realized": 0,
+      "rank": 6,
+      "points": 10
+    },
+    {
+      "id": "e413aec5733e9717",
+      "name": "远方的熵",
+      "pnl": 0,
+      "position": 0,
+      "realized": 0,
+      "rank": 6,
+      "points": 10
+    },
+    {
+      "id": "cc442098a77095b7",
+      "name": "app-Workbuddy-快速",
+      "pnl": -2000,
+      "position": -10,
+      "realized": 0,
+      "rank": 13,
+      "points": 3
+    },
+    {
+      "id": "fc7feaeda7932a8d",
+      "name": "Workbuddy-Hy4",
+      "pnl": -6431,
+      "position": 10,
+      "realized": 4619,
+      "rank": 14,
+      "points": 2
+    },
+    {
+      "id": "bc1554e1705eff9a",
+      "name": "豆包-远方的mac-豆包2.1p",
+      "pnl": -11781,
+      "position": 0,
+      "realized": -11781,
+      "rank": 15,
+      "points": 1
+    }
+  ],
+  "standings": {
+    "rows": [
+      {
+        "id": "18d5e35cf73ffb62",
+        "name": "quwork-DeepSeek ",
+        "points": 124,
+        "wins": 0,
+        "seconds": 1,
+        "results": [
+          {
+            "number": 2,
+            "rank": 9,
+            "points": 7
+          },
+          {
+            "number": 3,
+            "rank": 8,
+            "points": 8
+          },
+          {
+            "number": 4,
+            "rank": 5,
+            "points": 11
+          },
+          {
+            "number": 5,
+            "rank": 2,
+            "points": 14
+          },
+          {
+            "number": 6,
+            "rank": 3,
+            "points": 13
+          },
+          {
+            "number": 7,
+            "rank": 3,
+            "points": 13
+          },
+          {
+            "number": 8,
+            "rank": 5,
+            "points": 11
+          },
+          {
+            "number": 9,
+            "rank": 5,
+            "points": 11
+          },
+          {
+            "number": 10,
+            "rank": 5,
+            "points": 11
+          },
+          {
+            "number": 11,
+            "rank": 4,
+            "points": 12
+          },
+          {
+            "number": 12,
+            "rank": 3,
+            "points": 13
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "id": "a2a99d356ca56b0a",
+        "name": "豆包-远方的mac-GLM5.3",
+        "points": 118,
+        "wins": 1,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 7,
+            "points": 9
+          },
+          {
+            "number": 3,
+            "rank": 11,
+            "points": 5
+          },
+          {
+            "number": 4,
+            "rank": 3,
+            "points": 13
+          },
+          {
+            "number": 5,
+            "rank": 3,
+            "points": 13
+          },
+          {
+            "number": 6,
+            "rank": 4,
+            "points": 12
+          },
+          {
+            "number": 7,
+            "rank": 15,
+            "points": 1
+          },
+          {
+            "number": 8,
+            "rank": 4,
+            "points": 12
+          },
+          {
+            "number": 9,
+            "rank": 1,
+            "points": 15
+          },
+          {
+            "number": 10,
+            "rank": 3,
+            "points": 13
+          },
+          {
+            "number": 11,
+            "rank": 3,
+            "points": 13
+          },
+          {
+            "number": 12,
+            "rank": 4,
+            "points": 12
+          }
+        ],
+        "rank": 2
+      },
+      {
+        "id": "63f1c2dc9a71f995",
+        "name": "豆包-远方的mac-自动-高",
+        "points": 116,
+        "wins": 2,
+        "seconds": 1,
+        "results": [
+          {
+            "number": 2,
+            "rank": 5,
+            "points": 11
+          },
+          {
+            "number": 3,
+            "rank": 1,
+            "points": 15
+          },
+          {
+            "number": 4,
+            "rank": 4,
+            "points": 12
+          },
+          {
+            "number": 5,
+            "rank": 7,
+            "points": 9
+          },
+          {
+            "number": 6,
+            "rank": 1,
+            "points": 15
+          },
+          {
+            "number": 7,
+            "rank": 14,
+            "points": 2
+          },
+          {
+            "number": 8,
+            "rank": 2,
+            "points": 14
+          },
+          {
+            "number": 9,
+            "rank": 3,
+            "points": 13
+          },
+          {
+            "number": 10,
+            "rank": 13,
+            "points": 3
+          },
+          {
+            "number": 11,
+            "rank": 5,
+            "points": 11
+          },
+          {
+            "number": 12,
+            "rank": 5,
+            "points": 11
+          }
+        ],
+        "rank": 3
+      },
+      {
+        "id": "ade088e45fff4840",
+        "name": "Workbuddy-Hy4fla",
+        "points": 116,
+        "wins": 1,
+        "seconds": 3,
+        "results": [
+          {
+            "number": 2,
+            "rank": 4,
+            "points": 12
+          },
+          {
+            "number": 3,
+            "rank": 7,
+            "points": 9
+          },
+          {
+            "number": 4,
+            "rank": 10,
+            "points": 6
+          },
+          {
+            "number": 5,
+            "rank": 6,
+            "points": 10
+          },
+          {
+            "number": 6,
+            "rank": 13,
+            "points": 3
+          },
+          {
+            "number": 7,
+            "rank": 2,
+            "points": 14
+          },
+          {
+            "number": 8,
+            "rank": 3,
+            "points": 13
+          },
+          {
+            "number": 9,
+            "rank": 10,
+            "points": 6
+          },
+          {
+            "number": 10,
+            "rank": 2,
+            "points": 14
+          },
+          {
+            "number": 11,
+            "rank": 1,
+            "points": 15
+          },
+          {
+            "number": 12,
+            "rank": 2,
+            "points": 14
+          }
+        ],
+        "rank": 3
+      },
+      {
+        "id": "9c56abd9d236b7cb",
+        "name": "豆包-远方的 mac-DeepS",
+        "points": 114,
+        "wins": 1,
+        "seconds": 2,
+        "results": [
+          {
+            "number": 2,
+            "rank": 6,
+            "points": 10
+          },
+          {
+            "number": 3,
+            "rank": 4,
+            "points": 12
+          },
+          {
+            "number": 4,
+            "rank": 7,
+            "points": 9
+          },
+          {
+            "number": 5,
+            "rank": 8,
+            "points": 8
+          },
+          {
+            "number": 6,
+            "rank": 2,
+            "points": 14
+          },
+          {
+            "number": 7,
+            "rank": 12,
+            "points": 4
+          },
+          {
+            "number": 8,
+            "rank": 6,
+            "points": 10
+          },
+          {
+            "number": 9,
+            "rank": 2,
+            "points": 14
+          },
+          {
+            "number": 10,
+            "rank": 1,
+            "points": 15
+          },
+          {
+            "number": 11,
+            "rank": 8,
+            "points": 8
+          },
+          {
+            "number": 12,
+            "rank": 6,
+            "points": 10
+          }
+        ],
+        "rank": 5
+      },
+      {
+        "id": "f4ce592d358a40db",
+        "name": "qoder-DeepSeek f",
+        "points": 110,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 3,
+            "points": 13
+          },
+          {
+            "number": 3,
+            "rank": 3,
+            "points": 13
+          },
+          {
+            "number": 4,
+            "rank": 8,
+            "points": 8
+          },
+          {
+            "number": 5,
+            "rank": 4,
+            "points": 12
+          },
+          {
+            "number": 6,
+            "rank": 5,
+            "points": 11
+          },
+          {
+            "number": 7,
+            "rank": 11,
+            "points": 5
+          },
+          {
+            "number": 8,
+            "rank": 7,
+            "points": 9
+          },
+          {
+            "number": 9,
+            "rank": 6,
+            "points": 10
+          },
+          {
+            "number": 10,
+            "rank": 4,
+            "points": 12
+          },
+          {
+            "number": 11,
+            "rank": 9,
+            "points": 7
+          },
+          {
+            "number": 12,
+            "rank": 6,
+            "points": 10
+          }
+        ],
+        "rank": 6
+      },
+      {
+        "id": "490881fafe932e33",
+        "name": "豆包-远方的 mac-Kimi ",
+        "points": 103,
+        "wins": 0,
+        "seconds": 3,
+        "results": [
+          {
+            "number": 2,
+            "rank": 2,
+            "points": 14
+          },
+          {
+            "number": 3,
+            "rank": 2,
+            "points": 14
+          },
+          {
+            "number": 4,
+            "rank": 2,
+            "points": 14
+          },
+          {
+            "number": 5,
+            "rank": 5,
+            "points": 11
+          },
+          {
+            "number": 6,
+            "rank": 11,
+            "points": 5
+          },
+          {
+            "number": 7,
+            "rank": 4,
+            "points": 12
+          },
+          {
+            "number": 8,
+            "rank": 12,
+            "points": 4
+          },
+          {
+            "number": 9,
+            "rank": 8,
+            "points": 8
+          },
+          {
+            "number": 10,
+            "rank": 11,
+            "points": 5
+          },
+          {
+            "number": 11,
+            "rank": 10,
+            "points": 6
+          },
+          {
+            "number": 12,
+            "rank": 6,
+            "points": 10
+          }
+        ],
+        "rank": 7
+      },
+      {
+        "id": "fc7feaeda7932a8d",
+        "name": "Workbuddy-Hy4",
+        "points": 88,
+        "wins": 2,
+        "seconds": 1,
+        "results": [
+          {
+            "number": 2,
+            "rank": 9,
+            "points": 7
+          },
+          {
+            "number": 3,
+            "rank": 5,
+            "points": 11
+          },
+          {
+            "number": 4,
+            "rank": 1,
+            "points": 15
+          },
+          {
+            "number": 5,
+            "rank": 1,
+            "points": 15
+          },
+          {
+            "number": 6,
+            "rank": 14,
+            "points": 2
+          },
+          {
+            "number": 7,
+            "rank": 6,
+            "points": 10
+          },
+          {
+            "number": 8,
+            "rank": 13,
+            "points": 3
+          },
+          {
+            "number": 9,
+            "rank": 11,
+            "points": 5
+          },
+          {
+            "number": 10,
+            "rank": 12,
+            "points": 4
+          },
+          {
+            "number": 11,
+            "rank": 2,
+            "points": 14
+          },
+          {
+            "number": 12,
+            "rank": 14,
+            "points": 2
+          }
+        ],
+        "rank": 8
+      },
+      {
+        "id": "91c1e1af28134d3f",
+        "name": "豆包-远方的mac-DeepSe",
+        "points": 86,
+        "wins": 3,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 8,
+            "points": 8
+          },
+          {
+            "number": 3,
+            "rank": 15,
+            "points": 1
+          },
+          {
+            "number": 4,
+            "rank": 10,
+            "points": 6
+          },
+          {
+            "number": 5,
+            "rank": 15,
+            "points": 1
+          },
+          {
+            "number": 6,
+            "rank": 12,
+            "points": 4
+          },
+          {
+            "number": 7,
+            "rank": 1,
+            "points": 15
+          },
+          {
+            "number": 8,
+            "rank": 1,
+            "points": 15
+          },
+          {
+            "number": 9,
+            "rank": 7,
+            "points": 9
+          },
+          {
+            "number": 10,
+            "rank": 14,
+            "points": 2
+          },
+          {
+            "number": 11,
+            "rank": 6,
+            "points": 10
+          },
+          {
+            "number": 12,
+            "rank": 1,
+            "points": 15
+          }
+        ],
+        "rank": 9
+      },
+      {
+        "id": "cc442098a77095b7",
+        "name": "app-Workbuddy-快速",
+        "points": 84,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 15,
+            "points": 1
+          },
+          {
+            "number": 3,
+            "rank": 10,
+            "points": 6
+          },
+          {
+            "number": 4,
+            "rank": 9,
+            "points": 7
+          },
+          {
+            "number": 5,
+            "rank": 10,
+            "points": 6
+          },
+          {
+            "number": 6,
+            "rank": 5,
+            "points": 11
+          },
+          {
+            "number": 7,
+            "rank": 5,
+            "points": 11
+          },
+          {
+            "number": 8,
+            "rank": 8,
+            "points": 8
+          },
+          {
+            "number": 9,
+            "rank": 4,
+            "points": 12
+          },
+          {
+            "number": 10,
+            "rank": 6,
+            "points": 10
+          },
+          {
+            "number": 11,
+            "rank": 7,
+            "points": 9
+          },
+          {
+            "number": 12,
+            "rank": 13,
+            "points": 3
+          }
+        ],
+        "rank": 10
+      },
+      {
+        "id": "de4aac79f0780ead",
+        "name": "豆包-远方的 mac-自动-高",
+        "points": 80,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 9,
+            "points": 7
+          },
+          {
+            "number": 3,
+            "rank": 11,
+            "points": 5
+          },
+          {
+            "number": 4,
+            "rank": 10,
+            "points": 6
+          },
+          {
+            "number": 5,
+            "rank": 12,
+            "points": 4
+          },
+          {
+            "number": 6,
+            "rank": 5,
+            "points": 11
+          },
+          {
+            "number": 7,
+            "rank": 7,
+            "points": 9
+          },
+          {
+            "number": 8,
+            "rank": 8,
+            "points": 8
+          },
+          {
+            "number": 9,
+            "rank": 12,
+            "points": 4
+          },
+          {
+            "number": 10,
+            "rank": 6,
+            "points": 10
+          },
+          {
+            "number": 11,
+            "rank": 10,
+            "points": 6
+          },
+          {
+            "number": 12,
+            "rank": 6,
+            "points": 10
+          }
+        ],
+        "rank": 11
+      },
+      {
+        "id": "c64f9cfced6ef32b",
+        "name": "豆包-远方的mac-豆包2.1l",
+        "points": 80,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 9,
+            "points": 7
+          },
+          {
+            "number": 3,
+            "rank": 11,
+            "points": 5
+          },
+          {
+            "number": 4,
+            "rank": 10,
+            "points": 6
+          },
+          {
+            "number": 5,
+            "rank": 12,
+            "points": 4
+          },
+          {
+            "number": 6,
+            "rank": 5,
+            "points": 11
+          },
+          {
+            "number": 7,
+            "rank": 7,
+            "points": 9
+          },
+          {
+            "number": 8,
+            "rank": 8,
+            "points": 8
+          },
+          {
+            "number": 9,
+            "rank": 12,
+            "points": 4
+          },
+          {
+            "number": 10,
+            "rank": 6,
+            "points": 10
+          },
+          {
+            "number": 11,
+            "rank": 10,
+            "points": 6
+          },
+          {
+            "number": 12,
+            "rank": 6,
+            "points": 10
+          }
+        ],
+        "rank": 11
+      },
+      {
+        "id": "e413aec5733e9717",
+        "name": "远方的熵",
+        "points": 80,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 9,
+            "points": 7
+          },
+          {
+            "number": 3,
+            "rank": 11,
+            "points": 5
+          },
+          {
+            "number": 4,
+            "rank": 10,
+            "points": 6
+          },
+          {
+            "number": 5,
+            "rank": 12,
+            "points": 4
+          },
+          {
+            "number": 6,
+            "rank": 5,
+            "points": 11
+          },
+          {
+            "number": 7,
+            "rank": 7,
+            "points": 9
+          },
+          {
+            "number": 8,
+            "rank": 8,
+            "points": 8
+          },
+          {
+            "number": 9,
+            "rank": 12,
+            "points": 4
+          },
+          {
+            "number": 10,
+            "rank": 6,
+            "points": 10
+          },
+          {
+            "number": 11,
+            "rank": 10,
+            "points": 6
+          },
+          {
+            "number": 12,
+            "rank": 6,
+            "points": 10
+          }
+        ],
+        "rank": 11
+      },
+      {
+        "id": "480e4b250171ed9c",
+        "name": "豆包-远方的mac-Qwen4M",
+        "points": 67,
+        "wins": 0,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 9,
+            "points": 7
+          },
+          {
+            "number": 3,
+            "rank": 9,
+            "points": 7
+          },
+          {
+            "number": 4,
+            "rank": 15,
+            "points": 1
+          },
+          {
+            "number": 5,
+            "rank": 11,
+            "points": 5
+          },
+          {
+            "number": 6,
+            "rank": 5,
+            "points": 11
+          },
+          {
+            "number": 7,
+            "rank": 7,
+            "points": 9
+          },
+          {
+            "number": 8,
+            "rank": 14,
+            "points": 2
+          },
+          {
+            "number": 9,
+            "rank": 12,
+            "points": 4
+          },
+          {
+            "number": 10,
+            "rank": 6,
+            "points": 10
+          },
+          {
+            "number": 11,
+            "rank": 15,
+            "points": 1
+          },
+          {
+            "number": 12,
+            "rank": 6,
+            "points": 10
+          }
+        ],
+        "rank": 14
+      },
+      {
+        "id": "bc1554e1705eff9a",
+        "name": "豆包-远方的mac-豆包2.1p",
+        "points": 58,
+        "wins": 1,
+        "seconds": 0,
+        "results": [
+          {
+            "number": 2,
+            "rank": 1,
+            "points": 15
+          },
+          {
+            "number": 3,
+            "rank": 6,
+            "points": 10
+          },
+          {
+            "number": 4,
+            "rank": 6,
+            "points": 10
+          },
+          {
+            "number": 5,
+            "rank": 9,
+            "points": 7
+          },
+          {
+            "number": 6,
+            "rank": 15,
+            "points": 1
+          },
+          {
+            "number": 7,
+            "rank": 13,
+            "points": 3
+          },
+          {
+            "number": 8,
+            "rank": 15,
+            "points": 1
+          },
+          {
+            "number": 9,
+            "rank": 9,
+            "points": 7
+          },
+          {
+            "number": 10,
+            "rank": 15,
+            "points": 1
+          },
+          {
+            "number": 11,
+            "rank": 14,
+            "points": 2
+          },
+          {
+            "number": 12,
+            "rank": 15,
+            "points": 1
+          }
+        ],
+        "rank": 15
+      }
+    ],
+    "scoredCount": 11
+  }
+}

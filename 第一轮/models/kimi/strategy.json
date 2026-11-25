@@ -1,0 +1,12 @@
+{
+  "enabled": false,
+  "fair_override": 26.25,
+  "own_estimate": 560.0,
+  "opening_weight": 1.0,
+  "quote_offset_pct": 0.01,
+  "take_threshold_pct": 0.005,
+  "quote_qty": 2,
+  "max_abs_position": 4,
+  "min_action_interval": 2.5,
+  "paused_games": []
+}

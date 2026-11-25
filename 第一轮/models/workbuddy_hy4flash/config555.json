@@ -1,0 +1,9 @@
+{
+  "enabled": false,
+  "fair": null,
+  "threshold": 0.05,
+  "maxOrder": 2,
+  "cooldown": 1200,
+  "useTake": true,
+  "note": "第2题已结算(+15231, rank5/32)。暂停自动交易，等下一题开盘读线索后人工设fair再开启；真人房间开盘锚可能严重失真"
+}

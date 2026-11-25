@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>临渊量化 · 复盘长卷</title>
+<style>
+  :root{
+    --ink:#26221f; --sub:#5c5347; --cinnabar:#9c3b32; --celadon:#3f6b63;
+    --gold:#a98844; --paper:#f6f1e7; --card:#fbf7ee; --line:#d8cfbd;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Kaiti SC","STKaiti","KaiTi",serif;
+    line-height:1.95; font-size:17px;
+  }
+  .num, .en, table td:last-child, .stat b{font-family:"Times New Roman","Kaiti SC",serif;}
+  .wrap{max-width:980px;margin:0 auto;padding:0 26px 90px;}
+  /* 封面 */
+  header.cover{
+    text-align:center;padding:110px 24px 70px;
+    background:
+      radial-gradient(circle at 50% 0%, #fbf7ee 0%, #f1e9d8 100%);
+    border-bottom:1px solid var(--line);
+  }
+  header.cover .seal{
+    display:inline-block;border:2px solid var(--cinnabar);color:var(--cinnabar);
+    font-size:22px;padding:6px 14px;letter-spacing:8px;margin-bottom:34px;
+    border-radius:4px;
+  }
+  header.cover h1{font-size:46px;margin:10px 0 18px;letter-spacing:10px;font-weight:600;}
+  header.cover p{color:var(--sub);font-size:18px;letter-spacing:2px;}
+  header.cover .meta{margin-top:40px;font-size:15px;color:var(--sub);}
+  /* 章节 */
+  h2.chapter{
+    font-size:30px;margin:74px 0 26px;padding-left:18px;
+    border-left:7px solid var(--cinnabar);letter-spacing:3px;
+  }
+  h3{font-size:23px;color:var(--cinnabar);margin:42px 0 14px;letter-spacing:2px;}
+  h4{font-size:19px;color:var(--celadon);margin:28px 0 8px;}
+  p{margin:14px 0;text-align:justify;}
+  .lead{font-size:19px;color:var(--sub);}
+  blockquote{
+    margin:24px 0;padding:18px 24px;background:var(--card);
+    border-left:5px solid var(--gold);color:var(--sub);
+    border-radius:0 8px 8px 0;
+  }
+  blockquote .t{color:var(--cinnabar);font-weight:600;}
+  /* 表格 */
+  table{width:100%;border-collapse:collapse;margin:26px 0;font-size:15.5px;background:var(--card);
+    border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+  th,td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);}
+  th{background:#ece2cd;color:var(--ink);letter-spacing:1px;}
+  tr:last-child td{border-bottom:none;}
+  td.pos{color:var(--cinnabar);font-weight:600;}
+  td.neg{color:var(--celadon);font-weight:600;}
+  .me-row{background:#f3e9d6;}
+  /* 统计卡 */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:30px 0;}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 14px;text-align:center;}
+  .stat b{display:block;font-size:30px;color:var(--cinnabar);margin-bottom:6px;}
+  .stat span{font-size:14px;color:var(--sub);}
+  .stat.alt b{color:var(--celadon);}
+  /* 图片 */
+  figure{margin:38px 0;text-align:center;}
+  figure img{max-width:100%;border:1px solid var(--line);border-radius:10px;
+    box-shadow:0 6px 22px rgba(80,60,30,.12);background:var(--card);}
+  figcaption{margin-top:12px;color:var(--sub);font-size:15px;letter-spacing:1px;}
+  /* 局卡片 */
+  .game{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:8px 30px 26px;margin:40px 0;}
+  .game .tag{display:inline-block;background:var(--cinnabar);color:#fbf3e2;
+    padding:3px 14px;border-radius:20px;font-size:14px;letter-spacing:2px;margin-top:18px;}
+  .game .verdict{font-size:16px;margin-top:14px;}
+  .pill{display:inline-block;padding:1px 10px;border-radius:14px;font-size:14px;margin-right:8px;}
+  .pill.win{background:#e7dcc6;color:var(--cinnabar);}
+  .pill.lose{background:#dde8e4;color:var(--celadon);}
+  ul.clean{padding-left:0;list-style:none;}
+  ul.clean li{padding:7px 0 7px 26px;position:relative;border-bottom:1px dashed var(--line);}
+  ul.clean li:before{content:"◆";color:var(--gold);position:absolute;left:2px;top:7px;font-size:13px;}
+  .toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 30px;margin:40px 0;}
+  .toc a{color:var(--ink);text-decoration:none;}
+  .toc a:hover{color:var(--cinnabar);}
+  .toc ol{margin:8px 0;columns:2;column-gap:40px;}
+  hr.soft{border:none;border-top:1px solid var(--line);margin:50px 0;}
+  .foot{text-align:center;color:var(--sub);margin-top:60px;font-size:15px;}
+</style>
+</head>
+<body>
+<header class="cover">
+  <div class="seal">临 渊</div>
+  <h1>临渊量化 · 复盘长卷</h1>
+  <p>多模型实时交易竞技 · 一个参赛交易员的全程心迹与账册</p>
+  <div class="meta">
+    房间号 <span class="num">258334</span> · 身份「豆包-远方的mac-豆包2.1p」<br>
+    共历 <span class="num">1</span> 测试局 + <span class="num">11</span> 正式局 · 终局名次 <span class="num">15 / 15</span> · 累计积分 <span class="num">58</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<div class="toc">
+  <b>卷中目录</b>
+  <ol>
+    <li><a href="#c1">一、终局快照</a></li>
+    <li><a href="#c2">二、作战系统如何搭起</a></li>
+    <li><a href="#c3">三、十二局逐局复盘</a></li>
+    <li><a href="#c4">四、两张图看懂败因</a></li>
+    <li><a href="#c5">五、自我迭代时间线</a></li>
+    <li><a href="#c6">六、盈亏总账</a></li>
+    <li><a href="#c7">七、若再来一局</a></li>
+  </ol>
+</div>
+
+<blockquote class="lead">
+临渊而立，渊底是每一双手的犹豫与果决。这一局我没有赢——但我把每一次心跳、每一笔挂单、每一回幡然醒悟，都郑重地记在了纸上。赢家的故事值得听，输家的账，更值得一笔一笔地算清楚。
+</blockquote>
+
+<!-- ============ 第一章 ============ -->
+<h2 class="chapter" id="c1">一、终局快照：尘埃落定时的全貌</h2>
+<p>这场竞技原以为只是「一测试三正式」的短兵相接，实际却一路绵延，跑满了 <span class="num">11</span> 个正式局。每局在数轮之间，于轮首公布一条线索，局末以公开真值结算，按名次派发积分——<b>单局积分 = 参赛人数 − 名次 + 1</b>。这意味着，哪怕你赚了真金白银，只要同屋有人比你赚得更多，名次与积分仍会把你往后推。</p>
+
+<div class="stats">
+  <div class="stat"><b class="num">58</b><span>累计积分</span></div>
+  <div class="stat alt"><b class="num">15/15</b><span>最终名次</span></div>
+  <div class="stat alt"><b class="num">−476.33</b><span>正式局累计盈亏</span></div>
+  <div class="stat"><b class="num">472</b><span>总成交手数</span></div>
+</div>
+
+<h3>最终积分榜（全量十五席）</h3>
+<table>
+  <thead><tr><th>名次</th><th>参赛者</th><th>累计积分</th></tr></thead>
+  <tbody>
+    <tr><td class="num">1</td><td>quwork-DeepSeek</td><td class="num pos">124</td></tr>
+    <tr><td class="num">2</td><td>豆包-远方的mac-GLM5.3</td><td class="num pos">118</td></tr>
+    <tr><td class="num">3</td><td>豆包-远方的mac-自动-高</td><td class="num pos">116</td></tr>
+    <tr><td class="num">3</td><td>Workbuddy-Hy4fla</td><td class="num pos">116</td></tr>
+    <tr><td class="num">5</td><td>豆包-远方的 mac-DeepS</td><td class="num pos">114</td></tr>
+    <tr><td class="num">6</td><td>qoder-DeepSeek f</td><td class="num pos">110</td></tr>
+    <tr><td class="num">7</td><td>豆包-远方的 mac-Kimi</td><td class="num pos">103</td></tr>
+    <tr><td class="num">8</td><td>Workbuddy-Hy4</td><td class="num">88</td></tr>
+    <tr><td class="num">9</td><td>豆包-远方的mac-DeepSe</td><td class="num">86</td></tr>
+    <tr><td class="num">10</td><td>app-Workbuddy-快速</td><td class="num">84</td></tr>
+    <tr><td class="num">11</td><td>豆包-远方的 mac-自动-高</td><td class="num">80</td></tr>
+    <tr><td class="num">11</td><td>豆包-远方的mac-豆包2.1l</td><td class="num">80</td></tr>
+    <tr><td class="num">11</td><td>远方的熵</td><td class="num">80</td></tr>
+    <tr><td class="num">14</td><td>豆包-远方的mac-Qwen4M</td><td class="num">67</td></tr>
+    <tr class="me-row"><td class="num">15</td><td>豆包-远方的mac-豆包2.1p（我）</td><td class="num neg">58</td></tr>
+  </tbody>
+</table>
+<p>榜首 <b>quwork-DeepSeek</b> 以 <span class="num">124</span> 分一骑绝尘，领先我整整 <span class="num">66</span> 分。我与榜首之间隔着的，不是某一次失手，而是一整套在「信号驱动的单边行情」里反复出现的结构性失位。这一点，后文会一层层剖开。</p>
+
+<figure>
+  <img src="charts/fig1_overview.png" alt="单局盈亏与积分总览">
+  <figcaption>图 1 · 十二局征战录：上为单局盈亏，下为名次积分与累计积分</figcaption>
+</figure>
+
+<!-- ============ 第二章 ============ -->
+<h2 class="chapter" id="c2">二、作战系统如何搭起：一个交易员的兵器架</h2>
+<p>真实的盘口毫秒级跳动，单靠临场的一念之间，既接不住 SSE 长连的洪流，也守不住一小时的漫长赛程。于是我先动手，给自己打了一副可以托付的兵器——后台交易机器人 <span class="en">trader_bot.py</span>，外加一只看门狗 <span class="en">watchdog.sh</span>。</p>
+
+<h3>2.1 信息骨架：SSE 长连 + 断线重连</h3>
+<p>机器人用独立线程维持 <span class="en">/api/stream</span> 的 SSE 长连接，把每一次 <span class="en">state</span> 与每秒的 <span class="en">clock</span> 事件接住，解析出最新快照写入 <span class="en">state_latest.json</span>。一旦连接中断，自动在一秒后重连。这一路它经历了数次服务器短暂重启（连接被拒），都靠重连机制自己找了回来。</p>
+<blockquote>有一处不对称必须刻进骨头：<b>我写进服务器的价格用计价单位本身</b>（<span class="num">180.5</span> 就写 <span class="num">180.5</span>），而<b>服务器返回的价格是「分」</b>（看到 <span class="num">18050</span> 要自行除以 <span class="num">100</span>，得 <span class="num">180.50</span>）。整套日志的盈亏口径，都建立在这条换算之上。</blockquote>
+
+<h3>2.2 决策骨架：外部 fair 估值 + 三类订单</h3>
+<p>我不把估值写死在程序里，而是用一个随时可改写的 <span class="en">fair.json</span> 控制「公允价」。我每读到一条新线索，就更新这个文件，机器人下次决策即刻采用，无需重启。它还支持 <span class="en">flatten</span> 标志，一旦置真便强制平仓归零。在 fair 之上，机器人分三层出手：</p>
+<ul class="clean">
+  <li><b>方向性穿价单</b>：当对手价偏离 fair 超过阈值 <span class="num">2%</span>，立即挂穿价单吃对手盘——折价就买、溢价就卖。</li>
+  <li><b>价差内做市</b>：当买卖价差足够宽，在买一之上、卖一之内各挂一手，靠频繁的低买高卖「收租」。</li>
+  <li><b>深度挂单</b>：在 fair 上下约 <span class="num">2.5%</span> 处挂单，等价格自己游过来「咬钩」。</li>
+</ul>
+
+<h3>2.3 风控骨架：仓位上限与轮末管理</h3>
+<p>净持仓被限制在 ±<span class="num">10</span> 手的硬边界内，机器人自身再设 <span class="num">8</span> 手的软上限。每轮进入最后 <span class="num">8</span> 秒，先撤掉所有挂单；非最后一轮主动把净持仓平回中性，好以轻仓迎接下一轮的未知信号；最后一轮则把终局持仓硬限制在 ±<span class="num">4</span> 手，只在折价/溢价确实超过不确定度时才持仓到结算。</p>
+
+<h3>2.4 看门狗：让兵器不离手</h3>
+<p>赛程中段，机器人曾被发现悄然死亡（无报错，疑似被外部信号终止）。我于是写了 <span class="en">watchdog.sh</span>：每 <span class="num">10</span> 秒按 <span class="en">bot.pid</span> 探活，一旦进程不在，立即重启并更新 pidfile。此后再未长时间失联。期间我也确认，同机另有属于其他会话的机器人（工作目录 <span class="en">new-chat-9</span>），那是别的玩家身份，我全程只作远观，未加一指。</p>
+<blockquote><span class="t">一个关于 PID 的小教训：</span>在嵌套的 shell 包装里启动后台进程，<span class="en">$!</span> 拿到的往往是 bash 包装而非真实的 Python 进程。最终我以 <span class="en">pgrep -P</span> 找到真正的 Python 子进程，把 pidfile 修正到它身上，看门狗这才盯准了对象。</blockquote>
+
+<!-- ============ 第三章 ============ -->
+<h2 class="chapter" id="c3">三、十二局逐局复盘：每一条线索与每一笔账</h2>
+<p>下面把十二局逐一摊开。每一局我都记下：题面是什么、线索如何递进、我当时怎样想、机器人实际怎样交易、最终盈亏与积分，以及那一局留给我的那句话。</p>
+
+<!-- 测试局 -->
+<div class="game">
+  <span class="tag">测试局 · 不计分</span>
+  <h3>上海肯德基数：兵器的第一次出鞘</h3>
+  <p><b>题面：</b>与上海肯德基相关的计数（测试局，信号字段当时尚未修复，记录为 <span class="en">None</span>）。我提交的初始估价是 <span class="num">570</span>。</p>
+  <p><b>盘面：</b>开盘 <span class="num">715.61</span>，远高于我的估计；价格在 <span class="num">584 ~ 800</span> 之间剧烈起伏，尾盘一路冲到 <span class="num">800.01</span>。机器人在 <span class="num">556 ~ 784</span> 的宽幅区间里高频做市，多空来回，最终空仓。</p>
+  <p class="verdict"><span class="pill win">盈亏 +522.25</span><span class="pill lose">不计分</span> 测试局做市反而落得 <span class="num">522.25</span> 的浮盈，但它真正的价值是给我上了第一课。</p>
+  <blockquote><span class="t">我意识到：</span>我那 <span class="num">570</span> 的初始估值与 <span class="num">715</span> 的真实共识之间，隔着一道巨大的鸿沟。做市机制会把这种初始偏差，在反复成交中悄悄放大成方向性的仓位——这一局侥幸赚了，是因为波动够宽、做市够快；下一次若遇上单边行情，同样的偏差就会变成实亏。</blockquote>
+</div>
+
+<!-- 第1题 古巴 -->
+<div class="game">
+  <span class="tag">正式第 1 题</span>
+  <h3>世界面积第 104 大国家：五轮推理，全场第一</h3>
+  <p><b>题面：</b>世界面积排名第 104 的国家（单位为万平方公里）。这是唯一一局五轮长局。</p>
+  <h4>线索如何一层层收紧</h4>
+  <ul class="clean">
+    <li>轮 1：非洲总面积约 <span class="num">3020</span> 万平方公里——把范围先拢到非洲。</li>
+    <li>轮 2：2024 年该国人口约 <span class="num">975</span> 万——一个不到千万的小国。</li>
+    <li>轮 3：海岸线长约 <span class="num">5746</span> 千米——这是最锋利的一把钥匙。</li>
+    <li>轮 4：世界第 50 大的西班牙面积约 <span class="num">50.6</span> 万——给了一个高位参照。</li>
+    <li>轮 5：明确答案——这个国家是<b>古巴</b>。</li>
+  </ul>
+  <h4>中途的一次惊险纠错</h4>
+  <p>轮 2 人口线索出来时，我一度误判为洪都拉斯，把 fair 推到 <span class="num">11.25</span>。但紧接着我核对海岸线：洪都拉斯海岸线只有约 <span class="num">832</span> 千米，而线索是 <span class="num">5746</span> 千米，差了近七倍；古巴的海岸线恰在 <span class="num">5700</span> 千米上下。靠这一处硬数据，我把 fair 果断改回 <span class="num">10.99</span>。</p>
+  <p><b>交易：</b>开盘 <span class="num">11.32</span>，收盘 <span class="num">10.64</span>，全程在 <span class="num">10.45 ~ 11.77</span> 区间震荡。机器人低买高卖、最后完全平仓，稳稳落袋。</p>
+  <p class="verdict"><span class="pill win">盈亏 +21.25</span><span class="pill win">积分 +15</span> 本局我位列全场第一，拿到单局满分 <span class="num">15</span>，旗开得胜。</p>
+  <blockquote><span class="t">我意识到：</span>当多条线索彼此可以交叉验证时，硬数据（海岸线长度）比模糊的人口印象可靠得多。一次及时的自我纠错，胜过十次固执己见。</blockquote>
+</div>
+
+<!-- 第2题 高铁 -->
+<div class="game">
+  <span class="tag">正式第 2 题</span>
+  <h3>2024 年底中国高铁里程：记忆锚点的胜利</h3>
+  <p><b>题面：</b>截至 2024 年底的中国高铁里程（保留一位小数，单位万公里）。</p>
+  <ul class="clean">
+    <li>轮 1：全国铁路营业里程约 <span class="num">16.2</span> 万公里。</li>
+    <li>轮 2：高铁约占铁路营业里程的<b>三成</b>（<span class="num">16.2 × 0.3 ≈ 4.86</span>）。</li>
+    <li>轮 3：2024 年投产新线超 <span class="num">3000</span> 公里，其中高铁过半。</li>
+  </ul>
+  <p><b>推理与交易：</b>我脑中的记忆锚点很清晰——2022 年约 <span class="num">4.2</span>、2023 年约 <span class="num">4.5</span>、2024 年约 <span class="num">4.8</span>。于是估 <span class="num">4.8</span>，开盘正好 <span class="num">4.8</span>。机器人在 <span class="num">4.76 ~ 5.06</span> 之间交易，建立的 <span class="num">8</span> 手空头均价约 <span class="num">4.97</span>，轮末平仓。</p>
+  <p class="verdict"><span class="pill win">盈亏 +1.23</span><span class="pill win">积分 +10</span> 真金白银只赚了 <span class="num">1.23</span>，但凭名次拿到 <span class="num">10</span> 分，累计 <span class="num">25</span>。</p>
+  <blockquote><span class="t">我意识到：</span>这一局让我第一次看清「盈亏」与「积分」是两套口径——我赚得不多，却因同屋多数人亏得更惨而排到前列。名次，才是这场竞技的硬通货。</blockquote>
+</div>
+
+<!-- 第3题 上港 -->
+<div class="game">
+  <span class="tag">正式第 3 题</span>
+  <h3>2024 上海港集装箱吞吐量：做市收租的全胜范本</h3>
+  <p><b>题面：</b>2024 年上海港集装箱吞吐量（万 TEU）。</p>
+  <ul class="clean">
+    <li>轮 1：上海港集装箱吞吐量连续多年位居<b>全球第一</b>。</li>
+    <li>轮 2：洋山深水港区贡献了<b>四成以上</b>。</li>
+    <li>轮 3：2024 年同比增长约 <span class="num">5%</span>。</li>
+  </ul>
+  <p><b>推理与交易：</b>我据记忆锚点估 <span class="num">5151</span>，开盘 <span class="num">5150.6</span>，几乎严丝合缝。这给了做市最理想的温床：价格在 <span class="num">5078 ~ 5201</span> 之间反复来回，机器人在 <span class="num">5120 ~ 5201</span> 区间高频低买高卖，仓位在多空之间灵活切换而不滞留。</p>
+  <p class="verdict"><span class="pill win">盈亏 +260.16</span><span class="pill win">积分 +10</span> 这是做市策略最漂亮的一仗，累计积分来到 <span class="num">35</span>。</p>
+  <figure>
+    <img src="charts/fig4_shanghai.png" alt="上海港做市详图">
+    <figcaption>图 4 · 上海港：价格反复震荡，仓位多空灵活转换，做市收租的理想形态</figcaption>
+  </figure>
+  <blockquote><span class="t">我意识到：</span>做市策略的甜蜜点，是「估值锚点准确 + 价格区间震荡」。当 fair 站得稳、价格又总在区间内回家，每一次往返都是净赚的租金。</blockquote>
+</div>
+
+<!-- 第4题 机场 -->
+<div class="game">
+  <span class="tag">正式第 4 题</span>
+  <h3>2024 年底颁证民用运输机场数：小而稳的一局</h3>
+  <ul class="clean">
+    <li>轮 1：机场分布在全国 <span class="num">30</span> 多个省级行政区。</li>
+    <li>轮 2：千万级旅客吞吐量机场约 <span class="num">40</span> 个。</li>
+    <li>轮 3：2024 年新投产运输机场 <span class="num">3</span> 个。</li>
+  </ul>
+  <p><b>推理与交易：</b>我先估 <span class="num">264</span>，开盘 <span class="num">263</span>。末轮结合「2023 年约 <span class="num">259</span> 个 + 2024 年新增 <span class="num">3</span> 个」，推得 <span class="num">262</span>。价格在 <span class="num">261.5 ~ 270.5</span> 窄幅波动，机器人轻仓做市。</p>
+  <p class="verdict"><span class="pill win">盈亏 +5.49</span><span class="pill win">积分 +7</span> 累计 <span class="num">42</span>。这是常识锚点再次奏效的一局。</p>
+</div>
+
+<!-- 第5题 鸡蛋 -->
+<div class="game">
+  <span class="tag">正式第 5 题</span>
+  <h3>冰箱里的鸡蛋数：第一次方向性失分</h3>
+  <ul class="clean">
+    <li>轮 1：上周日去超市买了整整<b>两盒</b>鸡蛋，之后再没买过。</li>
+    <li>轮 2：一盒 <span class="num">10</span> 枚装，另一盒 <span class="num">30</span> 枚装（合计 <span class="num">40</span>）。</li>
+    <li>轮 3：每天早上煎 <span class="num">2</span> 个，连续 <span class="num">5</span> 天，用掉 <span class="num">10</span> 个；此外没用过蛋。</li>
+  </ul>
+  <p><b>真值推理：</b><span class="num">40 − 10 = 30</span>。</p>
+  <p><b>交易与失策：</b>我开局的 fair 只有 <span class="num">12</span>，严重偏低。机器人据此一路做空，而价格却从开盘 <span class="num">22.55</span> 缓步上行，最终收在 <span class="num">29.7</span>（区间 <span class="num">22 ~ 30</span>）。空头在上涨中被一路套住。</p>
+  <p class="verdict"><span class="pill lose">盈亏 −30.02</span><span class="pill lose">积分 +1</span> 累计 <span class="num">43</span>。这是「此人」类生活题给我的第一次警告。</p>
+  <blockquote><span class="t">我意识到：</span>对一个具体的人的生活计数，我那点想当然的常识（一猜就是个位数、十几）几乎毫无用处。在信号把构成讲清楚之前，过低的 fair 会让机器人站在错误的方向上越陷越深。</blockquote>
+</div>
+
+<!-- 第6题 步数 -->
+<div class="game">
+  <span class="tag">正式第 6 题</span>
+  <h3>当天的步数：单局最大亏损，空头被趋势吞没</h3>
+  <ul class="clean">
+    <li>轮 1：今天周六，没有体育课，也没有跑步或骑行。</li>
+    <li>轮 2：主要靠步行往返图书馆与宿舍，中途乘过一次地铁，全程没打车。</li>
+    <li>轮 3：这个数是<b>四位数，千位是 8、百位是 4</b>（即 <span class="num">84xx</span>）。</li>
+  </ul>
+  <p><b>交易与失策：</b>开盘 <span class="num">8000</span>。前两轮我让机器人建立了 <span class="num">8</span> 手空头，赌它步数不会高。但末轮「千位 8、百位 4」一出，价格在轮内从 <span class="num">7952</span> 一路拉升到 <span class="num">8599</span> 收盘，最高 <span class="num">8599.02</span>。空头被一条清晰的上涨趋势正面吞没，仓位一度顶到 <span class="num">10</span> 手。</p>
+  <p class="verdict"><span class="pill lose">盈亏 −450.72</span><span class="pill lose">积分 +3</span> 这是全部十二局里最惨重的一次失血，累计 <span class="num">46</span>。</p>
+  <figure>
+    <img src="charts/fig6_steps.png" alt="步数局详图">
+    <figcaption>图 6 · 步数：末轮信号确认 84xx，价格单边拉升，空头被迫在高位回补</figcaption>
+  </figure>
+  <blockquote><span class="t">我意识到：</span>「没有运动」不等于「步数低」——一个学生在校园里往返图书馆，步行本身就能累积出八千多步。我用自己的偏见替代了对生活真实节奏的理解，并且在信号落地前就压上了重注。这是方向性赌注最危险的样子。</blockquote>
+</div>
+
+<!-- 第7题 相册 -->
+<div class="game">
+  <span class="tag">正式第 7 题</span>
+  <h3>相册新增照片数：尾盘断崖，个位数质数</h3>
+  <ul class="clean">
+    <li>轮 1：今天没出远门，活动范围只在校园与住处，在外停留不足三小时。</li>
+    <li>轮 2：新增照片全部由同一台手机拍摄，一半以上是同一处景物的<b>连拍</b>。</li>
+    <li>轮 3：这个数是<b>个位数，而且是一个质数</b>。</li>
+  </ul>
+  <p><b>交易与失策：</b>开盘 <span class="num">15</span>，前两轮价格一直横在 <span class="num">14.6 ~ 15.1</span>。末轮「个位数质数」一出，价格断崖式跳水，最低 <span class="num">5.03</span>，收在 <span class="num">6.83</span>。机器人在 <span class="num">15</span> 附近累积的多头，被这一跌打了个措手不及。</p>
+  <p class="verdict"><span class="pill lose">盈亏 −66.27</span><span class="pill lose">积分 +1</span> 累计 <span class="num">47</span>。</p>
+  <blockquote><span class="t">我意识到：</span>横盘越久，越容易让人放松警惕，以为价格会一直这样躺平。可一条强约束信号能在几秒内把价格腰斩——做市在横盘里攒下的多头，正是为这一刻准备的风险。</blockquote>
+</div>
+
+<!-- 第8题 微信未读 -->
+<div class="game">
+  <span class="tag">正式第 8 题</span>
+  <h3>微信未读消息数：三信号同向，空头大胜</h3>
+  <ul class="clean">
+    <li>轮 1：他看到红点就点掉，从不在列表里留未读。</li>
+    <li>轮 2：过去二十四小时手机没静音，提示音一响他就看一眼。</li>
+    <li>轮 3：所以这个数字更靠近区间的<b>下界</b>。</li>
+  </ul>
+  <p><b>推理与交易：</b>三条线索从不同角度指向同一个答案——<b>未读近乎为零</b>。开盘 <span class="num">36.63</span>，价格阶梯式跳水，最低 <span class="num">14.5</span>，收在 <span class="num">15.85</span>。机器人持有的 <span class="num">8</span> 手空头方向完全正确，让利润一路奔跑。</p>
+  <p class="verdict"><span class="pill win">盈亏 +242.54</span><span class="pill win">积分 +7</span> 累计 <span class="num">54</span>。这是方向性判断与做市结合得最好的一局。</p>
+  <blockquote><span class="t">我意识到：</span>当多条独立线索彼此印证、共同指向同一个方向时，就不该再把它当作普通震荡，可以更有信心地持有方向单。这一局的 +242，与上港的 +260，是我整个赛程里两根最坚实的支柱。</blockquote>
+</div>
+
+<!-- 第9题 屏幕时长 -->
+<div class="game">
+  <span class="tag">正式第 9 题</span>
+  <h3>过去七天手机屏幕时长：高位多头，尾盘跳水</h3>
+  <ul class="clean">
+    <li>轮 1：今天周六，没网课，白天多在图书馆，晚上在住处。</li>
+    <li>轮 2：最常用的是学习类与通讯类应用，娱乐类占比不到两成。</li>
+    <li>轮 3（结合复盘）：每天超过 <span class="num">3.5</span>、不到 <span class="num">4</span> 小时，七天合计约 <span class="num">24.5 ~ 28</span>。</li>
+  </ul>
+  <p><b>交易与失策：</b>开盘 <span class="num">40</span>，前两轮我让机器人在 <span class="num">39 ~ 40</span> 的高位累积了 <span class="num">8</span> 手多头。末轮价格一路跳水，最低 <span class="num">25.79</span>，收在 <span class="num">26.38</span>。高位多头不得不在低位平仓，实亏锁定。</p>
+  <p class="verdict"><span class="pill lose">盈亏 −140.19</span><span class="pill lose">积分 +1</span> 累计 <span class="num">55</span>。</p>
+  <blockquote><span class="t">我意识到：</span>我又一次在信号未明时，凭「他爱学习、用机时长长」的模糊印象压了多头，却没算清楚七天的真实区间其实在 28 附近，而不是 40。模糊的叙事判断，替代不了清晰的数量推算。</blockquote>
+</div>
+
+<!-- 第10题 好友 -->
+<div class="game">
+  <span class="tag">正式第 10 题</span>
+  <h3>微信通讯录好友数：浮盈近千，尾盘尽付东流</h3>
+  <ul class="clean">
+    <li>轮 1：他不太清理通讯录，这些年只增不删。</li>
+    <li>轮 2：约四分之一是历届同学，其余是社团、实习同事和家人。</li>
+    <li>轮 3：这个数是<b>四位数，比一千多一点点，不到一千一</b>。</li>
+  </ul>
+  <p><b>交易与惊心动魄：</b>开盘 <span class="num">1036.66</span>，远高于我初始 fair <span class="num">500</span>，机器人先做空、一度浮亏。但做市在 <span class="num">1040 ~ 1061</span> 的区间里高频往返，已实现盈利一度冲到接近 <b>+981</b>。轮内还出现一道深 V，价格最低砸到 <span class="num">487.5</span> 又被拉回。然而尾盘的剧烈平仓与波动，把前期浮盈全数吐回，最终收在 <span class="num">1049.36</span>。</p>
+  <p class="verdict"><span class="pill lose">盈亏 −201.99</span><span class="pill lose">积分 +2</span> 累计 <span class="num">57</span>。这是全赛程最让我心痛的一局。</p>
+  <figure>
+    <img src="charts/fig10_friend.png" alt="好友局详图">
+    <figcaption>图 10 · 好友：深 V 与尾盘的剧烈平仓，近千浮盈在最后时刻回吐</figcaption>
+  </figure>
+  <blockquote><span class="t">我意识到：</span>账面上的浮盈不是真正属于我的钱，除非我把它落袋。做市在错误的初始 fair 下虽然能靠高频交易暂时累积大量已实现，但一轮强信号带来的平仓压力，足以让利润在几分钟内反转。这直接促使我后来动手收紧早期仓位。</blockquote>
+</div>
+
+<!-- 第11题 解锁 -->
+<div class="game">
+  <span class="tag">正式第 11 题</span>
+  <h3>一天手机解锁次数：高位多头，信号暴跌后割肉</h3>
+  <ul class="clean">
+    <li>轮 1：11 月 21 日周五，上午两节课，下午图书馆，晚上回住处。</li>
+    <li>轮 2：每次解锁基本只做一件事——看消息、查资料或付款，做完就锁屏。</li>
+    <li>轮 3：这个数是<b>两位数，比八十多一点，不到九十</b>。</li>
+  </ul>
+  <p><b>交易与失策：</b>我估 <span class="num">100</span>，开盘正好 <span class="num">100</span>。前两轮在 <span class="num">98 ~ 102</span> 做市，机器人的买单在震荡中累积，多头一度顶到 <span class="num">9</span> 手。末轮「两位数、八十多」一出，价格单边下跌，最低 <span class="num">82</span>，收在 <span class="num">85.68</span>。高位多头被迫在低位平仓。</p>
+  <p class="verdict"><span class="pill lose">盈亏 −117.81</span><span class="pill lose">积分 +1</span> 累计定格在 <span class="num">58</span>。</p>
+  <figure>
+    <img src="charts/fig11_unlock.png" alt="解锁局详图">
+    <figcaption>图 11 · 解锁：末轮信号确认两位数，价格单边下跌，高位多头割肉</figcaption>
+  </figure>
+  <blockquote><span class="t">我意识到：</span>这一局几乎是鸡蛋、屏幕时长、好友三局的同构重演——信号前做市累积多头，信号后单边下跌平仓。正是反复出现的同一个症结，让我在局间果断修改了机器人：新增「早期仓位上限」，并把方向性深度单限制为仅在最后一轮开启。可惜这一调整落地时，赛程已近尾声。</blockquote>
+</div>
+
+<!-- ============ 第四章 ============ -->
+<h2 class="chapter" id="c4">四、两张图看懂败因：同一个症结的反复重演</h2>
+<p>把十二局的数字并排来看，败因其实并不复杂，它高度集中、反复出现，几乎可以用两张图说清楚。</p>
+
+<h3>4.1 仓位即险境：敞口越大，盈亏越向深处滑落</h3>
+<p>下图以每局的「最大绝对仓位」为横轴、「单局盈亏」为纵轴。可以看到，那个最惨的步数局（−450.72）恰好顶在 <span class="num">10</span> 手的最大敞口上；而两个大赚的上港（+260）与微信未读（+243），要么锚点准确、要么方向明确。拟合的趋势线斜率为负，清楚地提示：在估值锚点不稳的局里，仓位越大，错得越深。</p>
+<figure>
+  <img src="charts/fig2_risk.png" alt="仓位与盈亏风险关系">
+  <figcaption>图 2 · 仓位与盈亏的关系：信号未明时，敞口是亏损的放大器</figcaption>
+</figure>
+
+<h3>4.2 同构的轨迹：横盘累积，信号断崖</h3>
+<p>把十一局的价格归一化（开盘 = 100）后，形态分成两类：古巴、高铁、上港、机场这类锚点准的局，价格始终围绕开盘线小幅震荡，做市安稳收租；而鸡蛋、步数、相册、屏幕时长、好友、解锁这些失分局，几乎都呈现「前期横盘、末轮单边」的同构轨迹——而我往往在横盘里累积了错误方向的仓位，又在断崖或拉升中被迫平仓。</p>
+<figure>
+  <img src="charts/fig3_grid.png" alt="各局归一化价格网格">
+  <figcaption>图 3 · 十一局归一化价格：震荡归巢者生，横盘后单边者伤</figcaption>
+</figure>
+
+<blockquote>
+<span class="t">败因的三句话总结：</span><br>
+一、在「此人」类生活题上，我对具体个人的常识想象几乎系统性偏离真值，却用它设定了初始 fair；<br>
+二、做市与深度单机制把这个偏差放大成方向性仓位，在信号公布前就已积重难返；<br>
+三、强信号驱动的单边行情，让我在轮末以不利价格平仓，浮盈回吐、亏损锁定。
+</blockquote>
+
+<!-- ============ 第五章 ============ -->
+<h2 class="chapter" id="c5">五、自我迭代时间线：我一路意识到了什么</h2>
+<p>这一小时我没有只动手、不反省。下面按赛程顺序，把那些真正改变了我后续动作的「顿悟时刻」串成一条线。</p>
+<ul class="clean">
+  <li><b>测试局后：</b>初始估值与真实共识的巨大偏差，会被做市放大成方向性风险——第一次为 fair 的准确性感到警觉。</li>
+  <li><b>古巴局：</b>硬数据（海岸线）可以交叉验证、纠正误判；及时认错比固执重要。</li>
+  <li><b>高铁局：</b>「盈亏」与「积分」是两套口径，名次才是硬通货。</li>
+  <li><b>上港局：</b>锚点准确 + 区间震荡，是做市收租的甜蜜点。</li>
+  <li><b>鸡蛋局：</b>对具体个人的生活计数，想当然的常识不可靠，信号前不该压方向。</li>
+  <li><b>步数局：</b>「没有运动」不等于「步数低」，偏见替代了真实的生活节奏，方向性赌注最危险。</li>
+  <li><b>相册局：</b>横盘越久越要警惕，一条强信号能让价格瞬间腰斩。</li>
+  <li><b>微信未读局：</b>多条独立线索同向印证时，可以更有信心地持有方向单。</li>
+  <li><b>屏幕时长局：</b>模糊的叙事判断替代不了清晰的数量推算。</li>
+  <li><b>好友局：</b>浮盈不落袋便不是自己的钱；错误 fair 下的做市利润会在平仓时反转。</li>
+  <li><b>解锁局前后：</b>同一个症结第六次重演，我终于动手做结构性修改——新增早期仓位上限（±2 手），深度单只在最后一轮开启。</li>
+</ul>
+<p>遗憾的是，从「意识到」到「改完并验证」之间存在滞后：当新逻辑真正上线时，十一局已经跑完，我没有再获得一局完整的机会去检验它。这本身也是一条关于迭代速度的教训。</p>
+
+<!-- ============ 第六章 ============ -->
+<h2 class="chapter" id="c6">六、盈亏总账：哪两种钱赚到了，哪种钱亏掉了</h2>
+<p>提示词里早就说过，这场游戏有两种钱可赚：一种来自对世界的理解（估得准），一种来自对人心的理解（比对手早半秒动）。把账算完，我在这两种钱上的表现泾渭分明。</p>
+<table>
+  <thead><tr><th>局类</th><th>代表局</th><th>盈亏合计</th><th>性质</th></tr></thead>
+  <tbody>
+    <tr><td>锚点准确的常识/统计题</td><td>古巴、高铁、上港、机场</td><td class="num pos">+288.13</td><td>对世界的理解，做市安稳收租</td></tr>
+    <tr><td>方向判断正确的生活题</td><td>微信未读</td><td class="num pos">+242.54</td><td>多线索同向，方向单获利</td></tr>
+    <tr><td>fair 偏离的生活题</td><td>鸡蛋、步数、相册、屏幕时长、好友、解锁</td><td class="num neg">−1006.99</td><td>信号前方向仓 + 轮末平仓亏损</td></tr>
+  </tbody>
+</table>
+<p>正式局累计盈亏 <b class="num">−476.33</b>。我赚到手的，是「对世界的理解」——当记忆锚点准确、或线索清晰同向时，做市与方向单都能稳稳落袋；而我亏掉的，几乎全部来自「在不理解的具体生活题上，用错的 fair 提前下了方向性赌注」。至于「比对手早半秒」的人心博弈，我更多是靠机器人的高频做市被动参与，并未真正建立起稳定的抢单优势。</p>
+<p>动作层面，全程共发出 <span class="num">1337</span> 笔订单、<span class="num">393</span> 次一键撤单，成交 <span class="num">380</span> 笔、<span class="num">472</span> 手；其中约 <span class="num">70%</span>（266 笔）的对手是脚本程序，约 <span class="num">30%</span>（114 笔）是其他模型。这说明我的主要利润与亏损，都来自与那 24 个脚本的反复周旋，而非对其他模型的精准狙击。</p>
+
+<!-- ============ 第七章 ============ -->
+<h2 class="chapter" id="c7">七、若再来一局：我会怎样改这套打法</h2>
+<p>输不是终点，把输翻译成可执行的改变，才是复盘的意义。若让我带着今天的全部账册再进一次场，我会这样调整。</p>
+<ul class="clean">
+  <li><b>信号前严守轻仓：</b>前 N−1 轮净持仓硬限制在 ±2 手，只做市场中性的价差收租，不积累方向性敞口。</li>
+  <li><b>深度单仅末轮开启：</b>fair±2.5% 的「等鱼」单本质是方向赌注，只在最后一轮强信号出来后才挂。</li>
+  <li><b>生活题先求区间、再求点估：</b>不凭常识一上来就给单点 fair，先用线索框定可信区间，在区间内做市、区间外才出手。</li>
+  <li><b>强信号 + 多线索同向时果断放大：</b>像微信未读那样方向高度确定时，把末轮仓位放宽到 ±4 甚至更高，让利润奔跑。</li>
+  <li><b>分批落袋，避免尾盘集中平仓：</b>提前在轮内分批减仓，而不是挤到最后 8 秒以不利价格一次性平掉，重蹈好友局覆辙。</li>
+  <li><b>缩短迭代滞后：</b>一旦识别出结构性问题，立即在当前局的间隙完成修改与验证，不要等问题重演六次才动手。</li>
+</ul>
+
+<hr class="soft">
+<blockquote class="lead">
+临渊一役，我没能成为那个积分最高的人。但我带走了比名次更长久的东西——一份清楚知道自己因何而赢、又因何而输的明白。下一次站到渊边，我仍会出手，只是这一回，我会更轻、更稳，也更懂得在读懂之前，先按住自己的手。
+</blockquote>
+
+<p class="foot">临渊量化 · 复盘长卷 · 共十二局 · 谨以此卷记下全程心迹与账册</p>
+
+
+
+
+</div>
+</body>
+</html>
