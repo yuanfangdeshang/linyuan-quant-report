@@ -14,6 +14,7 @@
 ├── data/official/              官方赛后导出 JSON
 ├── docs/                       同一份参赛提示词与交易界面截图
 ├── server/                     本地撮合引擎、交易席/主持台前端
+├── scripts/                    自动做市程序
 ├── archive/                    旧版合集、13 个单章（历史证据）
 ├── 第一轮/                     原始资源：模型代码、日志、对话、报告
 ├── INDEX.md                    工作区索引
@@ -26,6 +27,10 @@
 - [交易席截图](docs/screenshots/trading.png)
 - [主持台截图](docs/screenshots/host.png)
 - [本地撮合引擎](server/README.md)
+
+## 自动交易
+
+`scripts/auto_mm.js` 是本地做市程序：读取本地会话后连接房间 WebSocket，围绕 `average` 挂双边、按库存偏斜报价；不联网查答案。
 
 ## 主报告内容
 
