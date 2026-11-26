@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>交易席 · 临渊量化</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f5643'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7f4ea'%3E%E5%8D%9A%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<style>
+  /* 进场浮层 */
+  .gate {
+    position: fixed; inset: 0; background: rgba(28,40,36,.34);
+    backdrop-filter: blur(4px); z-index: 70;
+    display: flex; align-items: center; justify-content: center; padding: 22px;
+  }
+  .gate .card { width: min(420px, 100%); margin: 0; }
+  .gate h2 { margin: 0 0 6px; font-size: 19px; letter-spacing: .05em; }
+  .gate p { margin: 0 0 16px; font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+  .closed-note {
+    margin-top: 12px; padding: 12px 14px; border-radius: 10px;
+    background: var(--card-2); border: 1px solid var(--line-soft);
+    font-size: 13px; color: var(--ink-2); text-align: center;
+  }
+  .order-disabled { opacity: .45; pointer-events: none; }
+
+  .list-empty { color: var(--muted); font-size: 13px; text-align: center; padding: 18px 0; }
+
+  .rt {
+    display: flex; justify-content: space-between; gap: 10px;
+    padding: 7px 0; border-bottom: 1px solid var(--line-soft); font-size: 13px;
+  }
+  .rt .side { width: 34px; }
+  .rt .side.buy { color: var(--red); }
+  .rt .side.sell { color: var(--green-2); }
+  .rt .p { font-family: var(--font-num); width: 78px; text-align: right; }
+  .rt .q { font-family: var(--font-num); width: 46px; text-align: right; color: var(--ink-2); }
+  .rt .cp { flex: 1; color: var(--muted); font-size: 12px; }
+  .rt .pnl { font-family: var(--font-num); width: 66px; text-align: right; }
+  .rt .pnl.up { color: var(--red); }
+  .rt .pnl.down { color: var(--green-2); }
+
+  .rev-player { border-top: 1px solid var(--line-soft); padding-top: 10px; margin-top: 12px; }
+  .rev-player:first-child { border-top: 0; margin-top: 0; padding-top: 0; }
+  .rev-head { display: flex; align-items: baseline; gap: 8px; font-size: 14px; margin-bottom: 6px; }
+  .rev-head .cnt { font-size: 12px; color: var(--muted); }
+  .rev-head .bot { font-size: 10.5px; color: var(--gold); border: 1px solid #e2d8bf; background: #faf6ec; border-radius: 4px; padding: 1px 5px; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand"><span class="mark">临</span>临渊量化 · 交易实验室</div>
+  <div class="spacer"></div>
+  <span class="chip">房间 <b class="num" id="roomCode">—</b></span>
+  <span class="chip" id="whoami">—</span>
+  <span class="chip"><span class="live-dot" id="dot"></span><span id="connText">连接中</span></span>
+</header>
+
+<div class="wrap" id="root">
+  <section class="card" id="qcard">
+    <div class="qhead">
+      <div>
+        <h1 class="q-title" id="qTitle">等待主持人出题…</h1>
+        <div class="q-sub" id="qSub"></div>
+      </div>
+      <div class="q-side" id="qSide"></div>
+    </div>
+  </section>
+
+  <div id="stage"></div>
+
+  <nav class="bottom-nav" id="nav">
+    <button data-tab="orders">委托<span class="badge" id="badgeOrders" hidden>0</span></button>
+    <button data-tab="trades">成交</button>
+    <button data-tab="rank">积分榜</button>
+    <button data-tab="review">复盘</button>
+    <button data-tab="more">更多</button>
+  </nav>
+</div>
+
+<div class="panel-overlay" id="overlay"></div>
+<div class="panel" id="panel"></div>
+<div class="toast" id="toast"></div>
+
+<div class="gate" id="gate" hidden>
+  <section class="card">
+    <h2>进入房间 <span class="num" id="gateCode"></span></h2>
+    <p>取一个昵称落座。同一浏览器会记住你的席位、持仓与估价。</p>
+    <label class="label-input">
+      <span>昵称</span>
+      <input id="gateName" maxlength="16" placeholder="例如 远方的熵">
+    </label>
+    <button class="btn primary block" id="gateBtn">入座</button>
+    <div class="err" id="gateErr"></div>
+  </section>
+</div>
+
+<script src="/play.js"></script>
+</body>
+</html>

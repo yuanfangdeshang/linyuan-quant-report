@@ -1,0 +1,10 @@
+{
+  "name": "linyuan-quant-market",
+  "version": "1.0.0",
+  "private": true,
+  "description": "临渊量化 · 交易实验室 —— 本地运行的量化估值交易竞猜服务器",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

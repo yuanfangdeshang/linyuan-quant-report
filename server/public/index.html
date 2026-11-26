@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>临渊量化 · 交易实验室</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f5643'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7f4ea'%3E%E5%8D%9A%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="landing">
+  <div class="hero">
+    <div class="mark-big">临</div>
+    <h1>临渊量化 · 交易实验室</h1>
+    <p class="sub">以估值为锚，以盘口为镜 —— 一场关于数量级的博弈</p>
+  </div>
+
+  <div class="grid">
+    <!-- 玩家入口 -->
+    <section class="card">
+      <h2>进入房间</h2>
+      <p class="hint">输入主持人给出的六位房间号，取一个昵称落座。同一浏览器会记住你的席位与持仓。</p>
+
+      <label class="label-input">
+        <span>房间号</span>
+        <input id="joinCode" inputmode="numeric" maxlength="6" placeholder="例如 880529">
+      </label>
+      <label class="label-input">
+        <span>昵称</span>
+        <input id="joinName" maxlength="16" placeholder="例如 远方的熵">
+      </label>
+
+      <button class="btn primary block" id="joinBtn">进入交易席</button>
+      <div class="err" id="joinErr"></div>
+
+      <div id="roomList" style="margin-top:14px"></div>
+    </section>
+
+    <!-- 主持人入口 -->
+    <section class="card">
+      <h2>开场（主持人）</h2>
+      <p class="hint">主持人控制出题、开盘、逐轮释放线索、停牌与结算，并可导出全员逐笔复盘。</p>
+
+      <label class="label-input">
+        <span>房间号（可留空自动生成）</span>
+        <input id="newCode" inputmode="numeric" maxlength="6" placeholder="留空则随机分配">
+      </label>
+      <label class="label-input">
+        <span>主持人密钥（已有房间时填写）</span>
+        <input id="newKey" placeholder="创建新房间可留空">
+      </label>
+
+      <button class="btn primary block" id="createBtn">创建新房间并进入主持台</button>
+      <button class="btn block" id="enterHostBtn" style="margin-top:9px">用房间号 + 密钥进入已有主持台</button>
+      <div class="err" id="hostErr"></div>
+
+      <p class="hint" style="margin-top:14px;margin-bottom:0">
+        建议：主持人用一台设备开场，玩家各用手机或电脑扫码进入同一局域网地址。
+      </p>
+    </section>
+  </div>
+
+  <div class="footnote">
+    本机地址 <span class="addr" id="addrLocal">http://localhost:7788</span><br>
+    <span id="addrLan"></span>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+
+function toast(msg) {
+  const t = $('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._h);
+  t._h = setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+function go(url) { location.href = url; }
+
+// 地址提示
+$('addrLocal').textContent = location.origin;
+
+function phaseLabel(p) {
+      return { idle: '待出题', estimate: '估值中', trading: '交易中', closed: '已停牌', settled: '已结算' }[p] || p;
+    }
+
+    async function loadRooms() {
+  try {
+    const res = await fetch('/api/rooms');
+    const data = await res.json();
+    const box = $('roomList');
+    if (!data.rooms.length) { box.innerHTML = ''; return; }
+    box.innerHTML = '<div class="card-title" style="margin-bottom:8px">正在进行的房间</div>' +
+      data.rooms.map((r) => `
+        <div class="bank-item" style="cursor:pointer" data-code="${r.code}">
+          <div class="body">
+            <div class="q">房间 <span class="num" style="color:var(--green)">${r.code}</span>
+              <span class="tag ${r.phase === 'trading' ? 'green' : ''}" style="margin-left:6px">${phaseLabel(r.phase)}</span></div>
+            <div class="meta">${r.players} 人 · 在线 ${r.online}${r.question ? ' · ' + r.question : ''}</div>
+          </div>
+          <button class="btn sm">加入</button>
+        </div>`).join('');
+    box.querySelectorAll('[data-code]').forEach((el) => {
+      el.addEventListener('click', () => { $('joinCode').value = el.dataset.code; $('joinName').focus(); });
+    });
+  } catch (e) { /* 忽略 */ }
+}
+
+async function join() {
+  const code = $('joinCode').value.trim();
+  const name = $('joinName').value.trim();
+  $('joinErr').textContent = '';
+  if (!code) return ($('joinErr').textContent = '请填写房间号');
+  if (!name) return ($('joinErr').textContent = '请填写昵称');
+
+  try {
+    const r = await fetch(`/api/room?code=${encodeURIComponent(code)}`);
+    if (!r.ok) {
+      const d = await r.json();
+      throw new Error(d.error || '房间不存在');
+    }
+    localStorage.setItem('lq:name:' + code, name);
+    go(`/play.html?code=${encodeURIComponent(code)}`);
+  } catch (e) {
+    $('joinErr').textContent = e.message;
+  }
+}
+
+async function createRoom() {
+  $('hostErr').textContent = '';
+  const code = $('newCode').value.trim();
+  try {
+    const res = await fetch('/api/create', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ code })
+    });
+    const d = await res.json();
+    if (!res.ok) throw new Error(d.error || '创建失败');
+    localStorage.setItem('lq:host:' + d.code, d.hostKey);
+    go(`/host.html?code=${d.code}&key=${d.hostKey}`);
+  } catch (e) {
+    $('hostErr').textContent = e.message;
+  }
+}
+
+function enterHost() {
+  const code = $('newCode').value.trim() || $('joinCode').value.trim();
+  let key = $('newKey').value.trim();
+  if (!code) return ($('hostErr').textContent = '请填写房间号');
+  if (!key) key = localStorage.getItem('lq:host:' + code) || '';
+  if (!key) return ($('hostErr').textContent = '请填写主持人密钥');
+  go(`/host.html?code=${encodeURIComponent(code)}&key=${encodeURIComponent(key)}`);
+}
+
+$('joinBtn').onclick = join;
+$('createBtn').onclick = createRoom;
+$('enterHostBtn').onclick = enterHost;
+$('joinName').addEventListener('keydown', (e) => { if (e.key === 'Enter') join(); });
+$('joinCode').addEventListener('keydown', (e) => { if (e.key === 'Enter') $('joinName').focus(); });
+
+// 局域网地址（由后端注入：从当前 host 推断不可靠，这里展示常用提示）
+$('addrLan').textContent = '局域网内其他设备请用 http://<本机局域网 IP>:7788 访问';
+
+loadRooms();
+setInterval(loadRooms, 15000);
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>主持台 · 临渊量化</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f5643'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f7f4ea'%3E%E5%8D%9A%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .host-grid {
+    display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; align-items: start;
+    margin-top: 18px;
+  }
+  @media (max-width: 900px) { .host-grid { grid-template-columns: 1fr; } }
+
+  .qbank-item {
+    display: flex; gap: 10px; align-items: flex-start;
+    padding: 10px 12px; border: 1px solid var(--line-soft); border-radius: 10px;
+    margin-bottom: 8px; background: #fcfbf7; cursor: pointer; transition: .15s;
+  }
+  .qbank-item:hover { border-color: var(--green); background: #f7faf7; }
+  .qbank-item.selected { border-color: var(--green); background: #f2f7f4; box-shadow: inset 3px 0 0 var(--green); }
+  .qbank-item .qi-main { flex: 1; min-width: 0; }
+  .qbank-item .qi-q { font-size: 14px; line-height: 1.5; }
+  .qbank-item .qi-meta { font-size: 11.5px; color: var(--muted); margin-top: 4px; }
+  .qbank-item .qi-ans { font-family: var(--font-num); font-size: 13px; color: var(--gold); white-space: nowrap; }
+
+  .state-line { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .ctl-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .ctl-row .btn { padding: 10px 8px; font-size: 13.5px; white-space: nowrap; }
+  .ctl-row.three { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 720px) { .ctl-row { grid-template-columns: repeat(2, 1fr); } }
+
+  .bot-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 0; border-bottom: 1px solid var(--line-soft);
+  }
+  .bot-row:last-child { border-bottom: 0; }
+  .bot-row .bt-main { flex: 1; }
+  .bot-row .bt-name { font-size: 14px; }
+  .bot-row .bt-desc { font-size: 11.5px; color: var(--muted); line-height: 1.6; }
+  .switch {
+    position: relative; width: 42px; height: 24px; border-radius: 12px;
+    background: #dcd8cc; border: 0; cursor: pointer; transition: .18s; flex: 0 0 auto;
+  }
+  .switch::after {
+    content: ''; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px;
+    border-radius: 50%; background: #fff; transition: .18s;
+  }
+  .switch.on { background: var(--green); }
+  .switch.on::after { left: 21px; }
+
+  .ply-row { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--line-soft); font-size: 13px; }
+  .ply-row:last-child { border-bottom: 0; }
+  .ply-row .nm { flex: 1; }
+  .ply-row .dot { width: 6px; height: 6px; border-radius: 50%; background: #cfcabc; }
+  .ply-row .dot.on { background: var(--green); }
+
+  .gate { position: fixed; inset: 0; background: rgba(28,40,36,.34); backdrop-filter: blur(4px); z-index: 70; display: flex; align-items: center; justify-content: center; padding: 22px; }
+  .gate .card { width: min(420px, 100%); margin: 0; }
+  .gate h2 { margin: 0 0 6px; font-size: 19px; letter-spacing: .05em; }
+  .gate p { margin: 0 0 16px; font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+  .num-item { display: flex; gap: 8px; align-items: center; }
+  .num-item input { flex: 0 0 110px; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand"><span class="mark">临</span>主持台 · 临渊量化</div>
+  <div class="spacer"></div>
+  <span class="chip">房间 <b class="num" id="roomCode">—</b></span>
+  <span class="chip" id="roleChip">待验证</span>
+  <span class="chip"><span class="live-dot off" id="dot"></span><span id="connText">未连接</span></span>
+</header>
+
+<div class="wrap">
+  <div class="host-grid">
+    <div>
+      <section class="card">
+        <div class="card-title">当前题目</div>
+        <h1 class="q-title" id="qTitle" style="font-size:22px;margin-bottom:4px">尚未选题</h1>
+        <div class="q-sub" id="qSub"></div>
+        <div class="state-line" id="stateLine"></div>
+        <div class="ctl-row">
+          <button class="btn primary" id="btnOpen" title="按全部报价（含机器人）的中位数开盘">开盘</button>
+          <button class="btn" id="btnNext">下一轮</button>
+          <button class="btn" id="btnClose">停牌</button>
+          <button class="btn gold" id="btnSettle">结算</button>
+        </div>
+        <div class="num-item" style="margin-top:14px">
+          <span class="est-note" style="margin:0;white-space:nowrap">轮次秒数</span>
+          <input id="secInput" inputmode="numeric" value="60">
+          <button class="btn sm" id="btnSec">设置</button>
+        </div>
+        <div class="est-note" id="hint" style="margin-top:10px"></div>
+      </section>
+
+      <section class="card">
+        <div class="card-title">题库 <span class="num" id="bankCount"></span></div>
+        <p class="est-note" style="margin-top:-6px">点击题目即可载入本房间，成为当前题。答案仅主持台可见。</p>
+        <div id="bank"></div>
+      </section>
+    </div>
+
+    <div>
+      <section class="card">
+        <div class="card-title">交易机器人</div>
+        <div id="bots"></div>
+        <p class="est-note" style="margin-top:10px">朝上为启用。机器人提供盘口流动性，成交同样计入复盘（默认不计入人类积分榜）。</p>
+      </section>
+
+      <section class="card">
+        <div class="card-title">玩家 <span class="num" id="plyCount">0</span></div>
+        <div id="players"></div>
+      </section>
+
+      <section class="card">
+        <div class="card-title">房间</div>
+        <div class="est-note" style="margin-top:0">玩家入口：<b id="playUrl" style="word-break:break-all;font-family:var(--font-num)"></b></div>
+        <div class="ctl-row three" style="margin-top:12px">
+          <a class="btn sm" id="btnExport" style="display:inline-block;text-align:center">导出复盘 JSON</a>
+          <button class="btn sm" id="btnResetScores">清空积分</button>
+          <button class="btn sm danger" id="btnResetRoom">重置房间</button>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div class="gate" id="gate" hidden>
+  <section class="card">
+    <h2>主持人验证</h2>
+    <p>房间 <b class="num" id="gateCode"></b>。请输入创建房间时拿到的密钥。</p>
+    <label class="label-input">
+      <span>密钥</span>
+      <input id="gateKey" autocomplete="off" placeholder="6 位密钥">
+    </label>
+    <button class="btn primary block" id="gateBtn">进入主持台</button>
+    <div class="err" id="gateErr"></div>
+  </section>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="/host.js"></script>
+</body>
+</html>
