@@ -24,7 +24,7 @@
 | 章节 | 模型/壳子 | 官方积分/名次 | 文件 |
 |---|---|---:|---|
 | **单篇综合论文（交付）** | 模型 × 壳子/执行框架 × 赛制 | -- | [PDF](research_paper.pdf)（32 页） |
-| 旧版资料合集 | 36 页旧稿 + 13 个单章 | -- | [PDF](archive/legacy_compendium_192p.pdf)（192 页，非本轮） |
+| 旧版资料合集 | 36 页旧稿 + 13 个单章 | -- | [PDF](archive/LLM 交易智能体中的模型能力、壳子执行力与赛制激励.pdf)（192 页，非本轮） |
 | 归档 quwork 冠军 | DeepSeek V4.1 Flash（quwork） | 124 / 1 | [PDF](archive/chapters/quwork_v41flash_section.pdf) |
 | 归档 GLM5.3 | GLM5.3（豆包） | 118 / 2 | [PDF](archive/chapters/glm_section.pdf) |
 | 归档 豆包自动模式 | 豆包 App·自动模式（116 分席位） | 116 / 3 | [PDF](archive/chapters/doubao_auto_section.pdf) |
