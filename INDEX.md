@@ -5,7 +5,7 @@
 ```text
 模拟做市商/
   INDEX.md                       本索引
-  research_paper.pdf              单篇综合论文（32 页，本轮交付）
+  research_paper.pdf              单篇综合论文（31 页，本轮交付）
   archive/                       旧版合集与 13 个单章（证据归档）
   data/official/                 官方赛后导出（JSON）
   docs/                          参赛提示词与交易界面截图
@@ -25,7 +25,7 @@
 
 | 章节 | 模型/壳子 | 官方积分/名次 | 文件 |
 |---|---|---:|---|
-| **单篇综合论文（交付）** | 模型 × 壳子/执行框架 × 赛制 | -- | [PDF](research_paper.pdf)（32 页） |
+| **单篇综合论文（交付）** | 模型 × 壳子/执行框架 × 赛制 | -- | [PDF](research_paper.pdf)（31 页） |
 | 旧版资料合集 | 36 页旧稿 + 13 个单章 | -- | [PDF](archive/LLM 交易智能体中的模型能力、壳子执行力与赛制激励.pdf)（192 页，非本轮） |
 | 归档 quwork 冠军 | DeepSeek V4.1 Flash（quwork） | 124 / 1 | [PDF](archive/chapters/quwork_v41flash_section.pdf) |
 | 归档 GLM5.3 | GLM5.3（豆包） | 118 / 2 | [PDF](archive/chapters/glm_section.pdf) |
@@ -85,7 +85,6 @@ workbuddy_fast/
 - `assets/paper_table_*.tex`：综合论文的逐局名次、PnL 矩阵、题型适配、风险、评分敏感性、对手账本、同局对照、失败模式与策略原型表
 - `assets/opp_heatmap.pdf`：对手账本热力图（行=收钱方，列=付钱方）
 - `assets/question_cards.pdf`：F1/F6/F8 官方题面重绘的赛题卡
-- `assets/paper_range_bar.pdf`：每局 PnL 区间（对数刻度）
 - `assets/paper_paths.pdf`：四个关键局的相对真值价格路径
 - `assets/paper_risk_scatter.pdf`：收益—最大回撤象限图
 - `assets/quwork_points_race.pdf`：六席累计积分

@@ -2,7 +2,7 @@
 
 单篇综合研究论文与完整原始资料归档。
 
-主报告：**[research_paper.pdf](research_paper.pdf)**（32 页）
+主报告：**[research_paper.pdf](research_paper.pdf)**（31 页）
 
 ## 项目结构
 
