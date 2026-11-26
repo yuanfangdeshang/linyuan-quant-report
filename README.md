@@ -2,14 +2,15 @@
 
 单篇综合研究论文与完整原始资料归档。
 
-主报告：**[research_paper.pdf](research_paper.pdf)**（31 页）
+主报告：**[paper/research_paper.pdf](paper/research_paper.pdf)**（31 页）
 
 ## 项目结构
 
 ```text
 .
-├── research_paper.pdf          单篇综合论文（主交付）
-├── assets/                     论文图表、表格片段与共享图
+├── paper/
+│   ├── research_paper.pdf      单篇综合论文（主交付）
+│   └── assets/                 论文图表、表格片段与共享图
 ├── data/official/              官方赛后导出 JSON
 ├── docs/                       同一份参赛提示词与交易界面截图
 ├── server/                     本地撮合引擎、交易席/主持台前端

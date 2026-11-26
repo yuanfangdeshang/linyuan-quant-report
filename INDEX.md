@@ -5,12 +5,12 @@
 ```text
 模拟做市商/
   INDEX.md                       本索引
-  research_paper.pdf              单篇综合论文（31 页，本轮交付）
+  paper/research_paper.pdf        单篇综合论文（31 页，本轮交付）
+  paper/assets/                  论文图表与表格源
   archive/                       旧版合集与 13 个单章（证据归档）
   data/official/                 官方赛后导出（JSON）
   docs/                          参赛提示词与交易界面截图
   server/                        本地撮合引擎与交易席/主持台前端
-  assets/                        共享图表与对手账本片段
   第一轮/                        原始资源（代码、日志、对话、报告；本地归档）
     INDEX.md                     原始资源说明
     manifest.json                文件级来源、大小、SHA-256
@@ -20,12 +20,12 @@
 
 ## 单篇交付与资料归档
 
-> 本轮只交付 `research_paper.pdf` 这一篇合成文章。下面的独立章节与旧合集是证据归档，不再作为阅读路径；单篇论文已跳过各章重复的环境、合规和逐模型传记。
+> 本轮只交付 `paper/research_paper.pdf` 这一篇合成文章。下面的独立章节与旧合集是证据归档，不再作为阅读路径；单篇论文已跳过各章重复的环境、合规和逐模型传记。
 
 
 | 章节 | 模型/壳子 | 官方积分/名次 | 文件 |
 |---|---|---:|---|
-| **单篇综合论文（交付）** | 模型 × 壳子/执行框架 × 赛制 | -- | [PDF](research_paper.pdf)（31 页） |
+| **单篇综合论文（交付）** | 模型 × 壳子/执行框架 × 赛制 | -- | [PDF](paper/research_paper.pdf)（31 页） |
 | 旧版资料合集 | 36 页旧稿 + 13 个单章 | -- | [PDF](archive/LLM 交易智能体中的模型能力、壳子执行力与赛制激励.pdf)（192 页，非本轮） |
 | 归档 quwork 冠军 | DeepSeek V4.1 Flash（quwork） | 124 / 1 | [PDF](archive/chapters/quwork_v41flash_section.pdf) |
 | 归档 GLM5.3 | GLM5.3（豆包） | 118 / 2 | [PDF](archive/chapters/glm_section.pdf) |
@@ -77,17 +77,17 @@ workbuddy_fast/
 
 ## 共享图表
 
-- `assets/rank_heatmap.pdf`：15 席 × 12 局名次热力图
-- `assets/activity_heatmap.pdf`：15 席 × 12 局成交手数热力图
-- `assets/pie_*.pdf`、`assets/opp_*.tex`：各模型的对手盈亏饼图与逐局矩阵
-- `assets/latency_*.pdf/.tex`：各模型的延迟/抢单代理指标
-- `assets/*_norm*.pdf`：归一化 PnL 图
-- `assets/paper_table_*.tex`：综合论文的逐局名次、PnL 矩阵、题型适配、风险、评分敏感性、对手账本、同局对照、失败模式与策略原型表
-- `assets/opp_heatmap.pdf`：对手账本热力图（行=收钱方，列=付钱方）
-- `assets/question_cards.pdf`：F1/F6/F8 官方题面重绘的赛题卡
-- `assets/paper_paths.pdf`：四个关键局的相对真值价格路径
-- `assets/paper_risk_scatter.pdf`：收益—最大回撤象限图
-- `assets/quwork_points_race.pdf`：六席累计积分
+- `paper/assets/rank_heatmap.pdf`：15 席 × 12 局名次热力图
+- `paper/assets/activity_heatmap.pdf`：15 席 × 12 局成交手数热力图
+- `paper/assets/pie_*.pdf`、`paper/assets/opp_*.tex`：各模型的对手盈亏饼图与逐局矩阵
+- `paper/assets/latency_*.pdf/.tex`：各模型的延迟/抢单代理指标
+- `paper/assets/*_norm*.pdf`：归一化 PnL 图
+- `paper/assets/paper_table_*.tex`：综合论文的逐局名次、PnL 矩阵、题型适配、风险、评分敏感性、对手账本、同局对照、失败模式与策略原型表
+- `paper/assets/opp_heatmap.pdf`：对手账本热力图（行=收钱方，列=付钱方）
+- `paper/assets/question_cards.pdf`：F1/F6/F8 官方题面重绘的赛题卡
+- `paper/assets/paper_paths.pdf`：四个关键局的相对真值价格路径
+- `paper/assets/paper_risk_scatter.pdf`：收益—最大回撤象限图
+- `paper/assets/quwork_points_race.pdf`：六席累计积分
 
 ## 编译
 
