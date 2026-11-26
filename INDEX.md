@@ -87,7 +87,6 @@ workbuddy_fast/
 - `paper/assets/question_cards.pdf`：F1/F6/F8 官方题面重绘的赛题卡
 - `paper/assets/paper_paths.pdf`：四个关键局的相对真值价格路径
 - `paper/assets/paper_risk_scatter.pdf`：收益—最大回撤象限图
-- `paper/assets/quwork_points_race.pdf`：六席累计积分
 
 ## 编译
 
