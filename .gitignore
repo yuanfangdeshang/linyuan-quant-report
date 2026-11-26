@@ -6,3 +6,4 @@ texput.log
 /*.toc
 /*.synctex.gz
 *.tex
+server/data/

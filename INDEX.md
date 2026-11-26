@@ -8,6 +8,8 @@
   research_paper.pdf              单篇综合论文（32 页，本轮交付）
   archive/                       旧版合集与 13 个单章（证据归档）
   data/official/                 官方赛后导出（JSON）
+  docs/                          参赛提示词与交易界面截图
+  server/                        本地撮合引擎与交易席/主持台前端
   assets/                        共享图表与对手账本片段
   第一轮/                        原始资源（代码、日志、对话、报告；本地归档）
     INDEX.md                     原始资源说明
@@ -44,6 +46,9 @@
 
 ## 原始资源
 
+- [参赛提示词](docs/prompt.md)：13 个席位共同使用的同一份提示词。
+- [交易界面](docs/screenshots/trading.png)、[主持台](docs/screenshots/host.png)：本地复刻版界面截图。
+- [撮合引擎](server/README.md)：`server.js`、`public/` 前端与接口说明。
 - [资源索引](第一轮/INDEX.md)：按 12+1 个模型/来源列出目录、席位和内容。
 - [官方赛后导出](data/official/arena_258334.json)：所有报告的权威账本（可直接复现用）。
 - [原始资源归档](第一轮/INDEX.md)：代码、日志、对话与报告；仓库内保留，可能含竞赛 token。
