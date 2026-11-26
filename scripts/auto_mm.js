@@ -12,6 +12,25 @@ const WIDE = 30;
 let ws, state, closed = false, resyncTimer, seq = 0;
 let lastQuoteKey = '';
 let lastCancelAt = 0;
+let revision = 0;
+let awaitingSnapshot = false;
+
+function applyPatch(obj, changes) {
+  let out = obj;
+  for (const [path, value] of changes) {
+    if (!path.length) { out = value; continue; }
+    if (path.some(k => ['__proto__','prototype','constructor'].includes(k))) throw Error('bad patch');
+    out = Array.isArray(out) ? [...out] : { ...out };
+    let t = out;
+    for (const k of path.slice(0, -1)) {
+      t[k] = Array.isArray(t[k]) ? [...t[k]] : { ...t[k] };
+      t = t[k];
+    }
+    const k = path[path.length - 1];
+    if (value === undefined) delete t[k]; else t[k] = value;
+  }
+  return out;
+}
 
 function send(obj) {
   if (ws && ws.readyState === WebSocket.OPEN) ws.send(JSON.stringify(obj));
@@ -47,7 +66,8 @@ function forecast(st) {
   const hist = (st.history || []).map(h => Number(h.price)).filter(Number.isFinite);
   const prev = hist.length ? hist[hist.length - 1] : prior;
   const momentum = last - prev;
-  const f = 0.55 * avg + 0.20 * prior + 0.25 * last + clamp(momentum * 0.15, -6, 6);
+  // 已结算均价是均价博弈的主锚；最新价只给低权重，避免把一笔异常成交当成趋势。
+  const f = 0.70 * avg + 0.20 * prior + 0.10 * last;
   return Math.round(f);
 }
 function targetFor(st, fair) {
@@ -71,11 +91,18 @@ function quotes(st) {
   if (ba != null && bid >= ba) bid = ba - 1;
   if (bb != null && ask <= bb) ask = bb + 1;
   if (ask <= bid) ask = bid + 2;
+  const tick = Math.pow(10, 2 - (st.config?.priceDecimals ?? 2));
+  bid = Math.max(tick, Math.round(bid / tick) * tick);
+  ask = Math.max(bid + tick, Math.round(ask / tick) * tick);
 
   let buyQty = pos >= MAX_POS ? 0 : 1;
   let sellQty = pos <= -MAX_POS ? 0 : 1;
   if (pos >= target + 2) buyQty = 0;
   if (pos <= target - 2) sellQty = 0;
+  // If the market is far from the forecast, take the touch instead of waiting forever.
+  const last = Number(st.price || st.openingPrice || 0);
+  if (fair < last - 2 * tick && bb != null && pos > target - 1) { sellQty = 1; ask = bb; }
+  if (fair > last + 2 * tick && ba != null && pos < target + 1) { buyQty = 1; bid = ba; }
   if (gap > WIDE) { buyQty = 0; sellQty = 0; }
   return { fair, target, bid, ask, buyQty, sellQty, pos, gap };
 }
@@ -107,14 +134,25 @@ function connect() {
   if (closed) return;
   ws = new WebSocket(s.ws);
   ws.onopen = () => {
+    revision = 0; awaitingSnapshot = false;
     send({ type: 'hello', protocol: 'delta-v1', encoding: 'gzip-v1', code: s.code, token: s.token });
-    resyncTimer = setInterval(() => send({ type: 'resync' }), 2500);
+    resyncTimer = setInterval(() => send({ type: 'resync' }), 5000);
     console.log('[ws] connected');
   };
   ws.onmessage = async e => {
     try {
       const m = JSON.parse(await decode(e));
-      if (m.type === 'state') onState(m.state);
+      if (m.type === 'state') {
+        state = m.state; revision = m.revision || 0; awaitingSnapshot = false;
+        onState(state);
+      } else if (m.type === 'patch') {
+        if (awaitingSnapshot) return;
+        if (m.base !== revision) { awaitingSnapshot = true; send({ type: 'resync' }); return; }
+        try { state = applyPatch(state, m.changes); revision = m.revision; onState(state); }
+        catch { awaitingSnapshot = true; send({ type: 'resync' }); }
+      } else if (m.type === 'error') {
+        console.error('[server]', m.message);
+      }
     } catch (err) { console.error('[ws] decode', err.message); }
   };
   ws.onclose = () => { clearInterval(resyncTimer); if (!closed) setTimeout(connect, 1000); };
