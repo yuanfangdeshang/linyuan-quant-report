@@ -78,7 +78,6 @@ workbuddy_fast/
 
 ## 共享图表
 
-- `paper/assets/rank_heatmap.pdf`：15 席 × 12 局名次热力图
 - `paper/assets/activity_heatmap.pdf`：15 席 × 12 局成交手数热力图
 - `paper/assets/pie_*.pdf`、`paper/assets/opp_*.tex`：各模型的对手盈亏饼图与逐局矩阵
 - `paper/assets/latency_*.pdf/.tex`：各模型的延迟/抢单代理指标
