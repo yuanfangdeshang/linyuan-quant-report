@@ -7,3 +7,8 @@ texput.log
 /*.synctex.gz
 *.tex
 server/data/
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.synctex.gz

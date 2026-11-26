@@ -7,4 +7,4 @@
 - `compendium_front.pdf`：旧合集封面与目录。
 
 这些文件用于追溯早期分章版本，不是当前主交付。主报告是根目录的
-`research_paper.pdf`。公开仓库不包含 TeX 源码。
+`paper/research_paper.pdf`。公开仓库不包含 TeX 源码。
