@@ -43,8 +43,12 @@ function quotes(st) {
   bid = Math.min(bid, fair - 1);
   ask = Math.max(ask, fair + 1);
   if (ask <= bid) ask = bid + 2;
-  const buyQty = pos >= 8 ? 0 : 1;
-  const sellQty = pos <= -8 ? 0 : 1;
+  let buyQty = pos >= 3 ? 0 : 1;
+  let sellQty = pos <= -3 ? 0 : 1;
+  if (pos > 3) { buyQty = 0; ask = Math.min(ask, fair - 1); }
+  if (pos < -3) { sellQty = 0; bid = Math.max(bid, fair + 1); }
+  const gap = bb != null && ba != null ? ba - bb : 0;
+  if (gap > 20) { buyQty = 0; sellQty = 0; }
   return { fair, bid, ask, buyQty, sellQty, pos };
 }
 function ownKey(st) {
@@ -59,7 +63,7 @@ function place(st) {
   lastQuoteKey = key;
   const now = Date.now();
   if (now - lastCancelAt > 700) {
-    action('cancelAll');
+    action('cancel-all');
     lastCancelAt = now;
   }
   if (q.buyQty) action('order', { side: 'buy', price: q.bid, qty: q.buyQty });
@@ -72,7 +76,7 @@ function onState(st) {
   else {
     lastQuoteKey = 'not-trading';
     if (st.phase === 'intermission' || st.phase === 'finished' || st.phase === 'paused') {
-      action('cancelAll');
+      action('cancel-all');
     }
   }
 }

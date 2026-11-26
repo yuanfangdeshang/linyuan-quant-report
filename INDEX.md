@@ -11,6 +11,7 @@
   data/official/                 官方赛后导出（JSON）
   docs/                          参赛提示词与交易界面截图
   server/                        本地撮合引擎与交易席/主持台前端
+  scripts/                       自动做市程序
   第一轮/                        原始资源（代码、日志、对话、报告；本地归档）
     INDEX.md                     原始资源说明
     manifest.json                文件级来源、大小、SHA-256
