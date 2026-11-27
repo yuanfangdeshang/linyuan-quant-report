@@ -33,3 +33,9 @@ node scripts/auto_mm.js
 python3 -m pip install matplotlib numpy
 python3 scripts/make_heatmaps.py
 ```
+
+`make_charts.py` 生成论文图 6（三种评分口径的名次变化）与图 7（PnL–最大回撤散点），输出 `paper/assets/paper_scoring_bump.pdf`、`paper_risk_scatter.pdf`：
+
+```bash
+python3 scripts/make_charts.py
+```
