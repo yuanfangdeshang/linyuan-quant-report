@@ -24,3 +24,12 @@ node scripts/auto_mm.js
 该程序只做模拟盘做市，不访问外部行情或答案。
 
 当预测价与最新价偏离超过 2 个最小报价单位时，程序会主动吃对手最优价，而不是只挂着等成交；这正是为了避免“盘口很薄、一直不成交”。
+
+## 论文热力图
+
+`make_heatmaps.py` 从 `data/official/arena_258334.json` 复算两张 15 席 × 12 局矩阵，输出 `paper/assets/rank_heatmap.pdf` 与 `paper/assets/trade_heatmap.pdf`：
+
+```bash
+python3 -m pip install matplotlib numpy
+python3 scripts/make_heatmaps.py
+```
