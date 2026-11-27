@@ -135,6 +135,14 @@ def load_opponent_matrix():
         if game["practice"]:
             continue
         truth = game["settlementPrice"] / 100.0
+        opening = game["openingPrice"] / 100.0
+        deviations = [
+            abs(trade["price"] / 100.0 - truth)
+            for player in game["review"]["players"]
+            for trade in player["trades"]
+        ]
+        exposure = max([abs(opening - truth)] + deviations + [0.01])
+        weight = 1.0 / (10.0 * exposure)
         for player in game["review"]["players"]:
             i = index.get(player["id"])
             if i is None:
@@ -143,6 +151,7 @@ def load_opponent_matrix():
                 qty = trade["qty"]
                 price = trade["price"] / 100.0
                 value = (truth - price) * qty if trade["side"] == "buy" else (price - truth) * qty
+                value *= weight
                 pnl[i] += value
                 j = index.get(trade["counterpartyId"])
                 if j is None:
@@ -152,7 +161,7 @@ def load_opponent_matrix():
 
     for i in range(size):
         matrix[i, i] = 0.0
-    assert np.allclose(matrix.sum(axis=1), pnl, atol=0.02)
+    assert np.allclose(matrix.sum(axis=1), pnl, atol=0.01)
     return matrix
 
 
@@ -189,25 +198,25 @@ def draw_opponent(matrix, path):
 
     ax.set_xlabel("付钱方（列 1–12 与行同名；最后一列为脚本）", fontsize=14, labelpad=8)
     ax.set_ylabel("收钱方（按名次）", fontsize=15, labelpad=14)
-    ax.set_title("对手账本：谁赚了谁的钱（正式局）", fontsize=19, pad=14)
+    ax.set_title("对手账本：谁赚了谁的钱（正式局，按局归一化）", fontsize=19, pad=14)
     ax.axvline(cols - 1, color="white", linewidth=2.2)
 
     for i in range(rows):
         for j in range(cols):
-            value = int(round(matrix[i, j]))
+            value = matrix[i, j]
             if i == j:
                 text = "—"
-            elif value == 0:
+            elif abs(value) < 0.005:
                 text = "0"
             else:
-                text = f"{value:+d}"
-            color = "white" if abs(matrix[i, j]) > 0.55 * vmax else "#111111"
+                text = f"{value:+.2f}"
+            color = "white" if abs(value) > 0.55 * vmax else "#111111"
             ax.text(j + 0.5, i + 0.5, text, ha="center", va="center", fontsize=13.5, color=color)
 
-    cb = fig.colorbar(mesh, cax=cax, ticks=[-5000, -2500, 0, 2500, 5000])
+    cb = fig.colorbar(mesh, cax=cax, ticks=[-4, -2, 0, 2, 4])
     cb.outline.set_visible(False)
     cb.ax.tick_params(length=3, labelsize=13)
-    cb.set_label("行从列赚得的 PnL", fontsize=14, labelpad=8)
+    cb.set_label("行从列赚的归一化 PnL", fontsize=14, labelpad=8)
 
     fig.savefig(path, format="pdf")
     plt.close(fig)
