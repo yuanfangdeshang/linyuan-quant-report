@@ -27,7 +27,7 @@ node scripts/auto_mm.js
 
 ## 论文热力图
 
-`make_heatmaps.py` 从 `data/official/arena_258334.json` 复算两张 15 席 × 12 局矩阵，输出 `paper/assets/rank_heatmap.pdf` 与 `paper/assets/trade_heatmap.pdf`：
+`make_heatmaps.py` 从 `data/official/arena_258334.json` 复算名次、成交手数与对手账本矩阵，输出 `paper/assets/rank_heatmap.pdf`、`trade_heatmap.pdf` 与 12 席 × 13 列的 `opp_heatmap.pdf`：
 
 ```bash
 python3 -m pip install matplotlib numpy
